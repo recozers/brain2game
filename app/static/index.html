@@ -100,6 +100,32 @@
   #score { font-weight: 700; color: var(--rose); font-variant-numeric: tabular-nums; }
   #backBtn { appearance: none; border: 1px solid var(--line); background: #fff; color: var(--text); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
   #gameFrame { flex: 1; width: 100%; border: 0; background: #fff; }
+
+  /* ---- session summary card: shown while the agent writes the game ---- */
+  #summary { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px;
+    background: rgba(246,246,244,.55); backdrop-filter: blur(3px); z-index: 5; }
+  #summary .card { width: min(780px, 100%); max-height: 100%; overflow-y: auto; background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 22px 26px 18px; box-shadow: 0 24px 60px rgba(0,0,0,.10); animation: rise .45s cubic-bezier(.2,.8,.2,1); }
+  @keyframes rise { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
+  #summary h1 { font-size: 20px; }
+  #summary .sub { margin-bottom: 14px; }
+  #sumRows { display: flex; flex-direction: column; gap: 6px; }
+  .srow { display: grid; grid-template-columns: 190px 1fr 46px 78px; align-items: center; gap: 12px; font-size: 12.5px; padding: 3px 8px; border-radius: 8px; border: 1px solid transparent; }
+  .srow .lbl { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .srow canvas { display: block; width: 100%; height: 14px; border-radius: 3px; background: #f0f0ed; }
+  .srow .mean { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .srow .delta { text-align: right; font-variant-numeric: tabular-nums; font-size: 11.5px; color: var(--dim); }
+  .srow .delta.low { color: var(--rose); font-weight: 600; } .srow .delta.high { color: var(--ok); }
+  .srow.target { border-color: var(--rose); background: #fff5f7; }
+  .srow.target .lbl { color: var(--rose-deep); font-weight: 650; }
+  .srow.target .lbl::after { content: "  ← target"; font-weight: 500; color: var(--rose); }
+  #sumAxis { display: grid; grid-template-columns: 190px 1fr 46px 78px; gap: 12px; font-size: 10.5px; color: var(--dim); padding: 2px 8px 0; }
+  #sumAxis .ax { display: flex; justify-content: space-between; }
+  #sumAgent { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr; gap: 6px; }
+  #sumState { font-size: 13.5px; color: var(--rose); font-weight: 600; }
+  #sumWhy { font-size: 13px; color: var(--text); line-height: 1.5; }
+  #sumLog { margin: 4px 0 0; color: var(--dim); font-size: 11px; white-space: pre-wrap; max-height: 54px; overflow: hidden; }
+  body.game #summary { display: none !important; }
   body.game #panel { display: none; }
   body.game #stage { position: fixed; right: 16px; bottom: 16px; width: 320px; height: 230px; z-index: 20;
     border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 16px 44px rgba(0,0,0,.14); background: #fff; }
@@ -136,6 +162,19 @@
       <div id="logState"><span class="spin"></span>starting…</div>
       <pre id="log" class="mono"></pre>
     </section>
+    <div id="summary" hidden>
+      <div class="card">
+        <h1>Your session, in brain systems</h1>
+        <p class="sub" id="sumSub">—</p>
+        <div id="sumRows"></div>
+        <div id="sumAxis"><span></span><span class="ax"><span id="sumT0">0 s</span><span>time →</span><span id="sumT1"></span></span><span>mean</span><span>vs usual</span></div>
+        <div id="sumAgent">
+          <div id="sumState"><span class="spin"></span>reading your session…</div>
+          <div id="sumWhy"></div>
+          <pre id="sumLog" class="mono"></pre>
+        </div>
+      </div>
+    </div>
     <button id="finishBtn" type="button" hidden>Train my brain</button>
   </div>
 

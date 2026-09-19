@@ -38,6 +38,8 @@ const state = {
   shownSecond: null, shownSystems: null, shownTop: null,
   waitingSince: null,
   secondsReceived: 0, lastInferS: null, secondsPredicted: null, busy: null,
+  history: new Map(),          // second -> {system id: z} for every second we have seen (summary card)
+  baseline: null,              // samples/baseline.json from the laptop server, if any
   pollErrors: 0, lastPollOk: null,
   phase: 'booting', phaseClass: '',
   finishing: false,
@@ -272,6 +274,7 @@ function ingest(resp) {
     const sysBySec = new Map((resp.systems || []).map((s) => [s.second, s.z || null]));
     const topBySec = new Map((resp.regions || []).map((s) => [s.second, s.top || null]));
     secs.forEach((sec, k) => {
+      const sz = sysBySec.get(sec); if (sz && !state.history.has(sec)) state.history.set(sec, sz);
       if (state.shownSecond !== null && sec <= state.shownSecond) return;   // already played (first write wins)
       let vec = vals ? vals.subarray(k * nv, (k + 1) * nv) : null;
       if (vec && vec.length !== N) { const v2 = new Float32Array(N); v2.set(vec.subarray(0, Math.min(N, vec.length))); vec = v2; }
@@ -534,10 +537,68 @@ function appendLog(lines) {
   }
   [...pre.children].forEach((c, i) => c.classList.toggle('last', i === pre.childElementCount - 1));
   pre.scrollTop = pre.scrollHeight;
+  const sl = $('sumLog'); if (sl) sl.textContent = lines.slice(-3).join('\n');
 }
-function setLogState(html) { $('logState').innerHTML = html; }
+function setLogState(html) { $('logState').innerHTML = html; const el = $('sumState'); if (el) el.innerHTML = html; }
+
+
+// ------------------------------------------------------------------------------------------------
+// session summary card (shown while the agent writes the game)
+// ------------------------------------------------------------------------------------------------
+const HEAT_STOPS = [[240, 240, 237], [255, 190, 140], [230, 57, 70], [122, 12, 46]];
+function heatColor(z, lo, hi) {
+  const t = clamp((z - lo) / Math.max(hi - lo, 1e-6), 0, 1);
+  const k = t < 0.33 ? [0, 1, t / 0.33] : t < 0.66 ? [1, 2, (t - 0.33) / 0.33] : [2, 3, (t - 0.66) / 0.34];
+  const a = HEAT_STOPS[k[0]], b = HEAT_STOPS[k[1]];
+  return `rgb(${Math.round(a[0] + (b[0] - a[0]) * k[2])},${Math.round(a[1] + (b[1] - a[1]) * k[2])},${Math.round(a[2] + (b[2] - a[2]) * k[2])})`;
+}
+let summaryRows = {};
+function showSummary() {
+  const secs = [...state.history.keys()].sort((a, b) => a - b);
+  const systems = state.atlas && state.atlas.systems ? state.atlas.systems : null;
+  const ids = systems ? Object.keys(systems) : FALLBACK_SYSTEMS;
+  const base = state.baseline && state.baseline.systems ? state.baseline.systems : null;
+  const stats = ids.map((id) => {
+    const zs = secs.map((sec) => (state.history.get(sec) || {})[id]).filter((v) => typeof v === 'number');
+    const mean = zs.length ? zs.reduce((a, b) => a + b, 0) / zs.length : null;
+    const b = base && base[id] ? base[id].mean : null;
+    return { id, label: systems && systems[id] ? systems[id].label.replace(/\s*\(.*\)$/, '') : id.replace(/_/g, ' '), zs, mean, delta: mean !== null && b !== null ? mean - b : null };
+  }).sort((a, b) => (b.mean ?? -9) - (a.mean ?? -9));
+  const all = stats.flatMap((r) => r.zs).sort((a, b) => a - b);
+  const hi = Math.max(0.35, all.length ? all[Math.floor(0.98 * (all.length - 1))] : 0.35), lo = 0.04;
+  $('sumSub').textContent = `${secs.length} seconds inferred` + (base ? ` · compared with your usual (${state.baseline.n_clips || Object.keys(base).length ? (state.baseline.n_clips || '') + ' clips' : ''})`.replace('( clips)', '') : ' · no baseline yet, so systems are ranked against each other');
+  $('sumT1').textContent = secs.length ? `${secs[secs.length - 1]} s` : '';
+  const host = $('sumRows'); host.innerHTML = ''; summaryRows = {};
+  const w = 600, hgt = 14;
+  for (const r of stats) {
+    const row = document.createElement('div'); row.className = 'srow';
+    row.innerHTML = `<span class="lbl"></span><canvas width="${w}" height="${hgt}"></canvas><span class="mean"></span><span class="delta"></span>`;
+    row.querySelector('.lbl').textContent = r.label;
+    row.querySelector('.mean').textContent = r.mean === null ? '—' : fmt(r.mean, 2);
+    const d = row.querySelector('.delta');
+    if (r.delta === null) d.textContent = '';
+    else { d.textContent = (r.delta >= 0 ? '+' : '−') + fmt(Math.abs(r.delta), 2); d.classList.toggle('low', r.delta < -0.04); d.classList.toggle('high', r.delta > 0.04); }
+    const ctx = row.querySelector('canvas').getContext('2d');
+    const n = Math.max(1, secs.length), cw = w / n;
+    secs.forEach((sec, i) => { const z = (state.history.get(sec) || {})[r.id]; ctx.fillStyle = typeof z === 'number' ? heatColor(z, lo, hi) : '#f0f0ed'; ctx.fillRect(Math.floor(i * cw), 0, Math.ceil(cw) + 1, hgt); });
+    host.appendChild(row); summaryRows[r.id] = row;
+  }
+  $('sumWhy').textContent = ''; $('sumLog').textContent = '';
+  $('summary').hidden = false;
+  $('logPanel').hidden = true;      // the card carries the log now
+}
+function annotateSummary(plan) {
+  if (!plan || !plan.target_system) return;
+  for (const [id, row] of Object.entries(summaryRows)) row.classList.toggle('target', id === plan.target_system);
+  const title = plan.game && plan.game.title ? `Writing “${plan.game.title}” for you…` : 'Writing your game…';
+  if (plan.why) $('sumWhy').textContent = plan.why;
+  setLogState('<span class="spin"></span>' + title);
+  const row = summaryRows[plan.target_system]; if (row) row.scrollIntoView({ block: 'nearest' });
+}
+function hideSummary() { $('summary').hidden = true; }
 
 function openGame(url, plan) {
+  hideSummary();
   const target = plan && plan.target_system;
   const label = target && state.atlas && state.atlas.systems && state.atlas.systems[target] ? state.atlas.systems[target].label : target || '';
   $('gameTitle').textContent = (plan && plan.game && plan.game.title) || 'Your game';
@@ -589,19 +650,22 @@ async function pollFinish(jobId) {
     }
     if (j.state === 'error') {
       setLogState('<span style="color:var(--danger)">the agent hit an error</span>');
-      toast('Game generation failed — see the log. The brain keeps running.');
+      toast('Game generation failed — see the log. The brain keeps running.'); hideSummary();
       state.finishing = false; $('finishBtn').disabled = false;
       return;
     }
-    setLogState('<span class="spin"></span>' + (j.plan && j.plan.game && j.plan.game.title ? `building “${j.plan.game.title}”` : 'the agent is working…'));
+    if (j.plan && j.plan.target_system && !state.summaryAnnotated) { state.summaryAnnotated = true; annotateSummary(j.plan); }
+    else if (!state.summaryAnnotated) setLogState('<span class="spin"></span>picking the system that got the least exercise…');
   }
 }
 
 async function onFinish() {
   const btn = $('finishBtn');
   if (state.finishing) return;
-  state.finishing = true; btn.disabled = true;
-  $('logPanel').hidden = false; $('log').innerHTML = ''; setLogState('<span class="spin"></span>asking the laptop server to finish the session…');
+  state.finishing = true; btn.disabled = true; state.summaryAnnotated = false;
+  $('log').innerHTML = '';
+  showSummary();
+  setLogState('<span class="spin"></span>reading your session…');
   renderStatus();
   if (MOCK) return mockFinish();
   try {
@@ -615,7 +679,7 @@ async function onFinish() {
     pollFinish(j.job_id);
   } catch (e) {
     console.warn('[finish] POST /finish failed:', e.message);
-    toast(`Couldn't reach the laptop server to finish (POST /finish: ${e.message}). The brain keeps running — start app/server.py and try again.`);
+    toast(`Couldn't reach the laptop server to finish (POST /finish: ${e.message}). The brain keeps running — start app/server.py and try again.`); hideSummary();
     setLogState('<span style="color:var(--danger)">laptop server not reachable</span>');
     state.finishing = false; btn.disabled = false; renderStatus();
   }
@@ -625,7 +689,8 @@ async function mockFinish() {
   const lines = ['Fetching session summary (mock)', 'Least-driven system: Visual motion (MT+/V5)', 'Planning a 60 s game: "Dot Drift"',
     'Generating HTML with the code model (mock)', 'Headless check: 0 console errors', 'Saving app/games/mock.html'];
   const acc = [];
-  for (const l of lines) { acc.push(l); appendLog(acc); setLogState('<span class="spin"></span>' + l); await sleep(700); }
+  for (const l of lines) { acc.push(l); appendLog(acc); setLogState('<span class="spin"></span>' + l); await sleep(900); if (l.startsWith('Planning')) annotateSummary({ target_system: 'motion', why: 'Motion areas were the quietest of your session compared with your usual footage (mock data).', game: { title: 'Dot Drift (mock)' } }); }
+  await sleep(2500);
   setLogState('done — loading the game');
   openGame('srcdoc:' + MOCK_GAME_HTML, { target_system: 'motion', why: 'motion areas were the quietest during your session (mock)', game: { title: 'Dot Drift (mock)' } });
 }
@@ -655,6 +720,7 @@ async function main() {
     wantHires ? loadHiresAssets(ASSET_BASE).catch((e) => { console.warn('[hires] unavailable, using fsaverage5 renderer:', e.message); return null; }) : null,
   ]);
   state.cfg = cfg; state.assets = assets; state.atlas = assets.atlas;
+  fetch(new URL('/samples/baseline.json', location.origin)).then((r) => (r.ok ? r.json() : null)).then((b) => { state.baseline = b; }).catch(() => {});
   console.info('[brain-twin] config', cfg, 'mesh', assets.mesh.n_vertices, 'vertices', assets.mesh.n_faces, 'faces; atlas', assets.atlas && assets.atlas.atlas, '; hires', !!hires);
   state.brain = hires
     ? createHiresBrain(hires, { stage: $('stage'), fadeS: FADE_S, thresholdFn: (vec) => { if (ADAPTIVE) adaptThresholds(vec); return [THRESH_LO, THRESH_HI]; } })
