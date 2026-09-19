@@ -315,7 +315,7 @@ def _ensure_systems(summary: Dict[str, Any]) -> List[Dict[str, Any]]:
         if not v:
             continue
         rows.append({"id": s["id"], "label": s["label"], "mean": sum(v) / len(v), "peak": max(v),
-                     "frac_active": sum(1 for x in v if x > 1.0) / len(v), "rank": 0})
+                     "frac_active": sum(1 for x in v if x > 0.3) / len(v), "rank": 0})
     rows.sort(key=lambda r: -r["mean"])
     for i, r in enumerate(rows):
         r["rank"] = i + 1
@@ -434,15 +434,15 @@ def build_analysis_prompt(summary: Dict[str, Any], baseline: Optional[Any]) -> s
     n = summary.get("n_seconds_predicted") or len(summary.get("timeline") or [])
     return f"""You are the analysis step of "Brain Twin", a live stage demo.
 A phone filmed the world for about {duration} s. TRIBE v2, a brain encoding model, predicted the AVERAGE human
-brain's fMRI response (fsaverage5 cortex, z-scores at 1 Hz, {n} predicted seconds) to that footage - audio and
-video only, no text. This is a simulator of an average brain, not a reading of the user's brain; the "why"
+brain's fMRI response (fsaverage5 cortex, z-scores at 1 Hz, {n} predicted seconds) to that footage from its
+video, its audio, and the transcribed speech. This is a simulator of an average brain, not a reading of the user's brain; the "why"
 must make that clear in plain words.
 
 Functional systems (only game_target=true systems may be chosen):
 {_systems_blurbs()}
 
 Session statistics per system, sorted most -> least driven (rank 1 = most driven). mean/peak are predicted
-z-scores; frac_active = share of seconds above z = 1.0:
+z-scores; frac_active = share of seconds above z = 0.3 (average-subject predictions are small: peaks ~0.5-0.7):
 {json.dumps(systems)}
 
 Most driven regions: {json.dumps(top_regions)}

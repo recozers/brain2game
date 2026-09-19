@@ -82,7 +82,7 @@ region names per atlas, `game_target: true|false`). Systems (ids are stable, do 
    "seconds_received": 25.0, "status": {...same as /status...}}
   ```
 - `GET /session/{sid}/status` → `{"chunks_received": 5, "seconds_received": 25.0, "seconds_predicted": 18,
-   "busy": true, "last_infer_s": 7.9, "last_window_s": 30.0, "delay_estimate_s": 15.4}`
+   "busy": true, "inflight": 2, "workers": 3, "last_infer_s": 7.9, "last_window_s": 20.0, "delay_estimate_s": 15.4}`
 - `POST /session/{sid}/finish` → session summary (also stored on the container until restart):
   ```json
   {"sid": "abc", "duration_s": 240.0, "n_seconds_predicted": 230,
@@ -94,9 +94,10 @@ region names per atlas, `game_target: true|false`). Systems (ids are stable, do 
 - `POST /predict` multipart `file` → same shape as `/preds` (all seconds) plus `"summary"` (same shape as finish).
   Used for sample clips, the baseline, and (stretch) scoring generated games.
 
-Modal service behaviour: one warm H100 container, `@modal.concurrent` so uploads/polls never wait on
-the GPU. Each new chunk triggers "predict the trailing 30 s window"; if the GPU is busy the request
-returns immediately and the worker picks the latest window when free (skip-to-latest, never queue).
+Modal service behaviour: one small CPU API container plus a pool of WORKERS warm H100 containers.
+Each new 3 s chunk dispatches "predict the trailing 20 s window" to a free worker (ticks overlap);
+when all workers are busy the newest chunk waits and the next free worker takes the latest window
+(skip-to-latest, never queue).
 Predictions for the last 2 s of a window are dropped (no trailing context) and filled by the next window.
 First write wins per absolute second.
 

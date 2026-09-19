@@ -12,7 +12,7 @@ const ADAPTIVE = true, THRESH_LO_FLOOR = 0.12, THRESH_MIN_SPAN = 0.25;  // per-f
 const FADE_S = 1.0;                         // crossfade between consecutive seconds
 const POLL_MS = 1000;                       // /preds poll period
 const GAP_SKIP_MS = 10000;                  // skip forward if a second never arrives
-const MAX_AHEAD = 20, KEEP_AHEAD = 10, MIN_START_BUFFER = 4, HARD_JUMP = 60;      // catch-up if the buffer runs away (bursty backend)
+const MAX_AHEAD = 20, KEEP_AHEAD = 10, MIN_START_BUFFER = 4, HARD_JUMP = 60, GAP_FETCH_MS = 30000;      // catch-up if the buffer runs away (bursty backend)
 const BAR_MIN = -0.2, BAR_MAX = 0.8;
 const TRAIN_AFTER_S = 20;                    // 'Train my brain' appears after this many inferred seconds
 const ASSET_BASE = new URL('assets/', import.meta.url);
@@ -39,6 +39,7 @@ const state = {
   waitingSince: null,
   secondsReceived: 0, lastInferS: null, secondsPredicted: null, busy: null,
   history: new Map(),          // second -> {system id: z} for every second we have seen (summary card)
+  received: new Set(), maxReceived: -1, gapSince: null,   // fetch-cursor bookkeeping (see ingest)
   baseline: null,              // samples/baseline.json from the laptop server, if any
   pollErrors: 0, lastPollOk: null,
   phase: 'booting', phaseClass: '',
@@ -280,8 +281,20 @@ function ingest(resp) {
       if (vec && vec.length !== N) { const v2 = new Float32Array(N); v2.set(vec.subarray(0, Math.min(N, vec.length))); vec = v2; }
       state.buffer.set(sec, { vec, systems: sysBySec.get(sec) || null, top: topBySec.get(sec) || null });
     });
-    state.nextSecond = Math.max(state.nextSecond, Math.max(...secs) + 1);
+    for (const sec of secs) state.received.add(sec);
+    state.maxReceived = Math.max(state.maxReceived, ...secs);
   }
+  // fetch cursor = first second we do not have yet: with parallel workers an earlier window can land after a
+  // later one, so never jump the cursor past a hole; give a hole GAP_FETCH_MS, then abandon it
+  while (state.received.has(state.nextSecond)) state.nextSecond++;
+  if (state.maxReceived >= state.nextSecond) {
+    if (state.gapSince === null) state.gapSince = performance.now();
+    else if (performance.now() - state.gapSince > GAP_FETCH_MS) {
+      console.info(`[fetch] second ${state.nextSecond} never arrived, moving on`);
+      state.nextSecond++; state.gapSince = null;
+      while (state.received.has(state.nextSecond)) state.nextSecond++;
+    }
+  } else state.gapSince = null;
   if (typeof resp.seconds_received === 'number') state.secondsReceived = resp.seconds_received;
   const st = resp.status || {};
   if (typeof st.seconds_received === 'number') state.secondsReceived = st.seconds_received;

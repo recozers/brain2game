@@ -29,8 +29,8 @@ Modal: `modal token` already set up; volume `brain-twin-cache` holds the weights
 ## Run
 
 ```
-# 1. backend (once; keeps one H100 warm until you `modal app stop brain-twin`)
-modal deploy modal_app/tribe_service.py
+# 1. backend (once; keeps WORKERS H100s + one small API container warm until `modal app stop brain-twin`)
+WORKERS=3 GPU=H200 modal deploy modal_app/tribe_service.py   # deploy-time knobs: WORKERS, GPU (H100|H200), WINDOW_S, TEXT_ON
 
 # 2. laptop app
 uvicorn app.server:app --port 8001        # then open http://localhost:8001  (8000 is taken by an old http.server on this laptop)
@@ -63,7 +63,7 @@ against when deciding which system is under-driven.
 
 ## Demo-day runbook
 
-1. Backend warm? `curl -s $MODAL_BASE_URL/ | head -c 200` should show `"version"` and `"gpu"`. If the app was stopped: `modal deploy modal_app/tribe_service.py` and wait ~2.5 min for the warm-up.
+1. Backend warm? `curl -s $MODAL_BASE_URL/` shows the version and worker count; `curl -s $MODAL_BASE_URL/workers` returns one worker's warm-up stats. If the app was stopped: `WORKERS=3 GPU=H200 modal deploy modal_app/tribe_service.py` and wait ~3 min for the workers to warm up.
 2. `uvicorn app.server:app --port 8001` from the repo root, open http://localhost:8001 on the laptop (a fresh `sid` is generated; the QR encodes it).
 3. Phone: scan the QR, allow camera + mic, press **Start streaming**, keep the app in the foreground. Point it at faces, motion and speech; the brain lags ~15-20 s.
 4. **Finish** → the agent log streams into the page (~45 s with `GEMINI_MODEL_CODE=gemini-3.8-flash`; ~3 min with the pro model) → the game takes over the screen, brain in the corner. **Back to brain** returns.
