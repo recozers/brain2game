@@ -69,9 +69,13 @@ region names per atlas, `game_target: true|false`). Systems (ids are stable, do 
 
 ## Modal API  (base URL in .env as MODAL_BASE_URL; CORS `*`; all JSON unless noted)
 
-- `GET /capture?sid=<sid>` → phone capture page (HTML). Rotates a MediaRecorder every 5 s, POSTs each file.
+- `GET /capture?sid=<sid>` → phone capture page (HTML). Rotates a MediaRecorder every 3 s, POSTs each file.
 - `POST /session/{sid}/chunk`  multipart: `file` (video/mp4), form fields `index` (int, 0-based), `duration` (float s)
   → `{"ok": true, "index": 3, "seconds_received": 20.0}`
+  Chunks are remuxed into a stable video/audio track order before inference. Overflowing packet
+  durations are repaired using the clip's normal packet durations; invalid or >60 s media is rejected
+  with HTTP 422. The timeline uses the normalized media duration, never an unchecked client estimate.
+  Uploads after Finish return HTTP 409.
 - `GET /session/{sid}/preds?since=<int>` → newly predicted seconds with `second >= since`:
   ```json
   {"sid": "abc", "rate_hz": 1, "n_vertices": 20484,
@@ -82,7 +86,7 @@ region names per atlas, `game_target: true|false`). Systems (ids are stable, do 
    "video": [{"second": 12, "clips": [{"index": 4, "offset_s": 0.0, "duration_s": 1.0}]}],
    "seconds_received": 25.0, "status": {...same as /status...}}
   ```
-- `GET /session/{sid}/video/{index}` → original uploaded MP4/WebM clip, with byte-range support for seeking.
+- `GET /session/{sid}/video/{index}` → normalized MP4/WebM clip used for inference, with byte-range support for seeking.
   `video[].clips` locates each prediction's one-second interval within the exact clips used for that inference
   window. An interval can span two clips. Offsets are retained with the first accepted prediction, so later
   uploads cannot move its preview. The muted camera panel follows brain playback, including adaptive speed,
@@ -97,6 +101,10 @@ region names per atlas, `game_target: true|false`). Systems (ids are stable, do 
    "regions":  [{"name": "L_S_calcarine", "system": "early_visual", "mean": 0.4, "peak": 2.6, "frac_active": 0.2}],
    "timeline": [{"second": 0, "z": {"early_visual": 1.2, "motion": 0.3, ...}}]}
   ```
+- `POST /session/{sid}/finish?wait=false` → HTTP 202 with `{"sid": "abc", "state": "finishing", "status": {...}}`
+  while inference finishes, then HTTP 200 with the same summary as above. Finish is idempotent:
+  concurrent requests and retries share one final pass and the cached result. The laptop polls this
+  route with short requests for up to 10 minutes, so a slow GPU or a dropped connection does not restart work.
 - `POST /predict` multipart `file` → same shape as `/preds` (all seconds) plus `"summary"` (same shape as finish).
   Used for sample clips, the baseline, and (stretch) scoring generated games.
 

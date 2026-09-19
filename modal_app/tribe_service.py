@@ -12,7 +12,9 @@ Two classes on one app:
 import asyncio
 import base64
 import json
+import math
 import os
+import statistics
 import subprocess
 import threading
 import time
@@ -22,7 +24,7 @@ from pathlib import Path
 import modal
 
 APP_NAME = "brain-twin"
-VERSION = 14
+VERSION = 15
 CACHE_DIR = "/cache"            # volume: HF hub cache lives at /cache/huggingface/hub
 FEAT_DIR = "/tmp/feat"          # per-worker neuralset feature cache (exca keeps an in-memory index: never wipe it)
 SESS_DIR = "/tmp/sessions"
@@ -30,6 +32,7 @@ N_VERT = 20484
 TRAIL_DROP = 2                  # seconds dropped at the end of each window (no trailing context)
 ACTIVE_Z = 0.3                  # system-level value counted as "active" (average-subject scale: peaks ~0.5-0.7)
 MAX_PREDS_PER_RESPONSE = 60
+MAX_CHUNK_S = 60.0              # live chunks are ~3 s; reject unbounded/corrupt media timelines
 # deploy-time knobs (baked into the image env so the containers see the same values)
 WORKERS = int(os.environ.get("WORKERS", "3"))
 GPU = os.environ.get("GPU", "H100")            # H100 | H200 (B200 needs torch>=2.7, which tribev2 pins out)
@@ -82,9 +85,65 @@ def _run(cmd: list[str], timeout: int = 300) -> subprocess.CompletedProcess:
 def _probe_duration(path: str) -> float | None:
     r = _run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path], timeout=60)
     try:
-        return float(r.stdout.strip())
+        duration = float(r.stdout.strip())
+        return duration if math.isfinite(duration) and duration > 0 else None
     except Exception:
         return None
+
+
+def _prepare_chunk(path: str) -> tuple[str, float]:
+    """Remux into a consistent stream order; repair overflowing packet durations before concat.
+
+    MediaRecorder can write a uint32-underflowed last-frame duration (~83 days at 600 Hz).
+    Clamping only our Python duration leaves that broken timestamp in the actual video. Repair
+    packet durations without re-encoding or moving the audio/video timestamps, then re-probe.
+    """
+    duration = _probe_duration(path)
+    filters = []
+    if duration is None or duration > MAX_CHUNK_S:
+        r = _run(["ffprobe", "-v", "error", "-show_entries",
+                  "stream=index,codec_type:packet=stream_index,pts_time,duration_time",
+                  "-of", "json", path], timeout=30)
+        if r.returncode:
+            raise ValueError("could not read chunk timestamps")
+        metadata = json.loads(r.stdout)
+        for stream in metadata.get("streams", []):
+            kind = stream.get("codec_type")
+            if kind not in {"video", "audio"}:
+                continue
+            packets = [p for p in metadata.get("packets", []) if p["stream_index"] == stream["index"]]
+            starts = [float(p["pts_time"]) for p in packets if "pts_time" in p]
+            if not starts or any(not math.isfinite(t) or t < -1 or t > MAX_CHUNK_S for t in starts):
+                raise ValueError("chunk packet timestamps exceed the live recording limit")
+            durations = [float(p["duration_time"]) for p in packets if "duration_time" in p]
+            good = [d for d in durations if math.isfinite(d) and 0 < d <= 1]
+            if any(not math.isfinite(d) or d > MAX_CHUNK_S for d in durations):
+                if not good:
+                    raise ValueError("chunk has no usable packet durations")
+                typical = statistics.median(good)
+                stream_type = "v" if kind == "video" else "a"
+                filters.extend([f"-bsf:{stream_type}",
+                                f"setts=duration=if(gt(DURATION*TB\\,{MAX_CHUNK_S})\\,{typical}/TB\\,DURATION)"])
+        print(f"repairing chunk {os.path.basename(path)}: reported duration={duration}, packet repair={bool(filters)}", flush=True)
+
+    # Some phone chunks switch their audio/video stream order. Concat requires a stable order.
+    ext = ".webm" if Path(path).suffix.lower() == ".webm" else ".mp4"
+    out = str(Path(path).with_suffix("")) + ".normalized" + ext
+    cmd = ["ffmpeg", "-y", "-v", "error", "-copyts", "-i", path, "-map", "0:v:0", "-map", "0:a:0?",
+           "-c", "copy", *filters]
+    if ext == ".mp4":
+        cmd += ["-movflags", "+faststart"]
+    try:
+        r = _run(cmd + [out], timeout=30)
+        if r.returncode:
+            raise ValueError(f"could not normalize chunk: {r.stderr[-300:]}")
+        repaired_duration = _probe_duration(out)
+        if repaired_duration is None or repaired_duration > MAX_CHUNK_S:
+            raise ValueError("chunk duration is invalid after timestamp repair")
+        return out, repaired_duration
+    except Exception:
+        Path(out).unlink(missing_ok=True)
+        raise
 
 
 def _synthetic_clip(path: str, seconds: int = 30, speech: bool = False) -> None:
@@ -297,6 +356,8 @@ class Session:
         self.max_inflight = max(1, WORKERS)
         self.finish_requested = False
         self.final_done = threading.Event()
+        self.finish_done = threading.Event()
+        self.finish_result = None
         self.n_windows = 0
         self.last_infer_s = None
         self.last_window_s = None
@@ -306,8 +367,10 @@ class Session:
 
     # ---- ingest -------------------------------------------------------------
     def add_chunk(self, index: int, path: str, client_duration: float) -> float:
-        dur = _probe_duration(path) or client_duration or 3.0
+        path, dur = _prepare_chunk(path)
         with self.lock:
+            if self.finish_requested:
+                raise ValueError("session is already finishing; start a new session")
             self.by_index[index] = {"index": index, "path": path, "duration": float(dur)}
             self._rebuild_timeline()
             self.pending = True
@@ -361,13 +424,19 @@ class Session:
         with open(list_path, "w") as f:
             for c in sel:
                 f.write(f"file '{c['path']}'\n")
+                f.write(f"duration {c['duration']:.6f}\n")
         r = _run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", list_path, "-c", "copy", "-movflags", "+faststart", out])
-        ok = r.returncode == 0 and (_probe_duration(out) or 0) > 0.5
+        duration = _probe_duration(out)
+        ok = r.returncode == 0 and duration is not None and abs(duration - total) < 1.0
         if not ok:
             r = _run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", list_path, "-c:v", "libx264", "-preset", "ultrafast",
-                      "-crf", "24", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", "48000", "-movflags", "+faststart", out])
+                      "-crf", "24", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", "48000", "-t", str(total),
+                      "-movflags", "+faststart", out])
             if r.returncode != 0:
                 raise RuntimeError(f"ffmpeg concat failed: {r.stderr[-800:]}")
+            duration = _probe_duration(out)
+            if duration is None or abs(duration - total) >= 1.0:
+                raise RuntimeError("inference window duration does not match its source clips")
         return out, sel[0]["t_start"], total, sel
 
     def _run_window(self, chunks: list[dict], n: int, final: bool):
@@ -387,6 +456,8 @@ class Session:
             new = 0
             with self.lock:
                 for i in range(keep):
+                    if not math.isfinite(rel_starts[i]) or not 0 <= rel_starts[i] < total:
+                        continue
                     sec = int(round(t_start + rel_starts[i]))
                     if sec in self.preds:
                         continue
@@ -436,6 +507,7 @@ class Session:
                 "windows": self.n_windows,
                 "last_error": self.last_error,
                 "finished": self.finish_requested,
+                "finish_state": "done" if self.finish_done.is_set() else "finishing" if self.finish_requested else "recording",
             }
 
     def preds_since(self, since: int) -> dict:
@@ -560,26 +632,49 @@ class TribeService:
                 self.sessions[sid] = s
             return s
 
-    def finish(self, sid: str) -> dict:
+    def finish(self, sid: str, wait: bool = True) -> dict:
         s = self.session(sid, create=False)
         if s is None:
             return {"error": "unknown session"}
         with s.lock:
-            s.finish_requested = True
-        t0 = time.time()
-        while s.inflight > 0 and time.time() - t0 < 120:   # let dispatched windows land
-            time.sleep(0.5)
-        if s.chunks:                                        # one last window with no trailing drop
+            start = not s.finish_requested
+            if start:
+                s.finish_requested = True
+                s.pending = False
+        if start:
+            threading.Thread(target=self._finish_session, args=(s,), daemon=True, name=f"finish-{sid}").start()
+        if wait:
+            s.finish_done.wait()
+        if s.finish_done.is_set():
+            return s.finish_result
+        return {"sid": sid, "state": "finishing", "status": s.status()}
+
+    def _finish_session(self, s: Session) -> None:
+        """Run once per session, independent of HTTP connections; cache the completed summary."""
+        try:
+            # Let all dispatched windows land before the final pass and summary.
+            while True:
+                with s.lock:
+                    busy = s.inflight > 0
+                if not busy:
+                    break
+                time.sleep(0.5)
             with s.lock:
                 chunks = [c.copy() for c in s.chunks]
-                n = s.n_windows
-                s.n_windows += 1
-                s.inflight += 1
-            s._run_window(chunks, n, True)
-        secs, arr = s.all_preds()
-        summary = self.summarize(secs, arr)
-        summary.update({"sid": sid, "status": s.status(), "timings": s.timings[-12:]})
-        return summary
+                if chunks:
+                    n = s.n_windows
+                    s.n_windows += 1
+                    s.inflight += 1
+            if chunks:
+                s._run_window(chunks, n, True)
+            secs, arr = s.all_preds()
+            summary = self.summarize(secs, arr)
+            summary.update({"sid": s.sid, "status": {**s.status(), "finish_state": "done"}, "timings": s.timings[-12:]})
+            s.finish_result = summary
+        except Exception as e:
+            s.finish_result = {"error": f"{type(e).__name__}: {e}", "sid": s.sid}
+        finally:
+            s.finish_done.set()
 
     def predict_bytes(self, data: bytes, filename: str) -> dict:
         import numpy as np
@@ -636,11 +731,16 @@ class TribeService:
         async def chunk(sid: str, file: UploadFile = File(...), index: int = Form(...), duration: float = Form(0.0)):
             data = await file.read()
             s = svc.session(sid)
+            if s.finish_requested:
+                raise HTTPException(409, "session is already finishing; start a new session")
             ext = Path(file.filename or "").suffix.lower() or ".mp4"
             path = f"{s.dir}/chunk_{index:05d}{ext}"
             with open(path, "wb") as f:
                 f.write(data)
-            received = await asyncio.to_thread(s.add_chunk, index, path, duration)
+            try:
+                received = await asyncio.to_thread(s.add_chunk, index, path, duration)
+            except ValueError as e:
+                raise HTTPException(422, str(e)) from e
             return {"ok": True, "index": index, "bytes": len(data), "seconds_received": round(received, 2)}
 
         @api.get("/session/{sid}/preds")
@@ -672,8 +772,9 @@ class TribeService:
             return FileResponse(path, media_type=media_type, headers={"Cache-Control": "no-store"})
 
         @api.post("/session/{sid}/finish")
-        async def finish(sid: str):
-            return await asyncio.to_thread(svc.finish, sid)
+        async def finish(sid: str, wait: bool = True):
+            result = await asyncio.to_thread(svc.finish, sid, wait=wait)
+            return JSONResponse(result, status_code=202 if result.get("state") == "finishing" else 200)
 
         @api.post("/predict")
         async def predict(file: UploadFile = File(...)):

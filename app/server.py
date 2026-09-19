@@ -57,6 +57,8 @@ _jobs: Dict[str, Dict[str, Any]] = {}
 _jobs_lock = threading.Lock()
 
 _SID_ALPHABET = "abcdefghjkmnpqrstuvwxyz23456789"
+SUMMARY_WAIT_S = 600
+SUMMARY_POLL_S = 2
 
 
 def _new_sid() -> str:
@@ -83,11 +85,28 @@ def _fetch_summary(sid: str, log) -> Dict[str, Any]:
         raise RuntimeError("MODAL_BASE_URL is not set in .env and no summary was supplied in the request")
     url = f"{base}/session/{sid}/finish"
     log(f"Fetching session summary from Modal ({url})")
-    with httpx.Client(timeout=120.0) as client:
-        resp = client.post(url)  # CONTRACTS.md: POST /session/{sid}/finish
-        if resp.status_code == 405:
-            log("Modal answered 405 to POST; retrying as GET")
-            resp = client.get(url)
+    deadline = time.monotonic() + SUMMARY_WAIT_S
+    next_progress = 0.0
+    with httpx.Client(timeout=15.0) as client:
+        while True:
+            if time.monotonic() >= deadline:
+                raise RuntimeError("Modal is still finishing after 10 minutes; retry Finish to retrieve its result")
+            try:
+                # Idempotent: retries/polls join the same final inference, including after a dropped connection.
+                resp = client.post(url, params={"wait": "false"})
+            except httpx.TransportError as e:
+                log(f"Summary connection interrupted ({type(e).__name__}); reconnecting")
+                time.sleep(SUMMARY_POLL_S)
+                continue
+            if resp.status_code != 202:
+                break
+            now = time.monotonic()
+            if now >= next_progress:
+                status = resp.json().get("status", {})
+                log(f"Finishing brain predictions: {status.get('seconds_predicted', '?')} s ready, "
+                    f"{status.get('inflight', '?')} inference window(s) running")
+                next_progress = now + 15
+            time.sleep(SUMMARY_POLL_S)
         if resp.status_code >= 400:
             raise RuntimeError(f"Modal /session/{sid}/finish returned HTTP {resp.status_code}: {resp.text[:200]}")
         data = resp.json()

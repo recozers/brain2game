@@ -2,7 +2,7 @@
 // See CONTRACTS.md "Viewer".  Query params: ?mock=1 (no network, synthetic data), ?modal=<base url>, ?sid=<id>.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { loadHiresAssets, createHiresBrain } from './brain.js';
+import { loadHiresAssets, createHiresBrain, focusActivation } from './brain.js';
 import { createVideoPreview } from './video-preview.js';
 
 const qs = new URLSearchParams(location.search);
@@ -213,9 +213,9 @@ function createBrain(assets) {
   controls.enablePan = false;
   controls.autoRotate = true; controls.autoRotateSpeed = 0.55;   // slow, until the user drags
   controls.minDistance = radius * 0.6; controls.maxDistance = radius * 6;
-  let idleTimer = null;
-  controls.addEventListener('start', () => { controls.autoRotate = false; clearTimeout(idleTimer); });
-  controls.addEventListener('end', () => { clearTimeout(idleTimer); idleTimer = setTimeout(() => { controls.autoRotate = true; }, 45000); });
+  let idleTimer = null, interacting = false;
+  controls.addEventListener('start', () => { interacting = true; controls.autoRotate = false; clearTimeout(idleTimer); });
+  controls.addEventListener('end', () => { interacting = false; clearTimeout(idleTimer); idleTimer = setTimeout(() => { controls.autoRotate = true; }, 45000); });
 
   function resize(initial) {
     const w = Math.max(1, stage.clientWidth), h = Math.max(1, stage.clientHeight);
@@ -251,7 +251,17 @@ function createBrain(assets) {
     },
   };
   const target = new Float32Array(N * 3), targetGlow = new Float32Array(N);
-  function showVector(vec) { if (ADAPTIVE) adaptThresholds(vec); activationColors(vec, base, target, targetGlow); fade.setTarget(target, targetGlow); }
+  let focusedActivation = false;
+  function showVector(vec) {
+    if (ADAPTIVE) adaptThresholds(vec);
+    activationColors(vec, base, target, targetGlow);
+    fade.setTarget(target, targetGlow);
+    if (!focusedActivation && !interacting) {
+      focusedActivation = focusActivation(vec, THRESH_LO, { camera, controls, mesh },
+        (i, out) => out.fromArray(assets.positions, i * 3));
+      if (focusedActivation) clearTimeout(idleTimer);
+    }
+  }
 
   let last = performance.now();
   function frame(now) {

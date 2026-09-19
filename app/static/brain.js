@@ -41,6 +41,51 @@ export async function loadHiresAssets(assetBase) {
 const SURFACES = { pial: [0, 0], white: [1, 0], inflated: [0, 1] };
 const easeInOut = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
 
+// Focus one local hotspot, not the midpoint between unrelated activity in both hemispheres.
+// The inflated surface supplies a stable viewing direction instead of a sulcus's inward normal.
+export function focusActivation(vec, threshold, { camera, controls, mesh }, positionAt, guideAt = positionAt) {
+  let peak = -1, strongest = threshold;
+  for (let i = 0; i < vec.length; i++) {
+    if (Number.isFinite(vec[i]) && vec[i] > strongest) { peak = i; strongest = vec[i]; }
+  }
+  if (peak < 0) return false;
+
+  const hemi = vec.length / 2, start = peak < hemi ? 0 : hemi;
+  const peakPoint = guideAt(peak, new THREE.Vector3());
+  const point = new THREE.Vector3(), centre = new THREE.Vector3();
+  const target = new THREE.Vector3(), guideTarget = new THREE.Vector3();
+  let weight = 0;
+  for (let i = start; i < start + hemi; i++) {
+    guideAt(i, point);
+    centre.add(point);
+    if (!(vec[i] > Math.max(threshold, strongest * 0.65)) || point.distanceToSquared(peakPoint) > 35 * 35) continue;
+    const w = (vec[i] - threshold) ** 2;
+    guideTarget.addScaledVector(point, w);
+    target.addScaledVector(positionAt(i, point), w);
+    weight += w;
+  }
+  if (!weight) return false;
+  centre.divideScalar(hemi);
+  target.divideScalar(weight);
+  const direction = guideTarget.divideScalar(weight).sub(centre);
+  if (direction.lengthSq() < 1e-6) return false;
+  mesh.updateWorldMatrix(true, false);
+  mesh.localToWorld(target);
+  direction.transformDirection(mesh.matrixWorld);
+  const distance = camera.position.distanceTo(controls.target);
+
+  // Clear residual orbit damping before changing the pose, then hold this view until user input.
+  controls.autoRotate = false;
+  const damping = controls.enableDamping;
+  controls.enableDamping = false;
+  controls.update();
+  controls.target.copy(target);
+  camera.position.copy(target).addScaledVector(direction, distance);
+  controls.update();
+  controls.enableDamping = damping;
+  return true;
+}
+
 export function createHiresBrain(assets, opts = {}) {
   const stage = opts.stage || document.getElementById('stage');
   const FADE_S = opts.fadeS ?? 1.0;
@@ -140,9 +185,9 @@ totalEmissiveRadiance += hotEmissive;`);
   controls.enablePan = false;
   controls.autoRotate = true; controls.autoRotateSpeed = 0.5;
   controls.minDistance = radius * 0.5; controls.maxDistance = radius * 6;
-  let idleTimer = null;
-  controls.addEventListener('start', () => { controls.autoRotate = false; clearTimeout(idleTimer); });
-  controls.addEventListener('end', () => { clearTimeout(idleTimer); idleTimer = setTimeout(() => { controls.autoRotate = true; }, 45000); });
+  let idleTimer = null, interacting = false;
+  controls.addEventListener('start', () => { interacting = true; controls.autoRotate = false; clearTimeout(idleTimer); });
+  controls.addEventListener('end', () => { interacting = false; clearTimeout(idleTimer); idleTimer = setTimeout(() => { controls.autoRotate = true; }, 45000); });
 
   function resize(initial) {
     const w_ = Math.max(1, stage.clientWidth), h_ = Math.max(1, stage.clientHeight);
@@ -164,6 +209,18 @@ totalEmissiveRadiance += hotEmissive;`);
   let showing = 0;
   const mixAnim = { from: 0, to: 0, t: 1 };
   const thr = { fromLo: 0.25, fromHi: 1.0, toLo: 0.25, toHi: 1.0 };
+  let focusedActivation = false;
+  const coarseHemi = meta.coarse_hemi_offset || 10242;
+  const fineHemi = meta.hemi_offset;
+  const coarseOffset = (i) => 3 * (i < coarseHemi ? i : fineHemi + i - coarseHemi);
+  function displayedPosition(i, out) {
+    const p = coarseOffset(i), [w, f] = mesh.morphTargetInfluences;
+    return out.set(
+      pial[p] * (1 - w - f) + white[p] * w + inflated[p] * f,
+      pial[p + 1] * (1 - w - f) + white[p + 1] * w + inflated[p + 1] * f,
+      pial[p + 2] * (1 - w - f) + white[p + 2] * w + inflated[p + 2] * f,
+    );
+  }
   function showVector(vec) {
     const [lo, hi] = thresholdFn(vec);
     const other = 1 - showing, out = act[other];
@@ -176,6 +233,11 @@ totalEmissiveRadiance += hotEmissive;`);
     mixAnim.from = uniforms.uMix.value; mixAnim.to = other; mixAnim.t = 0;
     thr.fromLo = uniforms.uLo.value; thr.fromHi = uniforms.uHi.value; thr.toLo = lo; thr.toHi = hi;
     showing = other;
+    if (!focusedActivation && !interacting) {
+      focusedActivation = focusActivation(vec, lo, { camera, controls, mesh }, displayedPosition,
+        (i, out) => out.fromArray(inflated, coarseOffset(i)));
+      if (focusedActivation) clearTimeout(idleTimer);
+    }
   }
 
   // ---- surface morph ----------------------------------------------------------------------------
