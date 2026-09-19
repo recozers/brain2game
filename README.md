@@ -30,7 +30,10 @@ Modal: `modal token` already set up; volume `brain-twin-cache` holds the weights
 
 ```
 # 1. backend (once; keeps WORKERS H100s + one small API container warm until `modal app stop brain-twin`)
-WORKERS=3 GPU=H200 modal deploy modal_app/tribe_service.py   # deploy-time knobs: WORKERS, GPU (H100|H200), WINDOW_S, TEXT_ON
+WORKERS=3 GPU=H100 WINDOW_S=20 modal deploy modal_app/tribe_service.py   # knobs: WORKERS, GPU, WINDOW_S, TEXT_ON
+#   measured 2026-09-19: H200 = same speed as H100 (video stage is compute-bound); 12 s windows cut lag ~5 s but
+#   agree with a 20 s run at r=0.77 vs a 0.87 noise floor, so 20 s is the accuracy choice.
+#   If GPU workers stay pending after a redeploy, `modal app stop brain-twin` first: old workers hold the slots.
 
 # 2. laptop app
 uvicorn app.server:app --port 8001        # then open http://localhost:8001  (8000 is taken by an old http.server on this laptop)
@@ -63,7 +66,7 @@ against when deciding which system is under-driven.
 
 ## Demo-day runbook
 
-1. Backend warm? `curl -s $MODAL_BASE_URL/` shows the version and worker count; `curl -s $MODAL_BASE_URL/workers` returns one worker's warm-up stats. If the app was stopped: `WORKERS=3 GPU=H200 modal deploy modal_app/tribe_service.py` and wait ~3 min for the workers to warm up.
+1. Backend warm? `curl -s $MODAL_BASE_URL/` shows the version and worker count; `curl -s $MODAL_BASE_URL/workers` returns one worker's warm-up stats. If the app was stopped: `WORKERS=3 GPU=H100 WINDOW_S=20 modal deploy modal_app/tribe_service.py` and wait ~3 min for the workers to warm up.
 2. `uvicorn app.server:app --port 8001` from the repo root, open http://localhost:8001 on the laptop (a fresh `sid` is generated; the QR encodes it).
 3. Phone: scan the QR, allow camera + mic, press **Start streaming**, keep the app in the foreground. Point it at faces, motion and speech; the brain lags ~15-20 s.
 4. **Finish** → the agent log streams into the page (~45 s with `GEMINI_MODEL_CODE=gemini-3.8-flash`; ~3 min with the pro model) → the game takes over the screen, brain in the corner. **Back to brain** returns.
