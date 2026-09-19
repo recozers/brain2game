@@ -1,6 +1,6 @@
 {
  "filename": "mcp_video-1349.MOV",
- "infer_s": 19.85,
+ "infer_s": 16.66,
  "rate_hz": 1,
  "n_vertices": 20484,
  "seconds": [
@@ -43,35 +43,35 @@
    "top": [
     {
      "name": "L_VMV2",
-     "z": 0.316
+     "z": 0.303
     },
     {
      "name": "R_VMV2",
-     "z": 0.298
+     "z": 0.288
     },
     {
      "name": "R_VMV3",
-     "z": 0.267
+     "z": 0.261
     },
     {
      "name": "L_VMV3",
-     "z": 0.258
+     "z": 0.252
     },
     {
      "name": "R_V8",
-     "z": 0.194
-    },
-    {
-     "name": "L_V4",
-     "z": 0.191
+     "z": 0.207
     },
     {
      "name": "L_V8",
-     "z": 0.191
+     "z": 0.202
     },
     {
-     "name": "R_PHA3",
-     "z": 0.184
+     "name": "L_V4",
+     "z": 0.199
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.192
     }
    ]
   },
@@ -80,35 +80,35 @@
    "top": [
     {
      "name": "L_VMV2",
-     "z": 0.329
+     "z": 0.343
     },
     {
      "name": "R_VMV2",
-     "z": 0.318
+     "z": 0.336
     },
     {
      "name": "R_VMV3",
-     "z": 0.291
+     "z": 0.311
     },
     {
      "name": "L_VMV3",
-     "z": 0.27
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.214
+     "z": 0.288
     },
     {
      "name": "R_V8",
-     "z": 0.21
-    },
-    {
-     "name": "L_V4",
-     "z": 0.203
+     "z": 0.256
     },
     {
      "name": "L_V8",
-     "z": 0.202
+     "z": 0.242
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.24
+    },
+    {
+     "name": "L_V4",
+     "z": 0.231
     }
    ]
   },
@@ -116,36 +116,36 @@
    "second": 2,
    "top": [
     {
-     "name": "L_VMV2",
-     "z": 0.361
+     "name": "R_VMV2",
+     "z": 0.387
     },
     {
-     "name": "R_VMV2",
-     "z": 0.354
+     "name": "L_VMV2",
+     "z": 0.383
     },
     {
      "name": "R_VMV3",
-     "z": 0.326
-    },
-    {
-     "name": "L_VMV3",
-     "z": 0.295
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.253
+     "z": 0.346
     },
     {
      "name": "R_V8",
-     "z": 0.225
+     "z": 0.311
     },
     {
-     "name": "L_V4",
-     "z": 0.219
+     "name": "L_VMV3",
+     "z": 0.301
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.293
     },
     {
      "name": "R_V3B",
-     "z": 0.213
+     "z": 0.275
+    },
+    {
+     "name": "R_DVT",
+     "z": 0.274
     }
    ]
   },
@@ -154,35 +154,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.427
+     "z": 0.447
     },
     {
      "name": "L_VMV2",
-     "z": 0.423
+     "z": 0.446
     },
     {
      "name": "R_VMV3",
-     "z": 0.398
+     "z": 0.41
     },
     {
      "name": "L_VMV3",
-     "z": 0.35
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.333
-    },
-    {
-     "name": "R_V3B",
-     "z": 0.278
-    },
-    {
-     "name": "L_V4",
-     "z": 0.276
+     "z": 0.36
     },
     {
      "name": "R_V8",
-     "z": 0.276
+     "z": 0.343
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.329
+    },
+    {
+     "name": "L_V8",
+     "z": 0.308
+    },
+    {
+     "name": "L_V4",
+     "z": 0.302
     }
    ]
   },
@@ -191,35 +191,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.521
+     "z": 0.551
     },
     {
      "name": "L_VMV2",
-     "z": 0.5
+     "z": 0.531
     },
     {
      "name": "R_VMV3",
-     "z": 0.491
+     "z": 0.517
     },
     {
      "name": "L_V3B",
-     "z": 0.443
+     "z": 0.481
     },
     {
      "name": "L_VMV3",
-     "z": 0.417
-    },
-    {
-     "name": "R_V3B",
-     "z": 0.385
+     "z": 0.443
     },
     {
      "name": "R_V8",
-     "z": 0.383
+     "z": 0.442
     },
     {
-     "name": "L_V4",
-     "z": 0.361
+     "name": "R_V3B",
+     "z": 0.442
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.419
     }
    ]
   },
@@ -228,35 +228,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.585
+     "z": 0.615
     },
     {
      "name": "L_VMV2",
-     "z": 0.562
+     "z": 0.589
     },
     {
      "name": "R_VMV3",
-     "z": 0.549
+     "z": 0.575
     },
     {
      "name": "L_V3B",
-     "z": 0.521
+     "z": 0.55
     },
     {
      "name": "R_V3B",
-     "z": 0.476
+     "z": 0.517
     },
     {
-     "name": "L_VMV3",
-     "z": 0.466
+     "name": "R_V8",
+     "z": 0.495
     },
     {
      "name": "L_V4t",
-     "z": 0.461
+     "z": 0.494
     },
     {
-     "name": "R_V7",
-     "z": 0.453
+     "name": "L_VMV3",
+     "z": 0.487
     }
    ]
   },
@@ -265,35 +265,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.644
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.615
+     "z": 0.669
     },
     {
      "name": "L_VMV2",
-     "z": 0.614
+     "z": 0.638
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.634
     },
     {
      "name": "R_VMV3",
-     "z": 0.606
+     "z": 0.631
     },
     {
      "name": "R_V3B",
-     "z": 0.561
-    },
-    {
-     "name": "R_V7",
-     "z": 0.547
+     "z": 0.586
     },
     {
      "name": "L_V4t",
-     "z": 0.547
+     "z": 0.567
+    },
+    {
+     "name": "R_V7",
+     "z": 0.565
     },
     {
      "name": "L_V7",
-     "z": 0.535
+     "z": 0.54
     }
    ]
   },
@@ -302,35 +302,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.702
+     "z": 0.733
     },
     {
      "name": "L_V3B",
-     "z": 0.684
+     "z": 0.714
     },
     {
      "name": "L_VMV2",
-     "z": 0.668
+     "z": 0.701
     },
     {
      "name": "R_VMV3",
-     "z": 0.652
+     "z": 0.678
     },
     {
      "name": "R_V3B",
-     "z": 0.62
+     "z": 0.665
     },
     {
      "name": "R_V7",
-     "z": 0.615
-    },
-    {
-     "name": "L_V7",
-     "z": 0.607
+     "z": 0.65
     },
     {
      "name": "L_V4t",
-     "z": 0.59
+     "z": 0.63
+    },
+    {
+     "name": "L_V7",
+     "z": 0.628
     }
    ]
   },
@@ -338,36 +338,36 @@
    "second": 8,
    "top": [
     {
-     "name": "L_V3B",
-     "z": 0.745
+     "name": "R_VMV2",
+     "z": 0.76
     },
     {
-     "name": "R_VMV2",
-     "z": 0.739
+     "name": "L_V3B",
+     "z": 0.76
     },
     {
      "name": "R_V7",
-     "z": 0.729
+     "z": 0.747
     },
     {
      "name": "L_V4t",
-     "z": 0.723
-    },
-    {
-     "name": "L_V7",
-     "z": 0.718
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.704
+     "z": 0.742
     },
     {
      "name": "R_V3B",
-     "z": 0.703
+     "z": 0.735
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.728
+    },
+    {
+     "name": "L_V7",
+     "z": 0.716
     },
     {
      "name": "R_VMV3",
-     "z": 0.693
+     "z": 0.712
     }
    ]
   },
@@ -376,35 +376,35 @@
    "top": [
     {
      "name": "R_V7",
-     "z": 0.79
+     "z": 0.813
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.807
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.803
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.797
     },
     {
      "name": "L_V7",
      "z": 0.79
     },
     {
-     "name": "L_V3B",
-     "z": 0.789
-    },
-    {
-     "name": "R_VMV2",
-     "z": 0.775
-    },
-    {
-     "name": "L_V4t",
-     "z": 0.769
-    },
-    {
      "name": "R_V3B",
-     "z": 0.753
+     "z": 0.785
     },
     {
      "name": "L_VMV2",
-     "z": 0.737
+     "z": 0.764
     },
     {
      "name": "R_VMV3",
-     "z": 0.731
+     "z": 0.761
     }
    ]
   },
@@ -413,35 +413,35 @@
    "top": [
     {
      "name": "R_V7",
-     "z": 0.809
-    },
-    {
-     "name": "L_V7",
-     "z": 0.805
+     "z": 0.868
     },
     {
      "name": "L_V4t",
-     "z": 0.797
+     "z": 0.862
+    },
+    {
+     "name": "L_V7",
+     "z": 0.838
     },
     {
      "name": "L_V3B",
-     "z": 0.774
-    },
-    {
-     "name": "R_VMV2",
-     "z": 0.763
+     "z": 0.818
     },
     {
      "name": "R_V3B",
-     "z": 0.753
+     "z": 0.815
     },
     {
-     "name": "L_VMV2",
-     "z": 0.727
+     "name": "R_VMV2",
+     "z": 0.812
     },
     {
      "name": "R_VMV3",
-     "z": 0.721
+     "z": 0.775
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.774
     }
    ]
   },
@@ -450,35 +450,35 @@
    "top": [
     {
      "name": "R_V7",
-     "z": 0.786
-    },
-    {
-     "name": "L_V7",
-     "z": 0.779
+     "z": 0.874
     },
     {
      "name": "L_V4t",
-     "z": 0.757
+     "z": 0.855
     },
     {
-     "name": "R_VMV2",
-     "z": 0.753
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.745
+     "name": "L_V7",
+     "z": 0.85
     },
     {
      "name": "R_V3B",
-     "z": 0.739
+     "z": 0.822
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.816
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.813
     },
     {
      "name": "L_VMV2",
-     "z": 0.72
+     "z": 0.781
     },
     {
      "name": "R_VMV3",
-     "z": 0.705
+     "z": 0.766
     }
    ]
   },
@@ -487,35 +487,35 @@
    "top": [
     {
      "name": "R_V7",
-     "z": 0.754
-    },
-    {
-     "name": "R_VMV2",
-     "z": 0.737
+     "z": 0.868
     },
     {
      "name": "L_V7",
-     "z": 0.735
+     "z": 0.829
     },
     {
      "name": "R_V3B",
-     "z": 0.716
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.703
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.7
+     "z": 0.828
     },
     {
      "name": "L_V4t",
-     "z": 0.695
+     "z": 0.824
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.822
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.786
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.785
     },
     {
      "name": "R_V6A",
-     "z": 0.679
+     "z": 0.778
     }
    ]
   },
@@ -524,35 +524,35 @@
    "top": [
     {
      "name": "R_V7",
-     "z": 0.737
-    },
-    {
-     "name": "R_VMV2",
-     "z": 0.715
-    },
-    {
-     "name": "L_V7",
-     "z": 0.707
+     "z": 0.846
     },
     {
      "name": "R_V3B",
-     "z": 0.697
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.68
-    },
-    {
-     "name": "R_V6A",
-     "z": 0.669
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.665
+     "z": 0.808
     },
     {
      "name": "L_V4t",
-     "z": 0.661
+     "z": 0.803
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.799
+    },
+    {
+     "name": "L_V7",
+     "z": 0.792
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.783
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.778
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.769
     }
    ]
   },
@@ -560,36 +560,36 @@
    "second": 14,
    "top": [
     {
-     "name": "R_VMV2",
-     "z": 0.606
-    },
-    {
-     "name": "R_V3B",
-     "z": 0.597
-    },
-    {
-     "name": "R_V7",
-     "z": 0.594
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.592
-    },
-    {
-     "name": "R_V6A",
-     "z": 0.566
-    },
-    {
      "name": "R_LO3",
-     "z": 0.553
+     "z": 0.715
+    },
+    {
+     "name": "R_MT",
+     "z": 0.712
     },
     {
      "name": "L_V4t",
-     "z": 0.552
+     "z": 0.71
     },
     {
-     "name": "R_IP0",
-     "z": 0.552
+     "name": "R_TPOJ3",
+     "z": 0.703
+    },
+    {
+     "name": "R_V7",
+     "z": 0.702
+    },
+    {
+     "name": "R_PCV",
+     "z": 0.699
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.697
+    },
+    {
+     "name": "L_TPOJ3",
+     "z": 0.696
     }
    ]
   },
@@ -597,36 +597,36 @@
    "second": 15,
    "top": [
     {
-     "name": "R_V3B",
-     "z": 0.535
-    },
-    {
-     "name": "R_LO3",
-     "z": 0.527
+     "name": "R_MT",
+     "z": 0.74
     },
     {
      "name": "L_V4t",
-     "z": 0.525
+     "z": 0.712
     },
     {
-     "name": "R_V7",
-     "z": 0.522
+     "name": "R_LO3",
+     "z": 0.704
     },
     {
-     "name": "L_VMV2",
-     "z": 0.51
+     "name": "R_TPOJ3",
+     "z": 0.696
     },
     {
-     "name": "R_V6A",
-     "z": 0.508
-    },
-    {
-     "name": "R_VMV2",
-     "z": 0.507
+     "name": "R_PCV",
+     "z": 0.691
     },
     {
      "name": "L_TPOJ3",
-     "z": 0.504
+     "z": 0.691
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.668
+    },
+    {
+     "name": "R_V7",
+     "z": 0.655
     }
    ]
   },
@@ -634,36 +634,36 @@
    "second": 16,
    "top": [
     {
-     "name": "R_V3B",
-     "z": 0.455
-    },
-    {
-     "name": "L_V4t",
-     "z": 0.453
-    },
-    {
-     "name": "R_LO3",
-     "z": 0.449
-    },
-    {
      "name": "R_MT",
-     "z": 0.437
+     "z": 0.627
+    },
+    {
+     "name": "R_PCV",
+     "z": 0.618
+    },
+    {
+     "name": "R_TPOJ3",
+     "z": 0.605
     },
     {
      "name": "L_TPOJ3",
-     "z": 0.426
+     "z": 0.602
     },
     {
-     "name": "L_V3CD",
-     "z": 0.426
+     "name": "R_LO3",
+     "z": 0.577
     },
     {
-     "name": "L_VMV2",
-     "z": 0.426
+     "name": "L_V4t",
+     "z": 0.571
     },
     {
-     "name": "R_V6A",
-     "z": 0.424
+     "name": "R_STV",
+     "z": 0.561
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.528
     }
    ]
   },
@@ -671,36 +671,36 @@
    "second": 17,
    "top": [
     {
-     "name": "L_V4t",
-     "z": 0.411
-    },
-    {
-     "name": "R_V3B",
-     "z": 0.407
-    },
-    {
      "name": "R_MT",
-     "z": 0.402
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.396
-    },
-    {
-     "name": "R_LO3",
-     "z": 0.391
+     "z": 0.599
     },
     {
      "name": "R_PCV",
-     "z": 0.386
+     "z": 0.575
     },
     {
-     "name": "R_V7",
-     "z": 0.386
+     "name": "L_V4t",
+     "z": 0.568
     },
     {
-     "name": "R_V6A",
-     "z": 0.385
+     "name": "L_TPOJ3",
+     "z": 0.557
+    },
+    {
+     "name": "R_TPOJ3",
+     "z": 0.551
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.547
+    },
+    {
+     "name": "R_MST",
+     "z": 0.517
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.515
     }
    ]
   },
@@ -708,36 +708,36 @@
    "second": 18,
    "top": [
     {
-     "name": "L_VMV2",
-     "z": 0.417
-    },
-    {
-     "name": "R_VMV2",
-     "z": 0.417
-    },
-    {
-     "name": "R_V3B",
-     "z": 0.404
-    },
-    {
-     "name": "L_V4t",
-     "z": 0.398
-    },
-    {
-     "name": "R_V7",
-     "z": 0.388
-    },
-    {
-     "name": "R_V6A",
-     "z": 0.379
-    },
-    {
-     "name": "R_LO3",
-     "z": 0.372
+     "name": "R_PCV",
+     "z": 0.592
     },
     {
      "name": "R_MT",
-     "z": 0.371
+     "z": 0.587
+    },
+    {
+     "name": "R_TPOJ3",
+     "z": 0.559
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.556
+    },
+    {
+     "name": "L_TPOJ3",
+     "z": 0.536
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.526
+    },
+    {
+     "name": "R_MST",
+     "z": 0.525
+    },
+    {
+     "name": "R_STV",
+     "z": 0.511
     }
    ]
   },
@@ -745,36 +745,36 @@
    "second": 19,
    "top": [
     {
-     "name": "R_VMV2",
-     "z": 0.442
+     "name": "R_PCV",
+     "z": 0.591
     },
     {
-     "name": "L_VMV2",
-     "z": 0.434
+     "name": "L_V4t",
+     "z": 0.553
+    },
+    {
+     "name": "R_MT",
+     "z": 0.549
+    },
+    {
+     "name": "R_TPOJ3",
+     "z": 0.541
+    },
+    {
+     "name": "R_STV",
+     "z": 0.539
+    },
+    {
+     "name": "R_MST",
+     "z": 0.537
     },
     {
      "name": "R_V7",
-     "z": 0.418
+     "z": 0.533
     },
     {
      "name": "R_V3B",
-     "z": 0.417
-    },
-    {
-     "name": "R_V6A",
-     "z": 0.408
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.406
-    },
-    {
-     "name": "L_V7",
-     "z": 0.402
-    },
-    {
-     "name": "R_VMV3",
-     "z": 0.399
+     "z": 0.524
     }
    ]
   },
@@ -782,36 +782,36 @@
    "second": 20,
    "top": [
     {
-     "name": "R_VMV2",
-     "z": 0.469
+     "name": "R_PCV",
+     "z": 0.591
     },
     {
      "name": "L_VMV2",
-     "z": 0.454
+     "z": 0.524
     },
     {
-     "name": "L_V3B",
-     "z": 0.427
-    },
-    {
-     "name": "R_VMV3",
-     "z": 0.425
+     "name": "R_VMV2",
+     "z": 0.524
     },
     {
      "name": "R_V7",
-     "z": 0.402
+     "z": 0.519
     },
     {
      "name": "R_V6A",
-     "z": 0.399
+     "z": 0.514
+    },
+    {
+     "name": "R_STV",
+     "z": 0.511
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.51
     },
     {
      "name": "R_V3B",
-     "z": 0.397
-    },
-    {
-     "name": "L_V7",
-     "z": 0.391
+     "z": 0.507
     }
    ]
   },
@@ -820,35 +820,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.506
+     "z": 0.533
     },
     {
      "name": "L_VMV2",
-     "z": 0.484
+     "z": 0.529
     },
     {
-     "name": "R_VMV3",
-     "z": 0.462
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.461
-    },
-    {
-     "name": "L_VMV3",
-     "z": 0.406
-    },
-    {
-     "name": "R_V3B",
-     "z": 0.406
-    },
-    {
-     "name": "L_V7",
-     "z": 0.402
+     "name": "R_PCV",
+     "z": 0.515
     },
     {
      "name": "R_V7",
-     "z": 0.402
+     "z": 0.513
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.511
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.498
+    },
+    {
+     "name": "L_V7",
+     "z": 0.493
+    },
+    {
+     "name": "L_V6A",
+     "z": 0.485
     }
    ]
   },
@@ -857,35 +857,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.501
+     "z": 0.53
     },
     {
      "name": "L_VMV2",
-     "z": 0.476
-    },
-    {
-     "name": "R_VMV3",
-     "z": 0.455
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.449
-    },
-    {
-     "name": "L_VMV3",
-     "z": 0.4
-    },
-    {
-     "name": "R_V3CD",
-     "z": 0.399
+     "z": 0.527
     },
     {
      "name": "R_V3B",
-     "z": 0.39
+     "z": 0.503
     },
     {
-     "name": "L_V3CD",
-     "z": 0.384
+     "name": "L_PGp",
+     "z": 0.492
+    },
+    {
+     "name": "L_V6A",
+     "z": 0.471
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.47
+    },
+    {
+     "name": "R_V7",
+     "z": 0.467
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.465
     }
    ]
   },
@@ -894,35 +894,35 @@
    "top": [
     {
      "name": "R_VMV2",
-     "z": 0.475
+     "z": 0.462
     },
     {
      "name": "L_VMV2",
-     "z": 0.451
-    },
-    {
-     "name": "R_VMV3",
-     "z": 0.437
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.42
-    },
-    {
-     "name": "L_VMV3",
-     "z": 0.384
-    },
-    {
-     "name": "R_V3CD",
-     "z": 0.376
+     "z": 0.458
     },
     {
      "name": "R_V3B",
-     "z": 0.368
+     "z": 0.446
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.434
     },
     {
      "name": "R_V6A",
-     "z": 0.357
+     "z": 0.431
+    },
+    {
+     "name": "L_V6A",
+     "z": 0.426
+    },
+    {
+     "name": "R_V7",
+     "z": 0.417
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.414
     }
    ]
   },
@@ -930,36 +930,36 @@
    "second": 24,
    "top": [
     {
-     "name": "R_VMV2",
-     "z": 0.426
-    },
-    {
      "name": "L_VMV2",
      "z": 0.412
     },
     {
-     "name": "R_VMV3",
-     "z": 0.395
-    },
-    {
-     "name": "L_V3B",
-     "z": 0.381
-    },
-    {
-     "name": "L_VMV3",
-     "z": 0.353
-    },
-    {
-     "name": "R_V3CD",
-     "z": 0.353
-    },
-    {
      "name": "R_V3B",
-     "z": 0.348
+     "z": 0.41
     },
     {
-     "name": "R_V7",
-     "z": 0.339
+     "name": "R_VMV2",
+     "z": 0.407
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.403
+    },
+    {
+     "name": "R_IP0",
+     "z": 0.387
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.382
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.377
+    },
+    {
+     "name": "L_IPS1",
+     "z": 0.376
     }
    ]
   },
@@ -967,36 +967,36 @@
    "second": 25,
    "top": [
     {
-     "name": "R_VMV2",
-     "z": 0.369
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.367
-    },
-    {
-     "name": "R_VMV3",
-     "z": 0.33
-    },
-    {
-     "name": "R_V3CD",
-     "z": 0.329
+     "name": "L_PGp",
+     "z": 0.341
     },
     {
      "name": "L_V3CD",
-     "z": 0.32
+     "z": 0.336
     },
     {
-     "name": "L_VMV3",
-     "z": 0.314
-    },
-    {
-     "name": "R_PHA3",
-     "z": 0.305
+     "name": "R_PGp",
+     "z": 0.335
     },
     {
      "name": "R_IP0",
-     "z": 0.305
+     "z": 0.329
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.329
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.321
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.313
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.306
     }
    ]
   },
@@ -1004,36 +1004,36 @@
    "second": 26,
    "top": [
     {
-     "name": "L_VMV2",
-     "z": 0.317
+     "name": "R_PGp",
+     "z": 0.307
     },
     {
-     "name": "R_VMV2",
-     "z": 0.306
+     "name": "L_TPOJ3",
+     "z": 0.302
     },
     {
-     "name": "L_V3CD",
-     "z": 0.299
-    },
-    {
-     "name": "R_V3CD",
-     "z": 0.292
-    },
-    {
-     "name": "R_PHA3",
-     "z": 0.281
+     "name": "L_PGp",
+     "z": 0.298
     },
     {
      "name": "R_IP0",
-     "z": 0.273
+     "z": 0.29
     },
     {
-     "name": "L_VMV3",
-     "z": 0.273
+     "name": "L_V3CD",
+     "z": 0.286
     },
     {
-     "name": "R_VMV3",
-     "z": 0.262
+     "name": "R_TPOJ3",
+     "z": 0.282
+    },
+    {
+     "name": "R_V4t",
+     "z": 0.28
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.278
     }
    ]
   },
@@ -1041,36 +1041,36 @@
    "second": 27,
    "top": [
     {
-     "name": "R_V4t",
-     "z": 0.297
+     "name": "R_MT",
+     "z": 0.342
     },
     {
-     "name": "L_V3CD",
-     "z": 0.292
+     "name": "R_V4t",
+     "z": 0.339
     },
     {
      "name": "R_LO3",
-     "z": 0.283
+     "z": 0.305
+    },
+    {
+     "name": "R_TPOJ3",
+     "z": 0.302
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.299
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.294
+    },
+    {
+     "name": "L_TPOJ3",
+     "z": 0.292
     },
     {
      "name": "L_V4t",
-     "z": 0.277
-    },
-    {
-     "name": "L_VMV2",
-     "z": 0.272
-    },
-    {
-     "name": "R_MT",
-     "z": 0.268
-    },
-    {
-     "name": "R_V3CD",
-     "z": 0.265
-    },
-    {
-     "name": "R_IP0",
-     "z": 0.258
+     "z": 0.286
     }
    ]
   },
@@ -1079,35 +1079,35 @@
    "top": [
     {
      "name": "R_V4t",
-     "z": 0.317
+     "z": 0.309
     },
     {
      "name": "R_MT",
      "z": 0.301
     },
     {
-     "name": "L_V4t",
-     "z": 0.285
+     "name": "L_V3CD",
+     "z": 0.255
     },
     {
      "name": "R_LO3",
-     "z": 0.284
+     "z": 0.254
     },
     {
-     "name": "L_V3CD",
-     "z": 0.263
+     "name": "L_V4t",
+     "z": 0.249
     },
     {
-     "name": "L_LO1",
-     "z": 0.245
+     "name": "R_PGp",
+     "z": 0.247
     },
     {
-     "name": "R_MST",
+     "name": "R_PIT",
+     "z": 0.238
+    },
+    {
+     "name": "R_TPOJ3",
      "z": 0.235
-    },
-    {
-     "name": "R_LO2",
-     "z": 0.23
     }
    ]
   },
@@ -1116,35 +1116,35 @@
    "top": [
     {
      "name": "R_V4t",
-     "z": 0.265
+     "z": 0.264
     },
     {
      "name": "R_MT",
-     "z": 0.214
-    },
-    {
-     "name": "L_V3CD",
-     "z": 0.212
-    },
-    {
-     "name": "R_LO3",
-     "z": 0.199
-    },
-    {
-     "name": "L_LO1",
-     "z": 0.191
-    },
-    {
-     "name": "L_V4t",
-     "z": 0.189
+     "z": 0.22
     },
     {
      "name": "R_PGp",
-     "z": 0.186
+     "z": 0.205
     },
     {
-     "name": "L_LO2",
-     "z": 0.182
+     "name": "L_V3CD",
+     "z": 0.202
+    },
+    {
+     "name": "R_PIT",
+     "z": 0.2
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.176
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.175
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.175
     }
    ]
   },
@@ -1152,36 +1152,36 @@
    "second": 30,
    "top": [
     {
+     "name": "R_PGs",
+     "z": 0.133
+    },
+    {
+     "name": "R_5L",
+     "z": 0.129
+    },
+    {
+     "name": "R_5m",
+     "z": 0.128
+    },
+    {
      "name": "R_V4t",
+     "z": 0.121
+    },
+    {
+     "name": "R_PGi",
      "z": 0.118
     },
     {
      "name": "R_PGp",
-     "z": 0.095
+     "z": 0.115
     },
     {
-     "name": "R_5L",
-     "z": 0.092
+     "name": "L_8BL",
+     "z": 0.112
     },
     {
      "name": "R_7AL",
-     "z": 0.088
-    },
-    {
-     "name": "L_PGp",
-     "z": 0.084
-    },
-    {
-     "name": "R_PH",
-     "z": 0.083
-    },
-    {
-     "name": "R_5m",
-     "z": 0.079
-    },
-    {
-     "name": "R_7Am",
-     "z": 0.076
+     "z": 0.112
     }
    ]
   },
@@ -1189,36 +1189,36 @@
    "second": 31,
    "top": [
     {
-     "name": "R_LBelt",
-     "z": 0.176
-    },
-    {
-     "name": "L_A1",
-     "z": 0.165
-    },
-    {
-     "name": "R_A1",
-     "z": 0.153
-    },
-    {
      "name": "L_SCEF",
-     "z": 0.142
+     "z": 0.191
+    },
+    {
+     "name": "R_IP1",
+     "z": 0.185
+    },
+    {
+     "name": "R_SCEF",
+     "z": 0.179
+    },
+    {
+     "name": "L_3b",
+     "z": 0.178
+    },
+    {
+     "name": "R_PGs",
+     "z": 0.172
+    },
+    {
+     "name": "L_3a",
+     "z": 0.168
     },
     {
      "name": "R_PFop",
-     "z": 0.142
+     "z": 0.166
     },
     {
-     "name": "L_LBelt",
-     "z": 0.137
-    },
-    {
-     "name": "L_OP1",
-     "z": 0.132
-    },
-    {
-     "name": "R_43",
-     "z": 0.131
+     "name": "L_a24pr",
+     "z": 0.163
     }
    ]
   }
@@ -1227,513 +1227,513 @@
   {
    "second": 0,
    "z": {
-    "early_visual": 0.033,
-    "motion": 0.05,
+    "early_visual": 0.047,
+    "motion": 0.059,
     "faces": 0.108,
     "places": 0.086,
-    "objects": 0.025,
-    "attention": -0.007,
-    "auditory": -0.067,
-    "somatomotor": 0.012,
-    "frontal_control": 0.007,
-    "language": -0.06,
+    "objects": 0.027,
+    "attention": 0.0,
+    "auditory": -0.012,
+    "somatomotor": 0.033,
+    "frontal_control": 0.014,
+    "language": -0.052,
     "default_mode": 0.006
    }
   },
   {
    "second": 1,
    "z": {
-    "early_visual": 0.059,
-    "motion": 0.076,
-    "faces": 0.099,
-    "places": 0.094,
-    "objects": 0.022,
-    "attention": -0.014,
-    "auditory": -0.017,
-    "somatomotor": 0.014,
-    "frontal_control": 0.002,
-    "language": -0.04,
-    "default_mode": 0.002
+    "early_visual": 0.078,
+    "motion": 0.107,
+    "faces": 0.123,
+    "places": 0.11,
+    "objects": 0.037,
+    "attention": -0.003,
+    "auditory": 0.049,
+    "somatomotor": 0.031,
+    "frontal_control": 0.012,
+    "language": -0.016,
+    "default_mode": 0.018
    }
   },
   {
    "second": 2,
    "z": {
-    "early_visual": 0.07,
-    "motion": 0.103,
-    "faces": 0.094,
-    "places": 0.103,
-    "objects": 0.024,
-    "attention": -0.005,
-    "auditory": 0.05,
-    "somatomotor": 0.018,
-    "frontal_control": -0.001,
-    "language": -0.029,
-    "default_mode": -0.007
+    "early_visual": 0.142,
+    "motion": 0.143,
+    "faces": 0.104,
+    "places": 0.13,
+    "objects": 0.028,
+    "attention": 0.021,
+    "auditory": 0.158,
+    "somatomotor": 0.058,
+    "frontal_control": 0.023,
+    "language": 0.016,
+    "default_mode": 0.032
    }
   },
   {
    "second": 3,
    "z": {
-    "early_visual": 0.094,
-    "motion": 0.159,
-    "faces": 0.103,
-    "places": 0.117,
-    "objects": 0.043,
-    "attention": 0.009,
-    "auditory": 0.068,
-    "somatomotor": 0.024,
-    "frontal_control": -0.0,
-    "language": -0.038,
-    "default_mode": -0.017
+    "early_visual": 0.111,
+    "motion": 0.167,
+    "faces": 0.125,
+    "places": 0.135,
+    "objects": 0.048,
+    "attention": 0.005,
+    "auditory": 0.14,
+    "somatomotor": 0.037,
+    "frontal_control": 0.016,
+    "language": -0.006,
+    "default_mode": 0.01
    }
   },
   {
    "second": 4,
    "z": {
-    "early_visual": 0.175,
-    "motion": 0.259,
-    "faces": 0.145,
-    "places": 0.165,
-    "objects": 0.082,
-    "attention": 0.034,
-    "auditory": 0.038,
-    "somatomotor": 0.044,
-    "frontal_control": 0.004,
-    "language": -0.055,
-    "default_mode": 0.0
+    "early_visual": 0.202,
+    "motion": 0.304,
+    "faces": 0.177,
+    "places": 0.179,
+    "objects": 0.11,
+    "attention": 0.056,
+    "auditory": 0.05,
+    "somatomotor": 0.058,
+    "frontal_control": 0.024,
+    "language": -0.041,
+    "default_mode": 0.023
    }
   },
   {
    "second": 5,
    "z": {
-    "early_visual": 0.213,
-    "motion": 0.334,
-    "faces": 0.174,
-    "places": 0.194,
-    "objects": 0.118,
-    "attention": 0.072,
-    "auditory": -0.001,
-    "somatomotor": 0.055,
-    "frontal_control": 0.02,
-    "language": -0.07,
-    "default_mode": 0.02
+    "early_visual": 0.237,
+    "motion": 0.361,
+    "faces": 0.19,
+    "places": 0.206,
+    "objects": 0.128,
+    "attention": 0.082,
+    "auditory": 0.008,
+    "somatomotor": 0.068,
+    "frontal_control": 0.037,
+    "language": -0.054,
+    "default_mode": 0.04
    }
   },
   {
    "second": 6,
    "z": {
-    "early_visual": 0.27,
-    "motion": 0.409,
-    "faces": 0.202,
-    "places": 0.23,
-    "objects": 0.153,
-    "attention": 0.113,
-    "auditory": -0.057,
-    "somatomotor": 0.074,
-    "frontal_control": 0.029,
-    "language": -0.107,
-    "default_mode": 0.035
+    "early_visual": 0.281,
+    "motion": 0.424,
+    "faces": 0.209,
+    "places": 0.235,
+    "objects": 0.159,
+    "attention": 0.122,
+    "auditory": -0.065,
+    "somatomotor": 0.081,
+    "frontal_control": 0.041,
+    "language": -0.105,
+    "default_mode": 0.045
    }
   },
   {
    "second": 7,
    "z": {
-    "early_visual": 0.305,
-    "motion": 0.452,
-    "faces": 0.221,
-    "places": 0.261,
-    "objects": 0.179,
-    "attention": 0.147,
-    "auditory": -0.087,
-    "somatomotor": 0.083,
-    "frontal_control": 0.042,
-    "language": -0.123,
-    "default_mode": 0.05
+    "early_visual": 0.332,
+    "motion": 0.485,
+    "faces": 0.241,
+    "places": 0.274,
+    "objects": 0.199,
+    "attention": 0.165,
+    "auditory": -0.091,
+    "somatomotor": 0.097,
+    "frontal_control": 0.061,
+    "language": -0.106,
+    "default_mode": 0.072
    }
   },
   {
    "second": 8,
    "z": {
-    "early_visual": 0.332,
-    "motion": 0.541,
-    "faces": 0.27,
-    "places": 0.28,
-    "objects": 0.238,
-    "attention": 0.19,
-    "auditory": -0.084,
-    "somatomotor": 0.081,
-    "frontal_control": 0.051,
-    "language": -0.132,
-    "default_mode": 0.064
+    "early_visual": 0.345,
+    "motion": 0.557,
+    "faces": 0.279,
+    "places": 0.286,
+    "objects": 0.247,
+    "attention": 0.198,
+    "auditory": -0.089,
+    "somatomotor": 0.09,
+    "frontal_control": 0.066,
+    "language": -0.117,
+    "default_mode": 0.082
    }
   },
   {
    "second": 9,
    "z": {
-    "early_visual": 0.344,
-    "motion": 0.58,
-    "faces": 0.303,
-    "places": 0.294,
-    "objects": 0.278,
-    "attention": 0.213,
-    "auditory": -0.077,
-    "somatomotor": 0.073,
-    "frontal_control": 0.046,
-    "language": -0.132,
-    "default_mode": 0.061
+    "early_visual": 0.351,
+    "motion": 0.597,
+    "faces": 0.314,
+    "places": 0.3,
+    "objects": 0.288,
+    "attention": 0.219,
+    "auditory": -0.075,
+    "somatomotor": 0.079,
+    "frontal_control": 0.056,
+    "language": -0.126,
+    "default_mode": 0.071
    }
   },
   {
    "second": 10,
    "z": {
-    "early_visual": 0.333,
-    "motion": 0.594,
-    "faces": 0.311,
-    "places": 0.294,
-    "objects": 0.292,
-    "attention": 0.219,
-    "auditory": -0.016,
-    "somatomotor": 0.061,
-    "frontal_control": 0.049,
-    "language": -0.11,
-    "default_mode": 0.061
+    "early_visual": 0.357,
+    "motion": 0.638,
+    "faces": 0.34,
+    "places": 0.311,
+    "objects": 0.319,
+    "attention": 0.234,
+    "auditory": 0.012,
+    "somatomotor": 0.069,
+    "frontal_control": 0.063,
+    "language": -0.096,
+    "default_mode": 0.078
    }
   },
   {
    "second": 11,
    "z": {
-    "early_visual": 0.311,
-    "motion": 0.566,
-    "faces": 0.316,
-    "places": 0.288,
-    "objects": 0.304,
-    "attention": 0.228,
-    "auditory": 0.051,
-    "somatomotor": 0.053,
-    "frontal_control": 0.051,
-    "language": -0.088,
-    "default_mode": 0.057
+    "early_visual": 0.354,
+    "motion": 0.635,
+    "faces": 0.357,
+    "places": 0.313,
+    "objects": 0.347,
+    "attention": 0.264,
+    "auditory": 0.099,
+    "somatomotor": 0.072,
+    "frontal_control": 0.077,
+    "language": -0.058,
+    "default_mode": 0.084
    }
   },
   {
    "second": 12,
    "z": {
-    "early_visual": 0.282,
-    "motion": 0.535,
-    "faces": 0.33,
-    "places": 0.288,
-    "objects": 0.312,
-    "attention": 0.225,
-    "auditory": 0.036,
-    "somatomotor": 0.039,
-    "frontal_control": 0.05,
-    "language": -0.07,
-    "default_mode": 0.064
+    "early_visual": 0.347,
+    "motion": 0.625,
+    "faces": 0.384,
+    "places": 0.328,
+    "objects": 0.367,
+    "attention": 0.276,
+    "auditory": 0.118,
+    "somatomotor": 0.066,
+    "frontal_control": 0.096,
+    "language": -0.012,
+    "default_mode": 0.113
    }
   },
   {
    "second": 13,
    "z": {
-    "early_visual": 0.262,
-    "motion": 0.513,
-    "faces": 0.326,
-    "places": 0.283,
-    "objects": 0.307,
-    "attention": 0.221,
-    "auditory": 0.058,
-    "somatomotor": 0.04,
-    "frontal_control": 0.051,
-    "language": -0.049,
-    "default_mode": 0.069
+    "early_visual": 0.334,
+    "motion": 0.61,
+    "faces": 0.394,
+    "places": 0.323,
+    "objects": 0.371,
+    "attention": 0.269,
+    "auditory": 0.193,
+    "somatomotor": 0.064,
+    "frontal_control": 0.097,
+    "language": 0.038,
+    "default_mode": 0.12
    }
   },
   {
    "second": 14,
    "z": {
-    "early_visual": 0.234,
-    "motion": 0.43,
-    "faces": 0.302,
-    "places": 0.243,
-    "objects": 0.267,
-    "attention": 0.181,
-    "auditory": 0.054,
-    "somatomotor": 0.039,
-    "frontal_control": 0.06,
-    "language": -0.021,
-    "default_mode": 0.09
+    "early_visual": 0.291,
+    "motion": 0.532,
+    "faces": 0.368,
+    "places": 0.264,
+    "objects": 0.331,
+    "attention": 0.215,
+    "auditory": 0.187,
+    "somatomotor": 0.052,
+    "frontal_control": 0.096,
+    "language": 0.085,
+    "default_mode": 0.134
    }
   },
   {
    "second": 15,
    "z": {
-    "early_visual": 0.208,
-    "motion": 0.394,
-    "faces": 0.281,
-    "places": 0.201,
-    "objects": 0.254,
-    "attention": 0.179,
-    "auditory": 0.037,
-    "somatomotor": 0.049,
-    "frontal_control": 0.069,
-    "language": -0.007,
-    "default_mode": 0.092
+    "early_visual": 0.28,
+    "motion": 0.517,
+    "faces": 0.354,
+    "places": 0.227,
+    "objects": 0.33,
+    "attention": 0.225,
+    "auditory": 0.19,
+    "somatomotor": 0.066,
+    "frontal_control": 0.121,
+    "language": 0.111,
+    "default_mode": 0.146
    }
   },
   {
    "second": 16,
    "z": {
-    "early_visual": 0.187,
-    "motion": 0.331,
-    "faces": 0.238,
-    "places": 0.156,
-    "objects": 0.212,
-    "attention": 0.159,
-    "auditory": 0.011,
-    "somatomotor": 0.055,
-    "frontal_control": 0.078,
-    "language": -0.011,
-    "default_mode": 0.096
+    "early_visual": 0.232,
+    "motion": 0.404,
+    "faces": 0.289,
+    "places": 0.176,
+    "objects": 0.266,
+    "attention": 0.184,
+    "auditory": 0.179,
+    "somatomotor": 0.057,
+    "frontal_control": 0.122,
+    "language": 0.124,
+    "default_mode": 0.144
    }
   },
   {
    "second": 17,
    "z": {
-    "early_visual": 0.192,
-    "motion": 0.311,
-    "faces": 0.202,
-    "places": 0.148,
-    "objects": 0.181,
-    "attention": 0.138,
-    "auditory": 0.002,
-    "somatomotor": 0.065,
-    "frontal_control": 0.078,
-    "language": -0.017,
-    "default_mode": 0.081
+    "early_visual": 0.253,
+    "motion": 0.414,
+    "faces": 0.276,
+    "places": 0.177,
+    "objects": 0.256,
+    "attention": 0.186,
+    "auditory": 0.158,
+    "somatomotor": 0.072,
+    "frontal_control": 0.136,
+    "language": 0.106,
+    "default_mode": 0.147
    }
   },
   {
    "second": 18,
    "z": {
-    "early_visual": 0.196,
-    "motion": 0.307,
-    "faces": 0.203,
-    "places": 0.166,
-    "objects": 0.178,
-    "attention": 0.136,
-    "auditory": 0.058,
-    "somatomotor": 0.072,
-    "frontal_control": 0.069,
-    "language": -0.0,
-    "default_mode": 0.073
+    "early_visual": 0.264,
+    "motion": 0.416,
+    "faces": 0.274,
+    "places": 0.199,
+    "objects": 0.243,
+    "attention": 0.173,
+    "auditory": 0.212,
+    "somatomotor": 0.077,
+    "frontal_control": 0.13,
+    "language": 0.123,
+    "default_mode": 0.144
    }
   },
   {
    "second": 19,
    "z": {
-    "early_visual": 0.211,
-    "motion": 0.311,
-    "faces": 0.204,
-    "places": 0.185,
-    "objects": 0.171,
-    "attention": 0.141,
-    "auditory": 0.063,
-    "somatomotor": 0.082,
-    "frontal_control": 0.072,
-    "language": -0.024,
-    "default_mode": 0.07
+    "early_visual": 0.275,
+    "motion": 0.425,
+    "faces": 0.282,
+    "places": 0.207,
+    "objects": 0.24,
+    "attention": 0.175,
+    "auditory": 0.269,
+    "somatomotor": 0.084,
+    "frontal_control": 0.139,
+    "language": 0.135,
+    "default_mode": 0.149
    }
   },
   {
    "second": 20,
    "z": {
-    "early_visual": 0.196,
-    "motion": 0.27,
-    "faces": 0.177,
-    "places": 0.199,
-    "objects": 0.149,
-    "attention": 0.14,
-    "auditory": 0.055,
-    "somatomotor": 0.083,
-    "frontal_control": 0.066,
-    "language": -0.047,
-    "default_mode": 0.047
+    "early_visual": 0.255,
+    "motion": 0.392,
+    "faces": 0.256,
+    "places": 0.223,
+    "objects": 0.22,
+    "attention": 0.175,
+    "auditory": 0.242,
+    "somatomotor": 0.08,
+    "frontal_control": 0.131,
+    "language": 0.112,
+    "default_mode": 0.129
    }
   },
   {
    "second": 21,
    "z": {
-    "early_visual": 0.171,
-    "motion": 0.234,
-    "faces": 0.154,
-    "places": 0.199,
-    "objects": 0.138,
-    "attention": 0.143,
-    "auditory": 0.02,
-    "somatomotor": 0.067,
-    "frontal_control": 0.052,
-    "language": -0.051,
-    "default_mode": 0.025
+    "early_visual": 0.232,
+    "motion": 0.357,
+    "faces": 0.237,
+    "places": 0.211,
+    "objects": 0.214,
+    "attention": 0.18,
+    "auditory": 0.188,
+    "somatomotor": 0.074,
+    "frontal_control": 0.123,
+    "language": 0.117,
+    "default_mode": 0.111
    }
   },
   {
    "second": 22,
    "z": {
-    "early_visual": 0.135,
-    "motion": 0.182,
-    "faces": 0.127,
-    "places": 0.193,
-    "objects": 0.117,
-    "attention": 0.14,
-    "auditory": -0.026,
-    "somatomotor": 0.056,
-    "frontal_control": 0.05,
-    "language": -0.076,
-    "default_mode": 0.015
+    "early_visual": 0.208,
+    "motion": 0.301,
+    "faces": 0.223,
+    "places": 0.201,
+    "objects": 0.212,
+    "attention": 0.191,
+    "auditory": 0.141,
+    "somatomotor": 0.07,
+    "frontal_control": 0.125,
+    "language": 0.101,
+    "default_mode": 0.094
    }
   },
   {
    "second": 23,
    "z": {
-    "early_visual": 0.111,
-    "motion": 0.167,
-    "faces": 0.125,
-    "places": 0.187,
-    "objects": 0.112,
-    "attention": 0.123,
-    "auditory": -0.061,
-    "somatomotor": 0.046,
-    "frontal_control": 0.032,
-    "language": -0.092,
-    "default_mode": 0.008
+    "early_visual": 0.162,
+    "motion": 0.253,
+    "faces": 0.216,
+    "places": 0.175,
+    "objects": 0.202,
+    "attention": 0.163,
+    "auditory": 0.091,
+    "somatomotor": 0.055,
+    "frontal_control": 0.09,
+    "language": 0.097,
+    "default_mode": 0.071
    }
   },
   {
    "second": 24,
    "z": {
-    "early_visual": 0.093,
-    "motion": 0.162,
-    "faces": 0.128,
-    "places": 0.17,
-    "objects": 0.117,
-    "attention": 0.125,
-    "auditory": -0.059,
-    "somatomotor": 0.044,
-    "frontal_control": 0.032,
-    "language": -0.084,
-    "default_mode": 0.011
+    "early_visual": 0.137,
+    "motion": 0.221,
+    "faces": 0.209,
+    "places": 0.153,
+    "objects": 0.193,
+    "attention": 0.158,
+    "auditory": 0.074,
+    "somatomotor": 0.058,
+    "frontal_control": 0.094,
+    "language": 0.107,
+    "default_mode": 0.073
    }
   },
   {
    "second": 25,
    "z": {
-    "early_visual": 0.056,
-    "motion": 0.121,
-    "faces": 0.133,
-    "places": 0.14,
-    "objects": 0.108,
-    "attention": 0.097,
-    "auditory": -0.033,
-    "somatomotor": 0.02,
-    "frontal_control": 0.01,
-    "language": -0.07,
-    "default_mode": 0.004
+    "early_visual": 0.082,
+    "motion": 0.168,
+    "faces": 0.209,
+    "places": 0.112,
+    "objects": 0.174,
+    "attention": 0.111,
+    "auditory": 0.094,
+    "somatomotor": 0.031,
+    "frontal_control": 0.075,
+    "language": 0.11,
+    "default_mode": 0.075
    }
   },
   {
    "second": 26,
    "z": {
-    "early_visual": 0.035,
-    "motion": 0.133,
-    "faces": 0.167,
-    "places": 0.117,
-    "objects": 0.116,
-    "attention": 0.055,
-    "auditory": -0.049,
-    "somatomotor": 0.006,
-    "frontal_control": -0.015,
-    "language": -0.07,
-    "default_mode": 0.002
+    "early_visual": 0.059,
+    "motion": 0.153,
+    "faces": 0.209,
+    "places": 0.101,
+    "objects": 0.154,
+    "attention": 0.079,
+    "auditory": 0.021,
+    "somatomotor": 0.025,
+    "frontal_control": 0.057,
+    "language": 0.063,
+    "default_mode": 0.074
    }
   },
   {
    "second": 27,
    "z": {
-    "early_visual": 0.035,
-    "motion": 0.161,
-    "faces": 0.18,
-    "places": 0.092,
-    "objects": 0.128,
-    "attention": 0.057,
-    "auditory": -0.039,
-    "somatomotor": 0.009,
-    "frontal_control": -0.007,
-    "language": -0.059,
-    "default_mode": 0.011
+    "early_visual": 0.072,
+    "motion": 0.18,
+    "faces": 0.217,
+    "places": 0.088,
+    "objects": 0.163,
+    "attention": 0.088,
+    "auditory": 0.023,
+    "somatomotor": 0.037,
+    "frontal_control": 0.072,
+    "language": 0.071,
+    "default_mode": 0.088
    }
   },
   {
    "second": 28,
    "z": {
-    "early_visual": 0.035,
-    "motion": 0.157,
-    "faces": 0.159,
-    "places": 0.068,
-    "objects": 0.116,
-    "attention": 0.064,
-    "auditory": -0.025,
-    "somatomotor": 0.025,
-    "frontal_control": 0.003,
-    "language": -0.061,
-    "default_mode": 0.021
+    "early_visual": 0.069,
+    "motion": 0.149,
+    "faces": 0.169,
+    "places": 0.072,
+    "objects": 0.125,
+    "attention": 0.092,
+    "auditory": 0.001,
+    "somatomotor": 0.065,
+    "frontal_control": 0.074,
+    "language": 0.028,
+    "default_mode": 0.087
    }
   },
   {
    "second": 29,
    "z": {
-    "early_visual": 0.007,
-    "motion": 0.093,
-    "faces": 0.118,
-    "places": 0.039,
-    "objects": 0.082,
-    "attention": 0.057,
-    "auditory": 0.0,
-    "somatomotor": 0.036,
-    "frontal_control": 0.004,
-    "language": -0.058,
-    "default_mode": 0.015
+    "early_visual": 0.038,
+    "motion": 0.094,
+    "faces": 0.124,
+    "places": 0.051,
+    "objects": 0.088,
+    "attention": 0.09,
+    "auditory": -0.005,
+    "somatomotor": 0.084,
+    "frontal_control": 0.071,
+    "language": -0.0,
+    "default_mode": 0.082
    }
   },
   {
    "second": 30,
    "z": {
-    "early_visual": -0.063,
-    "motion": -0.039,
-    "faces": 0.004,
-    "places": -0.025,
-    "objects": 0.009,
-    "attention": 0.038,
-    "auditory": -0.026,
-    "somatomotor": 0.039,
-    "frontal_control": -0.008,
-    "language": -0.041,
-    "default_mode": -0.006
+    "early_visual": -0.039,
+    "motion": -0.04,
+    "faces": 0.014,
+    "places": -0.014,
+    "objects": 0.016,
+    "attention": 0.07,
+    "auditory": -0.019,
+    "somatomotor": 0.086,
+    "frontal_control": 0.067,
+    "language": 0.024,
+    "default_mode": 0.068
    }
   },
   {
    "second": 31,
    "z": {
-    "early_visual": -0.058,
-    "motion": -0.122,
-    "faces": -0.129,
-    "places": -0.067,
-    "objects": -0.064,
-    "attention": 0.05,
-    "auditory": 0.086,
-    "somatomotor": 0.084,
-    "frontal_control": 0.018,
-    "language": 0.002,
-    "default_mode": 0.023
+    "early_visual": -0.038,
+    "motion": -0.114,
+    "faces": -0.097,
+    "places": -0.044,
+    "objects": -0.048,
+    "attention": 0.08,
+    "auditory": 0.061,
+    "somatomotor": 0.138,
+    "frontal_control": 0.087,
+    "language": 0.046,
+    "default_mode": 0.089
    }
   }
  ],
@@ -1744,2611 +1744,2611 @@
    {
     "id": "motion",
     "label": "Visual motion (MT+/V5)",
-    "mean": 0.2743,
-    "peak": 0.5942,
-    "frac_active": 0.4688,
+    "mean": 0.3292,
+    "peak": 0.6382,
+    "frac_active": 0.5938,
     "rank": 1
    },
    {
     "id": "faces",
     "label": "Face processing (fusiform / FFA)",
-    "mean": 0.1804,
-    "peak": 0.3304,
-    "frac_active": 0.1875,
+    "mean": 0.2242,
+    "peak": 0.3941,
+    "frac_active": 0.2188,
     "rank": 2
-   },
-   {
-    "id": "places",
-    "label": "Scenes and navigation (PPA / RSC)",
-    "mean": 0.1683,
-    "peak": 0.294,
-    "frac_active": 0.0,
-    "rank": 3
    },
    {
     "id": "early_visual",
     "label": "Early visual cortex (V1/V2)",
-    "mean": 0.1583,
-    "peak": 0.3443,
-    "frac_active": 0.1562,
-    "rank": 4
+    "mean": 0.1985,
+    "peak": 0.3574,
+    "frac_active": 0.2188,
+    "rank": 3
    },
    {
     "id": "objects",
     "label": "Object recognition (lateral occipital / IT)",
-    "mean": 0.1489,
-    "peak": 0.3124,
-    "frac_active": 0.0938,
+    "mean": 0.1892,
+    "peak": 0.3706,
+    "frac_active": 0.1875,
+    "rank": 4
+   },
+   {
+    "id": "places",
+    "label": "Scenes and navigation (PPA / RSC)",
+    "mean": 0.1811,
+    "peak": 0.3283,
+    "frac_active": 0.125,
     "rank": 5
    },
    {
     "id": "attention",
     "label": "Spatial attention (intraparietal / SPL)",
-    "mean": 0.1146,
-    "peak": 0.2282,
+    "mean": 0.1421,
+    "peak": 0.2763,
     "frac_active": 0.0,
     "rank": 6
    },
    {
-    "id": "somatomotor",
-    "label": "Sensorimotor cortex",
-    "mean": 0.0483,
-    "peak": 0.0835,
+    "id": "default_mode",
+    "label": "Default mode network",
+    "mean": 0.0844,
+    "peak": 0.1492,
     "frac_active": 0.0,
     "rank": 7
    },
    {
-    "id": "default_mode",
-    "label": "Default mode network",
-    "mean": 0.0358,
-    "peak": 0.0955,
+    "id": "auditory",
+    "label": "Auditory cortex (Heschl's / STG)",
+    "mean": 0.0813,
+    "peak": 0.269,
     "frac_active": 0.0,
     "rank": 8
    },
    {
     "id": "frontal_control",
     "label": "Executive control (dorsolateral prefrontal)",
-    "mean": 0.0332,
-    "peak": 0.0781,
+    "mean": 0.0779,
+    "peak": 0.1394,
     "frac_active": 0.0,
     "rank": 9
    },
    {
-    "id": "auditory",
-    "label": "Auditory cortex (Heschl's / STG)",
-    "mean": -0.0011,
-    "peak": 0.0855,
+    "id": "somatomotor",
+    "label": "Sensorimotor cortex",
+    "mean": 0.0661,
+    "peak": 0.1378,
     "frac_active": 0.0,
     "rank": 10
    },
    {
     "id": "language",
     "label": "Language network (IFG / STS)",
-    "mean": -0.0591,
-    "peak": 0.0018,
+    "mean": 0.0257,
+    "peak": 0.1349,
     "frac_active": 0.0,
     "rank": 11
    }
   ],
   "regions": [
    {
-    "name": "R_VMV2",
+    "name": "L_VMV2",
     "system": "places",
-    "mean": 0.4434,
-    "peak": 0.7747,
+    "mean": 0.465,
+    "peak": 0.7862,
     "frac_active": 0.8125
    },
    {
-    "name": "L_VMV2",
+    "name": "R_VMV2",
     "system": "places",
-    "mean": 0.4367,
-    "peak": 0.7365,
-    "frac_active": 0.8438
+    "mean": 0.4646,
+    "peak": 0.8219,
+    "frac_active": 0.7812
    },
    {
     "name": "R_V3B",
     "system": "motion",
-    "mean": 0.4007,
-    "peak": 0.753,
-    "frac_active": 0.6562
+    "mean": 0.4595,
+    "peak": 0.828,
+    "frac_active": 0.7188
    },
    {
     "name": "R_V7",
     "system": null,
-    "mean": 0.3952,
-    "peak": 0.8092,
+    "mean": 0.4463,
+    "peak": 0.8743,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "L_V4t",
+    "system": "motion",
+    "mean": 0.4353,
+    "peak": 0.8619,
+    "frac_active": 0.5938
+   },
+   {
+    "name": "R_V6A",
+    "system": null,
+    "mean": 0.4185,
+    "peak": 0.7781,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "R_LO3",
+    "system": "objects",
+    "mean": 0.4122,
+    "peak": 0.7828,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "L_V7",
+    "system": null,
+    "mean": 0.4119,
+    "peak": 0.8505,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "R_PCV",
+    "system": "default_mode",
+    "mean": 0.4105,
+    "peak": 0.71,
     "frac_active": 0.6562
    },
    {
     "name": "L_V3B",
     "system": "motion",
-    "mean": 0.3928,
-    "peak": 0.7892,
+    "mean": 0.4089,
+    "peak": 0.8183,
     "frac_active": 0.6875
    },
    {
     "name": "R_VMV3",
     "system": "places",
-    "mean": 0.3918,
-    "peak": 0.7308,
+    "mean": 0.4041,
+    "peak": 0.7745,
     "frac_active": 0.75
    },
    {
-    "name": "L_V7",
+    "name": "L_V6A",
     "system": null,
-    "mean": 0.3766,
-    "peak": 0.8047,
+    "mean": 0.4031,
+    "peak": 0.7571,
     "frac_active": 0.6562
    },
    {
     "name": "L_V3CD",
     "system": null,
-    "mean": 0.3701,
-    "peak": 0.6706,
+    "mean": 0.3996,
+    "peak": 0.723,
     "frac_active": 0.6875
    },
    {
-    "name": "R_V6A",
-    "system": null,
-    "mean": 0.3698,
-    "peak": 0.6894,
-    "frac_active": 0.625
-   },
-   {
-    "name": "L_VMV3",
-    "system": "places",
-    "mean": 0.3607,
-    "peak": 0.6457,
-    "frac_active": 0.6875
-   },
-   {
-    "name": "R_V3CD",
-    "system": null,
-    "mean": 0.3606,
-    "peak": 0.6564,
-    "frac_active": 0.6875
-   },
-   {
-    "name": "L_V4t",
+    "name": "R_MT",
     "system": "motion",
-    "mean": 0.3604,
-    "peak": 0.7967,
-    "frac_active": 0.5312
-   },
-   {
-    "name": "L_V6A",
-    "system": null,
-    "mean": 0.3568,
-    "peak": 0.688,
+    "mean": 0.397,
+    "peak": 0.7399,
     "frac_active": 0.625
-   },
-   {
-    "name": "R_IP0",
-    "system": null,
-    "mean": 0.3466,
-    "peak": 0.624,
-    "frac_active": 0.6562
-   },
-   {
-    "name": "L_V4",
-    "system": "early_visual",
-    "mean": 0.3343,
-    "peak": 0.6402,
-    "frac_active": 0.5625
-   },
-   {
-    "name": "R_LO3",
-    "system": "objects",
-    "mean": 0.334,
-    "peak": 0.6815,
-    "frac_active": 0.4688
    },
    {
     "name": "R_PGp",
     "system": null,
-    "mean": 0.3267,
-    "peak": 0.5909,
-    "frac_active": 0.5625
+    "mean": 0.3947,
+    "peak": 0.7135,
+    "frac_active": 0.6875
+   },
+   {
+    "name": "R_IP0",
+    "system": null,
+    "mean": 0.3944,
+    "peak": 0.7132,
+    "frac_active": 0.6875
    },
    {
     "name": "L_PGp",
     "system": null,
-    "mean": 0.3243,
-    "peak": 0.5938,
+    "mean": 0.3919,
+    "peak": 0.7242,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "R_TPOJ3",
+    "system": null,
+    "mean": 0.3846,
+    "peak": 0.7034,
+    "frac_active": 0.5938
+   },
+   {
+    "name": "R_V3CD",
+    "system": null,
+    "mean": 0.3794,
+    "peak": 0.6895,
+    "frac_active": 0.6875
+   },
+   {
+    "name": "L_MT",
+    "system": "motion",
+    "mean": 0.3768,
+    "peak": 0.7083,
+    "frac_active": 0.5938
+   },
+   {
+    "name": "L_VMV3",
+    "system": "places",
+    "mean": 0.3753,
+    "peak": 0.6818,
+    "frac_active": 0.7188
+   },
+   {
+    "name": "L_V4",
+    "system": "early_visual",
+    "mean": 0.3739,
+    "peak": 0.6814,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "L_TPOJ3",
+    "system": null,
+    "mean": 0.3686,
+    "peak": 0.7118,
+    "frac_active": 0.625
+   },
+   {
+    "name": "R_MST",
+    "system": "motion",
+    "mean": 0.3669,
+    "peak": 0.665,
     "frac_active": 0.5625
    },
    {
     "name": "L_IP0",
     "system": null,
-    "mean": 0.3173,
-    "peak": 0.5899,
-    "frac_active": 0.625
-   },
-   {
-    "name": "R_LO1",
-    "system": "motion",
-    "mean": 0.3161,
-    "peak": 0.6459,
-    "frac_active": 0.5
+    "mean": 0.3622,
+    "peak": 0.6874,
+    "frac_active": 0.6562
    },
    {
     "name": "L_IPS1",
     "system": null,
-    "mean": 0.3093,
-    "peak": 0.5954,
+    "mean": 0.3599,
+    "peak": 0.6775,
     "frac_active": 0.625
    },
    {
     "name": "R_V4",
     "system": "early_visual",
-    "mean": 0.3065,
-    "peak": 0.5852,
-    "frac_active": 0.5
-   },
-   {
-    "name": "R_IPS1",
-    "system": null,
-    "mean": 0.3059,
-    "peak": 0.545,
-    "frac_active": 0.5312
-   },
-   {
-    "name": "R_DVT",
-    "system": null,
-    "mean": 0.3045,
-    "peak": 0.574,
-    "frac_active": 0.5312
-   },
-   {
-    "name": "L_MT",
-    "system": "motion",
-    "mean": 0.2936,
-    "peak": 0.6168,
-    "frac_active": 0.4688
-   },
-   {
-    "name": "R_PCV",
-    "system": "default_mode",
-    "mean": 0.2907,
-    "peak": 0.526,
-    "frac_active": 0.4688
-   },
-   {
-    "name": "R_VIP",
-    "system": "attention",
-    "mean": 0.2884,
-    "peak": 0.5245,
-    "frac_active": 0.4062
-   },
-   {
-    "name": "R_PHA3",
-    "system": "places",
-    "mean": 0.2873,
-    "peak": 0.4506,
-    "frac_active": 0.5312
+    "mean": 0.3569,
+    "peak": 0.6354,
+    "frac_active": 0.5938
    },
    {
     "name": "R_V8",
     "system": "objects",
-    "mean": 0.2814,
-    "peak": 0.5868,
-    "frac_active": 0.4375
+    "mean": 0.349,
+    "peak": 0.6703,
+    "frac_active": 0.6562
    },
    {
-    "name": "R_MT",
-    "system": "motion",
-    "mean": 0.2767,
-    "peak": 0.5985,
-    "frac_active": 0.5
-   },
-   {
-    "name": "L_V8",
-    "system": "objects",
-    "mean": 0.2752,
-    "peak": 0.5456,
-    "frac_active": 0.4062
+    "name": "R_IPS1",
+    "system": null,
+    "mean": 0.3487,
+    "peak": 0.6237,
+    "frac_active": 0.625
    },
    {
     "name": "L_MST",
     "system": "motion",
-    "mean": 0.2704,
-    "peak": 0.604,
-    "frac_active": 0.4688
+    "mean": 0.3438,
+    "peak": 0.6602,
+    "frac_active": 0.5625
    },
    {
-    "name": "L_TPOJ3",
+    "name": "R_VIP",
+    "system": "attention",
+    "mean": 0.3417,
+    "peak": 0.6029,
+    "frac_active": 0.625
+   },
+   {
+    "name": "R_DVT",
     "system": null,
-    "mean": 0.2659,
-    "peak": 0.5344,
-    "frac_active": 0.3438
+    "mean": 0.3392,
+    "peak": 0.6029,
+    "frac_active": 0.625
    },
    {
-    "name": "R_PHA2",
-    "system": "places",
-    "mean": 0.2655,
-    "peak": 0.4357,
-    "frac_active": 0.4062
-   },
-   {
-    "name": "R_TPOJ3",
-    "system": null,
-    "mean": 0.2643,
-    "peak": 0.5085,
-    "frac_active": 0.4375
-   },
-   {
-    "name": "R_MST",
+    "name": "R_LO1",
     "system": "motion",
-    "mean": 0.2642,
-    "peak": 0.5918,
-    "frac_active": 0.4688
+    "mean": 0.3335,
+    "peak": 0.6967,
+    "frac_active": 0.5625
    },
    {
-    "name": "L_LO2",
-    "system": "motion",
-    "mean": 0.2626,
-    "peak": 0.5479,
-    "frac_active": 0.375
-   },
-   {
-    "name": "L_LO1",
-    "system": "motion",
-    "mean": 0.2614,
-    "peak": 0.5111,
-    "frac_active": 0.3438
+    "name": "L_V8",
+    "system": "objects",
+    "mean": 0.3273,
+    "peak": 0.6063,
+    "frac_active": 0.5938
    },
    {
     "name": "R_V4t",
     "system": "motion",
-    "mean": 0.2594,
-    "peak": 0.4984,
-    "frac_active": 0.4062
-   },
-   {
-    "name": "R_VVC",
-    "system": "faces",
-    "mean": 0.2575,
-    "peak": 0.4411,
-    "frac_active": 0.3125
-   },
-   {
-    "name": "R_LIPv",
-    "system": "attention",
-    "mean": 0.2569,
-    "peak": 0.4753,
-    "frac_active": 0.3438
-   },
-   {
-    "name": "R_V3A",
-    "system": "motion",
-    "mean": 0.2486,
-    "peak": 0.5808,
-    "frac_active": 0.4375
-   },
-   {
-    "name": "R_LO2",
-    "system": "motion",
-    "mean": 0.245,
-    "peak": 0.4889,
-    "frac_active": 0.375
+    "mean": 0.3264,
+    "peak": 0.5755,
+    "frac_active": 0.5312
    },
    {
     "name": "R_7Am",
     "system": "attention",
-    "mean": 0.2439,
-    "peak": 0.4347,
-    "frac_active": 0.3438
+    "mean": 0.3157,
+    "peak": 0.5675,
+    "frac_active": 0.5625
    },
    {
-    "name": "L_DVT",
-    "system": null,
-    "mean": 0.2436,
-    "peak": 0.4504,
-    "frac_active": 0.3125
-   },
-   {
-    "name": "L_7PL",
-    "system": "attention",
-    "mean": 0.2365,
-    "peak": 0.4284,
-    "frac_active": 0.3125
-   },
-   {
-    "name": "L_PHA2",
-    "system": "places",
-    "mean": 0.2256,
-    "peak": 0.3861,
-    "frac_active": 0.25
-   },
-   {
-    "name": "L_LO3",
-    "system": "objects",
-    "mean": 0.2251,
-    "peak": 0.4532,
-    "frac_active": 0.3125
-   },
-   {
-    "name": "L_LIPv",
-    "system": "attention",
-    "mean": 0.2236,
-    "peak": 0.4171,
-    "frac_active": 0.25
-   },
-   {
-    "name": "L_VIP",
-    "system": "attention",
-    "mean": 0.2236,
-    "peak": 0.4401,
-    "frac_active": 0.2812
-   },
-   {
-    "name": "L_7Am",
-    "system": "attention",
-    "mean": 0.2218,
-    "peak": 0.3992,
-    "frac_active": 0.2812
-   },
-   {
-    "name": "L_FST",
+    "name": "L_LO2",
     "system": "motion",
-    "mean": 0.2194,
-    "peak": 0.5364,
-    "frac_active": 0.3125
+    "mean": 0.3069,
+    "peak": 0.6038,
+    "frac_active": 0.4688
    },
    {
-    "name": "R_PHA1",
+    "name": "R_PHA3",
     "system": "places",
-    "mean": 0.2189,
-    "peak": 0.3527,
-    "frac_active": 0.25
+    "mean": 0.303,
+    "peak": 0.5039,
+    "frac_active": 0.5312
    },
    {
-    "name": "L_VVC",
-    "system": "faces",
-    "mean": 0.2164,
-    "peak": 0.3855,
-    "frac_active": 0.2188
-   },
-   {
-    "name": "L_PHA3",
-    "system": "places",
-    "mean": 0.2145,
-    "peak": 0.3539,
-    "frac_active": 0.1875
-   },
-   {
-    "name": "R_FST",
+    "name": "R_LO2",
     "system": "motion",
-    "mean": 0.2093,
-    "peak": 0.4687,
-    "frac_active": 0.25
-   },
-   {
-    "name": "L_V3A",
-    "system": "motion",
-    "mean": 0.2063,
-    "peak": 0.5486,
-    "frac_active": 0.2812
-   },
-   {
-    "name": "L_V3",
-    "system": "early_visual",
-    "mean": 0.2036,
-    "peak": 0.4228,
-    "frac_active": 0.25
-   },
-   {
-    "name": "R_V3",
-    "system": "early_visual",
-    "mean": 0.2003,
-    "peak": 0.3884,
-    "frac_active": 0.25
-   },
-   {
-    "name": "R_7PL",
-    "system": "attention",
-    "mean": 0.1977,
-    "peak": 0.3373,
-    "frac_active": 0.1875
-   },
-   {
-    "name": "R_FEF",
-    "system": null,
-    "mean": 0.1878,
-    "peak": 0.3692,
-    "frac_active": 0.1875
-   },
-   {
-    "name": "R_PH",
-    "system": "objects",
-    "mean": 0.187,
-    "peak": 0.3912,
-    "frac_active": 0.2188
-   },
-   {
-    "name": "R_6a",
-    "system": null,
-    "mean": 0.1869,
-    "peak": 0.3527,
-    "frac_active": 0.1875
-   },
-   {
-    "name": "R_FFC",
-    "system": "faces",
-    "mean": 0.1854,
-    "peak": 0.3473,
-    "frac_active": 0.2188
+    "mean": 0.3023,
+    "peak": 0.5453,
+    "frac_active": 0.5
    },
    {
     "name": "L_PCV",
     "system": "default_mode",
-    "mean": 0.1821,
-    "peak": 0.3431,
-    "frac_active": 0.25
+    "mean": 0.2964,
+    "peak": 0.5258,
+    "frac_active": 0.5
    },
    {
-    "name": "L_FEF",
-    "system": null,
-    "mean": 0.1817,
-    "peak": 0.4324,
-    "frac_active": 0.2188
+    "name": "L_FST",
+    "system": "motion",
+    "mean": 0.295,
+    "peak": 0.61,
+    "frac_active": 0.5
    },
    {
-    "name": "L_MIP",
+    "name": "L_7Am",
     "system": "attention",
-    "mean": 0.174,
-    "peak": 0.3436,
-    "frac_active": 0.1562
+    "mean": 0.2934,
+    "peak": 0.5186,
+    "frac_active": 0.5
+   },
+   {
+    "name": "R_LIPv",
+    "system": "attention",
+    "mean": 0.292,
+    "peak": 0.5409,
+    "frac_active": 0.5625
    },
    {
     "name": "R_TPOJ2",
     "system": null,
-    "mean": 0.17,
-    "peak": 0.3941,
-    "frac_active": 0.2812
+    "mean": 0.2892,
+    "peak": 0.5711,
+    "frac_active": 0.4375
    },
    {
-    "name": "L_5mv",
-    "system": null,
-    "mean": 0.1696,
-    "peak": 0.3228,
-    "frac_active": 0.125
-   },
-   {
-    "name": "L_6a",
-    "system": null,
-    "mean": 0.1658,
-    "peak": 0.3408,
-    "frac_active": 0.1562
-   },
-   {
-    "name": "L_VMV1",
-    "system": "places",
-    "mean": 0.1658,
-    "peak": 0.314,
-    "frac_active": 0.0938
-   },
-   {
-    "name": "R_7AL",
-    "system": "attention",
-    "mean": 0.165,
-    "peak": 0.3021,
-    "frac_active": 0.0312
-   },
-   {
-    "name": "L_PHA1",
-    "system": "places",
-    "mean": 0.1647,
-    "peak": 0.2741,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_5mv",
-    "system": null,
-    "mean": 0.1636,
-    "peak": 0.2778,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_POS1",
-    "system": "places",
-    "mean": 0.163,
-    "peak": 0.3071,
-    "frac_active": 0.125
-   },
-   {
-    "name": "L_PH",
-    "system": "objects",
-    "mean": 0.1617,
-    "peak": 0.3609,
-    "frac_active": 0.125
-   },
-   {
-    "name": "L_23c",
-    "system": null,
-    "mean": 0.16,
-    "peak": 0.3267,
-    "frac_active": 0.125
-   },
-   {
-    "name": "L_V6",
-    "system": null,
-    "mean": 0.1582,
-    "peak": 0.3464,
-    "frac_active": 0.1562
-   },
-   {
-    "name": "L_PIT",
-    "system": "faces",
-    "mean": 0.158,
-    "peak": 0.2836,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_MIP",
-    "system": "attention",
-    "mean": 0.1545,
-    "peak": 0.2757,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_23c",
-    "system": null,
-    "mean": 0.1474,
-    "peak": 0.2893,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PIT",
-    "system": "faces",
-    "mean": 0.1464,
-    "peak": 0.2798,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_VMV1",
-    "system": "places",
-    "mean": 0.1439,
-    "peak": 0.2869,
-    "frac_active": 0.0
+    "name": "L_LO1",
+    "system": "motion",
+    "mean": 0.2862,
+    "peak": 0.5452,
+    "frac_active": 0.4062
    },
    {
     "name": "R_STV",
     "system": null,
-    "mean": 0.1396,
-    "peak": 0.3424,
-    "frac_active": 0.1562
+    "mean": 0.286,
+    "peak": 0.5858,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "L_LO3",
+    "system": "objects",
+    "mean": 0.2854,
+    "peak": 0.5362,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "R_PHA2",
+    "system": "places",
+    "mean": 0.2829,
+    "peak": 0.4912,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "L_7PL",
+    "system": "attention",
+    "mean": 0.2818,
+    "peak": 0.5155,
+    "frac_active": 0.5625
+   },
+   {
+    "name": "R_V3A",
+    "system": "motion",
+    "mean": 0.2801,
+    "peak": 0.5943,
+    "frac_active": 0.5312
+   },
+   {
+    "name": "R_FEF",
+    "system": null,
+    "mean": 0.2787,
+    "peak": 0.488,
+    "frac_active": 0.5
+   },
+   {
+    "name": "L_DVT",
+    "system": null,
+    "mean": 0.2777,
+    "peak": 0.4919,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "R_FST",
+    "system": "motion",
+    "mean": 0.2747,
+    "peak": 0.5223,
+    "frac_active": 0.4375
+   },
+   {
+    "name": "L_VIP",
+    "system": "attention",
+    "mean": 0.2735,
+    "peak": 0.5167,
+    "frac_active": 0.5
+   },
+   {
+    "name": "R_VVC",
+    "system": "faces",
+    "mean": 0.2705,
+    "peak": 0.4805,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "L_LIPv",
+    "system": "attention",
+    "mean": 0.2704,
+    "peak": 0.4925,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "L_FEF",
+    "system": null,
+    "mean": 0.2681,
+    "peak": 0.54,
+    "frac_active": 0.5
+   },
+   {
+    "name": "L_PHA2",
+    "system": "places",
+    "mean": 0.2545,
+    "peak": 0.4548,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "R_6a",
+    "system": null,
+    "mean": 0.2437,
+    "peak": 0.4295,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "R_V3",
+    "system": "early_visual",
+    "mean": 0.2436,
+    "peak": 0.4043,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "L_V3",
+    "system": "early_visual",
+    "mean": 0.2413,
+    "peak": 0.4322,
+    "frac_active": 0.3438
+   },
+   {
+    "name": "L_VVC",
+    "system": "faces",
+    "mean": 0.241,
+    "peak": 0.4287,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "R_FFC",
+    "system": "faces",
+    "mean": 0.2397,
+    "peak": 0.4244,
+    "frac_active": 0.3438
    },
    {
     "name": "R_IFJa",
     "system": "language",
-    "mean": 0.1387,
-    "peak": 0.2991,
-    "frac_active": 0.0
+    "mean": 0.2382,
+    "peak": 0.4509,
+    "frac_active": 0.3438
+   },
+   {
+    "name": "R_PHA1",
+    "system": "places",
+    "mean": 0.2348,
+    "peak": 0.4014,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_PHA3",
+    "system": "places",
+    "mean": 0.2335,
+    "peak": 0.4051,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_V3A",
+    "system": "motion",
+    "mean": 0.2242,
+    "peak": 0.5547,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "L_6a",
+    "system": null,
+    "mean": 0.2242,
+    "peak": 0.4161,
+    "frac_active": 0.3125
+   },
+   {
+    "name": "R_7PL",
+    "system": "attention",
+    "mean": 0.2208,
+    "peak": 0.4011,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "L_PIT",
+    "system": "faces",
+    "mean": 0.215,
+    "peak": 0.377,
+    "frac_active": 0.25
+   },
+   {
+    "name": "R_PH",
+    "system": "objects",
+    "mean": 0.2131,
+    "peak": 0.4349,
+    "frac_active": 0.2188
    },
    {
     "name": "R_PSL",
     "system": null,
-    "mean": 0.1331,
-    "peak": 0.3164,
-    "frac_active": 0.0938
+    "mean": 0.2092,
+    "peak": 0.4412,
+    "frac_active": 0.3125
    },
    {
-    "name": "R_5m",
+    "name": "L_5mv",
     "system": null,
-    "mean": 0.1323,
-    "peak": 0.186,
-    "frac_active": 0.0
+    "mean": 0.2089,
+    "peak": 0.3647,
+    "frac_active": 0.1875
    },
    {
-    "name": "R_IFJp",
-    "system": null,
-    "mean": 0.1288,
-    "peak": 0.2733,
-    "frac_active": 0.0
+    "name": "R_PIT",
+    "system": "faces",
+    "mean": 0.2077,
+    "peak": 0.3666,
+    "frac_active": 0.1875
    },
    {
-    "name": "L_7AL",
+    "name": "R_7AL",
     "system": "attention",
-    "mean": 0.1287,
-    "peak": 0.2381,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_V2",
-    "system": "early_visual",
-    "mean": 0.1285,
-    "peak": 0.2789,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_V2",
-    "system": "early_visual",
-    "mean": 0.1271,
-    "peak": 0.2998,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_7PC",
-    "system": "attention",
-    "mean": 0.1227,
-    "peak": 0.2702,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_V6",
-    "system": null,
-    "mean": 0.1221,
-    "peak": 0.2892,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_31a",
-    "system": "default_mode",
-    "mean": 0.1211,
-    "peak": 0.22,
-    "frac_active": 0.0
+    "mean": 0.2068,
+    "peak": 0.3578,
+    "frac_active": 0.1562
    },
    {
     "name": "R_8C",
     "system": "frontal_control",
-    "mean": 0.1196,
-    "peak": 0.2242,
-    "frac_active": 0.0
+    "mean": 0.2063,
+    "peak": 0.3576,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_23c",
+    "system": null,
+    "mean": 0.2023,
+    "peak": 0.3783,
+    "frac_active": 0.1875
+   },
+   {
+    "name": "L_MIP",
+    "system": "attention",
+    "mean": 0.201,
+    "peak": 0.3993,
+    "frac_active": 0.25
+   },
+   {
+    "name": "R_IFJp",
+    "system": null,
+    "mean": 0.201,
+    "peak": 0.3817,
+    "frac_active": 0.1875
    },
    {
     "name": "R_PEF",
     "system": null,
-    "mean": 0.1186,
-    "peak": 0.2722,
-    "frac_active": 0.0
+    "mean": 0.2006,
+    "peak": 0.3948,
+    "frac_active": 0.25
+   },
+   {
+    "name": "R_5mv",
+    "system": null,
+    "mean": 0.1981,
+    "peak": 0.3073,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "R_POS1",
+    "system": "places",
+    "mean": 0.1928,
+    "peak": 0.3744,
+    "frac_active": 0.25
+   },
+   {
+    "name": "L_PH",
+    "system": "objects",
+    "mean": 0.1879,
+    "peak": 0.4009,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "L_V6",
+    "system": null,
+    "mean": 0.1863,
+    "peak": 0.3537,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "R_23c",
+    "system": null,
+    "mean": 0.1834,
+    "peak": 0.3399,
+    "frac_active": 0.0938
+   },
+   {
+    "name": "L_PHA1",
+    "system": "places",
+    "mean": 0.1788,
+    "peak": 0.3115,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "L_VMV1",
+    "system": "places",
+    "mean": 0.1782,
+    "peak": 0.327,
+    "frac_active": 0.1562
+   },
+   {
+    "name": "R_55b",
+    "system": "language",
+    "mean": 0.1769,
+    "peak": 0.3293,
+    "frac_active": 0.1562
    },
    {
     "name": "L_6ma",
     "system": "somatomotor",
-    "mean": 0.1167,
-    "peak": 0.2452,
-    "frac_active": 0.0
+    "mean": 0.1749,
+    "peak": 0.3149,
+    "frac_active": 0.0625
    },
    {
-    "name": "R_ProS",
-    "system": "places",
-    "mean": 0.1128,
-    "peak": 0.235,
-    "frac_active": 0.0
+    "name": "R_IFSp",
+    "system": "language",
+    "mean": 0.1694,
+    "peak": 0.3147,
+    "frac_active": 0.0938
    },
    {
-    "name": "R_5L",
-    "system": null,
-    "mean": 0.1123,
-    "peak": 0.1611,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_POS1",
-    "system": "places",
-    "mean": 0.112,
-    "peak": 0.2195,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_POS2",
-    "system": "default_mode",
-    "mean": 0.1117,
-    "peak": 0.2492,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_7PC",
-    "system": "attention",
-    "mean": 0.1101,
-    "peak": 0.2605,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_7Pm",
-    "system": null,
-    "mean": 0.1083,
-    "peak": 0.2143,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_V1",
-    "system": "early_visual",
-    "mean": 0.1067,
-    "peak": 0.2709,
+    "name": "R_6ma",
+    "system": "somatomotor",
+    "mean": 0.1672,
+    "peak": 0.294,
     "frac_active": 0.0
    },
    {
     "name": "L_FFC",
     "system": "faces",
-    "mean": 0.1043,
-    "peak": 0.2219,
+    "mean": 0.1636,
+    "peak": 0.3108,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "L_7AL",
+    "system": "attention",
+    "mean": 0.1634,
+    "peak": 0.2766,
     "frac_active": 0.0
    },
    {
-    "name": "R_6ma",
-    "system": "somatomotor",
-    "mean": 0.1037,
-    "peak": 0.2102,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_6mp",
-    "system": "somatomotor",
-    "mean": 0.1022,
-    "peak": 0.1649,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_V1",
+    "name": "R_V2",
     "system": "early_visual",
-    "mean": 0.1017,
-    "peak": 0.2553,
+    "mean": 0.1623,
+    "peak": 0.2818,
     "frac_active": 0.0
    },
    {
-    "name": "R_PF",
+    "name": "L_7Pm",
     "system": null,
-    "mean": 0.1005,
-    "peak": 0.239,
+    "mean": 0.1602,
+    "peak": 0.2838,
     "frac_active": 0.0
    },
    {
-    "name": "R_7Pm",
+    "name": "R_5m",
     "system": null,
-    "mean": 0.0989,
-    "peak": 0.2152,
+    "mean": 0.16,
+    "peak": 0.2036,
     "frac_active": 0.0
    },
    {
-    "name": "L_PF",
-    "system": null,
-    "mean": 0.0983,
-    "peak": 0.2482,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_2",
-    "system": "somatomotor",
-    "mean": 0.0979,
-    "peak": 0.1756,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_2",
-    "system": "somatomotor",
-    "mean": 0.0977,
-    "peak": 0.193,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_POS2",
+    "name": "R_31a",
     "system": "default_mode",
-    "mean": 0.0924,
-    "peak": 0.2029,
+    "mean": 0.159,
+    "peak": 0.2801,
     "frac_active": 0.0
    },
    {
-    "name": "R_55b",
-    "system": "language",
-    "mean": 0.0898,
-    "peak": 0.1952,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PFcm",
-    "system": null,
-    "mean": 0.0884,
-    "peak": 0.2437,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PreS",
-    "system": null,
-    "mean": 0.0859,
-    "peak": 0.1539,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_IFSp",
-    "system": "language",
-    "mean": 0.0856,
-    "peak": 0.191,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_RI",
-    "system": "auditory",
-    "mean": 0.0852,
-    "peak": 0.2328,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PFt",
-    "system": "attention",
-    "mean": 0.0852,
-    "peak": 0.164,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_IFSa",
-    "system": "frontal_control",
-    "mean": 0.0851,
-    "peak": 0.1803,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p24pr",
-    "system": null,
-    "mean": 0.0848,
-    "peak": 0.1434,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_46",
-    "system": "frontal_control",
-    "mean": 0.0845,
-    "peak": 0.1578,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_8Ad",
-    "system": null,
-    "mean": 0.0809,
-    "peak": 0.1442,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_8Ad",
-    "system": null,
-    "mean": 0.0806,
-    "peak": 0.1343,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_9-46d",
-    "system": "frontal_control",
-    "mean": 0.0804,
-    "peak": 0.1399,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_i6-8",
-    "system": "frontal_control",
-    "mean": 0.0801,
-    "peak": 0.1364,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_33pr",
-    "system": null,
-    "mean": 0.0744,
-    "peak": 0.1446,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_5m",
-    "system": null,
-    "mean": 0.0732,
-    "peak": 0.111,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_RI",
-    "system": "auditory",
-    "mean": 0.0716,
-    "peak": 0.1705,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_5L",
-    "system": null,
-    "mean": 0.0712,
-    "peak": 0.1069,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_AIP",
-    "system": "attention",
-    "mean": 0.0698,
-    "peak": 0.1524,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_ProS",
-    "system": "places",
-    "mean": 0.0671,
-    "peak": 0.1637,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_6d",
-    "system": "somatomotor",
-    "mean": 0.0663,
-    "peak": 0.1271,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_9-46d",
-    "system": "frontal_control",
-    "mean": 0.0662,
-    "peak": 0.1404,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_9a",
-    "system": "frontal_control",
-    "mean": 0.0657,
-    "peak": 0.1245,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_33pr",
-    "system": null,
-    "mean": 0.0654,
-    "peak": 0.1144,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TE2p",
-    "system": "objects",
-    "mean": 0.0648,
-    "peak": 0.1602,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TF",
-    "system": null,
-    "mean": 0.0647,
-    "peak": 0.1184,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_v23ab",
-    "system": "default_mode",
-    "mean": 0.0641,
-    "peak": 0.132,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_6mp",
-    "system": "somatomotor",
-    "mean": 0.064,
-    "peak": 0.1075,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_24dd",
-    "system": null,
-    "mean": 0.0626,
-    "peak": 0.1066,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PFt",
-    "system": "attention",
-    "mean": 0.0618,
-    "peak": 0.1708,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_IFJp",
-    "system": null,
-    "mean": 0.0599,
-    "peak": 0.1932,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_4",
-    "system": "somatomotor",
-    "mean": 0.0593,
-    "peak": 0.093,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PGi",
-    "system": "default_mode",
-    "mean": 0.0582,
-    "peak": 0.2049,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_46",
-    "system": "frontal_control",
-    "mean": 0.057,
-    "peak": 0.1131,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_IFJa",
-    "system": "language",
-    "mean": 0.0569,
-    "peak": 0.1535,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_8Av",
-    "system": "frontal_control",
-    "mean": 0.0564,
-    "peak": 0.1336,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PreS",
-    "system": null,
-    "mean": 0.0562,
-    "peak": 0.1135,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PFcm",
-    "system": null,
-    "mean": 0.0561,
-    "peak": 0.1561,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_a24pr",
-    "system": null,
-    "mean": 0.0557,
-    "peak": 0.1029,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PI",
-    "system": null,
-    "mean": 0.0553,
-    "peak": 0.1048,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_24dd",
-    "system": null,
-    "mean": 0.0544,
-    "peak": 0.1065,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_a10p",
-    "system": null,
-    "mean": 0.052,
-    "peak": 0.0855,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_d32",
-    "system": "default_mode",
-    "mean": 0.0518,
-    "peak": 0.1076,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_LBelt",
-    "system": "auditory",
-    "mean": 0.0516,
-    "peak": 0.1857,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PoI1",
-    "system": null,
-    "mean": 0.0507,
-    "peak": 0.1015,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PFop",
-    "system": null,
-    "mean": 0.0501,
-    "peak": 0.1419,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_23d",
-    "system": "default_mode",
-    "mean": 0.0498,
-    "peak": 0.0938,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_i6-8",
-    "system": "frontal_control",
-    "mean": 0.0478,
-    "peak": 0.1175,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p32",
-    "system": "default_mode",
-    "mean": 0.0472,
-    "peak": 0.1172,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_10d",
-    "system": null,
-    "mean": 0.047,
-    "peak": 0.0835,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PEF",
-    "system": null,
-    "mean": 0.0466,
-    "peak": 0.1327,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_a24pr",
-    "system": null,
-    "mean": 0.0462,
-    "peak": 0.0998,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_9m",
-    "system": "default_mode",
-    "mean": 0.046,
-    "peak": 0.1192,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_FOP5",
-    "system": null,
-    "mean": 0.0456,
-    "peak": 0.1227,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_24dv",
-    "system": null,
-    "mean": 0.0454,
-    "peak": 0.1226,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_47m",
-    "system": null,
-    "mean": 0.045,
-    "peak": 0.0863,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p32pr",
-    "system": null,
-    "mean": 0.044,
-    "peak": 0.1135,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_52",
-    "system": null,
-    "mean": 0.0429,
-    "peak": 0.1269,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_24dv",
-    "system": null,
-    "mean": 0.0427,
-    "peak": 0.1071,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_IP1",
-    "system": "attention",
-    "mean": 0.0425,
-    "peak": 0.1175,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_SCEF",
-    "system": null,
-    "mean": 0.0407,
-    "peak": 0.119,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p10p",
-    "system": null,
-    "mean": 0.0403,
-    "peak": 0.0818,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_4",
-    "system": "somatomotor",
-    "mean": 0.0397,
-    "peak": 0.0951,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_31pd",
-    "system": "default_mode",
-    "mean": 0.0393,
-    "peak": 0.1342,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_1",
-    "system": "somatomotor",
-    "mean": 0.0382,
-    "peak": 0.08,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_LBelt",
-    "system": "auditory",
-    "mean": 0.0373,
-    "peak": 0.1764,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_9p",
-    "system": "frontal_control",
-    "mean": 0.0371,
-    "peak": 0.1106,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_6r",
-    "system": null,
-    "mean": 0.0371,
-    "peak": 0.104,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_3a",
-    "system": "somatomotor",
-    "mean": 0.0369,
-    "peak": 0.0807,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p24pr",
-    "system": null,
-    "mean": 0.0368,
-    "peak": 0.0832,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_AIP",
-    "system": "attention",
-    "mean": 0.0361,
-    "peak": 0.1313,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_LIPd",
-    "system": "attention",
-    "mean": 0.0359,
-    "peak": 0.0878,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_STSva",
-    "system": "language",
-    "mean": 0.0359,
-    "peak": 0.1314,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_s6-8",
-    "system": null,
-    "mean": 0.0355,
-    "peak": 0.1092,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p9-46v",
-    "system": "frontal_control",
-    "mean": 0.035,
-    "peak": 0.0849,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p32pr",
-    "system": null,
-    "mean": 0.034,
-    "peak": 0.0986,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_RSC",
-    "system": "places",
-    "mean": 0.0331,
-    "peak": 0.0815,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_s6-8",
-    "system": null,
-    "mean": 0.033,
-    "peak": 0.0682,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_6v",
-    "system": "somatomotor",
-    "mean": 0.0324,
-    "peak": 0.1122,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_47s",
-    "system": null,
-    "mean": 0.0324,
-    "peak": 0.0873,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_7m",
-    "system": "default_mode",
-    "mean": 0.0323,
-    "peak": 0.1407,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TA2",
-    "system": "auditory",
-    "mean": 0.0313,
-    "peak": 0.1182,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_1",
-    "system": "somatomotor",
-    "mean": 0.0309,
-    "peak": 0.1047,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_6d",
-    "system": "somatomotor",
-    "mean": 0.0309,
-    "peak": 0.0918,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PoI1",
-    "system": null,
-    "mean": 0.0304,
-    "peak": 0.0768,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p32",
-    "system": "default_mode",
-    "mean": 0.0297,
-    "peak": 0.0852,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PeEc",
-    "system": null,
-    "mean": 0.029,
-    "peak": 0.052,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_47m",
-    "system": null,
-    "mean": 0.0282,
-    "peak": 0.0623,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_6v",
-    "system": "somatomotor",
-    "mean": 0.0279,
-    "peak": 0.0774,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p24",
-    "system": "default_mode",
-    "mean": 0.027,
-    "peak": 0.0761,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_a24",
-    "system": "default_mode",
-    "mean": 0.0269,
-    "peak": 0.0891,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_A4",
-    "system": "auditory",
-    "mean": 0.0269,
-    "peak": 0.1107,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_d32",
-    "system": "default_mode",
-    "mean": 0.0268,
-    "peak": 0.0915,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_FOP2",
-    "system": null,
-    "mean": 0.0268,
-    "peak": 0.1045,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_45",
-    "system": "language",
-    "mean": 0.0267,
-    "peak": 0.121,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_47l",
-    "system": null,
-    "mean": 0.0266,
-    "peak": 0.0782,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PHT",
-    "system": null,
-    "mean": 0.0265,
-    "peak": 0.1557,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_p47r",
-    "system": "frontal_control",
-    "mean": 0.026,
-    "peak": 0.0955,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_a9-46v",
-    "system": "frontal_control",
-    "mean": 0.0259,
-    "peak": 0.0723,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_10r",
-    "system": "default_mode",
-    "mean": 0.025,
-    "peak": 0.0777,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PBelt",
-    "system": "auditory",
-    "mean": 0.0248,
-    "peak": 0.1229,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TF",
-    "system": null,
-    "mean": 0.0246,
-    "peak": 0.0546,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p24",
-    "system": "default_mode",
-    "mean": 0.0232,
-    "peak": 0.075,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_31pv",
-    "system": "default_mode",
-    "mean": 0.0218,
-    "peak": 0.0721,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_MBelt",
-    "system": "auditory",
-    "mean": 0.0217,
-    "peak": 0.1166,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_44",
-    "system": "language",
-    "mean": 0.0209,
-    "peak": 0.0984,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_52",
-    "system": null,
-    "mean": 0.0208,
-    "peak": 0.106,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_10v",
-    "system": "default_mode",
-    "mean": 0.0203,
-    "peak": 0.0451,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_RSC",
-    "system": "places",
-    "mean": 0.0202,
-    "peak": 0.0689,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_10pp",
-    "system": null,
-    "mean": 0.0202,
-    "peak": 0.0468,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_a32pr",
-    "system": null,
-    "mean": 0.0202,
-    "peak": 0.0801,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_31a",
-    "system": "default_mode",
-    "mean": 0.02,
-    "peak": 0.0607,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_9m",
-    "system": "default_mode",
-    "mean": 0.0192,
-    "peak": 0.0802,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PoI2",
-    "system": null,
-    "mean": 0.0179,
-    "peak": 0.0543,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_6r",
-    "system": null,
-    "mean": 0.0165,
-    "peak": 0.0889,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TPOJ2",
-    "system": null,
-    "mean": 0.0165,
-    "peak": 0.1961,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_8BL",
-    "system": "frontal_control",
-    "mean": 0.0164,
-    "peak": 0.0825,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_11l",
-    "system": null,
-    "mean": 0.015,
-    "peak": 0.0423,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_8BM",
-    "system": "default_mode",
-    "mean": 0.0147,
-    "peak": 0.0763,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PBelt",
-    "system": "auditory",
-    "mean": 0.0144,
-    "peak": 0.0992,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PGs",
-    "system": "default_mode",
-    "mean": 0.0144,
-    "peak": 0.0994,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_10d",
-    "system": null,
-    "mean": 0.0142,
-    "peak": 0.0354,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p10p",
-    "system": null,
-    "mean": 0.0139,
-    "peak": 0.0448,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_a32pr",
-    "system": null,
-    "mean": 0.0136,
-    "peak": 0.0657,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_13l",
-    "system": null,
-    "mean": 0.0133,
-    "peak": 0.0414,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_9a",
-    "system": "frontal_control",
-    "mean": 0.0129,
-    "peak": 0.0541,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_AVI",
-    "system": null,
-    "mean": 0.0129,
-    "peak": 0.0721,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_A1",
-    "system": "auditory",
-    "mean": 0.0123,
-    "peak": 0.165,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_Pir",
-    "system": null,
-    "mean": 0.0121,
-    "peak": 0.0494,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_25",
-    "system": null,
-    "mean": 0.0119,
-    "peak": 0.0291,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_3a",
-    "system": "somatomotor",
-    "mean": 0.0118,
-    "peak": 0.1021,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_a24",
-    "system": "default_mode",
-    "mean": 0.0108,
-    "peak": 0.0593,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_a9-46v",
-    "system": "frontal_control",
-    "mean": 0.0107,
-    "peak": 0.0629,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PFop",
-    "system": null,
-    "mean": 0.0105,
-    "peak": 0.0857,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_IP1",
-    "system": "attention",
-    "mean": 0.0091,
-    "peak": 0.1269,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_OP1",
-    "system": null,
-    "mean": 0.009,
-    "peak": 0.1315,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_SCEF",
-    "system": null,
-    "mean": 0.0089,
-    "peak": 0.142,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_AVI",
-    "system": null,
-    "mean": 0.0088,
-    "peak": 0.0609,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PI",
-    "system": null,
-    "mean": 0.0084,
-    "peak": 0.0519,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_47s",
-    "system": null,
-    "mean": 0.0082,
-    "peak": 0.0604,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_H",
-    "system": null,
-    "mean": 0.0076,
-    "peak": 0.0348,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_v23ab",
-    "system": "default_mode",
-    "mean": 0.0061,
-    "peak": 0.0697,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_FOP5",
-    "system": null,
-    "mean": 0.0061,
-    "peak": 0.0446,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_8C",
-    "system": "frontal_control",
-    "mean": 0.0058,
-    "peak": 0.0625,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_9p",
-    "system": "frontal_control",
-    "mean": 0.0055,
-    "peak": 0.0461,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_EC",
-    "system": null,
-    "mean": 0.0051,
-    "peak": 0.0332,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_IFSa",
-    "system": "frontal_control",
-    "mean": 0.0036,
-    "peak": 0.0713,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_IP2",
-    "system": "attention",
-    "mean": 0.0022,
-    "peak": 0.1222,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_10pp",
-    "system": null,
-    "mean": 0.0021,
-    "peak": 0.0221,
+    "name": "L_V2",
+    "system": "early_visual",
+    "mean": 0.1589,
+    "peak": 0.2984,
     "frac_active": 0.0
    },
    {
     "name": "R_TPOJ1",
     "system": null,
-    "mean": 0.0019,
-    "peak": 0.1537,
-    "frac_active": 0.0
+    "mean": 0.158,
+    "peak": 0.4283,
+    "frac_active": 0.25
    },
    {
-    "name": "L_AAIC",
+    "name": "R_7Pm",
     "system": null,
-    "mean": 0.0016,
-    "peak": 0.0342,
+    "mean": 0.1572,
+    "peak": 0.2983,
     "frac_active": 0.0
    },
    {
-    "name": "R_FOP2",
-    "system": null,
-    "mean": 0.0014,
-    "peak": 0.094,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TA2",
-    "system": "auditory",
-    "mean": 0.0002,
-    "peak": 0.0839,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_7m",
-    "system": "default_mode",
-    "mean": -0.0004,
-    "peak": 0.0811,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_LIPd",
+    "name": "R_7PC",
     "system": "attention",
-    "mean": -0.0009,
-    "peak": 0.1183,
-    "frac_active": 0.0
+    "mean": 0.1556,
+    "peak": 0.3209,
+    "frac_active": 0.0938
    },
    {
-    "name": "R_AAIC",
+    "name": "R_MIP",
+    "system": "attention",
+    "mean": 0.1554,
+    "peak": 0.3,
+    "frac_active": 0.0312
+   },
+   {
+    "name": "L_PF",
     "system": null,
-    "mean": -0.0009,
-    "peak": 0.0415,
-    "frac_active": 0.0
+    "mean": 0.155,
+    "peak": 0.3457,
+    "frac_active": 0.0625
    },
    {
-    "name": "L_10v",
+    "name": "R_PGi",
     "system": "default_mode",
-    "mean": -0.001,
-    "peak": 0.0208,
-    "frac_active": 0.0
+    "mean": 0.1547,
+    "peak": 0.3344,
+    "frac_active": 0.1562
    },
    {
-    "name": "L_11l",
+    "name": "L_TPOJ2",
     "system": null,
-    "mean": -0.0017,
-    "peak": 0.0259,
-    "frac_active": 0.0
+    "mean": 0.1539,
+    "peak": 0.4306,
+    "frac_active": 0.25
    },
    {
-    "name": "L_pOFC",
-    "system": null,
-    "mean": -0.0029,
-    "peak": 0.0132,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_MBelt",
-    "system": "auditory",
-    "mean": -0.0029,
-    "peak": 0.1031,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_FOP4",
-    "system": null,
-    "mean": -0.003,
-    "peak": 0.0518,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_a47r",
+    "name": "R_IFSa",
     "system": "frontal_control",
-    "mean": -0.0037,
-    "peak": 0.0308,
+    "mean": 0.1534,
+    "peak": 0.2925,
     "frac_active": 0.0
    },
    {
-    "name": "L_PSL",
-    "system": null,
-    "mean": -0.0045,
-    "peak": 0.0898,
+    "name": "L_V1",
+    "system": "early_visual",
+    "mean": 0.1488,
+    "peak": 0.2678,
     "frac_active": 0.0
    },
    {
-    "name": "L_PGs",
-    "system": "default_mode",
-    "mean": -0.0046,
-    "peak": 0.057,
+    "name": "R_VMV1",
+    "system": "places",
+    "mean": 0.1487,
+    "peak": 0.2847,
     "frac_active": 0.0
    },
    {
-    "name": "L_Pir",
-    "system": null,
-    "mean": -0.0055,
-    "peak": 0.0307,
+    "name": "R_V1",
+    "system": "early_visual",
+    "mean": 0.1479,
+    "peak": 0.2834,
     "frac_active": 0.0
    },
    {
-    "name": "L_55b",
-    "system": "language",
-    "mean": -0.0059,
-    "peak": 0.0819,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PeEc",
-    "system": null,
-    "mean": -0.0059,
-    "peak": 0.0121,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_d23ab",
-    "system": "default_mode",
-    "mean": -0.0061,
-    "peak": 0.0668,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_SFL",
-    "system": null,
-    "mean": -0.0069,
-    "peak": 0.074,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_a10p",
-    "system": null,
-    "mean": -0.0072,
-    "peak": 0.0254,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_PFm",
-    "system": null,
-    "mean": -0.0079,
-    "peak": 0.0666,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_8BM",
-    "system": "default_mode",
-    "mean": -0.0085,
-    "peak": 0.0495,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TE2p",
-    "system": "objects",
-    "mean": -0.0089,
-    "peak": 0.0521,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_MI",
-    "system": null,
-    "mean": -0.0091,
-    "peak": 0.0696,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_3b",
-    "system": "somatomotor",
-    "mean": -0.0092,
-    "peak": 0.1205,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_31pv",
-    "system": "default_mode",
-    "mean": -0.0095,
-    "peak": 0.0407,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_pOFC",
-    "system": null,
-    "mean": -0.0096,
-    "peak": 0.0031,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_A1",
+    "name": "L_LBelt",
     "system": "auditory",
-    "mean": -0.0105,
-    "peak": 0.1532,
-    "frac_active": 0.0
+    "mean": 0.1454,
+    "peak": 0.3901,
+    "frac_active": 0.1562
    },
    {
-    "name": "R_25",
+    "name": "L_7PC",
+    "system": "attention",
+    "mean": 0.1449,
+    "peak": 0.3152,
+    "frac_active": 0.0938
+   },
+   {
+    "name": "R_5L",
     "system": null,
-    "mean": -0.011,
-    "peak": -0.0041,
+    "mean": 0.1417,
+    "peak": 0.202,
     "frac_active": 0.0
    },
    {
-    "name": "R_Ig",
+    "name": "R_STSva",
+    "system": "language",
+    "mean": 0.1373,
+    "peak": 0.2764,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8Ad",
     "system": null,
-    "mean": -0.0113,
-    "peak": 0.0958,
+    "mean": 0.1354,
+    "peak": 0.2036,
     "frac_active": 0.0
    },
    {
-    "name": "L_23d",
-    "system": "default_mode",
-    "mean": -0.012,
-    "peak": 0.0426,
+    "name": "R_6mp",
+    "system": "somatomotor",
+    "mean": 0.1354,
+    "peak": 0.1812,
     "frac_active": 0.0
    },
    {
-    "name": "L_PoI2",
+    "name": "R_9a",
+    "system": "frontal_control",
+    "mean": 0.1327,
+    "peak": 0.2223,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PEF",
     "system": null,
-    "mean": -0.0121,
-    "peak": 0.0274,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_EC",
-    "system": null,
-    "mean": -0.0134,
-    "peak": 0.0043,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_OFC",
-    "system": null,
-    "mean": -0.0138,
-    "peak": -0.004,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_10r",
-    "system": "default_mode",
-    "mean": -0.0139,
-    "peak": 0.0203,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TGv",
-    "system": null,
-    "mean": -0.0141,
-    "peak": 0.0218,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TE1m",
-    "system": null,
-    "mean": -0.0147,
-    "peak": 0.0182,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_OFC",
-    "system": null,
-    "mean": -0.0148,
-    "peak": 0.0005,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_H",
-    "system": null,
-    "mean": -0.0151,
-    "peak": 0.003,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_d23ab",
-    "system": "default_mode",
-    "mean": -0.0158,
-    "peak": 0.0628,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_FOP1",
-    "system": null,
-    "mean": -0.0159,
-    "peak": 0.0699,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_FOP1",
-    "system": null,
-    "mean": -0.0166,
-    "peak": 0.0974,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_13l",
-    "system": null,
-    "mean": -0.017,
-    "peak": 0.0098,
+    "mean": 0.1316,
+    "peak": 0.2635,
     "frac_active": 0.0
    },
    {
     "name": "L_STV",
     "system": null,
-    "mean": -0.0171,
-    "peak": 0.124,
-    "frac_active": 0.0
+    "mean": 0.1315,
+    "peak": 0.3747,
+    "frac_active": 0.2188
    },
    {
-    "name": "L_8BL",
-    "system": "frontal_control",
-    "mean": -0.0191,
-    "peak": 0.0258,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_45",
-    "system": "language",
-    "mean": -0.0212,
-    "peak": 0.0252,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_3b",
-    "system": "somatomotor",
-    "mean": -0.0214,
-    "peak": 0.0737,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_31pd",
-    "system": "default_mode",
-    "mean": -0.0236,
-    "peak": 0.0467,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TGd",
-    "system": "language",
-    "mean": -0.0239,
-    "peak": 0.0187,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_OP2-3",
-    "system": null,
-    "mean": -0.0244,
-    "peak": 0.0785,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_a47r",
-    "system": "frontal_control",
-    "mean": -0.0249,
-    "peak": 0.0086,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_OP4",
-    "system": null,
-    "mean": -0.0254,
-    "peak": 0.0774,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_OP4",
-    "system": null,
-    "mean": -0.0261,
-    "peak": 0.0763,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p47r",
-    "system": "frontal_control",
-    "mean": -0.0285,
-    "peak": 0.0141,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_FOP4",
-    "system": null,
-    "mean": -0.0292,
-    "peak": 0.0942,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_OP1",
-    "system": null,
-    "mean": -0.0293,
-    "peak": 0.0481,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_43",
-    "system": null,
-    "mean": -0.0296,
-    "peak": 0.1311,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_p9-46v",
-    "system": "frontal_control",
-    "mean": -0.0312,
-    "peak": 0.0481,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_Ig",
-    "system": null,
-    "mean": -0.0314,
-    "peak": 0.0731,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_OP2-3",
-    "system": null,
-    "mean": -0.0333,
-    "peak": 0.091,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_44",
-    "system": "language",
-    "mean": -0.0334,
-    "peak": 0.0125,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_FOP3",
-    "system": null,
-    "mean": -0.0338,
-    "peak": 0.0658,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_FOP3",
-    "system": null,
-    "mean": -0.0344,
-    "peak": 0.1006,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_SFL",
-    "system": null,
-    "mean": -0.0366,
-    "peak": 0.0307,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_MI",
-    "system": null,
-    "mean": -0.0372,
-    "peak": 0.0136,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_s32",
-    "system": null,
-    "mean": -0.0377,
-    "peak": -0.0128,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_43",
-    "system": null,
-    "mean": -0.0381,
-    "peak": 0.0808,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_8Av",
-    "system": "frontal_control",
-    "mean": -0.0398,
-    "peak": -0.0043,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_A4",
+    "name": "L_RI",
     "system": "auditory",
-    "mean": -0.0433,
-    "peak": 0.0575,
+    "mean": 0.1306,
+    "peak": 0.3058,
+    "frac_active": 0.0312
+   },
+   {
+    "name": "R_A4",
+    "system": "auditory",
+    "mean": 0.1305,
+    "peak": 0.3524,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "R_8Ad",
+    "system": null,
+    "mean": 0.13,
+    "peak": 0.2086,
     "frac_active": 0.0
    },
    {
-    "name": "L_IP2",
+    "name": "L_IFJa",
+    "system": "language",
+    "mean": 0.1295,
+    "peak": 0.2615,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9m",
+    "system": "default_mode",
+    "mean": 0.1286,
+    "peak": 0.2276,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_LBelt",
+    "system": "auditory",
+    "mean": 0.1281,
+    "peak": 0.3501,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "R_ProS",
+    "system": "places",
+    "mean": 0.1279,
+    "peak": 0.2712,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PF",
+    "system": null,
+    "mean": 0.1265,
+    "peak": 0.2945,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8Av",
+    "system": "frontal_control",
+    "mean": 0.1259,
+    "peak": 0.2303,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_2",
+    "system": "somatomotor",
+    "mean": 0.1254,
+    "peak": 0.2283,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V6",
+    "system": null,
+    "mean": 0.1249,
+    "peak": 0.2694,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_i6-8",
+    "system": "frontal_control",
+    "mean": 0.1246,
+    "peak": 0.2004,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_POS1",
+    "system": "places",
+    "mean": 0.1245,
+    "peak": 0.2467,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_POS2",
+    "system": "default_mode",
+    "mean": 0.1233,
+    "peak": 0.2466,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_2",
+    "system": "somatomotor",
+    "mean": 0.1219,
+    "peak": 0.2057,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFJp",
+    "system": null,
+    "mean": 0.1212,
+    "peak": 0.2786,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFcm",
+    "system": null,
+    "mean": 0.1191,
+    "peak": 0.2871,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9-46d",
+    "system": "frontal_control",
+    "mean": 0.1187,
+    "peak": 0.217,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31pd",
+    "system": "default_mode",
+    "mean": 0.1179,
+    "peak": 0.2391,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_46",
+    "system": "frontal_control",
+    "mean": 0.1161,
+    "peak": 0.1981,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_45",
+    "system": "language",
+    "mean": 0.1148,
+    "peak": 0.2626,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PBelt",
+    "system": "auditory",
+    "mean": 0.1141,
+    "peak": 0.341,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "R_9p",
+    "system": "frontal_control",
+    "mean": 0.112,
+    "peak": 0.2146,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PHT",
+    "system": null,
+    "mean": 0.1102,
+    "peak": 0.2715,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p24pr",
+    "system": null,
+    "mean": 0.1095,
+    "peak": 0.1701,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PSL",
+    "system": null,
+    "mean": 0.1076,
+    "peak": 0.2944,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PBelt",
+    "system": "auditory",
+    "mean": 0.1076,
+    "peak": 0.3345,
+    "frac_active": 0.0625
+   },
+   {
+    "name": "R_d32",
+    "system": "default_mode",
+    "mean": 0.1067,
+    "peak": 0.189,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7m",
+    "system": "default_mode",
+    "mean": 0.1052,
+    "peak": 0.2365,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_33pr",
+    "system": null,
+    "mean": 0.104,
+    "peak": 0.187,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFt",
     "system": "attention",
-    "mean": -0.046,
-    "peak": 0.0962,
+    "mean": 0.1036,
+    "peak": 0.2035,
     "frac_active": 0.0
    },
    {
-    "name": "L_47l",
-    "system": null,
-    "mean": -0.0462,
-    "peak": 0.0107,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TE2a",
-    "system": null,
-    "mean": -0.0464,
-    "peak": -0.0083,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_TE1p",
-    "system": null,
-    "mean": -0.0486,
-    "peak": 0.0285,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TE2a",
-    "system": null,
-    "mean": -0.0505,
-    "peak": -0.0237,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TE1m",
-    "system": null,
-    "mean": -0.0507,
-    "peak": -0.0207,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_IFSp",
-    "system": "language",
-    "mean": -0.0547,
-    "peak": 0.0683,
-    "frac_active": 0.0
-   },
-   {
-    "name": "R_STSvp",
-    "system": "language",
-    "mean": -0.0554,
-    "peak": 0.0488,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_PFm",
-    "system": null,
-    "mean": -0.056,
-    "peak": 0.0284,
+    "name": "R_8BL",
+    "system": "frontal_control",
+    "mean": 0.1004,
+    "peak": 0.1842,
     "frac_active": 0.0
    },
    {
     "name": "L_TPOJ1",
     "system": null,
-    "mean": -0.0643,
-    "peak": 0.0735,
+    "mean": 0.1001,
+    "peak": 0.3544,
+    "frac_active": 0.1562
+   },
+   {
+    "name": "R_TE2p",
+    "system": "objects",
+    "mean": 0.0991,
+    "peak": 0.2106,
     "frac_active": 0.0
    },
    {
-    "name": "R_s32",
+    "name": "R_6d",
+    "system": "somatomotor",
+    "mean": 0.0989,
+    "peak": 0.1419,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_s6-8",
     "system": null,
-    "mean": -0.0658,
-    "peak": -0.0424,
+    "mean": 0.0978,
+    "peak": 0.1995,
     "frac_active": 0.0
    },
    {
-    "name": "L_PHT",
+    "name": "R_TF",
     "system": null,
-    "mean": -0.0697,
-    "peak": 0.0627,
+    "mean": 0.0972,
+    "peak": 0.1657,
     "frac_active": 0.0
    },
    {
-    "name": "L_TGd",
-    "system": "language",
-    "mean": -0.0699,
-    "peak": -0.033,
+    "name": "L_PFt",
+    "system": "attention",
+    "mean": 0.0956,
+    "peak": 0.2237,
     "frac_active": 0.0
    },
    {
-    "name": "R_STGa",
+    "name": "R_v23ab",
+    "system": "default_mode",
+    "mean": 0.0951,
+    "peak": 0.1638,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5L",
+    "system": null,
+    "mean": 0.0948,
+    "peak": 0.1217,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_SFL",
+    "system": null,
+    "mean": 0.0937,
+    "peak": 0.2132,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_RI",
+    "system": "auditory",
+    "mean": 0.0932,
+    "peak": 0.1968,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_44",
     "system": "language",
-    "mean": -0.0785,
-    "peak": -0.0193,
+    "mean": 0.0931,
+    "peak": 0.2098,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSvp",
+    "system": "language",
+    "mean": 0.0926,
+    "peak": 0.2983,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_d32",
+    "system": "default_mode",
+    "mean": 0.0921,
+    "peak": 0.1764,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6mp",
+    "system": "somatomotor",
+    "mean": 0.0907,
+    "peak": 0.1446,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_i6-8",
+    "system": "frontal_control",
+    "mean": 0.0907,
+    "peak": 0.1712,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9m",
+    "system": "default_mode",
+    "mean": 0.0902,
+    "peak": 0.1631,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5m",
+    "system": null,
+    "mean": 0.0896,
+    "peak": 0.1228,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_SCEF",
+    "system": null,
+    "mean": 0.0892,
+    "peak": 0.1791,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PreS",
+    "system": null,
+    "mean": 0.0892,
+    "peak": 0.1734,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_55b",
+    "system": "language",
+    "mean": 0.0889,
+    "peak": 0.2234,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9-46d",
+    "system": "frontal_control",
+    "mean": 0.0887,
+    "peak": 0.1593,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_POS2",
+    "system": "default_mode",
+    "mean": 0.0879,
+    "peak": 0.1942,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_33pr",
+    "system": null,
+    "mean": 0.0877,
+    "peak": 0.1451,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AIP",
+    "system": "attention",
+    "mean": 0.0848,
+    "peak": 0.1832,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A1",
+    "system": "auditory",
+    "mean": 0.0837,
+    "peak": 0.2732,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47l",
+    "system": null,
+    "mean": 0.0831,
+    "peak": 0.1578,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47s",
+    "system": null,
+    "mean": 0.0821,
+    "peak": 0.1515,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_46",
+    "system": "frontal_control",
+    "mean": 0.0818,
+    "peak": 0.1603,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8BM",
+    "system": "default_mode",
+    "mean": 0.0805,
+    "peak": 0.1668,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PI",
+    "system": null,
+    "mean": 0.0785,
+    "peak": 0.1545,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10d",
+    "system": null,
+    "mean": 0.0779,
+    "peak": 0.123,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_ProS",
+    "system": "places",
+    "mean": 0.0778,
+    "peak": 0.1873,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_s6-8",
+    "system": null,
+    "mean": 0.0754,
+    "peak": 0.1172,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8C",
+    "system": "frontal_control",
+    "mean": 0.0744,
+    "peak": 0.1604,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_24dd",
+    "system": null,
+    "mean": 0.0742,
+    "peak": 0.1272,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p9-46v",
+    "system": "frontal_control",
+    "mean": 0.0734,
+    "peak": 0.1349,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_4",
+    "system": "somatomotor",
+    "mean": 0.0723,
+    "peak": 0.134,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_24dd",
+    "system": null,
+    "mean": 0.0714,
+    "peak": 0.1326,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A4",
+    "system": "auditory",
+    "mean": 0.0706,
+    "peak": 0.3076,
+    "frac_active": 0.0312
+   },
+   {
+    "name": "L_IFSa",
+    "system": "frontal_control",
+    "mean": 0.0694,
+    "peak": 0.1803,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP5",
+    "system": null,
+    "mean": 0.0693,
+    "peak": 0.1617,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a24pr",
+    "system": null,
+    "mean": 0.0691,
+    "peak": 0.1509,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9a",
+    "system": "frontal_control",
+    "mean": 0.0682,
+    "peak": 0.1301,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_52",
+    "system": null,
+    "mean": 0.0679,
+    "peak": 0.161,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFcm",
+    "system": null,
+    "mean": 0.0657,
+    "peak": 0.1714,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_23d",
+    "system": "default_mode",
+    "mean": 0.0654,
+    "peak": 0.112,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TA2",
+    "system": "auditory",
+    "mean": 0.0654,
+    "peak": 0.183,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6v",
+    "system": "somatomotor",
+    "mean": 0.0641,
+    "peak": 0.1244,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PoI1",
+    "system": null,
+    "mean": 0.0631,
+    "peak": 0.1239,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_MBelt",
+    "system": "auditory",
+    "mean": 0.0621,
+    "peak": 0.1966,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFop",
+    "system": null,
+    "mean": 0.0614,
+    "peak": 0.1731,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7m",
+    "system": "default_mode",
+    "mean": 0.0613,
+    "peak": 0.1393,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p47r",
+    "system": "frontal_control",
+    "mean": 0.0608,
+    "peak": 0.1438,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p32pr",
+    "system": null,
+    "mean": 0.0607,
+    "peak": 0.1321,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AIP",
+    "system": "attention",
+    "mean": 0.06,
+    "peak": 0.1741,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47m",
+    "system": null,
+    "mean": 0.06,
+    "peak": 0.1033,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PreS",
+    "system": null,
+    "mean": 0.0592,
+    "peak": 0.1265,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a24pr",
+    "system": null,
+    "mean": 0.0588,
+    "peak": 0.163,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6r",
+    "system": null,
+    "mean": 0.0587,
+    "peak": 0.1405,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6v",
+    "system": "somatomotor",
+    "mean": 0.0578,
+    "peak": 0.1514,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47s",
+    "system": null,
+    "mean": 0.0575,
+    "peak": 0.1215,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6d",
+    "system": "somatomotor",
+    "mean": 0.0574,
+    "peak": 0.1305,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IP1",
+    "system": "attention",
+    "mean": 0.0573,
+    "peak": 0.1379,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_24dv",
+    "system": null,
+    "mean": 0.0563,
+    "peak": 0.1551,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8BM",
+    "system": "default_mode",
+    "mean": 0.0562,
+    "peak": 0.1413,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p24pr",
+    "system": null,
+    "mean": 0.0553,
+    "peak": 0.1027,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_4",
+    "system": "somatomotor",
+    "mean": 0.0527,
+    "peak": 0.155,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9p",
+    "system": "frontal_control",
+    "mean": 0.0519,
+    "peak": 0.1102,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TF",
+    "system": null,
+    "mean": 0.051,
+    "peak": 0.0922,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_24dv",
+    "system": null,
+    "mean": 0.0505,
+    "peak": 0.1459,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_SCEF",
+    "system": null,
+    "mean": 0.0503,
+    "peak": 0.1915,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFSp",
+    "system": "language",
+    "mean": 0.0501,
+    "peak": 0.1998,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PI",
+    "system": null,
+    "mean": 0.05,
+    "peak": 0.1369,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_45",
+    "system": "language",
+    "mean": 0.0499,
+    "peak": 0.1536,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p24",
+    "system": "default_mode",
+    "mean": 0.0497,
+    "peak": 0.1074,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31pd",
+    "system": "default_mode",
+    "mean": 0.0494,
+    "peak": 0.122,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p32pr",
+    "system": null,
+    "mean": 0.0492,
+    "peak": 0.1607,
     "frac_active": 0.0
    },
    {
     "name": "R_STSda",
     "system": "language",
-    "mean": -0.0789,
-    "peak": 0.0224,
+    "mean": 0.0487,
+    "peak": 0.2356,
     "frac_active": 0.0
    },
    {
-    "name": "L_PGi",
+    "name": "R_p10p",
+    "system": null,
+    "mean": 0.0475,
+    "peak": 0.093,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10v",
     "system": "default_mode",
-    "mean": -0.0799,
-    "peak": 0.02,
+    "mean": 0.0471,
+    "peak": 0.0802,
     "frac_active": 0.0
    },
    {
-    "name": "R_TE1a",
-    "system": "language",
-    "mean": -0.0851,
-    "peak": -0.0275,
-    "frac_active": 0.0
-   },
-   {
-    "name": "L_TE1p",
+    "name": "L_PoI1",
     "system": null,
-    "mean": -0.094,
-    "peak": 0.0033,
+    "mean": 0.0468,
+    "peak": 0.1087,
     "frac_active": 0.0
    },
    {
-    "name": "L_TGv",
+    "name": "R_PGs",
+    "system": "default_mode",
+    "mean": 0.0463,
+    "peak": 0.1718,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6r",
     "system": null,
-    "mean": -0.1005,
-    "peak": -0.0526,
+    "mean": 0.0457,
+    "peak": 0.1416,
     "frac_active": 0.0
    },
    {
-    "name": "L_TE1a",
-    "system": "language",
-    "mean": -0.1128,
-    "peak": -0.0635,
+    "name": "L_1",
+    "system": "somatomotor",
+    "mean": 0.0443,
+    "peak": 0.149,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a10p",
+    "system": null,
+    "mean": 0.0442,
+    "peak": 0.0819,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AVI",
+    "system": null,
+    "mean": 0.0438,
+    "peak": 0.1204,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_SFL",
+    "system": null,
+    "mean": 0.0429,
+    "peak": 0.1452,
     "frac_active": 0.0
    },
    {
     "name": "R_A5",
     "system": "auditory",
-    "mean": -0.1153,
-    "peak": 0.0595,
+    "mean": 0.0429,
+    "peak": 0.331,
+    "frac_active": 0.0312
+   },
+   {
+    "name": "R_31pv",
+    "system": "default_mode",
+    "mean": 0.0425,
+    "peak": 0.1131,
     "frac_active": 0.0
    },
    {
-    "name": "L_STGa",
+    "name": "L_8BL",
+    "system": "frontal_control",
+    "mean": 0.0404,
+    "peak": 0.1293,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AVI",
+    "system": null,
+    "mean": 0.0398,
+    "peak": 0.0992,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_3a",
+    "system": "somatomotor",
+    "mean": 0.0398,
+    "peak": 0.15,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_44",
     "system": "language",
-    "mean": -0.125,
-    "peak": -0.0459,
+    "mean": 0.0395,
+    "peak": 0.1533,
     "frac_active": 0.0
    },
    {
-    "name": "L_STSva",
-    "system": "language",
-    "mean": -0.1439,
-    "peak": 0.0302,
+    "name": "R_1",
+    "system": "somatomotor",
+    "mean": 0.0392,
+    "peak": 0.1283,
     "frac_active": 0.0
    },
    {
-    "name": "L_A5",
+    "name": "L_p24",
+    "system": "default_mode",
+    "mean": 0.0391,
+    "peak": 0.1055,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TA2",
     "system": "auditory",
-    "mean": -0.1554,
-    "peak": 0.067,
+    "mean": 0.0378,
+    "peak": 0.1616,
     "frac_active": 0.0
    },
    {
-    "name": "L_STSvp",
-    "system": "language",
-    "mean": -0.169,
-    "peak": 0.0152,
+    "name": "L_PHT",
+    "system": null,
+    "mean": 0.0371,
+    "peak": 0.2173,
     "frac_active": 0.0
    },
    {
-    "name": "L_STSda",
+    "name": "R_52",
+    "system": null,
+    "mean": 0.0358,
+    "peak": 0.1306,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A1",
+    "system": "auditory",
+    "mean": 0.0356,
+    "peak": 0.1547,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p32",
+    "system": "default_mode",
+    "mean": 0.0346,
+    "peak": 0.095,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PGs",
+    "system": "default_mode",
+    "mean": 0.0345,
+    "peak": 0.1294,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MBelt",
+    "system": "auditory",
+    "mean": 0.0342,
+    "peak": 0.1449,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AAIC",
+    "system": null,
+    "mean": 0.0339,
+    "peak": 0.1063,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10d",
+    "system": null,
+    "mean": 0.0336,
+    "peak": 0.0846,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a32pr",
+    "system": null,
+    "mean": 0.0333,
+    "peak": 0.0966,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47m",
+    "system": null,
+    "mean": 0.0321,
+    "peak": 0.0827,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFop",
+    "system": null,
+    "mean": 0.0321,
+    "peak": 0.1153,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a24",
+    "system": "default_mode",
+    "mean": 0.0314,
+    "peak": 0.0936,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE2p",
+    "system": "objects",
+    "mean": 0.0308,
+    "peak": 0.1091,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_RSC",
+    "system": "places",
+    "mean": 0.0304,
+    "peak": 0.1045,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10r",
+    "system": "default_mode",
+    "mean": 0.0287,
+    "peak": 0.0858,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31a",
+    "system": "default_mode",
+    "mean": 0.0285,
+    "peak": 0.1099,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP5",
+    "system": null,
+    "mean": 0.0278,
+    "peak": 0.0965,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a32pr",
+    "system": null,
+    "mean": 0.0272,
+    "peak": 0.118,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PeEc",
+    "system": null,
+    "mean": 0.0268,
+    "peak": 0.0497,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p32",
+    "system": "default_mode",
+    "mean": 0.0262,
+    "peak": 0.1143,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a9-46v",
+    "system": "frontal_control",
+    "mean": 0.025,
+    "peak": 0.096,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_LIPd",
+    "system": "attention",
+    "mean": 0.0239,
+    "peak": 0.1045,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_Pir",
+    "system": null,
+    "mean": 0.0235,
+    "peak": 0.0701,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31pv",
+    "system": "default_mode",
+    "mean": 0.023,
+    "peak": 0.1059,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10pp",
+    "system": null,
+    "mean": 0.0229,
+    "peak": 0.0489,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a24",
+    "system": "default_mode",
+    "mean": 0.0225,
+    "peak": 0.0647,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47l",
+    "system": null,
+    "mean": 0.0221,
+    "peak": 0.1299,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10v",
+    "system": "default_mode",
+    "mean": 0.0213,
+    "peak": 0.048,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PGi",
+    "system": "default_mode",
+    "mean": 0.02,
+    "peak": 0.1413,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_3a",
+    "system": "somatomotor",
+    "mean": 0.0198,
+    "peak": 0.1677,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP2",
+    "system": null,
+    "mean": 0.0191,
+    "peak": 0.1087,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFm",
+    "system": null,
+    "mean": 0.0188,
+    "peak": 0.1288,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AAIC",
+    "system": null,
+    "mean": 0.0187,
+    "peak": 0.0701,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP1",
+    "system": null,
+    "mean": 0.0186,
+    "peak": 0.1571,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_RSC",
+    "system": "places",
+    "mean": 0.0141,
+    "peak": 0.1156,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_LIPd",
+    "system": "attention",
+    "mean": 0.014,
+    "peak": 0.1579,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PoI2",
+    "system": null,
+    "mean": 0.0134,
+    "peak": 0.0755,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_11l",
+    "system": null,
+    "mean": 0.0132,
+    "peak": 0.0384,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8Av",
+    "system": "frontal_control",
+    "mean": 0.0125,
+    "peak": 0.0692,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p9-46v",
+    "system": "frontal_control",
+    "mean": 0.0103,
+    "peak": 0.1062,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p10p",
+    "system": null,
+    "mean": 0.0101,
+    "peak": 0.0887,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_Pir",
+    "system": null,
+    "mean": 0.0094,
+    "peak": 0.0631,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_v23ab",
+    "system": "default_mode",
+    "mean": 0.009,
+    "peak": 0.1487,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_13l",
+    "system": null,
+    "mean": 0.0083,
+    "peak": 0.0371,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TGd",
     "system": "language",
-    "mean": -0.1736,
-    "peak": 0.0308,
+    "mean": 0.0054,
+    "peak": 0.0565,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a10p",
+    "system": null,
+    "mean": 0.0053,
+    "peak": 0.0519,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1m",
+    "system": null,
+    "mean": 0.0053,
+    "peak": 0.047,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_EC",
+    "system": null,
+    "mean": 0.005,
+    "peak": 0.0375,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_25",
+    "system": null,
+    "mean": 0.0037,
+    "peak": 0.0284,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TGv",
+    "system": null,
+    "mean": 0.0032,
+    "peak": 0.0417,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IP1",
+    "system": "attention",
+    "mean": 0.0025,
+    "peak": 0.1847,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p47r",
+    "system": "frontal_control",
+    "mean": 0.0022,
+    "peak": 0.0672,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10pp",
+    "system": null,
+    "mean": 0.0016,
+    "peak": 0.0226,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a9-46v",
+    "system": "frontal_control",
+    "mean": 0.0009,
+    "peak": 0.0898,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a47r",
+    "system": "frontal_control",
+    "mean": 0.0008,
+    "peak": 0.0606,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_23d",
+    "system": "default_mode",
+    "mean": 0.0005,
+    "peak": 0.0886,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_H",
+    "system": null,
+    "mean": 0.0005,
+    "peak": 0.0344,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_3b",
+    "system": "somatomotor",
+    "mean": -0.0003,
+    "peak": 0.1782,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IP2",
+    "system": "attention",
+    "mean": -0.0015,
+    "peak": 0.1594,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP2",
+    "system": null,
+    "mean": -0.0025,
+    "peak": 0.1207,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10r",
+    "system": "default_mode",
+    "mean": -0.0044,
+    "peak": 0.0218,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PeEc",
+    "system": null,
+    "mean": -0.0049,
+    "peak": 0.0218,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP4",
+    "system": null,
+    "mean": -0.0066,
+    "peak": 0.0922,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a47r",
+    "system": "frontal_control",
+    "mean": -0.0076,
+    "peak": 0.0366,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MI",
+    "system": null,
+    "mean": -0.0077,
+    "peak": 0.1177,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_11l",
+    "system": null,
+    "mean": -0.0081,
+    "peak": 0.0256,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_pOFC",
+    "system": null,
+    "mean": -0.0086,
+    "peak": 0.0063,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_d23ab",
+    "system": "default_mode",
+    "mean": -0.0114,
+    "peak": 0.1312,
     "frac_active": 0.0
    },
    {
     "name": "R_STSdp",
     "system": "language",
-    "mean": -0.1736,
-    "peak": 0.0421,
+    "mean": -0.0118,
+    "peak": 0.2342,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE2a",
+    "system": null,
+    "mean": -0.0158,
+    "peak": 0.0283,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_25",
+    "system": null,
+    "mean": -0.0158,
+    "peak": -0.0001,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OFC",
+    "system": null,
+    "mean": -0.0159,
+    "peak": -0.0066,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PoI2",
+    "system": null,
+    "mean": -0.0173,
+    "peak": 0.0451,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_EC",
+    "system": null,
+    "mean": -0.0173,
+    "peak": 0.0037,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_d23ab",
+    "system": "default_mode",
+    "mean": -0.0175,
+    "peak": 0.1343,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STGa",
+    "system": "language",
+    "mean": -0.0183,
+    "peak": 0.0672,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFm",
+    "system": null,
+    "mean": -0.0189,
+    "peak": 0.1069,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A5",
+    "system": "auditory",
+    "mean": -0.0191,
+    "peak": 0.1995,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OFC",
+    "system": null,
+    "mean": -0.0207,
+    "peak": 0.0027,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_pOFC",
+    "system": null,
+    "mean": -0.0208,
+    "peak": -0.0029,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_H",
+    "system": null,
+    "mean": -0.0211,
+    "peak": 0.0132,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP1",
+    "system": null,
+    "mean": -0.0216,
+    "peak": 0.0933,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_Ig",
+    "system": null,
+    "mean": -0.0222,
+    "peak": 0.1246,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_13l",
+    "system": null,
+    "mean": -0.0226,
+    "peak": 0.0169,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP4",
+    "system": null,
+    "mean": -0.0238,
+    "peak": 0.1107,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1p",
+    "system": null,
+    "mean": -0.0261,
+    "peak": 0.0736,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_3b",
+    "system": "somatomotor",
+    "mean": -0.0266,
+    "peak": 0.1428,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP1",
+    "system": null,
+    "mean": -0.028,
+    "peak": 0.1409,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1a",
+    "system": "language",
+    "mean": -0.0328,
+    "peak": 0.0362,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1m",
+    "system": null,
+    "mean": -0.0341,
+    "peak": 0.0068,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_43",
+    "system": null,
+    "mean": -0.0345,
+    "peak": 0.1609,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_MI",
+    "system": null,
+    "mean": -0.0363,
+    "peak": 0.0639,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE2a",
+    "system": null,
+    "mean": -0.0371,
+    "peak": -0.0081,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP1",
+    "system": null,
+    "mean": -0.0386,
+    "peak": 0.0857,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSvp",
+    "system": "language",
+    "mean": -0.0388,
+    "peak": 0.1336,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP4",
+    "system": null,
+    "mean": -0.041,
+    "peak": 0.1331,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP2-3",
+    "system": null,
+    "mean": -0.0424,
+    "peak": 0.1189,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_s32",
+    "system": null,
+    "mean": -0.0439,
+    "peak": -0.0129,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP4",
+    "system": null,
+    "mean": -0.0441,
+    "peak": 0.1144,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_Ig",
+    "system": null,
+    "mean": -0.0464,
+    "peak": 0.1032,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TGd",
+    "system": "language",
+    "mean": -0.0477,
+    "peak": 0.0082,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_43",
+    "system": null,
+    "mean": -0.05,
+    "peak": 0.1101,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IP2",
+    "system": "attention",
+    "mean": -0.05,
+    "peak": 0.1361,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP2-3",
+    "system": null,
+    "mean": -0.0544,
+    "peak": 0.1264,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP3",
+    "system": null,
+    "mean": -0.0599,
+    "peak": 0.0948,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1p",
+    "system": null,
+    "mean": -0.0604,
+    "peak": 0.0562,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSva",
+    "system": "language",
+    "mean": -0.0617,
+    "peak": 0.0883,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP3",
+    "system": null,
+    "mean": -0.0634,
+    "peak": 0.1392,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1a",
+    "system": "language",
+    "mean": -0.0667,
+    "peak": 0.0128,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSda",
+    "system": "language",
+    "mean": -0.068,
+    "peak": 0.1007,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STGa",
+    "system": "language",
+    "mean": -0.0725,
+    "peak": 0.0193,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_s32",
+    "system": null,
+    "mean": -0.0725,
+    "peak": -0.0233,
     "frac_active": 0.0
    },
    {
     "name": "L_STSdp",
     "system": "language",
-    "mean": -0.2138,
-    "peak": 0.0636,
+    "mean": -0.0733,
+    "peak": 0.1549,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TGv",
+    "system": null,
+    "mean": -0.081,
+    "peak": -0.017,
     "frac_active": 0.0
    }
   ],
@@ -4356,516 +4356,516 @@
    {
     "second": 0,
     "z": {
-     "early_visual": 0.033,
-     "motion": 0.05,
+     "early_visual": 0.047,
+     "motion": 0.059,
      "faces": 0.108,
      "places": 0.086,
-     "objects": 0.025,
-     "attention": -0.007,
-     "auditory": -0.067,
-     "somatomotor": 0.012,
-     "frontal_control": 0.007,
-     "language": -0.06,
+     "objects": 0.027,
+     "attention": 0.0,
+     "auditory": -0.012,
+     "somatomotor": 0.033,
+     "frontal_control": 0.014,
+     "language": -0.052,
      "default_mode": 0.006
     }
    },
    {
     "second": 1,
     "z": {
-     "early_visual": 0.059,
-     "motion": 0.076,
-     "faces": 0.099,
-     "places": 0.094,
-     "objects": 0.022,
-     "attention": -0.014,
-     "auditory": -0.017,
-     "somatomotor": 0.014,
-     "frontal_control": 0.002,
-     "language": -0.04,
-     "default_mode": 0.002
+     "early_visual": 0.078,
+     "motion": 0.107,
+     "faces": 0.123,
+     "places": 0.11,
+     "objects": 0.037,
+     "attention": -0.003,
+     "auditory": 0.049,
+     "somatomotor": 0.031,
+     "frontal_control": 0.012,
+     "language": -0.016,
+     "default_mode": 0.018
     }
    },
    {
     "second": 2,
     "z": {
-     "early_visual": 0.07,
-     "motion": 0.103,
-     "faces": 0.094,
-     "places": 0.103,
-     "objects": 0.024,
-     "attention": -0.005,
-     "auditory": 0.05,
-     "somatomotor": 0.018,
-     "frontal_control": -0.001,
-     "language": -0.029,
-     "default_mode": -0.007
+     "early_visual": 0.142,
+     "motion": 0.143,
+     "faces": 0.104,
+     "places": 0.13,
+     "objects": 0.028,
+     "attention": 0.021,
+     "auditory": 0.158,
+     "somatomotor": 0.058,
+     "frontal_control": 0.023,
+     "language": 0.016,
+     "default_mode": 0.032
     }
    },
    {
     "second": 3,
     "z": {
-     "early_visual": 0.094,
-     "motion": 0.159,
-     "faces": 0.103,
-     "places": 0.117,
-     "objects": 0.043,
-     "attention": 0.009,
-     "auditory": 0.068,
-     "somatomotor": 0.024,
-     "frontal_control": -0.0,
-     "language": -0.038,
-     "default_mode": -0.017
+     "early_visual": 0.111,
+     "motion": 0.167,
+     "faces": 0.125,
+     "places": 0.135,
+     "objects": 0.048,
+     "attention": 0.005,
+     "auditory": 0.14,
+     "somatomotor": 0.037,
+     "frontal_control": 0.016,
+     "language": -0.006,
+     "default_mode": 0.01
     }
    },
    {
     "second": 4,
     "z": {
-     "early_visual": 0.175,
-     "motion": 0.259,
-     "faces": 0.145,
-     "places": 0.165,
-     "objects": 0.082,
-     "attention": 0.034,
-     "auditory": 0.038,
-     "somatomotor": 0.044,
-     "frontal_control": 0.004,
-     "language": -0.055,
-     "default_mode": 0.0
+     "early_visual": 0.202,
+     "motion": 0.304,
+     "faces": 0.177,
+     "places": 0.179,
+     "objects": 0.11,
+     "attention": 0.056,
+     "auditory": 0.05,
+     "somatomotor": 0.058,
+     "frontal_control": 0.024,
+     "language": -0.041,
+     "default_mode": 0.023
     }
    },
    {
     "second": 5,
     "z": {
-     "early_visual": 0.213,
-     "motion": 0.334,
-     "faces": 0.174,
-     "places": 0.194,
-     "objects": 0.118,
-     "attention": 0.072,
-     "auditory": -0.001,
-     "somatomotor": 0.055,
-     "frontal_control": 0.02,
-     "language": -0.07,
-     "default_mode": 0.02
+     "early_visual": 0.237,
+     "motion": 0.361,
+     "faces": 0.19,
+     "places": 0.206,
+     "objects": 0.128,
+     "attention": 0.082,
+     "auditory": 0.008,
+     "somatomotor": 0.068,
+     "frontal_control": 0.037,
+     "language": -0.054,
+     "default_mode": 0.04
     }
    },
    {
     "second": 6,
     "z": {
-     "early_visual": 0.27,
-     "motion": 0.409,
-     "faces": 0.202,
-     "places": 0.23,
-     "objects": 0.153,
-     "attention": 0.113,
-     "auditory": -0.057,
-     "somatomotor": 0.074,
-     "frontal_control": 0.029,
-     "language": -0.107,
-     "default_mode": 0.035
+     "early_visual": 0.281,
+     "motion": 0.424,
+     "faces": 0.209,
+     "places": 0.235,
+     "objects": 0.159,
+     "attention": 0.122,
+     "auditory": -0.065,
+     "somatomotor": 0.081,
+     "frontal_control": 0.041,
+     "language": -0.105,
+     "default_mode": 0.045
     }
    },
    {
     "second": 7,
     "z": {
-     "early_visual": 0.305,
-     "motion": 0.452,
-     "faces": 0.221,
-     "places": 0.261,
-     "objects": 0.179,
-     "attention": 0.147,
-     "auditory": -0.087,
-     "somatomotor": 0.083,
-     "frontal_control": 0.042,
-     "language": -0.123,
-     "default_mode": 0.05
+     "early_visual": 0.332,
+     "motion": 0.485,
+     "faces": 0.241,
+     "places": 0.274,
+     "objects": 0.199,
+     "attention": 0.165,
+     "auditory": -0.091,
+     "somatomotor": 0.097,
+     "frontal_control": 0.061,
+     "language": -0.106,
+     "default_mode": 0.072
     }
    },
    {
     "second": 8,
     "z": {
-     "early_visual": 0.332,
-     "motion": 0.541,
-     "faces": 0.27,
-     "places": 0.28,
-     "objects": 0.238,
-     "attention": 0.19,
-     "auditory": -0.084,
-     "somatomotor": 0.081,
-     "frontal_control": 0.051,
-     "language": -0.132,
-     "default_mode": 0.064
+     "early_visual": 0.345,
+     "motion": 0.557,
+     "faces": 0.279,
+     "places": 0.286,
+     "objects": 0.247,
+     "attention": 0.198,
+     "auditory": -0.089,
+     "somatomotor": 0.09,
+     "frontal_control": 0.066,
+     "language": -0.117,
+     "default_mode": 0.082
     }
    },
    {
     "second": 9,
     "z": {
-     "early_visual": 0.344,
-     "motion": 0.58,
-     "faces": 0.303,
-     "places": 0.294,
-     "objects": 0.278,
-     "attention": 0.213,
-     "auditory": -0.077,
-     "somatomotor": 0.073,
-     "frontal_control": 0.046,
-     "language": -0.132,
-     "default_mode": 0.061
+     "early_visual": 0.351,
+     "motion": 0.597,
+     "faces": 0.314,
+     "places": 0.3,
+     "objects": 0.288,
+     "attention": 0.219,
+     "auditory": -0.075,
+     "somatomotor": 0.079,
+     "frontal_control": 0.056,
+     "language": -0.126,
+     "default_mode": 0.071
     }
    },
    {
     "second": 10,
     "z": {
-     "early_visual": 0.333,
-     "motion": 0.594,
-     "faces": 0.311,
-     "places": 0.294,
-     "objects": 0.292,
-     "attention": 0.219,
-     "auditory": -0.016,
-     "somatomotor": 0.061,
-     "frontal_control": 0.049,
-     "language": -0.11,
-     "default_mode": 0.061
+     "early_visual": 0.357,
+     "motion": 0.638,
+     "faces": 0.34,
+     "places": 0.311,
+     "objects": 0.319,
+     "attention": 0.234,
+     "auditory": 0.012,
+     "somatomotor": 0.069,
+     "frontal_control": 0.063,
+     "language": -0.096,
+     "default_mode": 0.078
     }
    },
    {
     "second": 11,
     "z": {
-     "early_visual": 0.311,
-     "motion": 0.566,
-     "faces": 0.316,
-     "places": 0.288,
-     "objects": 0.304,
-     "attention": 0.228,
-     "auditory": 0.051,
-     "somatomotor": 0.053,
-     "frontal_control": 0.051,
-     "language": -0.088,
-     "default_mode": 0.057
+     "early_visual": 0.354,
+     "motion": 0.635,
+     "faces": 0.357,
+     "places": 0.313,
+     "objects": 0.347,
+     "attention": 0.264,
+     "auditory": 0.099,
+     "somatomotor": 0.072,
+     "frontal_control": 0.077,
+     "language": -0.058,
+     "default_mode": 0.084
     }
    },
    {
     "second": 12,
     "z": {
-     "early_visual": 0.282,
-     "motion": 0.535,
-     "faces": 0.33,
-     "places": 0.288,
-     "objects": 0.312,
-     "attention": 0.225,
-     "auditory": 0.036,
-     "somatomotor": 0.039,
-     "frontal_control": 0.05,
-     "language": -0.07,
-     "default_mode": 0.064
+     "early_visual": 0.347,
+     "motion": 0.625,
+     "faces": 0.384,
+     "places": 0.328,
+     "objects": 0.367,
+     "attention": 0.276,
+     "auditory": 0.118,
+     "somatomotor": 0.066,
+     "frontal_control": 0.096,
+     "language": -0.012,
+     "default_mode": 0.113
     }
    },
    {
     "second": 13,
     "z": {
-     "early_visual": 0.262,
-     "motion": 0.513,
-     "faces": 0.326,
-     "places": 0.283,
-     "objects": 0.307,
-     "attention": 0.221,
-     "auditory": 0.058,
-     "somatomotor": 0.04,
-     "frontal_control": 0.051,
-     "language": -0.049,
-     "default_mode": 0.069
+     "early_visual": 0.334,
+     "motion": 0.61,
+     "faces": 0.394,
+     "places": 0.323,
+     "objects": 0.371,
+     "attention": 0.269,
+     "auditory": 0.193,
+     "somatomotor": 0.064,
+     "frontal_control": 0.097,
+     "language": 0.038,
+     "default_mode": 0.12
     }
    },
    {
     "second": 14,
     "z": {
-     "early_visual": 0.234,
-     "motion": 0.43,
-     "faces": 0.302,
-     "places": 0.243,
-     "objects": 0.267,
-     "attention": 0.181,
-     "auditory": 0.054,
-     "somatomotor": 0.039,
-     "frontal_control": 0.06,
-     "language": -0.021,
-     "default_mode": 0.09
+     "early_visual": 0.291,
+     "motion": 0.532,
+     "faces": 0.368,
+     "places": 0.264,
+     "objects": 0.331,
+     "attention": 0.215,
+     "auditory": 0.187,
+     "somatomotor": 0.052,
+     "frontal_control": 0.096,
+     "language": 0.085,
+     "default_mode": 0.134
     }
    },
    {
     "second": 15,
     "z": {
-     "early_visual": 0.208,
-     "motion": 0.394,
-     "faces": 0.281,
-     "places": 0.201,
-     "objects": 0.254,
-     "attention": 0.179,
-     "auditory": 0.037,
-     "somatomotor": 0.049,
-     "frontal_control": 0.069,
-     "language": -0.007,
-     "default_mode": 0.092
+     "early_visual": 0.28,
+     "motion": 0.517,
+     "faces": 0.354,
+     "places": 0.227,
+     "objects": 0.33,
+     "attention": 0.225,
+     "auditory": 0.19,
+     "somatomotor": 0.066,
+     "frontal_control": 0.121,
+     "language": 0.111,
+     "default_mode": 0.146
     }
    },
    {
     "second": 16,
     "z": {
-     "early_visual": 0.187,
-     "motion": 0.331,
-     "faces": 0.238,
-     "places": 0.156,
-     "objects": 0.212,
-     "attention": 0.159,
-     "auditory": 0.011,
-     "somatomotor": 0.055,
-     "frontal_control": 0.078,
-     "language": -0.011,
-     "default_mode": 0.096
+     "early_visual": 0.232,
+     "motion": 0.404,
+     "faces": 0.289,
+     "places": 0.176,
+     "objects": 0.266,
+     "attention": 0.184,
+     "auditory": 0.179,
+     "somatomotor": 0.057,
+     "frontal_control": 0.122,
+     "language": 0.124,
+     "default_mode": 0.144
     }
    },
    {
     "second": 17,
     "z": {
-     "early_visual": 0.192,
-     "motion": 0.311,
-     "faces": 0.202,
-     "places": 0.148,
-     "objects": 0.181,
-     "attention": 0.138,
-     "auditory": 0.002,
-     "somatomotor": 0.065,
-     "frontal_control": 0.078,
-     "language": -0.017,
-     "default_mode": 0.081
+     "early_visual": 0.253,
+     "motion": 0.414,
+     "faces": 0.276,
+     "places": 0.177,
+     "objects": 0.256,
+     "attention": 0.186,
+     "auditory": 0.158,
+     "somatomotor": 0.072,
+     "frontal_control": 0.136,
+     "language": 0.106,
+     "default_mode": 0.147
     }
    },
    {
     "second": 18,
     "z": {
-     "early_visual": 0.196,
-     "motion": 0.307,
-     "faces": 0.203,
-     "places": 0.166,
-     "objects": 0.178,
-     "attention": 0.136,
-     "auditory": 0.058,
-     "somatomotor": 0.072,
-     "frontal_control": 0.069,
-     "language": -0.0,
-     "default_mode": 0.073
+     "early_visual": 0.264,
+     "motion": 0.416,
+     "faces": 0.274,
+     "places": 0.199,
+     "objects": 0.243,
+     "attention": 0.173,
+     "auditory": 0.212,
+     "somatomotor": 0.077,
+     "frontal_control": 0.13,
+     "language": 0.123,
+     "default_mode": 0.144
     }
    },
    {
     "second": 19,
     "z": {
-     "early_visual": 0.211,
-     "motion": 0.311,
-     "faces": 0.204,
-     "places": 0.185,
-     "objects": 0.171,
-     "attention": 0.141,
-     "auditory": 0.063,
-     "somatomotor": 0.082,
-     "frontal_control": 0.072,
-     "language": -0.024,
-     "default_mode": 0.07
+     "early_visual": 0.275,
+     "motion": 0.425,
+     "faces": 0.282,
+     "places": 0.207,
+     "objects": 0.24,
+     "attention": 0.175,
+     "auditory": 0.269,
+     "somatomotor": 0.084,
+     "frontal_control": 0.139,
+     "language": 0.135,
+     "default_mode": 0.149
     }
    },
    {
     "second": 20,
     "z": {
-     "early_visual": 0.196,
-     "motion": 0.27,
-     "faces": 0.177,
-     "places": 0.199,
-     "objects": 0.149,
-     "attention": 0.14,
-     "auditory": 0.055,
-     "somatomotor": 0.083,
-     "frontal_control": 0.066,
-     "language": -0.047,
-     "default_mode": 0.047
+     "early_visual": 0.255,
+     "motion": 0.392,
+     "faces": 0.256,
+     "places": 0.223,
+     "objects": 0.22,
+     "attention": 0.175,
+     "auditory": 0.242,
+     "somatomotor": 0.08,
+     "frontal_control": 0.131,
+     "language": 0.112,
+     "default_mode": 0.129
     }
    },
    {
     "second": 21,
     "z": {
-     "early_visual": 0.171,
-     "motion": 0.234,
-     "faces": 0.154,
-     "places": 0.199,
-     "objects": 0.138,
-     "attention": 0.143,
-     "auditory": 0.02,
-     "somatomotor": 0.067,
-     "frontal_control": 0.052,
-     "language": -0.051,
-     "default_mode": 0.025
+     "early_visual": 0.232,
+     "motion": 0.357,
+     "faces": 0.237,
+     "places": 0.211,
+     "objects": 0.214,
+     "attention": 0.18,
+     "auditory": 0.188,
+     "somatomotor": 0.074,
+     "frontal_control": 0.123,
+     "language": 0.117,
+     "default_mode": 0.111
     }
    },
    {
     "second": 22,
     "z": {
-     "early_visual": 0.135,
-     "motion": 0.182,
-     "faces": 0.127,
-     "places": 0.193,
-     "objects": 0.117,
-     "attention": 0.14,
-     "auditory": -0.026,
-     "somatomotor": 0.056,
-     "frontal_control": 0.05,
-     "language": -0.076,
-     "default_mode": 0.015
+     "early_visual": 0.208,
+     "motion": 0.301,
+     "faces": 0.223,
+     "places": 0.201,
+     "objects": 0.212,
+     "attention": 0.191,
+     "auditory": 0.141,
+     "somatomotor": 0.07,
+     "frontal_control": 0.125,
+     "language": 0.101,
+     "default_mode": 0.094
     }
    },
    {
     "second": 23,
     "z": {
-     "early_visual": 0.111,
-     "motion": 0.167,
-     "faces": 0.125,
-     "places": 0.187,
-     "objects": 0.112,
-     "attention": 0.123,
-     "auditory": -0.061,
-     "somatomotor": 0.046,
-     "frontal_control": 0.032,
-     "language": -0.092,
-     "default_mode": 0.008
+     "early_visual": 0.162,
+     "motion": 0.253,
+     "faces": 0.216,
+     "places": 0.175,
+     "objects": 0.202,
+     "attention": 0.163,
+     "auditory": 0.091,
+     "somatomotor": 0.055,
+     "frontal_control": 0.09,
+     "language": 0.097,
+     "default_mode": 0.071
     }
    },
    {
     "second": 24,
     "z": {
-     "early_visual": 0.093,
-     "motion": 0.162,
-     "faces": 0.128,
-     "places": 0.17,
-     "objects": 0.117,
-     "attention": 0.125,
-     "auditory": -0.059,
-     "somatomotor": 0.044,
-     "frontal_control": 0.032,
-     "language": -0.084,
-     "default_mode": 0.011
+     "early_visual": 0.137,
+     "motion": 0.221,
+     "faces": 0.209,
+     "places": 0.153,
+     "objects": 0.193,
+     "attention": 0.158,
+     "auditory": 0.074,
+     "somatomotor": 0.058,
+     "frontal_control": 0.094,
+     "language": 0.107,
+     "default_mode": 0.073
     }
    },
    {
     "second": 25,
     "z": {
-     "early_visual": 0.056,
-     "motion": 0.121,
-     "faces": 0.133,
-     "places": 0.14,
-     "objects": 0.108,
-     "attention": 0.097,
-     "auditory": -0.033,
-     "somatomotor": 0.02,
-     "frontal_control": 0.01,
-     "language": -0.07,
-     "default_mode": 0.004
+     "early_visual": 0.082,
+     "motion": 0.168,
+     "faces": 0.209,
+     "places": 0.112,
+     "objects": 0.174,
+     "attention": 0.111,
+     "auditory": 0.094,
+     "somatomotor": 0.031,
+     "frontal_control": 0.075,
+     "language": 0.11,
+     "default_mode": 0.075
     }
    },
    {
     "second": 26,
     "z": {
-     "early_visual": 0.035,
-     "motion": 0.133,
-     "faces": 0.167,
-     "places": 0.117,
-     "objects": 0.116,
-     "attention": 0.055,
-     "auditory": -0.049,
-     "somatomotor": 0.006,
-     "frontal_control": -0.015,
-     "language": -0.07,
-     "default_mode": 0.002
+     "early_visual": 0.059,
+     "motion": 0.153,
+     "faces": 0.209,
+     "places": 0.101,
+     "objects": 0.154,
+     "attention": 0.079,
+     "auditory": 0.021,
+     "somatomotor": 0.025,
+     "frontal_control": 0.057,
+     "language": 0.063,
+     "default_mode": 0.074
     }
    },
    {
     "second": 27,
     "z": {
-     "early_visual": 0.035,
-     "motion": 0.161,
-     "faces": 0.18,
-     "places": 0.092,
-     "objects": 0.128,
-     "attention": 0.057,
-     "auditory": -0.039,
-     "somatomotor": 0.009,
-     "frontal_control": -0.007,
-     "language": -0.059,
-     "default_mode": 0.011
+     "early_visual": 0.072,
+     "motion": 0.18,
+     "faces": 0.217,
+     "places": 0.088,
+     "objects": 0.163,
+     "attention": 0.088,
+     "auditory": 0.023,
+     "somatomotor": 0.037,
+     "frontal_control": 0.072,
+     "language": 0.071,
+     "default_mode": 0.088
     }
    },
    {
     "second": 28,
     "z": {
-     "early_visual": 0.035,
-     "motion": 0.157,
-     "faces": 0.159,
-     "places": 0.068,
-     "objects": 0.116,
-     "attention": 0.064,
-     "auditory": -0.025,
-     "somatomotor": 0.025,
-     "frontal_control": 0.003,
-     "language": -0.061,
-     "default_mode": 0.021
+     "early_visual": 0.069,
+     "motion": 0.149,
+     "faces": 0.169,
+     "places": 0.072,
+     "objects": 0.125,
+     "attention": 0.092,
+     "auditory": 0.001,
+     "somatomotor": 0.065,
+     "frontal_control": 0.074,
+     "language": 0.028,
+     "default_mode": 0.087
     }
    },
    {
     "second": 29,
     "z": {
-     "early_visual": 0.007,
-     "motion": 0.093,
-     "faces": 0.118,
-     "places": 0.039,
-     "objects": 0.082,
-     "attention": 0.057,
-     "auditory": 0.0,
-     "somatomotor": 0.036,
-     "frontal_control": 0.004,
-     "language": -0.058,
-     "default_mode": 0.015
+     "early_visual": 0.038,
+     "motion": 0.094,
+     "faces": 0.124,
+     "places": 0.051,
+     "objects": 0.088,
+     "attention": 0.09,
+     "auditory": -0.005,
+     "somatomotor": 0.084,
+     "frontal_control": 0.071,
+     "language": -0.0,
+     "default_mode": 0.082
     }
    },
    {
     "second": 30,
     "z": {
-     "early_visual": -0.063,
-     "motion": -0.039,
-     "faces": 0.004,
-     "places": -0.025,
-     "objects": 0.009,
-     "attention": 0.038,
-     "auditory": -0.026,
-     "somatomotor": 0.039,
-     "frontal_control": -0.008,
-     "language": -0.041,
-     "default_mode": -0.006
+     "early_visual": -0.039,
+     "motion": -0.04,
+     "faces": 0.014,
+     "places": -0.014,
+     "objects": 0.016,
+     "attention": 0.07,
+     "auditory": -0.019,
+     "somatomotor": 0.086,
+     "frontal_control": 0.067,
+     "language": 0.024,
+     "default_mode": 0.068
     }
    },
    {
     "second": 31,
     "z": {
-     "early_visual": -0.058,
-     "motion": -0.122,
-     "faces": -0.129,
-     "places": -0.067,
-     "objects": -0.064,
-     "attention": 0.05,
-     "auditory": 0.086,
-     "somatomotor": 0.084,
-     "frontal_control": 0.018,
-     "language": 0.002,
-     "default_mode": 0.023
+     "early_visual": -0.038,
+     "motion": -0.114,
+     "faces": -0.097,
+     "places": -0.044,
+     "objects": -0.048,
+     "attention": 0.08,
+     "auditory": 0.061,
+     "somatomotor": 0.138,
+     "frontal_control": 0.087,
+     "language": 0.046,
+     "default_mode": 0.089
     }
    }
   ]
  },
- "_wall_s": 24.6
+ "_wall_s": 23.4
 }

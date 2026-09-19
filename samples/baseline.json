@@ -9,79 +9,79 @@
  "systems": {
   "places": {
    "label": "Scenes and navigation (PPA / RSC)",
-   "mean": 0.1974,
-   "std": 0.0661,
-   "peak": 0.3204,
-   "frac_active": 0.1426
+   "mean": 0.206,
+   "std": 0.0526,
+   "peak": 0.3296,
+   "frac_active": 0.1497
   },
   "motion": {
    "label": "Visual motion (MT+/V5)",
-   "mean": 0.2442,
-   "std": 0.0581,
-   "peak": 0.4143,
-   "frac_active": 0.3271
+   "mean": 0.2847,
+   "std": 0.0678,
+   "peak": 0.4546,
+   "frac_active": 0.4069
   },
   "early_visual": {
    "label": "Early visual cortex (V1/V2)",
-   "mean": 0.1415,
-   "std": 0.0369,
-   "peak": 0.2477,
-   "frac_active": 0.0391
+   "mean": 0.1675,
+   "std": 0.0344,
+   "peak": 0.278,
+   "frac_active": 0.0547
   },
   "faces": {
    "label": "Face processing (fusiform / FFA)",
-   "mean": 0.1613,
-   "std": 0.0357,
-   "peak": 0.2553,
-   "frac_active": 0.0469
+   "mean": 0.1926,
+   "std": 0.045,
+   "peak": 0.2972,
+   "frac_active": 0.0988
   },
   "objects": {
    "label": "Object recognition (lateral occipital / IT)",
-   "mean": 0.1327,
-   "std": 0.0426,
-   "peak": 0.2192,
-   "frac_active": 0.0234
+   "mean": 0.1618,
+   "std": 0.0494,
+   "peak": 0.263,
+   "frac_active": 0.0763
   },
   "attention": {
    "label": "Spatial attention (intraparietal / SPL)",
-   "mean": 0.0886,
-   "std": 0.0296,
-   "peak": 0.154,
-   "frac_active": 0.0
-  },
-  "somatomotor": {
-   "label": "Sensorimotor cortex",
-   "mean": 0.0165,
-   "std": 0.0223,
-   "peak": 0.0698,
+   "mean": 0.1077,
+   "std": 0.0325,
+   "peak": 0.1767,
    "frac_active": 0.0
   },
   "default_mode": {
    "label": "Default mode network",
-   "mean": 0.0083,
-   "std": 0.0195,
-   "peak": 0.0518,
+   "mean": 0.035,
+   "std": 0.029,
+   "peak": 0.0985,
+   "frac_active": 0.0
+  },
+  "somatomotor": {
+   "label": "Sensorimotor cortex",
+   "mean": 0.0325,
+   "std": 0.0226,
+   "peak": 0.12,
    "frac_active": 0.0
   },
   "frontal_control": {
    "label": "Executive control (dorsolateral prefrontal)",
-   "mean": 0.0071,
-   "std": 0.0153,
-   "peak": 0.0383,
+   "mean": 0.0318,
+   "std": 0.0282,
+   "peak": 0.0876,
    "frac_active": 0.0
   },
   "auditory": {
    "label": "Auditory cortex (Heschl's / STG)",
-   "mean": -0.0386,
-   "std": 0.0269,
-   "peak": 0.1224,
+   "mean": 0.0229,
+   "std": 0.0455,
+   "peak": 0.2341,
    "frac_active": 0.0
   },
   "language": {
    "label": "Language network (IFG / STS)",
-   "mean": -0.0986,
-   "std": 0.0334,
-   "peak": 0.0034,
+   "mean": -0.0573,
+   "std": 0.061,
+   "peak": 0.077,
    "frac_active": 0.0
   }
  }
