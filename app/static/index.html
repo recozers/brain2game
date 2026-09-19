@@ -6,106 +6,110 @@
 <title>Brain Twin</title>
 <style>
   :root {
-    --bg: #0b0d12; --panel: #12151c; --panel-2: #191d27; --line: #262b38;
-    --text: #e8eaf0; --muted: #8e97aa; --dim: #5b6473;
-    --accent: #ff7a2f; --accent-2: #ffd23f; --danger: #ff5c5c; --ok: #5ad19a;
+    --bg: #f6f6f4; --panel: #ffffff; --line: #e7e7e3; --text: #1c1d20; --muted: #6f7379; --dim: #a9adb4;
+    --rose: #d63a5c; --rose-deep: #8d1b3a; --peach: #ff9a3c; --ok: #2f9e6b; --danger: #c93a3a;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
-    font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; overflow: hidden; }
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; overflow: hidden; }
   [hidden] { display: none !important; }
   .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
   #app { display: flex; height: 100vh; width: 100vw; }
 
-  /* ---- stage (three.js canvas) ---- */
-  #stage { flex: 1 1 auto; position: relative; min-width: 0; background: var(--bg); }
+  /* ---- stage: the brain is the main event ---- */
+  #stage { flex: 1 1 auto; position: relative; min-width: 0;
+    background: radial-gradient(ellipse at 50% 42%, #ffffff 0%, #f8f8f6 55%, #efefec 100%); }
   #stage canvas { display: block; }
-  #stageTime { position: absolute; left: 20px; top: 16px; font-size: 13px; color: var(--muted); letter-spacing: .3px; pointer-events: none; }
-  #stageTime b { display: block; font-size: 34px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; line-height: 1.1; }
-  #legend { position: absolute; left: 20px; bottom: 16px; color: var(--muted); font-size: 12px; pointer-events: none; }
-  #legend .ramp { width: 180px; height: 8px; border-radius: 4px; margin: 4px 0 2px;
-    background: linear-gradient(90deg, #6f6f74 0 12%, #e8501a 20%, #ffd23f 62%, #ffffff 100%); }
-  #legend .ticks { display: flex; justify-content: space-between; width: 180px; font-variant-numeric: tabular-nums; }
-  #hint { position: absolute; right: 16px; bottom: 16px; color: var(--dim); font-size: 12px; pointer-events: none; }
-  #inflateBtn { position: absolute; right: 16px; top: 16px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: rgba(20,23,32,.75); color: var(--text); font-size: 13px; cursor: pointer; backdrop-filter: blur(6px); }
-  #inflateBtn:hover { background: rgba(40,44,58,.9); }
-  body.game #inflateBtn { display: none; }
+  #stageTime { position: absolute; left: 24px; top: 20px; font-size: 12px; color: var(--muted); letter-spacing: .4px; text-transform: uppercase; pointer-events: none; }
+  #stageTime b { display: block; font-size: 30px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; line-height: 1.15; letter-spacing: 0; text-transform: none; }
+  #legend { position: absolute; left: 24px; bottom: 20px; color: var(--muted); font-size: 11px; pointer-events: none; }
+  #legend .ramp { width: 170px; height: 7px; border-radius: 4px; margin: 5px 0 3px;
+    background: linear-gradient(90deg, #d9d3d3 0 12%, #ffb070 22%, #e63946 62%, #7a0c2e 100%); }
+  #legend .ticks { display: flex; justify-content: space-between; width: 170px; font-variant-numeric: tabular-nums; }
+  #inflateBtn { position: absolute; right: 20px; top: 20px; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line);
+    background: rgba(255,255,255,.85); color: var(--muted); font-size: 12px; cursor: pointer; backdrop-filter: blur(6px); }
+  #inflateBtn:hover { color: var(--text); border-color: #d5d5d0; }
   #boot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 15px; }
 
-  /* ---- right panel ---- */
-  #panel { width: 380px; flex: 0 0 380px; background: var(--panel); border-left: 1px solid var(--line);
-    display: flex; flex-direction: column; gap: 14px; padding: 18px 18px 16px; overflow-y: auto; }
-  h1 { margin: 0; font-size: 24px; font-weight: 650; letter-spacing: .2px; }
-  h2 { margin: 0 0 8px; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
-  .sub { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
-  .card { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
-  .status { display: grid; grid-template-columns: auto 1fr; gap: 5px 14px; font-size: 13px; }
-  .status .k { color: var(--muted); white-space: nowrap; }
-  .status .v { text-align: right; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .status .v.big { font-size: 15px; font-weight: 600; }
-  #phase { color: var(--accent-2); }
-  #phase.ok { color: var(--ok); } #phase.bad { color: var(--danger); }
-  #topRegions { margin-top: 8px; color: var(--muted); font-size: 12px; min-height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* the one call to action: appears bottom-right once >= 20 s have been inferred */
+  #finishBtn { position: absolute; right: 22px; bottom: 22px; appearance: none; border: 0; border-radius: 999px; padding: 12px 20px;
+    font-size: 15px; font-weight: 600; letter-spacing: .1px; color: #fff; background: var(--rose); cursor: pointer;
+    box-shadow: 0 8px 24px rgba(214, 58, 92, .28); transition: transform .15s ease, box-shadow .15s ease; }
+  #finishBtn:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(214, 58, 92, .34); }
+  #finishBtn:disabled { opacity: .6; cursor: default; transform: none; }
+  #finishBtn.pop { animation: pop .5s cubic-bezier(.2,.9,.3,1.3); }
+  @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-  /* bar chart */
-  #bars { display: flex; flex-direction: column; gap: 5px; }
-  .row { display: grid; grid-template-columns: 118px 1fr 40px; align-items: center; gap: 8px; font-size: 12px; }
-  .row .lbl { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .row.active .lbl { color: var(--text); }
-  .row .track { position: relative; height: 12px; background: #0e1117; border-radius: 3px; overflow: hidden; }
-  .row .zero { position: absolute; left: 20%; top: 0; bottom: 0; width: 1px; background: #3a4150; }
-  .row .thr { position: absolute; left: 52%; top: 0; bottom: 0; width: 1px; background: #4a3a2a; }
-  .row .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--dim); border-radius: 3px;
-    transition: width .6s ease, background-color .6s ease; }
-  .row .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
-  .row.active .val { color: var(--text); }
-  .chart-scale { display: grid; grid-template-columns: 118px 1fr 40px; gap: 8px; font-size: 10px; color: var(--dim); margin-top: 4px; }
-  .chart-scale .axis { display: flex; justify-content: space-between; }
-
-  /* QR */
-  #qrCard { display: flex; gap: 14px; align-items: center; }
-  #qrBox { width: 132px; height: 132px; border-radius: 8px; background: #fff; padding: 6px; flex: 0 0 auto; }
-  #qrBox img, #qrBox canvas { display: block; width: 120px; height: 120px; }
-  #qrNone { width: 132px; height: 132px; border-radius: 8px; background: #0e1117; border: 1px dashed var(--line); color: var(--dim);
-    display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; padding: 8px; flex: 0 0 auto; }
-  #qrText { font-size: 13px; color: var(--muted); min-width: 0; }
-  #qrText strong { color: var(--text); }
-  #qrUrl { display: block; margin-top: 6px; color: var(--dim); word-break: break-all; }
-
-  /* finish */
-  #finishBtn { appearance: none; border: 0; border-radius: 12px; padding: 16px; font-size: 20px; font-weight: 700; letter-spacing: .3px;
-    color: #14100c; background: linear-gradient(180deg, var(--accent-2), var(--accent)); cursor: pointer; box-shadow: 0 6px 24px rgba(255, 122, 47, .25); }
-  #finishBtn:hover { filter: brightness(1.06); }
-  #finishBtn:disabled { opacity: .55; cursor: default; filter: none; }
-  #log { margin: 0; white-space: pre-wrap; word-break: break-word; max-height: 220px; overflow-y: auto; color: var(--muted); }
+  /* build log: floats above the button while the agent works */
+  #logPanel { position: absolute; right: 22px; bottom: 76px; width: 360px; max-width: calc(100% - 44px); background: var(--panel);
+    border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; box-shadow: 0 12px 36px rgba(0,0,0,.08); }
+  #logPanel h2 { margin: 0 0 6px; }
+  #log { margin: 0; white-space: pre-wrap; word-break: break-word; max-height: 200px; overflow-y: auto; color: var(--muted); font-size: 11.5px; }
   #log .last { color: var(--text); }
-  #logState { font-size: 12px; color: var(--accent-2); margin-bottom: 6px; }
-  .spin { display: inline-block; width: 10px; height: 10px; border: 2px solid var(--accent-2); border-right-color: transparent;
+  #logState { font-size: 12px; color: var(--rose); margin-bottom: 6px; }
+  .spin { display: inline-block; width: 10px; height: 10px; border: 2px solid var(--rose); border-right-color: transparent;
     border-radius: 50%; animation: spin .9s linear infinite; vertical-align: -1px; margin-right: 6px; }
   @keyframes spin { to { transform: rotate(360deg); } }
-  #toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); max-width: min(560px, 90vw); background: #2a1417; color: #ffd6d6;
-    border: 1px solid #5a2a2e; border-radius: 10px; padding: 12px 16px; font-size: 13px; z-index: 50; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
-  #toast.info { background: #14201b; color: #cdf3e1; border-color: #285a45; }
-  .foot { color: var(--dim); font-size: 11px; margin-top: auto; }
+
+  /* ---- right panel: the systems chart ---- */
+  #panel { width: 360px; flex: 0 0 360px; background: var(--panel); border-left: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 18px; padding: 24px 22px 18px; overflow-y: auto; }
+  h1 { margin: 0; font-size: 19px; font-weight: 650; letter-spacing: -.1px; }
+  h2 { margin: 0 0 10px; font-size: 11px; font-weight: 600; letter-spacing: .9px; text-transform: uppercase; color: var(--muted); }
+  .sub { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
+
+  #bars { display: flex; flex-direction: column; gap: 7px; }
+  .row { display: grid; grid-template-columns: 124px 1fr 38px; align-items: center; gap: 10px; font-size: 12.5px; }
+  .row .lbl { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row.active .lbl { color: var(--text); }
+  .row .track { position: relative; height: 10px; background: #f0f0ed; border-radius: 5px; overflow: hidden; }
+  .row .zero { position: absolute; left: 20%; top: 0; bottom: 0; width: 1px; background: #d9d9d4; }
+  .row .thr { display: none; }
+  .row .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #cfd2d8; border-radius: 5px;
+    transition: width .6s ease, background-color .6s ease; }
+  .row .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--dim); font-size: 11.5px; }
+  .row.active .val { color: var(--text); }
+  .chart-scale { display: grid; grid-template-columns: 124px 1fr 38px; gap: 10px; font-size: 10px; color: var(--dim); margin-top: 6px; }
+  .chart-scale .axis { display: flex; justify-content: space-between; }
+  #topRegions { margin-top: 10px; color: var(--muted); font-size: 11.5px; min-height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* status strip + QR at the bottom of the panel */
+  .status { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 12px; color: var(--muted); }
+  .status .v { text-align: right; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
+  .status .quiet, .status .quiet + .v { display: none; }
+  #phase { color: var(--peach); } #phase.ok { color: var(--ok); } #phase.bad { color: var(--danger); }
+  #qrCard { display: flex; gap: 12px; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); }
+  #qrBox { width: 96px; height: 96px; border-radius: 8px; background: #fff; border: 1px solid var(--line); padding: 4px; flex: 0 0 auto; }
+  #qrBox img, #qrBox canvas { display: block; width: 86px; height: 86px; }
+  #qrNone { width: 96px; height: 96px; border-radius: 8px; background: #fafaf8; border: 1px dashed var(--line); color: var(--dim);
+    display: flex; align-items: center; justify-content: center; text-align: center; font-size: 10.5px; padding: 6px; flex: 0 0 auto; }
+  #qrText { font-size: 12px; color: var(--muted); min-width: 0; }
+  #qrText strong { color: var(--text); }
+  #qrUrl { display: none; }
+  .foot { color: var(--dim); font-size: 11px; }
+
+  #toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); max-width: min(560px, 90vw); background: #fff3f3; color: #7a1f1f;
+    border: 1px solid #f0c4c4; border-radius: 10px; padding: 12px 16px; font-size: 13px; z-index: 50; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+  #toast.info { background: #eefaf3; color: #1f5a3c; border-color: #bfe6cf; }
 
   /* ---- game mode: iframe takes over, brain shrinks to a corner ---- */
   #gameWrap { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; background: var(--bg); }
-  #gameBar { display: flex; align-items: center; gap: 14px; padding: 8px 14px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 13px; }
+  #gameBar { display: flex; align-items: center; gap: 14px; padding: 9px 16px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 13px; }
   #gameBar .title { font-weight: 650; }
   #gameBar .why { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-  #score { font-weight: 700; color: var(--accent-2); font-variant-numeric: tabular-nums; }
-  #backBtn { appearance: none; border: 1px solid var(--line); background: var(--panel-2); color: var(--text); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  #score { font-weight: 700; color: var(--rose); font-variant-numeric: tabular-nums; }
+  #backBtn { appearance: none; border: 1px solid var(--line); background: #fff; color: var(--text); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
   #gameFrame { flex: 1; width: 100%; border: 0; background: #fff; }
   body.game #panel { display: none; }
   body.game #stage { position: fixed; right: 16px; bottom: 16px; width: 320px; height: 230px; z-index: 20;
-    border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,.6); }
-  body.game #legend, body.game #hint { display: none; }
-  body.game #stageTime { left: 12px; top: 8px; }
-  body.game #stageTime b { font-size: 20px; }
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 16px 44px rgba(0,0,0,.14); background: #fff; }
+  body.game #legend, body.game #finishBtn, body.game #logPanel, body.game #inflateBtn { display: none !important; }
+  body.game #stageTime { left: 12px; top: 10px; }
+  body.game #stageTime b { font-size: 18px; }
 
   @media (max-width: 900px) {
     #app { flex-direction: column; }
-    #panel { width: auto; flex: 0 0 auto; max-height: 55vh; border-left: 0; border-top: 1px solid var(--line); }
+    #panel { width: auto; flex: 0 0 auto; max-height: 50vh; border-left: 0; border-top: 1px solid var(--line); }
   }
 </style>
 <script type="importmap">
@@ -125,51 +129,46 @@
   <div id="stage">
     <div id="boot">loading brain…</div>
     <div id="stageTime">brain time<b id="stageTimeVal">—</b></div>
-    <div id="legend">predicted BOLD (z)<div class="ramp"></div><div class="ticks"><span id="tick-lo">&lt;0.25 base</span><span id="tick-mid">0.6</span><span id="tick-hi">1.0</span></div></div>
+    <div id="legend">predicted response<div class="ramp"></div><div class="ticks"><span id="tick-lo">&lt;0.25 base</span><span id="tick-mid">0.6</span><span id="tick-hi">1.0</span></div></div>
     <button id="inflateBtn" hidden>Inflate</button>
-    <div id="hint">drag to rotate · scroll to zoom · i to inflate</div>
+    <section id="logPanel" hidden>
+      <h2>Building your game</h2>
+      <div id="logState"><span class="spin"></span>starting…</div>
+      <pre id="log" class="mono"></pre>
+    </section>
+    <button id="finishBtn" type="button" hidden>Train my brain</button>
   </div>
 
   <aside id="panel">
     <header>
       <h1>Brain Twin</h1>
-      <p class="sub">what an average brain would be doing, ~15 s ago</p>
+      <p class="sub">What an average brain would be doing, about 15 seconds ago.</p>
     </header>
 
-    <section class="card">
-      <div class="status">
-        <span class="k">session</span><span class="v mono" id="sid">—</span>
-        <span class="k">state</span><span class="v" id="phase">booting</span>
-        <span class="k">seconds received</span><span class="v" id="received">—</span>
-        <span class="k">brain time</span><span class="v big" id="brainTime">—</span>
-        <span class="k">delay</span><span class="v" id="delay">—</span>
-        <span class="k">last inference</span><span class="v" id="infer">—</span>
-        <span class="k">buffered</span><span class="v" id="buffered">—</span>
-      </div>
+    <section>
+      <h2>Brain systems <span style="font-weight:400;text-transform:none;letter-spacing:0">(mean response, shown second)</span></h2>
+      <div id="bars"></div>
+      <div class="chart-scale"><span></span><span class="axis"><span>-0.2</span><span>0</span><span>0.4</span><span>0.8</span></span><span></span></div>
       <div id="topRegions"></div>
     </section>
 
-    <section class="card">
-      <h2>Systems <span style="font-weight:400;text-transform:none;letter-spacing:0">(mean z, shown second)</span></h2>
-      <div id="bars"></div>
-      <div class="chart-scale"><span></span><span class="axis"><span>-0.2</span><span>0</span><span>0.4</span><span>0.8</span></span><span></span></div>
+    <section class="status">
+      <span class="k">session</span><span class="v mono" id="sid">—</span>
+      <span class="k">state</span><span class="v" id="phase">booting</span>
+      <span class="k">behind reality</span><span class="v" id="delay">—</span>
+      <span class="k quiet">seconds received</span><span class="v" id="received">—</span>
+      <span class="k quiet">brain time</span><span class="v" id="brainTime">—</span>
+      <span class="k quiet">last inference</span><span class="v" id="infer">—</span>
+      <span class="k quiet">buffered</span><span class="v" id="buffered">—</span>
     </section>
 
-    <section class="card" id="qrCard">
+    <section id="qrCard">
       <div id="qrBox"></div>
       <div id="qrNone" hidden></div>
-      <div id="qrText"><strong>Scan to start filming</strong><br>The phone streams what it sees; the model predicts the average brain's response.<span id="qrUrl" class="mono"></span></div>
+      <div id="qrText"><strong>Scan to start filming</strong><br>Your phone becomes the eye; the model predicts the average brain's response.<span id="qrUrl" class="mono"></span></div>
     </section>
 
-    <button id="finishBtn" type="button">Finish</button>
-
-    <section class="card" id="logPanel" hidden>
-      <h2>Building your game</h2>
-      <div id="logState"><span class="spin"></span>starting…</div>
-      <pre id="log" class="mono"></pre>
-    </section>
-
-    <div class="foot">TRIBE v2 predicts an <em>average</em> brain's fMRI response to what the phone sees and hears. A simulator, not a mind reader.</div>
+    <div class="foot">TRIBE v2 predicts an <em>average</em> brain's fMRI response to what the camera sees and hears. A simulator, not a mind reader.</div>
   </aside>
 </div>
 

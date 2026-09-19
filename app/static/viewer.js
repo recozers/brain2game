@@ -14,6 +14,7 @@ const POLL_MS = 1000;                       // /preds poll period
 const GAP_SKIP_MS = 10000;                  // skip forward if a second never arrives
 const MAX_AHEAD = 20, KEEP_AHEAD = 10, MIN_START_BUFFER = 6, HARD_JUMP = 60;      // catch-up if the buffer runs away (bursty backend)
 const BAR_MIN = -0.2, BAR_MAX = 0.8;
+const TRAIN_AFTER_S = 20;                    // 'Train my brain' appears after this many inferred seconds
 const ASSET_BASE = new URL('assets/', import.meta.url);
 const FALLBACK_SYSTEMS = ['early_visual', 'motion', 'faces', 'places', 'objects', 'attention', 'auditory',
   'somatomotor', 'frontal_control', 'language', 'default_mode'];
@@ -108,11 +109,13 @@ function activationColors(vec, base, out, glow) {
     glow[i] = w * (0.35 + 0.65 * clamp((z - THRESH_LO) / (THRESH_HI - THRESH_LO), 0, 1));
   }
 }
+const BAR_STOPS = [[255, 176, 112], [230, 57, 70], [122, 12, 46]];   // light theme: peach -> red -> deep rose
 function barColor(z) {
-  if (!(z >= THRESH_LO)) return '#5b6473';
-  rampInto(z, tmp3);
-  const s = tmp3.map((v) => Math.round(255 * (v <= 0.0031308 ? v * 12.92 : 1.055 * Math.pow(v, 1 / 2.4) - 0.055)));
-  return `rgb(${s[0]},${s[1]},${s[2]})`;
+  if (!(z >= THRESH_LO)) return '#cfd2d8';
+  const t = clamp((z - THRESH_LO) / (THRESH_HI - THRESH_LO), 0, 1);
+  const seg = t < 0.5 ? [BAR_STOPS[0], BAR_STOPS[1], t / 0.5] : [BAR_STOPS[1], BAR_STOPS[2], (t - 0.5) / 0.5];
+  const c = seg[0].map((a, i) => Math.round(a + (seg[1][i] - a) * seg[2]));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -424,7 +427,7 @@ function startMock(assets) {
   }
   let t = 0;
   ingest(synth(t++)); ingest(synth(t++));
-  setInterval(() => { ingest(synth(t++)); renderStatus(); }, 1000);
+  setInterval(() => { ingest(synth(t++)); state.secondsPredicted = Math.max(state.secondsPredicted || 0, t); renderStatus(); }, 1000);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -453,6 +456,10 @@ function renderStatus() {
   $('delay').textContent = shown === null || !(state.secondsReceived > 0) ? '—' : fmt(state.secondsReceived - shown, 1) + ' s';
   $('infer').textContent = state.lastInferS === null || state.lastInferS === undefined ? '—' : fmt(state.lastInferS, 1) + ' s' + (state.busy ? ' · busy' : '');
   $('buffered').textContent = `${state.buffer.size} s`;
+  const btn = $('finishBtn');
+  const ready = (state.secondsPredicted || 0) >= TRAIN_AFTER_S || state.finishing;
+  if (ready && btn.hidden) { btn.hidden = false; btn.classList.add('pop'); }
+  else if (!ready && !btn.hidden) btn.hidden = true;
   $('topRegions').textContent = state.shownTop && state.shownTop.length
     ? 'top: ' + state.shownTop.slice(0, 4).map((t) => `${t.name} ${fmt(t.z, 1)}`).join(' · ') : '';
 }
@@ -480,7 +487,7 @@ function renderBars() {
     r.bar.style.width = (clamp((v - BAR_MIN) / (BAR_MAX - BAR_MIN), 0, 1) * 100).toFixed(1) + '%';
     r.bar.style.background = barColor(v);
     r.val.textContent = fmt(v, 2);
-    r.row.classList.toggle('active', v >= 1.0);
+    r.row.classList.toggle('active', v >= THRESH_LO);
   }
 }
 
