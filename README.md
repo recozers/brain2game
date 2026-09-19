@@ -69,6 +69,8 @@ against when deciding which system is under-driven.
 1. Backend warm? `curl -s $MODAL_BASE_URL/` shows the version and worker count; `curl -s $MODAL_BASE_URL/workers` returns one worker's warm-up stats. If the app was stopped: `WORKERS=3 GPU=H100 WINDOW_S=20 modal deploy modal_app/tribe_service.py` and wait ~3 min for the workers to warm up.
 2. `uvicorn app.server:app --port 8001` from the repo root, open http://localhost:8001 on the laptop (a fresh `sid` is generated; the QR encodes it).
 3. Phone: scan the QR, allow camera + mic, press **Start streaming**, keep the app in the foreground. Point it at faces, motion and speech; the brain lags ~15-20 s.
+   The muted camera preview beneath the system stats follows the displayed brain time, showing the footage
+   used for that prediction. It pauses with the brain and follows catch-up playback across clip boundaries.
 4. **Finish** → the agent log streams into the page (~45 s with `GEMINI_MODEL_CODE=gemini-3.8-flash`; ~3 min with the pro model) → the game takes over the screen, brain in the corner. **Back to brain** returns.
 
 Fallbacks, in order:

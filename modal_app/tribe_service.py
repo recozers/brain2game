@@ -22,7 +22,7 @@ from pathlib import Path
 import modal
 
 APP_NAME = "brain-twin"
-VERSION = 13
+VERSION = 14
 CACHE_DIR = "/cache"            # volume: HF hub cache lives at /cache/huggingface/hub
 FEAT_DIR = "/tmp/feat"          # per-worker neuralset feature cache (exca keeps an in-memory index: never wipe it)
 SESS_DIR = "/tmp/sessions"
@@ -264,6 +264,21 @@ class TribeWorker:
 # ---------------------------------------------------------------------------------------------------
 # sessions (live in the API container)
 # ---------------------------------------------------------------------------------------------------
+def _video_segments(chunks: list[dict], start: float, duration: float = 1.0) -> list[dict]:
+    """Locate a prediction interval in the exact chunk sequence supplied to inference."""
+    parts, cursor = [], 0.0
+    for chunk in chunks:
+        end = cursor + chunk["duration"]
+        lo, hi = max(start, cursor), min(start + duration, end)
+        if hi > lo:
+            parts.append({"index": chunk["index"], "offset_s": round(lo - cursor, 6),
+                          "duration_s": round(hi - lo, 6)})
+        cursor = end
+        if cursor >= start + duration:
+            break
+    return parts
+
+
 class Session:
     def __init__(self, sid: str, svc: "TribeService"):
         self.sid = sid
@@ -275,6 +290,7 @@ class Session:
         self.preds: dict[int, "np.ndarray"] = {}
         self.sys: dict[int, dict] = {}
         self.top: dict[int, list] = {}
+        self.video: dict[int, list] = {}     # source clip offsets retained with the winning prediction
         self.lock = threading.Lock()
         self.pending = False                  # chunks arrived since the last dispatch
         self.inflight = 0
@@ -330,10 +346,10 @@ class Session:
             self.inflight += 1
             n = self.n_windows
             self.n_windows += 1
-            chunks = list(self.chunks)
+            chunks = [c.copy() for c in self.chunks]
         threading.Thread(target=self._run_window, args=(chunks, n, False), daemon=True, name=f"win-{self.sid}-{n}").start()
 
-    def _build_window(self, chunks: list[dict], n: int) -> tuple[str, float, float]:
+    def _build_window(self, chunks: list[dict], n: int) -> tuple[str, float, float, list[dict]]:
         sel, total = [], 0.0
         for c in reversed(chunks):                       # newest first, only while the sequence stays contiguous
             if total >= WINDOW_S or (sel and c["index"] != sel[0]["index"] - 1):
@@ -352,11 +368,11 @@ class Session:
                       "-crf", "24", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", "48000", "-movflags", "+faststart", out])
             if r.returncode != 0:
                 raise RuntimeError(f"ffmpeg concat failed: {r.stderr[-800:]}")
-        return out, sel[0]["t_start"], total
+        return out, sel[0]["t_start"], total, sel
 
     def _run_window(self, chunks: list[dict], n: int, final: bool):
         try:
-            path, t_start, total = self._build_window(chunks, n)
+            path, t_start, total, window_chunks = self._build_window(chunks, n)
             with open(path, "rb") as f:
                 data = f.read()
             try:
@@ -379,6 +395,7 @@ class Session:
                     s, top = self.svc.stats_for(vec)
                     self.sys[sec] = s
                     self.top[sec] = top
+                    self.video[sec] = _video_segments(window_chunks, float(rel_starts[i]))
                     new += 1
                 self.last_infer_s = round(dt, 2)
                 self.last_window_s = round(total, 2)
@@ -429,10 +446,12 @@ class Session:
             data = np.stack([self.preds[k] for k in secs]).astype("float16") if secs else np.zeros((0, N_VERT), "float16")
             regions = [{"second": k, "top": self.top[k]} for k in secs]
             systems = [{"second": k, "z": self.sys[k]} for k in secs]
+            video = [{"second": k, "clips": self.video.get(k, [])} for k in secs]
         st = self.status()
         return {"sid": self.sid, "rate_hz": 1, "n_vertices": N_VERT, "seconds": secs,
                 "data_b64": base64.b64encode(np.ascontiguousarray(data).tobytes()).decode(),
-                "regions": regions, "systems": systems, "seconds_received": st["seconds_received"], "status": st}
+                "regions": regions, "systems": systems, "video": video,
+                "seconds_received": st["seconds_received"], "status": st}
 
     def all_preds(self):
         import numpy as np
@@ -552,7 +571,7 @@ class TribeService:
             time.sleep(0.5)
         if s.chunks:                                        # one last window with no trailing drop
             with s.lock:
-                chunks = list(s.chunks)
+                chunks = [c.copy() for c in s.chunks]
                 n = s.n_windows
                 s.n_windows += 1
                 s.inflight += 1
@@ -585,7 +604,7 @@ class TribeService:
     def web(self):
         from fastapi import FastAPI, File, Form, HTTPException, UploadFile
         from fastapi.middleware.cors import CORSMiddleware
-        from fastapi.responses import HTMLResponse, JSONResponse
+        from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 
         svc = self
         api = FastAPI(title="Brain Twin")
@@ -638,6 +657,19 @@ class TribeService:
             if s is None:
                 raise HTTPException(404, "unknown session")
             return s.status()
+
+        @api.get("/session/{sid}/video/{index}")
+        def video(sid: str, index: int):
+            s = svc.session(sid, create=False)
+            if s is None:
+                raise HTTPException(404, "unknown session")
+            with s.lock:
+                chunk = s.by_index.get(index)
+                path = chunk["path"] if chunk else None
+            if not path or not os.path.isfile(path):
+                raise HTTPException(404, "video chunk unavailable")
+            media_type = "video/webm" if Path(path).suffix.lower() == ".webm" else "video/mp4"
+            return FileResponse(path, media_type=media_type, headers={"Cache-Control": "no-store"})
 
         @api.post("/session/{sid}/finish")
         async def finish(sid: str):

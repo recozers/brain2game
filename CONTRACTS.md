@@ -79,8 +79,14 @@ region names per atlas, `game_target: true|false`). Systems (ids are stable, do 
    "data_b64": "<base64 of float16 array, shape (len(seconds), 20484), C order>",
    "regions": [{"second": 12, "top": [{"name": "L_S_calcarine", "z": 2.1}, ...]}],   // top 8 per second
    "systems": [{"second": 12, "z": {"early_visual": 1.8, "motion": 0.4, ...}}],
+   "video": [{"second": 12, "clips": [{"index": 4, "offset_s": 0.0, "duration_s": 1.0}]}],
    "seconds_received": 25.0, "status": {...same as /status...}}
   ```
+- `GET /session/{sid}/video/{index}` → original uploaded MP4/WebM clip, with byte-range support for seeking.
+  `video[].clips` locates each prediction's one-second interval within the exact clips used for that inference
+  window. An interval can span two clips. Offsets are retained with the first accepted prediction, so later
+  uploads cannot move its preview. The muted camera panel follows brain playback, including adaptive speed,
+  pauses and jumps; missing footage does not block predictions. Session video expires on API container restart.
 - `GET /session/{sid}/status` → `{"chunks_received": 5, "seconds_received": 25.0, "seconds_predicted": 18,
    "busy": true, "inflight": 2, "workers": 3, "last_infer_s": 7.9, "last_window_s": 20.0, "delay_estimate_s": 15.4}`
 - `POST /session/{sid}/finish` → session summary (also stored on the container until restart):

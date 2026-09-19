@@ -3,6 +3,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { loadHiresAssets, createHiresBrain } from './brain.js';
+import { createVideoPreview } from './video-preview.js';
 
 const qs = new URLSearchParams(location.search);
 const MOCK = ['1', 'true', 'yes'].includes((qs.get('mock') || '').toLowerCase());
@@ -31,7 +32,7 @@ const withTimeout = (ms) => (typeof AbortSignal.timeout === 'function' ? AbortSi
 // state
 // ------------------------------------------------------------------------------------------------
 const state = {
-  cfg: null, assets: null, atlas: null, brain: null,
+  cfg: null, assets: null, atlas: null, brain: null, video: null,
   buffer: new Map(),          // second -> { vec: Float32Array(N), systems: {id: z} | null, top: [{name, z}] | null }
   nextSecond: 0,              // since= for the next poll (= last received + 1)
   playSecond: null,           // next second to display
@@ -274,12 +275,14 @@ function ingest(resp) {
     const nv = resp.n_vertices || N;
     const sysBySec = new Map((resp.systems || []).map((s) => [s.second, s.z || null]));
     const topBySec = new Map((resp.regions || []).map((s) => [s.second, s.top || null]));
+    const videoBySec = new Map((resp.video || []).map((v) => [v.second, v]));
     secs.forEach((sec, k) => {
       const sz = sysBySec.get(sec); if (sz && !state.history.has(sec)) state.history.set(sec, sz);
       if (state.shownSecond !== null && sec <= state.shownSecond) return;   // already played (first write wins)
       let vec = vals ? vals.subarray(k * nv, (k + 1) * nv) : null;
       if (vec && vec.length !== N) { const v2 = new Float32Array(N); v2.set(vec.subarray(0, Math.min(N, vec.length))); vec = v2; }
-      state.buffer.set(sec, { vec, systems: sysBySec.get(sec) || null, top: topBySec.get(sec) || null });
+      state.buffer.set(sec, { vec, systems: sysBySec.get(sec) || null, top: topBySec.get(sec) || null,
+        video: videoBySec.get(sec) || { second: sec, clips: [] } });
     });
     for (const sec of secs) state.received.add(sec);
     state.maxReceived = Math.max(state.maxReceived, ...secs);
@@ -347,6 +350,7 @@ function show(sec) {
   if (e.vec) state.brain.showVector(e.vec);
   state.shownSecond = sec; state.shownSystems = e.systems; state.shownTop = e.top;
   state.playSecond = sec + 1;
+  state.video?.follow(e.video, playbackPeriodMs(), state.buffer.get(sec + 1)?.video);
   renderStatus(); renderBars();
 }
 
@@ -748,6 +752,7 @@ async function main() {
     wantHires ? loadHiresAssets(ASSET_BASE).catch((e) => { console.warn('[hires] unavailable, using fsaverage5 renderer:', e.message); return null; }) : null,
   ]);
   state.cfg = cfg; state.assets = assets; state.atlas = assets.atlas;
+  state.video = createVideoPreview({ baseUrl: cfg.modal_base_url, sid: cfg.sid, mock: MOCK });
   fetch(new URL('/samples/baseline.json', location.origin)).then((r) => (r.ok ? r.json() : null)).then((b) => { state.baseline = b; }).catch(() => {});
   console.info('[brain-twin] config', cfg, 'mesh', assets.mesh.n_vertices, 'vertices', assets.mesh.n_faces, 'faces; atlas', assets.atlas && assets.atlas.atlas, '; hires', !!hires);
   state.brain = hires
