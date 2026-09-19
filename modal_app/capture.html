@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Brain Twin · Eye</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; background:#0b0d12; color:#e8e8f0; font-family: -apple-system, system-ui, sans-serif; padding: env(safe-area-inset-top) 16px 24px; }
+  h1 { font-size: 22px; margin: 18px 0 4px; letter-spacing: .3px; }
+  .sub { color:#9aa0b4; font-size: 13px; margin: 0 0 14px; line-height: 1.4; }
+  video { width:100%; aspect-ratio: 4/3; background:#000; border-radius: 14px; object-fit: cover; }
+  .row { display:flex; gap:10px; margin-top:14px; }
+  button { flex:1; font-size:17px; padding:14px; border-radius: 12px; border:0; background:#ff7a1a; color:#111; font-weight:700; }
+  button.secondary { background:#2a2f3f; color:#e8e8f0; }
+  button:disabled { opacity:.5; }
+  .stats { margin-top:14px; display:grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; font-size:14px; }
+  .stats div span { display:block; color:#9aa0b4; font-size:11px; text-transform: uppercase; letter-spacing:.6px; }
+  .pill { display:inline-block; padding:3px 9px; border-radius: 999px; background:#1c2030; font-size:12px; color:#9aa0b4; margin-top:8px; }
+  .err { color:#ff6b6b; font-size:13px; margin-top:10px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<h1>Brain Twin · Eye</h1>
+<p class="sub">This phone is the eye. The laptop shows what an average human brain would be doing about 15 seconds behind what you film. Keep the screen on and the app in the foreground.</p>
+<video id="v" autoplay muted playsinline></video>
+<div class="row">
+  <button id="start">Start streaming</button>
+  <button id="stop" class="secondary" disabled>Stop</button>
+</div>
+<div class="stats">
+  <div><span>Session</span><b id="sid"></b></div>
+  <div><span>Chunks sent</span><b id="sent">0</b></div>
+  <div><span>Seconds received</span><b id="secs">0</b></div>
+  <div><span>Last upload</span><b id="up">–</b></div>
+  <div><span>Last chunk size</span><b id="size">–</b></div>
+  <div><span>Format</span><b id="mime">–</b></div>
+</div>
+<div class="pill" id="state">idle</div>
+<div class="err" id="err"></div>
+<script>
+const qs = new URLSearchParams(location.search);
+const sid = qs.get('sid') || 'demo';
+const CHUNK_MS = 5000;
+document.getElementById('sid').textContent = sid;
+const $ = id => document.getElementById(id);
+let stream = null, rec = null, idx = 0, running = false, wakeLock = null, inflight = 0;
+
+function pickMime() {
+  const cands = ['video/mp4;codecs=avc1.42E01E,mp4a.40.2', 'video/mp4;codecs=avc1,mp4a.40.2', 'video/mp4',
+                 'video/webm;codecs=vp8,opus', 'video/webm'];
+  if (!window.MediaRecorder) return '';
+  for (const m of cands) { try { if (MediaRecorder.isTypeSupported(m)) return m; } catch (e) {} }
+  return '';
+}
+
+async function start() {
+  $('err').textContent = '';
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal: 'environment' }, width: { ideal: 640 }, height: { ideal: 480 }, frameRate: { ideal: 30 } },
+      audio: true
+    });
+  } catch (e) { $('err').textContent = 'Camera/mic permission failed: ' + e; return; }
+  $('v').srcObject = stream;
+  running = true; idx = 0;
+  $('start').disabled = true; $('stop').disabled = false; $('state').textContent = 'streaming';
+  try { wakeLock = await navigator.wakeLock.request('screen'); } catch (e) {}
+  loop();
+}
+
+function loop() {
+  if (!running) return;
+  const mime = pickMime();
+  const opts = mime ? { mimeType: mime, videoBitsPerSecond: 1200000, audioBitsPerSecond: 64000 } : { videoBitsPerSecond: 1200000 };
+  let r;
+  try { r = new MediaRecorder(stream, opts); } catch (e) { r = new MediaRecorder(stream); }
+  const my = idx++;
+  const t0 = performance.now();
+  r.ondataavailable = (e) => { if (e.data && e.data.size > 0) upload(e.data, my, (performance.now() - t0) / 1000, r.mimeType || mime); };
+  r.onerror = (e) => { $('err').textContent = 'Recorder error: ' + (e.error || e); };
+  r.start();
+  rec = r;
+  $('mime').textContent = (r.mimeType || mime || 'default').split(';')[0];
+  setTimeout(() => { try { if (r.state !== 'inactive') r.stop(); } catch (e) {} loop(); }, CHUNK_MS);
+}
+
+async function upload(blob, index, duration, mime) {
+  const ext = (mime || '').includes('mp4') ? 'mp4' : 'webm';
+  const fd = new FormData();
+  fd.append('file', blob, `chunk_${String(index).padStart(4, '0')}.${ext}`);
+  fd.append('index', String(index));
+  fd.append('duration', duration.toFixed(2));
+  const t0 = performance.now();
+  inflight++;
+  try {
+    const res = await fetch(`/session/${encodeURIComponent(sid)}/chunk`, { method: 'POST', body: fd });
+    const j = await res.json();
+    if (!res.ok) throw new Error(JSON.stringify(j));
+    $('sent').textContent = String(index + 1);
+    $('secs').textContent = (j.seconds_received || 0).toFixed(1);
+    $('up').textContent = Math.round(performance.now() - t0) + ' ms';
+    $('size').textContent = (blob.size / 1024).toFixed(0) + ' KB';
+  } catch (e) {
+    $('err').textContent = 'Upload failed for chunk ' + index + ': ' + e;
+  } finally { inflight--; }
+}
+
+function stop() {
+  running = false;
+  try { if (rec && rec.state !== 'inactive') rec.stop(); } catch (e) {}
+  if (stream) stream.getTracks().forEach(t => t.stop());
+  if (wakeLock) { try { wakeLock.release(); } catch (e) {} wakeLock = null; }
+  $('start').disabled = false; $('stop').disabled = true; $('state').textContent = 'stopped';
+}
+$('start').onclick = start;
+$('stop').onclick = stop;
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState === 'visible' && running && !wakeLock) { try { wakeLock = await navigator.wakeLock.request('screen'); } catch (e) {} }
+});
+</script>
+</body>
+</html>

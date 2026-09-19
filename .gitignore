@@ -1,0 +1,20 @@
+.env
+__pycache__/
+*.pyc
+samples/*.mov
+samples/*.mp4
+samples/*.npz
+app/games/*.html
+app/games/*.json
+app/static/assets/*.f32
+app/static/assets/*.u32
+.DS_Store
+node_modules/
+app/static/assets/hires/*.f32
+app/static/assets/hires/*.u32
+# generated games: keep the hand-made fallback and two good pre-generated ones for demo day
+app/games/*.png
+samples/*.MOV
+!app/games/_fallback_motion.html
+!app/games/20260919-114240-a18c.html
+!app/games/20260919-122001-ca77.html

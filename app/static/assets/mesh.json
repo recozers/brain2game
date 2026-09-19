@@ -1,0 +1,31 @@
+{
+ "n_vertices": 20484,
+ "n_faces": 40960,
+ "hemi_offset": 10242,
+ "mesh": "fsaverage5",
+ "surface": "inflated",
+ "units": "mm",
+ "hemi_gap_mm": 12.0,
+ "files": {
+  "positions": "positions.f32",
+  "faces": "faces.u32",
+  "sulc": "sulc.f32"
+ },
+ "dtypes": {
+  "positions": "float32le[N*3]",
+  "faces": "uint32le[F*3]",
+  "sulc": "float32le[N]"
+ },
+ "bbox": [
+  -88.99400329589844,
+  -107.99299621582031,
+  -73.29000091552734,
+  87.77899932861328,
+  107.98300170898438,
+  73.31300354003906
+ ],
+ "sulc_range": [
+  -1.4937248229980469,
+  1.8412240743637085
+ ]
+}

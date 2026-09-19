@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Rule Shift</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #090c12;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  #header {
+    flex: 0 0 auto;
+    background: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 10;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .game-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .target-badge {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: #7dd3fc;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 9999px;
+    letter-spacing: 0.02em;
+  }
+  .stats-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .stat-pill {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    background: #1e293b;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+  }
+  .stat-label {
+    font-size: 0.68rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .stat-value {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+  .stat-value.timer {
+    color: #f59e0b;
+  }
+  .stat-value.score {
+    color: #10b981;
+  }
+  .header-why {
+    font-size: 0.71rem;
+    line-height: 1.35;
+    color: #94a3b8;
+    background: rgba(15, 23, 42, 0.8);
+    border-left: 2px solid #38bdf8;
+    padding-left: 8px;
+  }
+  #canvas-container {
+    flex: 1 1 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-top">
+    <div class="title-group">
+      <span class="game-title">Rule Shift</span>
+      <span class="target-badge">Target: Executive control (dorsolateral prefrontal)</span>
+    </div>
+    <div class="stats-group">
+      <div class="stat-pill">
+        <span class="stat-label">Time</span>
+        <span class="stat-value timer" id="ui-timer">60.0s</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-label">Score</span>
+        <span class="stat-value score" id="ui-score">0</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-label">Streak</span>
+        <span class="stat-value" id="ui-streak">x1</span>
+      </div>
+    </div>
+  </div>
+  <div class="header-why">
+    The passive footage lacked puzzles or rule-based demands, dropping executive control to the lowest relative drive (-1.06 deviation). Our simulation predicts an average human brain's response rather than scanning yours, revealing how little active planning the video required.
+  </div>
+</header>
+
+<div id="canvas-container">
+  <canvas id="game-canvas"></canvas>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // --- Audio System (lazy initialized, wrapped safely) ---
+  let audioCtx = null;
+  function initAudio() {
+    if (!audioCtx) {
+      try {
+        const AudioCtor = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtor) audioCtx = new AudioCtor();
+      } catch (e) {}
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      try { audioCtx.resume(); } catch (e) {}
+    }
+  }
+
+  function playSound(type) {
+    if (!audioCtx || gameState === 'demo') return;
+    try {
+      const now = audioCtx.currentTime;
+      if (type === 'correct') {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(587.33, now); // D5
+        osc.frequency.exponentialRampToValueAtTime(880.0, now + 0.12); // A5
+        gain.gain.setValueAtTime(0.18, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.14);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.15);
+      } else if (type === 'wrong') {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.linearRampToValueAtTime(110, now + 0.18);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.21);
+      } else if (type === 'shift') {
+        // Futuristic dual chime for shift
+        const osc1 = audioCtx.createOscillator();
+        const osc2 = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc1.type = 'triangle';
+        osc2.type = 'sine';
+        osc1.frequency.setValueAtTime(440, now);
+        osc1.frequency.exponentialRampToValueAtTime(1046.5, now + 0.25);
+        osc2.frequency.setValueAtTime(330, now);
+        osc2.frequency.exponentialRampToValueAtTime(659.25, now + 0.25);
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+        osc1.connect(gain);
+        osc2.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc1.start(now);
+        osc2.start(now);
+        osc1.stop(now + 0.36);
+        osc2.stop(now + 0.36);
+      }
+    } catch (e) {}
+  }
+
+  // --- Constants & Config ---
+  const TARGET_SYSTEM_ID = "frontal_control";
+  const ROUND_TIME = 60.0;
+  const DEMO_TIME = 25.0;
+
+  // Rules: 'color' or 'shape'
+  // Left: RED / CIRCLE
+  // Right: BLUE / SQUARE
+  const COLOR_RED = '#f43f5e';
+  const COLOR_BLUE = '#0284c7';
+  const COLOR_RED_NAME = 'RED';
+  const COLOR_BLUE_NAME = 'BLUE';
+
+  // Canvas setup
+  const canvas = document.getElementById('game-canvas');
+  const ctx = canvas.getContext('2d');
+  const container = document.getElementById('canvas-container');
+
+  const uiTimer = document.getElementById('ui-timer');
+  const uiScore = document.getElementById('ui-score');
+  const uiStreak = document.getElementById('ui-streak');
+
+  let width = 800;
+  let height = 600;
+  let dpr = 1;
+
+  function resize() {
+    dpr = window.devicePixelRatio || 1;
+    width = container.clientWidth || 800;
+    height = container.clientHeight || 600;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // --- State Variables ---
+  // gameState: 'start' | 'playing' | 'demo' | 'ended'
+  let gameState = 'start';
+  let timeLeft = ROUND_TIME;
+  let score = 0;
+  let streak = 0;
+  let maxStreak = 0;
+  let totalTrials = 0;
+  let correctTrials = 0;
+  let switchTrials = 0;
+  let switchCorrect = 0;
+  let isSwitchTrial = false;
+
+  let currentRule = 'color'; // 'color' or 'shape'
+  let nextShiftIn = 5; // changes after 4-8 successes
+  let activeCard = null;
+  let cardTimer = 1.2;
+  let cardMaxTimer = 1.2;
+  let cardAnim = { x: 0, y: 0, vx: 0, vy: 0, alpha: 1, scale: 1, flyOut: false };
+
+  // Visual effects
+  let particles = [];
+  let floatingTexts = [];
+  let shiftBannerAnim = 0; // 1 down to 0
+  let feedbackFlash = 0; // 1 green / -1 red decay
+  let screenShake = 0;
+
+  // Demo bot control
+  let demoBotActionTime = 0;
+  let demoPosted = false;
+
+  // --- Card Generator ---
+  // Card attributes: color ('red' | 'blue'), shape ('circle' | 'square')
+  function createCard() {
+    // 70% chance of conflict/incongruent stimulus (Red Square or Blue Circle) to engage prefrontal override
+    const isConflict = Math.random() < 0.72;
+    let color, shape;
+    if (isConflict) {
+      if (Math.random() < 0.5) {
+        color = 'red';
+        shape = 'square';
+      } else {
+        color = 'blue';
+        shape = 'circle';
+      }
+    } else {
+      if (Math.random() < 0.5) {
+        color = 'red';
+        shape = 'circle';
+      } else {
+        color = 'blue';
+        shape = 'square';
+      }
+    }
+
+    // Adaptive time window: 1.20s baseline, down to 0.72s with high streak
+    const dynamicWindow = Math.max(0.72, 1.20 - (streak * 0.038));
+    cardMaxTimer = dynamicWindow;
+    cardTimer = dynamicWindow;
+
+    cardAnim = {
+      x: width / 2,
+      y: height / 2 + 30,
+      scale: 0.6,
+      targetScale: 1,
+      alpha: 1,
+      flyOut: false
+    };
+
+    return { color, shape };
+  }
+
+  function getCorrectDirection(card, rule) {
+    if (rule === 'color') {
+      return card.color === 'red' ? 'left' : 'right';
+    } else {
+      return card.shape === 'circle' ? 'left' : 'right';
+    }
+  }
+
+  // --- Game Flow Methods ---
+  function startRound(mode) {
+    initAudio();
+    gameState = mode; // 'playing' or 'demo'
+    timeLeft = mode === 'demo' ? DEMO_TIME : ROUND_TIME;
+    score = 0;
+    streak = 0;
+    maxStreak = 0;
+    totalTrials = 0;
+    correctTrials = 0;
+    switchTrials = 0;
+    switchCorrect = 0;
+    isSwitchTrial = false;
+    currentRule = Math.random() < 0.5 ? 'color' : 'shape';
+    nextShiftIn = 4 + Math.floor(Math.random() * 4); // 4 to 7
+    particles = [];
+    floatingTexts = [];
+    shiftBannerAnim = 1.0;
+    demoPosted = false;
+    activeCard = createCard();
+    if (gameState === 'demo') {
+      scheduleDemoDecision();
+    }
+    updateUI();
+  }
+
+  function scheduleDemoDecision() {
+    // Realistic cognitive latency: 320ms to 480ms
+    demoBotActionTime = 0.32 + Math.random() * 0.16;
+  }
+
+  function triggerRuleShift() {
+    currentRule = (currentRule === 'color') ? 'shape' : 'color';
+    nextShiftIn = 4 + Math.floor(Math.random() * 5); // 4 to 8
+    shiftBannerAnim = 1.0;
+    screenShake = 6;
+    isSwitchTrial = true;
+    playSound('shift');
+
+    // Add particle burst for rule shift
+    for (let i = 0; i < 28; i++) {
+      const ang = Math.random() * Math.PI * 2;
+      const spd = 2 + Math.random() * 5;
+      particles.push({
+        x: width / 2,
+        y: 130,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 1,
+        life: 0.7 + Math.random() * 0.4,
+        maxLife: 1.0,
+        color: '#facc15',
+        size: 3 + Math.random() * 4
+      });
+    }
+  }
+
+  function evaluateChoice(chosenDir) {
+    if (!activeCard || cardAnim.flyOut) return;
+
+    totalTrials++;
+    const correctDir = getCorrectDirection(activeCard, currentRule);
+    const isCorrect = chosenDir === correctDir;
+
+    if (isSwitchTrial) {
+      switchTrials++;
+      if (isCorrect) switchCorrect++;
+      isSwitchTrial = false;
+    }
+
+    const binTargetX = chosenDir === 'left' ? width * 0.2 : width * 0.8;
+    const binTargetY = height / 2 + 30;
+
+    if (isCorrect) {
+      correctTrials++;
+      streak++;
+      if (streak > maxStreak) maxStreak = streak;
+
+      // Score: 100 * multiplier (up to 5x) + speed bonus
+      const speedPct = Math.max(0, cardTimer / cardMaxTimer);
+      const mult = Math.min(5, 1 + Math.floor(streak / 3));
+      const addedScore = Math.round(100 * mult + speedPct * 50);
+      score += addedScore;
+
+      playSound('correct');
+      feedbackFlash = 0.7;
+
+      floatingTexts.push({
+        text: `+${addedScore}${mult > 1 ? ' (' + mult + 'x)' : ''}`,
+        x: width / 2,
+        y: height / 2 - 40,
+        life: 0.8,
+        color: '#34d399'
+      });
+
+      // Spawn subtle burst at destination
+      for (let i = 0; i < 14; i++) {
+        const ang = Math.random() * Math.PI * 2;
+        const spd = 1.5 + Math.random() * 4;
+        particles.push({
+          x: binTargetX,
+          y: binTargetY,
+          vx: Math.cos(ang) * spd,
+          vy: Math.sin(ang) * spd,
+          life: 0.5 + Math.random() * 0.3,
+          maxLife: 0.8,
+          color: activeCard.color === 'red' ? COLOR_RED : COLOR_BLUE,
+          size: 2.5 + Math.random() * 3.5
+        });
+      }
+
+      // Check for rule shift countdown
+      nextShiftIn--;
+      if (nextShiftIn <= 0) {
+        triggerRuleShift();
+      }
+    } else {
+      streak = 0;
+      playSound('wrong');
+      feedbackFlash = -0.8;
+      screenShake = 10;
+
+      floatingTexts.push({
+        text: 'RULE MISS',
+        x: width / 2,
+        y: height / 2 - 40,
+        life: 0.9,
+        color: '#f43f5e'
+      });
+    }
+
+    // Launch card into chosen bin
+    cardAnim.flyOut = true;
+    cardAnim.vx = (binTargetX - cardAnim.x) * 6.5;
+    cardAnim.vy = (binTargetY - cardAnim.y) * 6.5;
+
+    updateUI();
+  }
+
+  function handleTimeout() {
+    if (!activeCard || cardAnim.flyOut) return;
+    totalTrials++;
+    streak = 0;
+    if (isSwitchTrial) {
+      switchTrials++;
+      isSwitchTrial = false;
+    }
+    playSound('wrong');
+    feedbackFlash = -0.8;
+    screenShake = 8;
+
+    floatingTexts.push({
+      text: 'TOO SLOW',
+      x: width / 2,
+      y: height / 2 - 40,
+      life: 0.9,
+      color: '#fb7185'
+    });
+
+    cardAnim.flyOut = true;
+    cardAnim.vx = 0;
+    cardAnim.vy = 400; // drops out
+    updateUI();
+  }
+
+  function endRound() {
+    if (gameState === 'ended') return;
+    gameState = 'ended';
+    activeCard = null;
+    updateUI();
+
+    if (!demoPosted) {
+      demoPosted = true;
+      try {
+        window.parent.postMessage({
+          type: "brain-game-score",
+          score: Math.round(score),
+          target: TARGET_SYSTEM_ID
+        }, "*");
+      } catch (e) {}
+    }
+  }
+
+  // --- External API for demo test ---
+  window.startDemo = function() {
+    startRound('demo');
+  };
+
+  function updateUI() {
+    if (uiTimer) {
+      uiTimer.textContent = `${Math.max(0, timeLeft).toFixed(1)}s`;
+    }
+    if (uiScore) {
+      uiScore.textContent = score.toLocaleString();
+    }
+    if (uiStreak) {
+      const mult = Math.min(5, 1 + Math.floor(streak / 3));
+      uiStreak.textContent = `x${mult} (${streak})`;
+      uiStreak.style.color = mult > 1 ? '#38bdf8' : '#f8fafc';
+    }
+  }
+
+  // --- Input Handling ---
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowRight' || e.code === 'Space' || e.code === 'KeyA' || e.code === 'KeyD') {
+      e.preventDefault();
+    }
+
+    if (gameState === 'start' || gameState === 'ended') {
+      startRound('playing');
+      return;
+    }
+
+    if (gameState !== 'playing') return;
+
+    if (e.code === 'ArrowLeft' || e.code === 'KeyA') {
+      evaluateChoice('left');
+    } else if (e.code === 'ArrowRight' || e.code === 'KeyD') {
+      evaluateChoice('right');
+    }
+  });
+
+  canvas.addEventListener('pointerdown', (e) => {
+    initAudio();
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    if (gameState === 'start' || gameState === 'ended') {
+      startRound('playing');
+      return;
+    }
+
+    if (gameState === 'playing') {
+      // Allow clicking on Left side or Right side bins
+      if (mx < width * 0.45) {
+        evaluateChoice('left');
+      } else if (mx > width * 0.55) {
+        evaluateChoice('right');
+      }
+    }
+  });
+
+  // --- Main Update Loop ---
+  let lastTime = performance.now();
+
+  function update(dt) {
+    // Screen shake decay
+    if (screenShake > 0) {
+      screenShake = Math.max(0, screenShake - dt * 25);
+    }
+
+    // Feedback flash decay
+    if (feedbackFlash > 0) feedbackFlash = Math.max(0, feedbackFlash - dt * 2.5);
+    if (feedbackFlash < 0) feedbackFlash = Math.min(0, feedbackFlash + dt * 2.5);
+
+    // Shift banner anim decay
+    if (shiftBannerAnim > 0) {
+      shiftBannerAnim = Math.max(0, shiftBannerAnim - dt * 1.6);
+    }
+
+    // Floating text update
+    for (let i = floatingTexts.length - 1; i >= 0; i--) {
+      const ft = floatingTexts[i];
+      ft.life -= dt;
+      ft.y -= 35 * dt;
+      if (ft.life <= 0) floatingTexts.splice(i, 1);
+    }
+
+    // Particles update
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life -= dt;
+      p.x += p.vx * dt * 60;
+      p.y += p.vy * dt * 60;
+      p.vx *= 0.96;
+      p.vy *= 0.96;
+      if (p.life <= 0) particles.splice(i, 1);
+    }
+
+    // Active session update
+    if (gameState === 'playing' || gameState === 'demo') {
+      timeLeft -= dt;
+      if (timeLeft <= 0) {
+        timeLeft = 0;
+        updateUI();
+        endRound();
+        return;
+      }
+      updateUI();
+
+      // Card flyout / card spawn logic
+      if (cardAnim.flyOut) {
+        cardAnim.x += cardAnim.vx * dt;
+        cardAnim.y += cardAnim.vy * dt;
+        cardAnim.scale = Math.max(0.2, cardAnim.scale - dt * 3.5);
+        cardAnim.alpha = Math.max(0, cardAnim.alpha - dt * 4.5);
+
+        if (cardAnim.alpha <= 0.05) {
+          activeCard = createCard();
+          if (gameState === 'demo') {
+            scheduleDemoDecision();
+          }
+        }
+      } else if (activeCard) {
+        // Entrance animation
+        if (cardAnim.scale < 1) {
+          cardAnim.scale = Math.min(1, cardAnim.scale + dt * 5.0);
+        }
+
+        // Decision timer
+        cardTimer -= dt;
+        if (cardTimer <= 0) {
+          handleTimeout();
+        }
+
+        // Demo bot automatic playing
+        if (gameState === 'demo') {
+          demoBotActionTime -= dt;
+          if (demoBotActionTime <= 0) {
+            const correctDir = getCorrectDirection(activeCard, currentRule);
+            // 90% accuracy, with occasional switch hesitation/error
+            const isBotCorrect = Math.random() < 0.91;
+            const chosenDir = isBotCorrect ? correctDir : (correctDir === 'left' ? 'right' : 'left');
+            evaluateChoice(chosenDir);
+          }
+        }
+      }
+    }
+  }
+
+  // --- Rendering ---
+  function drawShape(ctx, shape, x, y, size, color) {
+    ctx.save();
+    ctx.fillStyle = color;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = 16;
+    ctx.beginPath();
+    if (shape === 'circle') {
+      ctx.arc(x, y, size / 2, 0, Math.PI * 2);
+    } else if (shape === 'square') {
+      const r = 8;
+      const left = x - size / 2;
+      const top = y - size / 2;
+      // Rounded rect
+      ctx.moveTo(left + r, top);
+      ctx.arcTo(left + size, top, left + size, top + size, r);
+      ctx.arcTo(left + size, top + size, left, top + size, r);
+      ctx.arcTo(left, top + size, left, top, r);
+      ctx.arcTo(left, top, left + size, top, r);
+    }
+    ctx.fill();
+
+    // Subtle glossy specular highlight
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.28)';
+    ctx.beginPath();
+    if (shape === 'circle') {
+      ctx.arc(x - size * 0.15, y - size * 0.15, size * 0.18, 0, Math.PI * 2);
+    } else {
+      ctx.arc(x - size * 0.18, y - size * 0.18, size * 0.14, 0, Math.PI * 2);
+    }
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function render() {
+    ctx.save();
+
+    // Screen shake offset
+    let shakeX = 0, shakeY = 0;
+    if (screenShake > 0) {
+      shakeX = (Math.random() - 0.5) * screenShake * 2;
+      shakeY = (Math.random() - 0.5) * screenShake * 2;
+      ctx.translate(shakeX, shakeY);
+    }
+
+    // Background clearing
+    ctx.fillStyle = '#090c12';
+    ctx.fillRect(-10, -10, width + 20, height + 20);
+
+    // Ambient radial glow behind card area
+    const grad = ctx.createRadialGradient(width / 2, height / 2, 40, width / 2, height / 2, width * 0.6);
+    grad.addColorStop(0, 'rgba(30, 41, 59, 0.4)');
+    grad.addColorStop(1, 'rgba(9, 12, 18, 0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, width, height);
+
+    // Feedback tint overlay
+    if (feedbackFlash > 0.01) {
+      ctx.fillStyle = `rgba(16, 185, 129, ${feedbackFlash * 0.18})`;
+      ctx.fillRect(0, 0, width, height);
+    } else if (feedbackFlash < -0.01) {
+      ctx.fillStyle = `rgba(244, 63, 94, ${Math.abs(feedbackFlash) * 0.2})`;
+      ctx.fillRect(0, 0, width, height);
+    }
+
+    // --- GAMEPLAY ELEMENTS ---
+    if (gameState === 'playing' || gameState === 'demo') {
+      renderGamePlay();
+    } else if (gameState === 'start') {
+      renderStartScreen();
+    } else if (gameState === 'ended') {
+      renderEndScreen();
+    }
+
+    // Render Floating Text
+    for (const ft of floatingTexts) {
+      ctx.save();
+      ctx.font = '800 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = ft.color;
+      ctx.shadowColor = ft.color;
+      ctx.shadowBlur = 10;
+      ctx.globalAlpha = Math.max(0, Math.min(1, ft.life * 1.5));
+      ctx.fillText(ft.text, ft.x, ft.y);
+      ctx.restore();
+    }
+
+    // Render Particles
+    for (const p of particles) {
+      ctx.save();
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, p.life / p.maxLife);
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    ctx.restore();
+  }
+
+  function renderGamePlay() {
+    // 1. TOP RULE BANNER
+    const bannerY = Math.max(45, height * 0.12);
+    const bannerW = Math.min(width * 0.88, 520);
+    const bannerH = 68;
+    const bannerX = (width - bannerW) / 2;
+
+    const isColorRule = currentRule === 'color';
+    const ruleColor = isColorRule ? '#38bdf8' : '#a855f7';
+
+    // Banner card container
+    ctx.save();
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = ruleColor;
+    ctx.lineWidth = shiftBannerAnim > 0.05 ? 3 + shiftBannerAnim * 3 : 2;
+    ctx.shadowColor = ruleColor;
+    ctx.shadowBlur = shiftBannerAnim > 0.05 ? 24 * shiftBannerAnim : 8;
+
+    // Rounded rectangle banner
+    const br = 12;
+    ctx.beginPath();
+    ctx.moveTo(bannerX + br, bannerY);
+    ctx.arcTo(bannerX + bannerW, bannerY, bannerX + bannerW, bannerY + bannerH, br);
+    ctx.arcTo(bannerX + bannerW, bannerY + bannerH, bannerX, bannerY + bannerH, br);
+    ctx.arcTo(bannerX, bannerY + bannerH, bannerX, bannerY, br);
+    ctx.arcTo(bannerX, bannerY, bannerX + bannerW, bannerY, br);
+    ctx.fill();
+    ctx.stroke();
+
+    // Banner Text
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.shadowBlur = 0;
+
+    ctx.font = '700 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.fillStyle = '#94a3b8';
+    ctx.letterSpacing = '0.08em';
+    ctx.fillText('CURRENT SORTING RULE', width / 2, bannerY + 20);
+
+    ctx.font = '900 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.fillStyle = ruleColor;
+    ctx.shadowColor = ruleColor;
+    ctx.shadowBlur = 10;
+    ctx.fillText(isColorRule ? 'MATCH COLOR' : 'MATCH SHAPE', width / 2, bannerY + 46);
+    ctx.restore();
+
+    // Rule shift alert pulse tag
+    if (shiftBannerAnim > 0.02) {
+      ctx.save();
+      ctx.globalAlpha = shiftBannerAnim;
+      ctx.font = '900 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.fillStyle = '#facc15';
+      ctx.textAlign = 'center';
+      ctx.shadowColor = '#facc15';
+      ctx.shadowBlur = 12;
+      ctx.fillText('▲ RULE FLIPPED! DISCARD OLD INSTRUCTIONS ▲', width / 2, bannerY - 12);
+      ctx.restore();
+    }
+
+    // 2. SORTING BINS (Left Dock & Right Dock)
+    const binY = height / 2 + 30;
+    const binW = Math.min(150, width * 0.28);
+    const binH = Math.min(220, height * 0.42);
+    const leftBinX = Math.max(16, width * 0.14 - binW / 2);
+    const rightBinX = Math.min(width - binW - 16, width * 0.86 - binW / 2);
+
+    renderBin(leftBinX, binY - binH / 2, binW, binH, 'left', '← KEY [A]', isColorRule);
+    renderBin(rightBinX, binY - binH / 2, binW, binH, 'right', 'KEY [D] →', isColorRule);
+
+    // 3. CENTER ACTIVE CARD
+    if (activeCard) {
+      renderCard(activeCard, cardAnim.x, cardAnim.y, cardAnim.scale, cardAnim.alpha);
+    }
+  }
+
+  function renderBin(x, y, w, h, side, keyLabel, isColorRule) {
+    ctx.save();
+    ctx.fillStyle = '#0b1329';
+    ctx.strokeStyle = '#1e293b';
+    ctx.lineWidth = 2;
+    const br = 14;
+
+    ctx.beginPath();
+    ctx.moveTo(x + br, y);
+    ctx.arcTo(x + w, y, x + w, y + h, br);
+    ctx.arcTo(x + w, y + h, x, y + h, br);
+    ctx.arcTo(x, y + h, x, y, br);
+    ctx.arcTo(x, y, x + w, y, br);
+    ctx.fill();
+    ctx.stroke();
+
+    // Header label: key mapping
+    ctx.textAlign = 'center';
+    ctx.font = '700 11px ui-monospace, monospace';
+    ctx.fillStyle = '#64748b';
+    ctx.fillText(keyLabel, x + w / 2, y + 22);
+
+    const isLeft = side === 'left';
+    // Left: Red / Circle. Right: Blue / Square
+    const targetColor = isLeft ? COLOR_RED : COLOR_BLUE;
+    const targetColorName = isLeft ? COLOR_RED_NAME : COLOR_BLUE_NAME;
+    const targetShape = isLeft ? 'circle' : 'square';
+    const targetShapeName = isLeft ? 'CIRCLE' : 'SQUARE';
+
+    // Highlight active rule attribute in the bin
+    const item1Active = isColorRule;
+    const item2Active = !isColorRule;
+
+    // Attribute 1: Color
+    const attr1Y = y + h * 0.42;
+    ctx.save();
+    if (item1Active) {
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.12)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.6)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect ? ctx.roundRect(x + 10, attr1Y - 24, w - 20, 48, 8) : ctx.rect(x + 10, attr1Y - 24, w - 20, 48);
+      ctx.fill();
+      ctx.stroke();
+    }
+    // Color circle indicator
+    ctx.beginPath();
+    ctx.fillStyle = targetColor;
+    ctx.arc(x + w / 2 - 28, attr1Y, 11, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.font = item1Active ? '800 13px -apple-system, sans-serif' : '600 12px -apple-system, sans-serif';
+    ctx.fillStyle = item1Active ? '#f8fafc' : '#475569';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(targetColorName, x + w / 2 - 8, attr1Y);
+    ctx.restore();
+
+    // Attribute 2: Shape
+    const attr2Y = y + h * 0.74;
+    ctx.save();
+    if (item2Active) {
+      ctx.fillStyle = 'rgba(168, 85, 247, 0.12)';
+      ctx.strokeStyle = 'rgba(168, 85, 247, 0.6)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect ? ctx.roundRect(x + 10, attr2Y - 24, w - 20, 48, 8) : ctx.rect(x + 10, attr2Y - 24, w - 20, 48);
+      ctx.fill();
+      ctx.stroke();
+    }
+    // Shape outline indicator
+    drawShape(ctx, targetShape, x + w / 2 - 28, attr2Y, 20, '#cbd5e1');
+
+    ctx.font = item2Active ? '800 13px -apple-system, sans-serif' : '600 12px -apple-system, sans-serif';
+    ctx.fillStyle = item2Active ? '#f8fafc' : '#475569';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(targetShapeName, x + w / 2 - 8, attr2Y);
+    ctx.restore();
+
+    ctx.restore();
+  }
+
+  function renderCard(card, cx, cy, scale, alpha) {
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+    ctx.translate(cx, cy);
+    ctx.scale(scale, scale);
+
+    const cardW = 180;
+    const cardH = 220;
+    const br = 16;
+
+    // Card shadow
+    ctx.shadowColor = 'rgba(0,0,0,0.6)';
+    ctx.shadowBlur = 26;
+    ctx.shadowOffsetY = 12;
+
+    // Card background
+    ctx.fillStyle = '#1e293b';
+    ctx.beginPath();
+    ctx.moveTo(-cardW / 2 + br, -cardH / 2);
+    ctx.arcTo(cardW / 2, -cardH / 2, cardW / 2, cardH / 2, br);
+    ctx.arcTo(cardW / 2, cardH / 2, -cardW / 2, cardH / 2, br);
+    ctx.arcTo(-cardW / 2, cardH / 2, -cardW / 2, -cardH / 2, br);
+    ctx.arcTo(-cardW / 2, -cardH / 2, cardW / 2, -cardH / 2, br);
+    ctx.fill();
+
+    // Card border
+    ctx.shadowColor = 'transparent';
+    ctx.strokeStyle = '#334155';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Inner bevel ring
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    ctx.strokeRect(-cardW / 2 + 8, -cardH / 2 + 8, cardW - 16, cardH - 16);
+
+    // Decision Timer Arc / Gauge at top of card
+    if (!cardAnim.flyOut) {
+      const timePct = Math.max(0, Math.min(1, cardTimer / cardMaxTimer));
+      const barW = cardW - 32;
+      const barH = 5;
+      const barX = -barW / 2;
+      const barY = -cardH / 2 + 20;
+
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.8)';
+      ctx.fillRect(barX, barY, barW, barH);
+
+      // Warning color ramp
+      let timerColor = '#38bdf8';
+      if (timePct < 0.3) timerColor = '#f43f5e';
+      else if (timePct < 0.6) timerColor = '#facc15';
+
+      ctx.fillStyle = timerColor;
+      ctx.shadowColor = timerColor;
+      ctx.shadowBlur = 6;
+      ctx.fillRect(barX, barY, barW * timePct, barH);
+      ctx.shadowBlur = 0;
+    }
+
+    // Draw the symbol on the card
+    const symbolColor = card.color === 'red' ? COLOR_RED : COLOR_BLUE;
+    drawShape(ctx, card.shape, 0, 10, 84, symbolColor);
+
+    ctx.restore();
+  }
+
+  function renderStartScreen() {
+    const cardW = Math.min(width * 0.88, 540);
+    const cardH = 340;
+    const cx = width / 2;
+    const cy = height / 2 + 10;
+
+    ctx.save();
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = '#1e293b';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'rgba(0,0,0,0.5)';
+    ctx.shadowBlur = 30;
+
+    ctx.beginPath();
+    ctx.roundRect ? ctx.roundRect(cx - cardW / 2, cy - cardH / 2, cardW, cardH, 16) : ctx.rect(cx - cardW / 2, cy - cardH / 2, cardW, cardH);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.shadowBlur = 0;
+
+    // Title
+    ctx.font = '900 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.fillStyle = '#38bdf8';
+    ctx.fillText('RULE SHIFT', cx, cy - 105);
+
+    // Subtitle
+    ctx.font = '600 13px -apple-system, sans-serif';
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillText('EXECUTIVE CONTROL & TASK SWITCHING', cx, cy - 80);
+
+    // Rule Instruction
+    ctx.font = '400 14px -apple-system, sans-serif';
+    ctx.fillStyle = '#e2e8f0';
+    ctx.fillText('A card appears. The overhead banner dictates the active rule:', cx, cy - 36);
+
+    ctx.font = '700 15px -apple-system, sans-serif';
+    ctx.fillStyle = '#38bdf8';
+    ctx.fillText('MATCH COLOR  or  MATCH SHAPE', cx, cy - 10);
+
+    ctx.font = '400 13.5px -apple-system, sans-serif';
+    ctx.fillStyle = '#cbd5e1';
+    ctx.fillText('Sort left or right using Arrow Keys [← / →] or [A / D].', cx, cy + 22);
+
+    ctx.font = '600 13px -apple-system, sans-serif';
+    ctx.fillStyle = '#facc15';
+    ctx.fillText('Watch out: the rule abruptly flips! Discard old habits instantly.', cx, cy + 50);
+
+    // Start Button Prompt
+    const pulse = Math.sin(performance.now() * 0.006) * 0.2 + 0.8;
+    ctx.font = '800 15px -apple-system, sans-serif';
+    ctx.fillStyle = `rgba(56, 189, 248, ${pulse})`;
+    ctx.fillText('PRESS ANY KEY OR CLICK TO START (60s)', cx, cy + 115);
+
+    ctx.restore();
+  }
+
+  function renderEndScreen() {
+    const cardW = Math.min(width * 0.9, 560);
+    const cardH = 390;
+    const cx = width / 2;
+    const cy = height / 2 + 15;
+
+    ctx.save();
+    ctx.fillStyle = '#0f172a';
+    ctx.strokeStyle = '#334155';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'rgba(0,0,0,0.6)';
+    ctx.shadowBlur = 32;
+
+    ctx.beginPath();
+    ctx.roundRect ? ctx.roundRect(cx - cardW / 2, cy - cardH / 2, cardW, cardH, 16) : ctx.rect(cx - cardW / 2, cy - cardH / 2, cardW, cardH);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.shadowBlur = 0;
+
+    // Completed header
+    ctx.font = '800 13px ui-monospace, monospace';
+    ctx.fillStyle = '#38bdf8';
+    ctx.fillText('SESSION COMPLETE', cx, cy - 145);
+
+    ctx.font = '900 36px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.fillStyle = '#f8fafc';
+    ctx.fillText(`${score.toLocaleString()} PTS`, cx, cy - 105);
+
+    // Accuracy and Switch Metrics
+    const accPct = totalTrials > 0 ? Math.round((correctTrials / totalTrials) * 100) : 0;
+    const switchPct = switchTrials > 0 ? Math.round((switchCorrect / switchTrials) * 100) : 100;
+
+    let flexibilityTitle = 'EXECUTIVE ADAPTER';
+    let flexColor = '#38bdf8';
+    if (switchPct >= 85 && accPct >= 90) {
+      flexibilityTitle = 'COGNITIVE ARCHITECT';
+      flexColor = '#10b981';
+    } else if (switchPct >= 70) {
+      flexibilityTitle = 'DYNAMIC SHIFTER';
+      flexColor = '#38bdf8';
+    } else {
+      flexibilityTitle = 'HABIT RESISTANT';
+      flexColor = '#f59e0b';
+    }
+
+    ctx.font = '800 15px -apple-system, sans-serif';
+    ctx.fillStyle = flexColor;
+    ctx.fillText(`FLEXIBILITY RATING: ${flexibilityTitle}`, cx, cy - 65);
+
+    // Metric Grid Boxes
+    const boxW = (cardW - 60) / 3;
+    const boxH = 76;
+    const boxY = cy - 40;
+
+    renderStatBox(cx - boxW * 1.5 - 6, boxY, boxW, boxH, 'ACCURACY', `${accPct}%`);
+    renderStatBox(cx - boxW * 0.5, boxY, boxW, boxH, 'SWITCH ACCURACY', `${switchPct}%`);
+    renderStatBox(cx + boxW * 0.5 + 6, boxY, boxW, boxH, 'MAX STREAK', `${maxStreak}`);
+
+    // Narrative recap
+    ctx.font = '400 12.5px -apple-system, sans-serif';
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillText('Your DLPFC actively suppressed perseverative errors during unexpected shifts.', cx, cy + 78);
+    ctx.fillText(`Sorted ${correctTrials} of ${totalTrials} cards with dynamic working memory overhead.`, cx, cy + 98);
+
+    // Play again prompt
+    const pulse = Math.sin(performance.now() * 0.006) * 0.2 + 0.8;
+    ctx.font = '800 15px -apple-system, sans-serif';
+    ctx.fillStyle = `rgba(52, 211, 153, ${pulse})`;
+    ctx.fillText('PRESS ANY KEY OR CLICK TO PLAY AGAIN', cx, cy + 145);
+
+    ctx.restore();
+  }
+
+  function renderStatBox(x, y, w, h, label, val) {
+    ctx.save();
+    ctx.fillStyle = '#1e293b';
+    ctx.strokeStyle = '#334155';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect ? ctx.roundRect(x, y, w, h, 8) : ctx.rect(x, y, w, h);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.font = '700 9.5px ui-monospace, monospace';
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillText(label, x + w / 2, y + 24);
+
+    ctx.font = '800 20px ui-monospace, monospace';
+    ctx.fillStyle = '#f8fafc';
+    ctx.fillText(val, x + w / 2, y + 54);
+    ctx.restore();
+  }
+
+  // --- Main Animation Frame ---
+  function loop(now) {
+    const dt = Math.min(0.1, (now - lastTime) / 1000);
+    lastTime = now;
+
+    update(dt);
+    render();
+
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+})();
+</script>
+</body>
+</html>

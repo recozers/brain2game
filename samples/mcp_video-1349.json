@@ -1,0 +1,4871 @@
+{
+ "filename": "mcp_video-1349.MOV",
+ "infer_s": 19.85,
+ "rate_hz": 1,
+ "n_vertices": 20484,
+ "seconds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31
+ ],
+ "regions": [
+  {
+   "second": 0,
+   "top": [
+    {
+     "name": "L_VMV2",
+     "z": 0.316
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.298
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.267
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.258
+    },
+    {
+     "name": "R_V8",
+     "z": 0.194
+    },
+    {
+     "name": "L_V4",
+     "z": 0.191
+    },
+    {
+     "name": "L_V8",
+     "z": 0.191
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.184
+    }
+   ]
+  },
+  {
+   "second": 1,
+   "top": [
+    {
+     "name": "L_VMV2",
+     "z": 0.329
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.318
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.291
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.27
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.214
+    },
+    {
+     "name": "R_V8",
+     "z": 0.21
+    },
+    {
+     "name": "L_V4",
+     "z": 0.203
+    },
+    {
+     "name": "L_V8",
+     "z": 0.202
+    }
+   ]
+  },
+  {
+   "second": 2,
+   "top": [
+    {
+     "name": "L_VMV2",
+     "z": 0.361
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.354
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.326
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.295
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.253
+    },
+    {
+     "name": "R_V8",
+     "z": 0.225
+    },
+    {
+     "name": "L_V4",
+     "z": 0.219
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.213
+    }
+   ]
+  },
+  {
+   "second": 3,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.427
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.423
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.398
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.35
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.333
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.278
+    },
+    {
+     "name": "L_V4",
+     "z": 0.276
+    },
+    {
+     "name": "R_V8",
+     "z": 0.276
+    }
+   ]
+  },
+  {
+   "second": 4,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.521
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.5
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.491
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.443
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.417
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.385
+    },
+    {
+     "name": "R_V8",
+     "z": 0.383
+    },
+    {
+     "name": "L_V4",
+     "z": 0.361
+    }
+   ]
+  },
+  {
+   "second": 5,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.585
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.562
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.549
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.521
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.476
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.466
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.461
+    },
+    {
+     "name": "R_V7",
+     "z": 0.453
+    }
+   ]
+  },
+  {
+   "second": 6,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.644
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.615
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.614
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.606
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.561
+    },
+    {
+     "name": "R_V7",
+     "z": 0.547
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.547
+    },
+    {
+     "name": "L_V7",
+     "z": 0.535
+    }
+   ]
+  },
+  {
+   "second": 7,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.702
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.684
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.668
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.652
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.62
+    },
+    {
+     "name": "R_V7",
+     "z": 0.615
+    },
+    {
+     "name": "L_V7",
+     "z": 0.607
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.59
+    }
+   ]
+  },
+  {
+   "second": 8,
+   "top": [
+    {
+     "name": "L_V3B",
+     "z": 0.745
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.739
+    },
+    {
+     "name": "R_V7",
+     "z": 0.729
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.723
+    },
+    {
+     "name": "L_V7",
+     "z": 0.718
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.704
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.703
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.693
+    }
+   ]
+  },
+  {
+   "second": 9,
+   "top": [
+    {
+     "name": "R_V7",
+     "z": 0.79
+    },
+    {
+     "name": "L_V7",
+     "z": 0.79
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.789
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.775
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.769
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.753
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.737
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.731
+    }
+   ]
+  },
+  {
+   "second": 10,
+   "top": [
+    {
+     "name": "R_V7",
+     "z": 0.809
+    },
+    {
+     "name": "L_V7",
+     "z": 0.805
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.797
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.774
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.763
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.753
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.727
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.721
+    }
+   ]
+  },
+  {
+   "second": 11,
+   "top": [
+    {
+     "name": "R_V7",
+     "z": 0.786
+    },
+    {
+     "name": "L_V7",
+     "z": 0.779
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.757
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.753
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.745
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.739
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.72
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.705
+    }
+   ]
+  },
+  {
+   "second": 12,
+   "top": [
+    {
+     "name": "R_V7",
+     "z": 0.754
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.737
+    },
+    {
+     "name": "L_V7",
+     "z": 0.735
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.716
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.703
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.7
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.695
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.679
+    }
+   ]
+  },
+  {
+   "second": 13,
+   "top": [
+    {
+     "name": "R_V7",
+     "z": 0.737
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.715
+    },
+    {
+     "name": "L_V7",
+     "z": 0.707
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.697
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.68
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.669
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.665
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.661
+    }
+   ]
+  },
+  {
+   "second": 14,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.606
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.597
+    },
+    {
+     "name": "R_V7",
+     "z": 0.594
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.592
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.566
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.553
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.552
+    },
+    {
+     "name": "R_IP0",
+     "z": 0.552
+    }
+   ]
+  },
+  {
+   "second": 15,
+   "top": [
+    {
+     "name": "R_V3B",
+     "z": 0.535
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.527
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.525
+    },
+    {
+     "name": "R_V7",
+     "z": 0.522
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.51
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.508
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.507
+    },
+    {
+     "name": "L_TPOJ3",
+     "z": 0.504
+    }
+   ]
+  },
+  {
+   "second": 16,
+   "top": [
+    {
+     "name": "R_V3B",
+     "z": 0.455
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.453
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.449
+    },
+    {
+     "name": "R_MT",
+     "z": 0.437
+    },
+    {
+     "name": "L_TPOJ3",
+     "z": 0.426
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.426
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.426
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.424
+    }
+   ]
+  },
+  {
+   "second": 17,
+   "top": [
+    {
+     "name": "L_V4t",
+     "z": 0.411
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.407
+    },
+    {
+     "name": "R_MT",
+     "z": 0.402
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.396
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.391
+    },
+    {
+     "name": "R_PCV",
+     "z": 0.386
+    },
+    {
+     "name": "R_V7",
+     "z": 0.386
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.385
+    }
+   ]
+  },
+  {
+   "second": 18,
+   "top": [
+    {
+     "name": "L_VMV2",
+     "z": 0.417
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.417
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.404
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.398
+    },
+    {
+     "name": "R_V7",
+     "z": 0.388
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.379
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.372
+    },
+    {
+     "name": "R_MT",
+     "z": 0.371
+    }
+   ]
+  },
+  {
+   "second": 19,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.442
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.434
+    },
+    {
+     "name": "R_V7",
+     "z": 0.418
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.417
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.408
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.406
+    },
+    {
+     "name": "L_V7",
+     "z": 0.402
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.399
+    }
+   ]
+  },
+  {
+   "second": 20,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.469
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.454
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.427
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.425
+    },
+    {
+     "name": "R_V7",
+     "z": 0.402
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.399
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.397
+    },
+    {
+     "name": "L_V7",
+     "z": 0.391
+    }
+   ]
+  },
+  {
+   "second": 21,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.506
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.484
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.462
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.461
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.406
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.406
+    },
+    {
+     "name": "L_V7",
+     "z": 0.402
+    },
+    {
+     "name": "R_V7",
+     "z": 0.402
+    }
+   ]
+  },
+  {
+   "second": 22,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.501
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.476
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.455
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.449
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.4
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.399
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.39
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.384
+    }
+   ]
+  },
+  {
+   "second": 23,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.475
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.451
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.437
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.42
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.384
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.376
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.368
+    },
+    {
+     "name": "R_V6A",
+     "z": 0.357
+    }
+   ]
+  },
+  {
+   "second": 24,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.426
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.412
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.395
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.381
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.353
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.353
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.348
+    },
+    {
+     "name": "R_V7",
+     "z": 0.339
+    }
+   ]
+  },
+  {
+   "second": 25,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.369
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.367
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.33
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.329
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.32
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.314
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.305
+    },
+    {
+     "name": "R_IP0",
+     "z": 0.305
+    }
+   ]
+  },
+  {
+   "second": 26,
+   "top": [
+    {
+     "name": "L_VMV2",
+     "z": 0.317
+    },
+    {
+     "name": "R_VMV2",
+     "z": 0.306
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.299
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.292
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.281
+    },
+    {
+     "name": "R_IP0",
+     "z": 0.273
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.273
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.262
+    }
+   ]
+  },
+  {
+   "second": 27,
+   "top": [
+    {
+     "name": "R_V4t",
+     "z": 0.297
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.292
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.283
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.277
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.272
+    },
+    {
+     "name": "R_MT",
+     "z": 0.268
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.265
+    },
+    {
+     "name": "R_IP0",
+     "z": 0.258
+    }
+   ]
+  },
+  {
+   "second": 28,
+   "top": [
+    {
+     "name": "R_V4t",
+     "z": 0.317
+    },
+    {
+     "name": "R_MT",
+     "z": 0.301
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.285
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.284
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.263
+    },
+    {
+     "name": "L_LO1",
+     "z": 0.245
+    },
+    {
+     "name": "R_MST",
+     "z": 0.235
+    },
+    {
+     "name": "R_LO2",
+     "z": 0.23
+    }
+   ]
+  },
+  {
+   "second": 29,
+   "top": [
+    {
+     "name": "R_V4t",
+     "z": 0.265
+    },
+    {
+     "name": "R_MT",
+     "z": 0.214
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.212
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.199
+    },
+    {
+     "name": "L_LO1",
+     "z": 0.191
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.189
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.186
+    },
+    {
+     "name": "L_LO2",
+     "z": 0.182
+    }
+   ]
+  },
+  {
+   "second": 30,
+   "top": [
+    {
+     "name": "R_V4t",
+     "z": 0.118
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.095
+    },
+    {
+     "name": "R_5L",
+     "z": 0.092
+    },
+    {
+     "name": "R_7AL",
+     "z": 0.088
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.084
+    },
+    {
+     "name": "R_PH",
+     "z": 0.083
+    },
+    {
+     "name": "R_5m",
+     "z": 0.079
+    },
+    {
+     "name": "R_7Am",
+     "z": 0.076
+    }
+   ]
+  },
+  {
+   "second": 31,
+   "top": [
+    {
+     "name": "R_LBelt",
+     "z": 0.176
+    },
+    {
+     "name": "L_A1",
+     "z": 0.165
+    },
+    {
+     "name": "R_A1",
+     "z": 0.153
+    },
+    {
+     "name": "L_SCEF",
+     "z": 0.142
+    },
+    {
+     "name": "R_PFop",
+     "z": 0.142
+    },
+    {
+     "name": "L_LBelt",
+     "z": 0.137
+    },
+    {
+     "name": "L_OP1",
+     "z": 0.132
+    },
+    {
+     "name": "R_43",
+     "z": 0.131
+    }
+   ]
+  }
+ ],
+ "systems": [
+  {
+   "second": 0,
+   "z": {
+    "early_visual": 0.033,
+    "motion": 0.05,
+    "faces": 0.108,
+    "places": 0.086,
+    "objects": 0.025,
+    "attention": -0.007,
+    "auditory": -0.067,
+    "somatomotor": 0.012,
+    "frontal_control": 0.007,
+    "language": -0.06,
+    "default_mode": 0.006
+   }
+  },
+  {
+   "second": 1,
+   "z": {
+    "early_visual": 0.059,
+    "motion": 0.076,
+    "faces": 0.099,
+    "places": 0.094,
+    "objects": 0.022,
+    "attention": -0.014,
+    "auditory": -0.017,
+    "somatomotor": 0.014,
+    "frontal_control": 0.002,
+    "language": -0.04,
+    "default_mode": 0.002
+   }
+  },
+  {
+   "second": 2,
+   "z": {
+    "early_visual": 0.07,
+    "motion": 0.103,
+    "faces": 0.094,
+    "places": 0.103,
+    "objects": 0.024,
+    "attention": -0.005,
+    "auditory": 0.05,
+    "somatomotor": 0.018,
+    "frontal_control": -0.001,
+    "language": -0.029,
+    "default_mode": -0.007
+   }
+  },
+  {
+   "second": 3,
+   "z": {
+    "early_visual": 0.094,
+    "motion": 0.159,
+    "faces": 0.103,
+    "places": 0.117,
+    "objects": 0.043,
+    "attention": 0.009,
+    "auditory": 0.068,
+    "somatomotor": 0.024,
+    "frontal_control": -0.0,
+    "language": -0.038,
+    "default_mode": -0.017
+   }
+  },
+  {
+   "second": 4,
+   "z": {
+    "early_visual": 0.175,
+    "motion": 0.259,
+    "faces": 0.145,
+    "places": 0.165,
+    "objects": 0.082,
+    "attention": 0.034,
+    "auditory": 0.038,
+    "somatomotor": 0.044,
+    "frontal_control": 0.004,
+    "language": -0.055,
+    "default_mode": 0.0
+   }
+  },
+  {
+   "second": 5,
+   "z": {
+    "early_visual": 0.213,
+    "motion": 0.334,
+    "faces": 0.174,
+    "places": 0.194,
+    "objects": 0.118,
+    "attention": 0.072,
+    "auditory": -0.001,
+    "somatomotor": 0.055,
+    "frontal_control": 0.02,
+    "language": -0.07,
+    "default_mode": 0.02
+   }
+  },
+  {
+   "second": 6,
+   "z": {
+    "early_visual": 0.27,
+    "motion": 0.409,
+    "faces": 0.202,
+    "places": 0.23,
+    "objects": 0.153,
+    "attention": 0.113,
+    "auditory": -0.057,
+    "somatomotor": 0.074,
+    "frontal_control": 0.029,
+    "language": -0.107,
+    "default_mode": 0.035
+   }
+  },
+  {
+   "second": 7,
+   "z": {
+    "early_visual": 0.305,
+    "motion": 0.452,
+    "faces": 0.221,
+    "places": 0.261,
+    "objects": 0.179,
+    "attention": 0.147,
+    "auditory": -0.087,
+    "somatomotor": 0.083,
+    "frontal_control": 0.042,
+    "language": -0.123,
+    "default_mode": 0.05
+   }
+  },
+  {
+   "second": 8,
+   "z": {
+    "early_visual": 0.332,
+    "motion": 0.541,
+    "faces": 0.27,
+    "places": 0.28,
+    "objects": 0.238,
+    "attention": 0.19,
+    "auditory": -0.084,
+    "somatomotor": 0.081,
+    "frontal_control": 0.051,
+    "language": -0.132,
+    "default_mode": 0.064
+   }
+  },
+  {
+   "second": 9,
+   "z": {
+    "early_visual": 0.344,
+    "motion": 0.58,
+    "faces": 0.303,
+    "places": 0.294,
+    "objects": 0.278,
+    "attention": 0.213,
+    "auditory": -0.077,
+    "somatomotor": 0.073,
+    "frontal_control": 0.046,
+    "language": -0.132,
+    "default_mode": 0.061
+   }
+  },
+  {
+   "second": 10,
+   "z": {
+    "early_visual": 0.333,
+    "motion": 0.594,
+    "faces": 0.311,
+    "places": 0.294,
+    "objects": 0.292,
+    "attention": 0.219,
+    "auditory": -0.016,
+    "somatomotor": 0.061,
+    "frontal_control": 0.049,
+    "language": -0.11,
+    "default_mode": 0.061
+   }
+  },
+  {
+   "second": 11,
+   "z": {
+    "early_visual": 0.311,
+    "motion": 0.566,
+    "faces": 0.316,
+    "places": 0.288,
+    "objects": 0.304,
+    "attention": 0.228,
+    "auditory": 0.051,
+    "somatomotor": 0.053,
+    "frontal_control": 0.051,
+    "language": -0.088,
+    "default_mode": 0.057
+   }
+  },
+  {
+   "second": 12,
+   "z": {
+    "early_visual": 0.282,
+    "motion": 0.535,
+    "faces": 0.33,
+    "places": 0.288,
+    "objects": 0.312,
+    "attention": 0.225,
+    "auditory": 0.036,
+    "somatomotor": 0.039,
+    "frontal_control": 0.05,
+    "language": -0.07,
+    "default_mode": 0.064
+   }
+  },
+  {
+   "second": 13,
+   "z": {
+    "early_visual": 0.262,
+    "motion": 0.513,
+    "faces": 0.326,
+    "places": 0.283,
+    "objects": 0.307,
+    "attention": 0.221,
+    "auditory": 0.058,
+    "somatomotor": 0.04,
+    "frontal_control": 0.051,
+    "language": -0.049,
+    "default_mode": 0.069
+   }
+  },
+  {
+   "second": 14,
+   "z": {
+    "early_visual": 0.234,
+    "motion": 0.43,
+    "faces": 0.302,
+    "places": 0.243,
+    "objects": 0.267,
+    "attention": 0.181,
+    "auditory": 0.054,
+    "somatomotor": 0.039,
+    "frontal_control": 0.06,
+    "language": -0.021,
+    "default_mode": 0.09
+   }
+  },
+  {
+   "second": 15,
+   "z": {
+    "early_visual": 0.208,
+    "motion": 0.394,
+    "faces": 0.281,
+    "places": 0.201,
+    "objects": 0.254,
+    "attention": 0.179,
+    "auditory": 0.037,
+    "somatomotor": 0.049,
+    "frontal_control": 0.069,
+    "language": -0.007,
+    "default_mode": 0.092
+   }
+  },
+  {
+   "second": 16,
+   "z": {
+    "early_visual": 0.187,
+    "motion": 0.331,
+    "faces": 0.238,
+    "places": 0.156,
+    "objects": 0.212,
+    "attention": 0.159,
+    "auditory": 0.011,
+    "somatomotor": 0.055,
+    "frontal_control": 0.078,
+    "language": -0.011,
+    "default_mode": 0.096
+   }
+  },
+  {
+   "second": 17,
+   "z": {
+    "early_visual": 0.192,
+    "motion": 0.311,
+    "faces": 0.202,
+    "places": 0.148,
+    "objects": 0.181,
+    "attention": 0.138,
+    "auditory": 0.002,
+    "somatomotor": 0.065,
+    "frontal_control": 0.078,
+    "language": -0.017,
+    "default_mode": 0.081
+   }
+  },
+  {
+   "second": 18,
+   "z": {
+    "early_visual": 0.196,
+    "motion": 0.307,
+    "faces": 0.203,
+    "places": 0.166,
+    "objects": 0.178,
+    "attention": 0.136,
+    "auditory": 0.058,
+    "somatomotor": 0.072,
+    "frontal_control": 0.069,
+    "language": -0.0,
+    "default_mode": 0.073
+   }
+  },
+  {
+   "second": 19,
+   "z": {
+    "early_visual": 0.211,
+    "motion": 0.311,
+    "faces": 0.204,
+    "places": 0.185,
+    "objects": 0.171,
+    "attention": 0.141,
+    "auditory": 0.063,
+    "somatomotor": 0.082,
+    "frontal_control": 0.072,
+    "language": -0.024,
+    "default_mode": 0.07
+   }
+  },
+  {
+   "second": 20,
+   "z": {
+    "early_visual": 0.196,
+    "motion": 0.27,
+    "faces": 0.177,
+    "places": 0.199,
+    "objects": 0.149,
+    "attention": 0.14,
+    "auditory": 0.055,
+    "somatomotor": 0.083,
+    "frontal_control": 0.066,
+    "language": -0.047,
+    "default_mode": 0.047
+   }
+  },
+  {
+   "second": 21,
+   "z": {
+    "early_visual": 0.171,
+    "motion": 0.234,
+    "faces": 0.154,
+    "places": 0.199,
+    "objects": 0.138,
+    "attention": 0.143,
+    "auditory": 0.02,
+    "somatomotor": 0.067,
+    "frontal_control": 0.052,
+    "language": -0.051,
+    "default_mode": 0.025
+   }
+  },
+  {
+   "second": 22,
+   "z": {
+    "early_visual": 0.135,
+    "motion": 0.182,
+    "faces": 0.127,
+    "places": 0.193,
+    "objects": 0.117,
+    "attention": 0.14,
+    "auditory": -0.026,
+    "somatomotor": 0.056,
+    "frontal_control": 0.05,
+    "language": -0.076,
+    "default_mode": 0.015
+   }
+  },
+  {
+   "second": 23,
+   "z": {
+    "early_visual": 0.111,
+    "motion": 0.167,
+    "faces": 0.125,
+    "places": 0.187,
+    "objects": 0.112,
+    "attention": 0.123,
+    "auditory": -0.061,
+    "somatomotor": 0.046,
+    "frontal_control": 0.032,
+    "language": -0.092,
+    "default_mode": 0.008
+   }
+  },
+  {
+   "second": 24,
+   "z": {
+    "early_visual": 0.093,
+    "motion": 0.162,
+    "faces": 0.128,
+    "places": 0.17,
+    "objects": 0.117,
+    "attention": 0.125,
+    "auditory": -0.059,
+    "somatomotor": 0.044,
+    "frontal_control": 0.032,
+    "language": -0.084,
+    "default_mode": 0.011
+   }
+  },
+  {
+   "second": 25,
+   "z": {
+    "early_visual": 0.056,
+    "motion": 0.121,
+    "faces": 0.133,
+    "places": 0.14,
+    "objects": 0.108,
+    "attention": 0.097,
+    "auditory": -0.033,
+    "somatomotor": 0.02,
+    "frontal_control": 0.01,
+    "language": -0.07,
+    "default_mode": 0.004
+   }
+  },
+  {
+   "second": 26,
+   "z": {
+    "early_visual": 0.035,
+    "motion": 0.133,
+    "faces": 0.167,
+    "places": 0.117,
+    "objects": 0.116,
+    "attention": 0.055,
+    "auditory": -0.049,
+    "somatomotor": 0.006,
+    "frontal_control": -0.015,
+    "language": -0.07,
+    "default_mode": 0.002
+   }
+  },
+  {
+   "second": 27,
+   "z": {
+    "early_visual": 0.035,
+    "motion": 0.161,
+    "faces": 0.18,
+    "places": 0.092,
+    "objects": 0.128,
+    "attention": 0.057,
+    "auditory": -0.039,
+    "somatomotor": 0.009,
+    "frontal_control": -0.007,
+    "language": -0.059,
+    "default_mode": 0.011
+   }
+  },
+  {
+   "second": 28,
+   "z": {
+    "early_visual": 0.035,
+    "motion": 0.157,
+    "faces": 0.159,
+    "places": 0.068,
+    "objects": 0.116,
+    "attention": 0.064,
+    "auditory": -0.025,
+    "somatomotor": 0.025,
+    "frontal_control": 0.003,
+    "language": -0.061,
+    "default_mode": 0.021
+   }
+  },
+  {
+   "second": 29,
+   "z": {
+    "early_visual": 0.007,
+    "motion": 0.093,
+    "faces": 0.118,
+    "places": 0.039,
+    "objects": 0.082,
+    "attention": 0.057,
+    "auditory": 0.0,
+    "somatomotor": 0.036,
+    "frontal_control": 0.004,
+    "language": -0.058,
+    "default_mode": 0.015
+   }
+  },
+  {
+   "second": 30,
+   "z": {
+    "early_visual": -0.063,
+    "motion": -0.039,
+    "faces": 0.004,
+    "places": -0.025,
+    "objects": 0.009,
+    "attention": 0.038,
+    "auditory": -0.026,
+    "somatomotor": 0.039,
+    "frontal_control": -0.008,
+    "language": -0.041,
+    "default_mode": -0.006
+   }
+  },
+  {
+   "second": 31,
+   "z": {
+    "early_visual": -0.058,
+    "motion": -0.122,
+    "faces": -0.129,
+    "places": -0.067,
+    "objects": -0.064,
+    "attention": 0.05,
+    "auditory": 0.086,
+    "somatomotor": 0.084,
+    "frontal_control": 0.018,
+    "language": 0.002,
+    "default_mode": 0.023
+   }
+  }
+ ],
+ "summary": {
+  "n_seconds_predicted": 32,
+  "duration_s": 32.0,
+  "systems": [
+   {
+    "id": "motion",
+    "label": "Visual motion (MT+/V5)",
+    "mean": 0.2743,
+    "peak": 0.5942,
+    "frac_active": 0.4688,
+    "rank": 1
+   },
+   {
+    "id": "faces",
+    "label": "Face processing (fusiform / FFA)",
+    "mean": 0.1804,
+    "peak": 0.3304,
+    "frac_active": 0.1875,
+    "rank": 2
+   },
+   {
+    "id": "places",
+    "label": "Scenes and navigation (PPA / RSC)",
+    "mean": 0.1683,
+    "peak": 0.294,
+    "frac_active": 0.0,
+    "rank": 3
+   },
+   {
+    "id": "early_visual",
+    "label": "Early visual cortex (V1/V2)",
+    "mean": 0.1583,
+    "peak": 0.3443,
+    "frac_active": 0.1562,
+    "rank": 4
+   },
+   {
+    "id": "objects",
+    "label": "Object recognition (lateral occipital / IT)",
+    "mean": 0.1489,
+    "peak": 0.3124,
+    "frac_active": 0.0938,
+    "rank": 5
+   },
+   {
+    "id": "attention",
+    "label": "Spatial attention (intraparietal / SPL)",
+    "mean": 0.1146,
+    "peak": 0.2282,
+    "frac_active": 0.0,
+    "rank": 6
+   },
+   {
+    "id": "somatomotor",
+    "label": "Sensorimotor cortex",
+    "mean": 0.0483,
+    "peak": 0.0835,
+    "frac_active": 0.0,
+    "rank": 7
+   },
+   {
+    "id": "default_mode",
+    "label": "Default mode network",
+    "mean": 0.0358,
+    "peak": 0.0955,
+    "frac_active": 0.0,
+    "rank": 8
+   },
+   {
+    "id": "frontal_control",
+    "label": "Executive control (dorsolateral prefrontal)",
+    "mean": 0.0332,
+    "peak": 0.0781,
+    "frac_active": 0.0,
+    "rank": 9
+   },
+   {
+    "id": "auditory",
+    "label": "Auditory cortex (Heschl's / STG)",
+    "mean": -0.0011,
+    "peak": 0.0855,
+    "frac_active": 0.0,
+    "rank": 10
+   },
+   {
+    "id": "language",
+    "label": "Language network (IFG / STS)",
+    "mean": -0.0591,
+    "peak": 0.0018,
+    "frac_active": 0.0,
+    "rank": 11
+   }
+  ],
+  "regions": [
+   {
+    "name": "R_VMV2",
+    "system": "places",
+    "mean": 0.4434,
+    "peak": 0.7747,
+    "frac_active": 0.8125
+   },
+   {
+    "name": "L_VMV2",
+    "system": "places",
+    "mean": 0.4367,
+    "peak": 0.7365,
+    "frac_active": 0.8438
+   },
+   {
+    "name": "R_V3B",
+    "system": "motion",
+    "mean": 0.4007,
+    "peak": 0.753,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "R_V7",
+    "system": null,
+    "mean": 0.3952,
+    "peak": 0.8092,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "L_V3B",
+    "system": "motion",
+    "mean": 0.3928,
+    "peak": 0.7892,
+    "frac_active": 0.6875
+   },
+   {
+    "name": "R_VMV3",
+    "system": "places",
+    "mean": 0.3918,
+    "peak": 0.7308,
+    "frac_active": 0.75
+   },
+   {
+    "name": "L_V7",
+    "system": null,
+    "mean": 0.3766,
+    "peak": 0.8047,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "L_V3CD",
+    "system": null,
+    "mean": 0.3701,
+    "peak": 0.6706,
+    "frac_active": 0.6875
+   },
+   {
+    "name": "R_V6A",
+    "system": null,
+    "mean": 0.3698,
+    "peak": 0.6894,
+    "frac_active": 0.625
+   },
+   {
+    "name": "L_VMV3",
+    "system": "places",
+    "mean": 0.3607,
+    "peak": 0.6457,
+    "frac_active": 0.6875
+   },
+   {
+    "name": "R_V3CD",
+    "system": null,
+    "mean": 0.3606,
+    "peak": 0.6564,
+    "frac_active": 0.6875
+   },
+   {
+    "name": "L_V4t",
+    "system": "motion",
+    "mean": 0.3604,
+    "peak": 0.7967,
+    "frac_active": 0.5312
+   },
+   {
+    "name": "L_V6A",
+    "system": null,
+    "mean": 0.3568,
+    "peak": 0.688,
+    "frac_active": 0.625
+   },
+   {
+    "name": "R_IP0",
+    "system": null,
+    "mean": 0.3466,
+    "peak": 0.624,
+    "frac_active": 0.6562
+   },
+   {
+    "name": "L_V4",
+    "system": "early_visual",
+    "mean": 0.3343,
+    "peak": 0.6402,
+    "frac_active": 0.5625
+   },
+   {
+    "name": "R_LO3",
+    "system": "objects",
+    "mean": 0.334,
+    "peak": 0.6815,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "R_PGp",
+    "system": null,
+    "mean": 0.3267,
+    "peak": 0.5909,
+    "frac_active": 0.5625
+   },
+   {
+    "name": "L_PGp",
+    "system": null,
+    "mean": 0.3243,
+    "peak": 0.5938,
+    "frac_active": 0.5625
+   },
+   {
+    "name": "L_IP0",
+    "system": null,
+    "mean": 0.3173,
+    "peak": 0.5899,
+    "frac_active": 0.625
+   },
+   {
+    "name": "R_LO1",
+    "system": "motion",
+    "mean": 0.3161,
+    "peak": 0.6459,
+    "frac_active": 0.5
+   },
+   {
+    "name": "L_IPS1",
+    "system": null,
+    "mean": 0.3093,
+    "peak": 0.5954,
+    "frac_active": 0.625
+   },
+   {
+    "name": "R_V4",
+    "system": "early_visual",
+    "mean": 0.3065,
+    "peak": 0.5852,
+    "frac_active": 0.5
+   },
+   {
+    "name": "R_IPS1",
+    "system": null,
+    "mean": 0.3059,
+    "peak": 0.545,
+    "frac_active": 0.5312
+   },
+   {
+    "name": "R_DVT",
+    "system": null,
+    "mean": 0.3045,
+    "peak": 0.574,
+    "frac_active": 0.5312
+   },
+   {
+    "name": "L_MT",
+    "system": "motion",
+    "mean": 0.2936,
+    "peak": 0.6168,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "R_PCV",
+    "system": "default_mode",
+    "mean": 0.2907,
+    "peak": 0.526,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "R_VIP",
+    "system": "attention",
+    "mean": 0.2884,
+    "peak": 0.5245,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "R_PHA3",
+    "system": "places",
+    "mean": 0.2873,
+    "peak": 0.4506,
+    "frac_active": 0.5312
+   },
+   {
+    "name": "R_V8",
+    "system": "objects",
+    "mean": 0.2814,
+    "peak": 0.5868,
+    "frac_active": 0.4375
+   },
+   {
+    "name": "R_MT",
+    "system": "motion",
+    "mean": 0.2767,
+    "peak": 0.5985,
+    "frac_active": 0.5
+   },
+   {
+    "name": "L_V8",
+    "system": "objects",
+    "mean": 0.2752,
+    "peak": 0.5456,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "L_MST",
+    "system": "motion",
+    "mean": 0.2704,
+    "peak": 0.604,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "L_TPOJ3",
+    "system": null,
+    "mean": 0.2659,
+    "peak": 0.5344,
+    "frac_active": 0.3438
+   },
+   {
+    "name": "R_PHA2",
+    "system": "places",
+    "mean": 0.2655,
+    "peak": 0.4357,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "R_TPOJ3",
+    "system": null,
+    "mean": 0.2643,
+    "peak": 0.5085,
+    "frac_active": 0.4375
+   },
+   {
+    "name": "R_MST",
+    "system": "motion",
+    "mean": 0.2642,
+    "peak": 0.5918,
+    "frac_active": 0.4688
+   },
+   {
+    "name": "L_LO2",
+    "system": "motion",
+    "mean": 0.2626,
+    "peak": 0.5479,
+    "frac_active": 0.375
+   },
+   {
+    "name": "L_LO1",
+    "system": "motion",
+    "mean": 0.2614,
+    "peak": 0.5111,
+    "frac_active": 0.3438
+   },
+   {
+    "name": "R_V4t",
+    "system": "motion",
+    "mean": 0.2594,
+    "peak": 0.4984,
+    "frac_active": 0.4062
+   },
+   {
+    "name": "R_VVC",
+    "system": "faces",
+    "mean": 0.2575,
+    "peak": 0.4411,
+    "frac_active": 0.3125
+   },
+   {
+    "name": "R_LIPv",
+    "system": "attention",
+    "mean": 0.2569,
+    "peak": 0.4753,
+    "frac_active": 0.3438
+   },
+   {
+    "name": "R_V3A",
+    "system": "motion",
+    "mean": 0.2486,
+    "peak": 0.5808,
+    "frac_active": 0.4375
+   },
+   {
+    "name": "R_LO2",
+    "system": "motion",
+    "mean": 0.245,
+    "peak": 0.4889,
+    "frac_active": 0.375
+   },
+   {
+    "name": "R_7Am",
+    "system": "attention",
+    "mean": 0.2439,
+    "peak": 0.4347,
+    "frac_active": 0.3438
+   },
+   {
+    "name": "L_DVT",
+    "system": null,
+    "mean": 0.2436,
+    "peak": 0.4504,
+    "frac_active": 0.3125
+   },
+   {
+    "name": "L_7PL",
+    "system": "attention",
+    "mean": 0.2365,
+    "peak": 0.4284,
+    "frac_active": 0.3125
+   },
+   {
+    "name": "L_PHA2",
+    "system": "places",
+    "mean": 0.2256,
+    "peak": 0.3861,
+    "frac_active": 0.25
+   },
+   {
+    "name": "L_LO3",
+    "system": "objects",
+    "mean": 0.2251,
+    "peak": 0.4532,
+    "frac_active": 0.3125
+   },
+   {
+    "name": "L_LIPv",
+    "system": "attention",
+    "mean": 0.2236,
+    "peak": 0.4171,
+    "frac_active": 0.25
+   },
+   {
+    "name": "L_VIP",
+    "system": "attention",
+    "mean": 0.2236,
+    "peak": 0.4401,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_7Am",
+    "system": "attention",
+    "mean": 0.2218,
+    "peak": 0.3992,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_FST",
+    "system": "motion",
+    "mean": 0.2194,
+    "peak": 0.5364,
+    "frac_active": 0.3125
+   },
+   {
+    "name": "R_PHA1",
+    "system": "places",
+    "mean": 0.2189,
+    "peak": 0.3527,
+    "frac_active": 0.25
+   },
+   {
+    "name": "L_VVC",
+    "system": "faces",
+    "mean": 0.2164,
+    "peak": 0.3855,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "L_PHA3",
+    "system": "places",
+    "mean": 0.2145,
+    "peak": 0.3539,
+    "frac_active": 0.1875
+   },
+   {
+    "name": "R_FST",
+    "system": "motion",
+    "mean": 0.2093,
+    "peak": 0.4687,
+    "frac_active": 0.25
+   },
+   {
+    "name": "L_V3A",
+    "system": "motion",
+    "mean": 0.2063,
+    "peak": 0.5486,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_V3",
+    "system": "early_visual",
+    "mean": 0.2036,
+    "peak": 0.4228,
+    "frac_active": 0.25
+   },
+   {
+    "name": "R_V3",
+    "system": "early_visual",
+    "mean": 0.2003,
+    "peak": 0.3884,
+    "frac_active": 0.25
+   },
+   {
+    "name": "R_7PL",
+    "system": "attention",
+    "mean": 0.1977,
+    "peak": 0.3373,
+    "frac_active": 0.1875
+   },
+   {
+    "name": "R_FEF",
+    "system": null,
+    "mean": 0.1878,
+    "peak": 0.3692,
+    "frac_active": 0.1875
+   },
+   {
+    "name": "R_PH",
+    "system": "objects",
+    "mean": 0.187,
+    "peak": 0.3912,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "R_6a",
+    "system": null,
+    "mean": 0.1869,
+    "peak": 0.3527,
+    "frac_active": 0.1875
+   },
+   {
+    "name": "R_FFC",
+    "system": "faces",
+    "mean": 0.1854,
+    "peak": 0.3473,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "L_PCV",
+    "system": "default_mode",
+    "mean": 0.1821,
+    "peak": 0.3431,
+    "frac_active": 0.25
+   },
+   {
+    "name": "L_FEF",
+    "system": null,
+    "mean": 0.1817,
+    "peak": 0.4324,
+    "frac_active": 0.2188
+   },
+   {
+    "name": "L_MIP",
+    "system": "attention",
+    "mean": 0.174,
+    "peak": 0.3436,
+    "frac_active": 0.1562
+   },
+   {
+    "name": "R_TPOJ2",
+    "system": null,
+    "mean": 0.17,
+    "peak": 0.3941,
+    "frac_active": 0.2812
+   },
+   {
+    "name": "L_5mv",
+    "system": null,
+    "mean": 0.1696,
+    "peak": 0.3228,
+    "frac_active": 0.125
+   },
+   {
+    "name": "L_6a",
+    "system": null,
+    "mean": 0.1658,
+    "peak": 0.3408,
+    "frac_active": 0.1562
+   },
+   {
+    "name": "L_VMV1",
+    "system": "places",
+    "mean": 0.1658,
+    "peak": 0.314,
+    "frac_active": 0.0938
+   },
+   {
+    "name": "R_7AL",
+    "system": "attention",
+    "mean": 0.165,
+    "peak": 0.3021,
+    "frac_active": 0.0312
+   },
+   {
+    "name": "L_PHA1",
+    "system": "places",
+    "mean": 0.1647,
+    "peak": 0.2741,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_5mv",
+    "system": null,
+    "mean": 0.1636,
+    "peak": 0.2778,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_POS1",
+    "system": "places",
+    "mean": 0.163,
+    "peak": 0.3071,
+    "frac_active": 0.125
+   },
+   {
+    "name": "L_PH",
+    "system": "objects",
+    "mean": 0.1617,
+    "peak": 0.3609,
+    "frac_active": 0.125
+   },
+   {
+    "name": "L_23c",
+    "system": null,
+    "mean": 0.16,
+    "peak": 0.3267,
+    "frac_active": 0.125
+   },
+   {
+    "name": "L_V6",
+    "system": null,
+    "mean": 0.1582,
+    "peak": 0.3464,
+    "frac_active": 0.1562
+   },
+   {
+    "name": "L_PIT",
+    "system": "faces",
+    "mean": 0.158,
+    "peak": 0.2836,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MIP",
+    "system": "attention",
+    "mean": 0.1545,
+    "peak": 0.2757,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_23c",
+    "system": null,
+    "mean": 0.1474,
+    "peak": 0.2893,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PIT",
+    "system": "faces",
+    "mean": 0.1464,
+    "peak": 0.2798,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_VMV1",
+    "system": "places",
+    "mean": 0.1439,
+    "peak": 0.2869,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STV",
+    "system": null,
+    "mean": 0.1396,
+    "peak": 0.3424,
+    "frac_active": 0.1562
+   },
+   {
+    "name": "R_IFJa",
+    "system": "language",
+    "mean": 0.1387,
+    "peak": 0.2991,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PSL",
+    "system": null,
+    "mean": 0.1331,
+    "peak": 0.3164,
+    "frac_active": 0.0938
+   },
+   {
+    "name": "R_5m",
+    "system": null,
+    "mean": 0.1323,
+    "peak": 0.186,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFJp",
+    "system": null,
+    "mean": 0.1288,
+    "peak": 0.2733,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7AL",
+    "system": "attention",
+    "mean": 0.1287,
+    "peak": 0.2381,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V2",
+    "system": "early_visual",
+    "mean": 0.1285,
+    "peak": 0.2789,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V2",
+    "system": "early_visual",
+    "mean": 0.1271,
+    "peak": 0.2998,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7PC",
+    "system": "attention",
+    "mean": 0.1227,
+    "peak": 0.2702,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V6",
+    "system": null,
+    "mean": 0.1221,
+    "peak": 0.2892,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31a",
+    "system": "default_mode",
+    "mean": 0.1211,
+    "peak": 0.22,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8C",
+    "system": "frontal_control",
+    "mean": 0.1196,
+    "peak": 0.2242,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PEF",
+    "system": null,
+    "mean": 0.1186,
+    "peak": 0.2722,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6ma",
+    "system": "somatomotor",
+    "mean": 0.1167,
+    "peak": 0.2452,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_ProS",
+    "system": "places",
+    "mean": 0.1128,
+    "peak": 0.235,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_5L",
+    "system": null,
+    "mean": 0.1123,
+    "peak": 0.1611,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_POS1",
+    "system": "places",
+    "mean": 0.112,
+    "peak": 0.2195,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_POS2",
+    "system": "default_mode",
+    "mean": 0.1117,
+    "peak": 0.2492,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7PC",
+    "system": "attention",
+    "mean": 0.1101,
+    "peak": 0.2605,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7Pm",
+    "system": null,
+    "mean": 0.1083,
+    "peak": 0.2143,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V1",
+    "system": "early_visual",
+    "mean": 0.1067,
+    "peak": 0.2709,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FFC",
+    "system": "faces",
+    "mean": 0.1043,
+    "peak": 0.2219,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6ma",
+    "system": "somatomotor",
+    "mean": 0.1037,
+    "peak": 0.2102,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6mp",
+    "system": "somatomotor",
+    "mean": 0.1022,
+    "peak": 0.1649,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V1",
+    "system": "early_visual",
+    "mean": 0.1017,
+    "peak": 0.2553,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PF",
+    "system": null,
+    "mean": 0.1005,
+    "peak": 0.239,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7Pm",
+    "system": null,
+    "mean": 0.0989,
+    "peak": 0.2152,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PF",
+    "system": null,
+    "mean": 0.0983,
+    "peak": 0.2482,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_2",
+    "system": "somatomotor",
+    "mean": 0.0979,
+    "peak": 0.1756,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_2",
+    "system": "somatomotor",
+    "mean": 0.0977,
+    "peak": 0.193,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_POS2",
+    "system": "default_mode",
+    "mean": 0.0924,
+    "peak": 0.2029,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_55b",
+    "system": "language",
+    "mean": 0.0898,
+    "peak": 0.1952,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFcm",
+    "system": null,
+    "mean": 0.0884,
+    "peak": 0.2437,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PreS",
+    "system": null,
+    "mean": 0.0859,
+    "peak": 0.1539,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFSp",
+    "system": "language",
+    "mean": 0.0856,
+    "peak": 0.191,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_RI",
+    "system": "auditory",
+    "mean": 0.0852,
+    "peak": 0.2328,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFt",
+    "system": "attention",
+    "mean": 0.0852,
+    "peak": 0.164,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFSa",
+    "system": "frontal_control",
+    "mean": 0.0851,
+    "peak": 0.1803,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p24pr",
+    "system": null,
+    "mean": 0.0848,
+    "peak": 0.1434,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_46",
+    "system": "frontal_control",
+    "mean": 0.0845,
+    "peak": 0.1578,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8Ad",
+    "system": null,
+    "mean": 0.0809,
+    "peak": 0.1442,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8Ad",
+    "system": null,
+    "mean": 0.0806,
+    "peak": 0.1343,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9-46d",
+    "system": "frontal_control",
+    "mean": 0.0804,
+    "peak": 0.1399,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_i6-8",
+    "system": "frontal_control",
+    "mean": 0.0801,
+    "peak": 0.1364,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_33pr",
+    "system": null,
+    "mean": 0.0744,
+    "peak": 0.1446,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5m",
+    "system": null,
+    "mean": 0.0732,
+    "peak": 0.111,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_RI",
+    "system": "auditory",
+    "mean": 0.0716,
+    "peak": 0.1705,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5L",
+    "system": null,
+    "mean": 0.0712,
+    "peak": 0.1069,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AIP",
+    "system": "attention",
+    "mean": 0.0698,
+    "peak": 0.1524,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_ProS",
+    "system": "places",
+    "mean": 0.0671,
+    "peak": 0.1637,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6d",
+    "system": "somatomotor",
+    "mean": 0.0663,
+    "peak": 0.1271,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9-46d",
+    "system": "frontal_control",
+    "mean": 0.0662,
+    "peak": 0.1404,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9a",
+    "system": "frontal_control",
+    "mean": 0.0657,
+    "peak": 0.1245,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_33pr",
+    "system": null,
+    "mean": 0.0654,
+    "peak": 0.1144,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE2p",
+    "system": "objects",
+    "mean": 0.0648,
+    "peak": 0.1602,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TF",
+    "system": null,
+    "mean": 0.0647,
+    "peak": 0.1184,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_v23ab",
+    "system": "default_mode",
+    "mean": 0.0641,
+    "peak": 0.132,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6mp",
+    "system": "somatomotor",
+    "mean": 0.064,
+    "peak": 0.1075,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_24dd",
+    "system": null,
+    "mean": 0.0626,
+    "peak": 0.1066,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFt",
+    "system": "attention",
+    "mean": 0.0618,
+    "peak": 0.1708,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFJp",
+    "system": null,
+    "mean": 0.0599,
+    "peak": 0.1932,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_4",
+    "system": "somatomotor",
+    "mean": 0.0593,
+    "peak": 0.093,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PGi",
+    "system": "default_mode",
+    "mean": 0.0582,
+    "peak": 0.2049,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_46",
+    "system": "frontal_control",
+    "mean": 0.057,
+    "peak": 0.1131,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFJa",
+    "system": "language",
+    "mean": 0.0569,
+    "peak": 0.1535,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8Av",
+    "system": "frontal_control",
+    "mean": 0.0564,
+    "peak": 0.1336,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PreS",
+    "system": null,
+    "mean": 0.0562,
+    "peak": 0.1135,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFcm",
+    "system": null,
+    "mean": 0.0561,
+    "peak": 0.1561,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a24pr",
+    "system": null,
+    "mean": 0.0557,
+    "peak": 0.1029,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PI",
+    "system": null,
+    "mean": 0.0553,
+    "peak": 0.1048,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_24dd",
+    "system": null,
+    "mean": 0.0544,
+    "peak": 0.1065,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a10p",
+    "system": null,
+    "mean": 0.052,
+    "peak": 0.0855,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_d32",
+    "system": "default_mode",
+    "mean": 0.0518,
+    "peak": 0.1076,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_LBelt",
+    "system": "auditory",
+    "mean": 0.0516,
+    "peak": 0.1857,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PoI1",
+    "system": null,
+    "mean": 0.0507,
+    "peak": 0.1015,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFop",
+    "system": null,
+    "mean": 0.0501,
+    "peak": 0.1419,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_23d",
+    "system": "default_mode",
+    "mean": 0.0498,
+    "peak": 0.0938,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_i6-8",
+    "system": "frontal_control",
+    "mean": 0.0478,
+    "peak": 0.1175,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p32",
+    "system": "default_mode",
+    "mean": 0.0472,
+    "peak": 0.1172,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10d",
+    "system": null,
+    "mean": 0.047,
+    "peak": 0.0835,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PEF",
+    "system": null,
+    "mean": 0.0466,
+    "peak": 0.1327,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a24pr",
+    "system": null,
+    "mean": 0.0462,
+    "peak": 0.0998,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9m",
+    "system": "default_mode",
+    "mean": 0.046,
+    "peak": 0.1192,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP5",
+    "system": null,
+    "mean": 0.0456,
+    "peak": 0.1227,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_24dv",
+    "system": null,
+    "mean": 0.0454,
+    "peak": 0.1226,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47m",
+    "system": null,
+    "mean": 0.045,
+    "peak": 0.0863,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p32pr",
+    "system": null,
+    "mean": 0.044,
+    "peak": 0.1135,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_52",
+    "system": null,
+    "mean": 0.0429,
+    "peak": 0.1269,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_24dv",
+    "system": null,
+    "mean": 0.0427,
+    "peak": 0.1071,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IP1",
+    "system": "attention",
+    "mean": 0.0425,
+    "peak": 0.1175,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_SCEF",
+    "system": null,
+    "mean": 0.0407,
+    "peak": 0.119,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p10p",
+    "system": null,
+    "mean": 0.0403,
+    "peak": 0.0818,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_4",
+    "system": "somatomotor",
+    "mean": 0.0397,
+    "peak": 0.0951,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31pd",
+    "system": "default_mode",
+    "mean": 0.0393,
+    "peak": 0.1342,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_1",
+    "system": "somatomotor",
+    "mean": 0.0382,
+    "peak": 0.08,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_LBelt",
+    "system": "auditory",
+    "mean": 0.0373,
+    "peak": 0.1764,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9p",
+    "system": "frontal_control",
+    "mean": 0.0371,
+    "peak": 0.1106,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6r",
+    "system": null,
+    "mean": 0.0371,
+    "peak": 0.104,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_3a",
+    "system": "somatomotor",
+    "mean": 0.0369,
+    "peak": 0.0807,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p24pr",
+    "system": null,
+    "mean": 0.0368,
+    "peak": 0.0832,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AIP",
+    "system": "attention",
+    "mean": 0.0361,
+    "peak": 0.1313,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_LIPd",
+    "system": "attention",
+    "mean": 0.0359,
+    "peak": 0.0878,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSva",
+    "system": "language",
+    "mean": 0.0359,
+    "peak": 0.1314,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_s6-8",
+    "system": null,
+    "mean": 0.0355,
+    "peak": 0.1092,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p9-46v",
+    "system": "frontal_control",
+    "mean": 0.035,
+    "peak": 0.0849,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p32pr",
+    "system": null,
+    "mean": 0.034,
+    "peak": 0.0986,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_RSC",
+    "system": "places",
+    "mean": 0.0331,
+    "peak": 0.0815,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_s6-8",
+    "system": null,
+    "mean": 0.033,
+    "peak": 0.0682,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6v",
+    "system": "somatomotor",
+    "mean": 0.0324,
+    "peak": 0.1122,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47s",
+    "system": null,
+    "mean": 0.0324,
+    "peak": 0.0873,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7m",
+    "system": "default_mode",
+    "mean": 0.0323,
+    "peak": 0.1407,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TA2",
+    "system": "auditory",
+    "mean": 0.0313,
+    "peak": 0.1182,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_1",
+    "system": "somatomotor",
+    "mean": 0.0309,
+    "peak": 0.1047,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6d",
+    "system": "somatomotor",
+    "mean": 0.0309,
+    "peak": 0.0918,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PoI1",
+    "system": null,
+    "mean": 0.0304,
+    "peak": 0.0768,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p32",
+    "system": "default_mode",
+    "mean": 0.0297,
+    "peak": 0.0852,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PeEc",
+    "system": null,
+    "mean": 0.029,
+    "peak": 0.052,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47m",
+    "system": null,
+    "mean": 0.0282,
+    "peak": 0.0623,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6v",
+    "system": "somatomotor",
+    "mean": 0.0279,
+    "peak": 0.0774,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p24",
+    "system": "default_mode",
+    "mean": 0.027,
+    "peak": 0.0761,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a24",
+    "system": "default_mode",
+    "mean": 0.0269,
+    "peak": 0.0891,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A4",
+    "system": "auditory",
+    "mean": 0.0269,
+    "peak": 0.1107,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_d32",
+    "system": "default_mode",
+    "mean": 0.0268,
+    "peak": 0.0915,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP2",
+    "system": null,
+    "mean": 0.0268,
+    "peak": 0.1045,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_45",
+    "system": "language",
+    "mean": 0.0267,
+    "peak": 0.121,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47l",
+    "system": null,
+    "mean": 0.0266,
+    "peak": 0.0782,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PHT",
+    "system": null,
+    "mean": 0.0265,
+    "peak": 0.1557,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p47r",
+    "system": "frontal_control",
+    "mean": 0.026,
+    "peak": 0.0955,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a9-46v",
+    "system": "frontal_control",
+    "mean": 0.0259,
+    "peak": 0.0723,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10r",
+    "system": "default_mode",
+    "mean": 0.025,
+    "peak": 0.0777,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PBelt",
+    "system": "auditory",
+    "mean": 0.0248,
+    "peak": 0.1229,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TF",
+    "system": null,
+    "mean": 0.0246,
+    "peak": 0.0546,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p24",
+    "system": "default_mode",
+    "mean": 0.0232,
+    "peak": 0.075,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31pv",
+    "system": "default_mode",
+    "mean": 0.0218,
+    "peak": 0.0721,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_MBelt",
+    "system": "auditory",
+    "mean": 0.0217,
+    "peak": 0.1166,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_44",
+    "system": "language",
+    "mean": 0.0209,
+    "peak": 0.0984,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_52",
+    "system": null,
+    "mean": 0.0208,
+    "peak": 0.106,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10v",
+    "system": "default_mode",
+    "mean": 0.0203,
+    "peak": 0.0451,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_RSC",
+    "system": "places",
+    "mean": 0.0202,
+    "peak": 0.0689,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10pp",
+    "system": null,
+    "mean": 0.0202,
+    "peak": 0.0468,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a32pr",
+    "system": null,
+    "mean": 0.0202,
+    "peak": 0.0801,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31a",
+    "system": "default_mode",
+    "mean": 0.02,
+    "peak": 0.0607,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9m",
+    "system": "default_mode",
+    "mean": 0.0192,
+    "peak": 0.0802,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PoI2",
+    "system": null,
+    "mean": 0.0179,
+    "peak": 0.0543,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6r",
+    "system": null,
+    "mean": 0.0165,
+    "peak": 0.0889,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TPOJ2",
+    "system": null,
+    "mean": 0.0165,
+    "peak": 0.1961,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8BL",
+    "system": "frontal_control",
+    "mean": 0.0164,
+    "peak": 0.0825,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_11l",
+    "system": null,
+    "mean": 0.015,
+    "peak": 0.0423,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8BM",
+    "system": "default_mode",
+    "mean": 0.0147,
+    "peak": 0.0763,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PBelt",
+    "system": "auditory",
+    "mean": 0.0144,
+    "peak": 0.0992,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PGs",
+    "system": "default_mode",
+    "mean": 0.0144,
+    "peak": 0.0994,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10d",
+    "system": null,
+    "mean": 0.0142,
+    "peak": 0.0354,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p10p",
+    "system": null,
+    "mean": 0.0139,
+    "peak": 0.0448,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a32pr",
+    "system": null,
+    "mean": 0.0136,
+    "peak": 0.0657,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_13l",
+    "system": null,
+    "mean": 0.0133,
+    "peak": 0.0414,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9a",
+    "system": "frontal_control",
+    "mean": 0.0129,
+    "peak": 0.0541,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AVI",
+    "system": null,
+    "mean": 0.0129,
+    "peak": 0.0721,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A1",
+    "system": "auditory",
+    "mean": 0.0123,
+    "peak": 0.165,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_Pir",
+    "system": null,
+    "mean": 0.0121,
+    "peak": 0.0494,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_25",
+    "system": null,
+    "mean": 0.0119,
+    "peak": 0.0291,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_3a",
+    "system": "somatomotor",
+    "mean": 0.0118,
+    "peak": 0.1021,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a24",
+    "system": "default_mode",
+    "mean": 0.0108,
+    "peak": 0.0593,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a9-46v",
+    "system": "frontal_control",
+    "mean": 0.0107,
+    "peak": 0.0629,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFop",
+    "system": null,
+    "mean": 0.0105,
+    "peak": 0.0857,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IP1",
+    "system": "attention",
+    "mean": 0.0091,
+    "peak": 0.1269,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP1",
+    "system": null,
+    "mean": 0.009,
+    "peak": 0.1315,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_SCEF",
+    "system": null,
+    "mean": 0.0089,
+    "peak": 0.142,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AVI",
+    "system": null,
+    "mean": 0.0088,
+    "peak": 0.0609,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PI",
+    "system": null,
+    "mean": 0.0084,
+    "peak": 0.0519,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47s",
+    "system": null,
+    "mean": 0.0082,
+    "peak": 0.0604,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_H",
+    "system": null,
+    "mean": 0.0076,
+    "peak": 0.0348,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_v23ab",
+    "system": "default_mode",
+    "mean": 0.0061,
+    "peak": 0.0697,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP5",
+    "system": null,
+    "mean": 0.0061,
+    "peak": 0.0446,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8C",
+    "system": "frontal_control",
+    "mean": 0.0058,
+    "peak": 0.0625,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9p",
+    "system": "frontal_control",
+    "mean": 0.0055,
+    "peak": 0.0461,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_EC",
+    "system": null,
+    "mean": 0.0051,
+    "peak": 0.0332,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFSa",
+    "system": "frontal_control",
+    "mean": 0.0036,
+    "peak": 0.0713,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IP2",
+    "system": "attention",
+    "mean": 0.0022,
+    "peak": 0.1222,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10pp",
+    "system": null,
+    "mean": 0.0021,
+    "peak": 0.0221,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TPOJ1",
+    "system": null,
+    "mean": 0.0019,
+    "peak": 0.1537,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AAIC",
+    "system": null,
+    "mean": 0.0016,
+    "peak": 0.0342,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP2",
+    "system": null,
+    "mean": 0.0014,
+    "peak": 0.094,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TA2",
+    "system": "auditory",
+    "mean": 0.0002,
+    "peak": 0.0839,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7m",
+    "system": "default_mode",
+    "mean": -0.0004,
+    "peak": 0.0811,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_LIPd",
+    "system": "attention",
+    "mean": -0.0009,
+    "peak": 0.1183,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AAIC",
+    "system": null,
+    "mean": -0.0009,
+    "peak": 0.0415,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10v",
+    "system": "default_mode",
+    "mean": -0.001,
+    "peak": 0.0208,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_11l",
+    "system": null,
+    "mean": -0.0017,
+    "peak": 0.0259,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_pOFC",
+    "system": null,
+    "mean": -0.0029,
+    "peak": 0.0132,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MBelt",
+    "system": "auditory",
+    "mean": -0.0029,
+    "peak": 0.1031,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP4",
+    "system": null,
+    "mean": -0.003,
+    "peak": 0.0518,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a47r",
+    "system": "frontal_control",
+    "mean": -0.0037,
+    "peak": 0.0308,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PSL",
+    "system": null,
+    "mean": -0.0045,
+    "peak": 0.0898,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PGs",
+    "system": "default_mode",
+    "mean": -0.0046,
+    "peak": 0.057,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_Pir",
+    "system": null,
+    "mean": -0.0055,
+    "peak": 0.0307,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_55b",
+    "system": "language",
+    "mean": -0.0059,
+    "peak": 0.0819,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PeEc",
+    "system": null,
+    "mean": -0.0059,
+    "peak": 0.0121,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_d23ab",
+    "system": "default_mode",
+    "mean": -0.0061,
+    "peak": 0.0668,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_SFL",
+    "system": null,
+    "mean": -0.0069,
+    "peak": 0.074,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a10p",
+    "system": null,
+    "mean": -0.0072,
+    "peak": 0.0254,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFm",
+    "system": null,
+    "mean": -0.0079,
+    "peak": 0.0666,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8BM",
+    "system": "default_mode",
+    "mean": -0.0085,
+    "peak": 0.0495,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE2p",
+    "system": "objects",
+    "mean": -0.0089,
+    "peak": 0.0521,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MI",
+    "system": null,
+    "mean": -0.0091,
+    "peak": 0.0696,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_3b",
+    "system": "somatomotor",
+    "mean": -0.0092,
+    "peak": 0.1205,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31pv",
+    "system": "default_mode",
+    "mean": -0.0095,
+    "peak": 0.0407,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_pOFC",
+    "system": null,
+    "mean": -0.0096,
+    "peak": 0.0031,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A1",
+    "system": "auditory",
+    "mean": -0.0105,
+    "peak": 0.1532,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_25",
+    "system": null,
+    "mean": -0.011,
+    "peak": -0.0041,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_Ig",
+    "system": null,
+    "mean": -0.0113,
+    "peak": 0.0958,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_23d",
+    "system": "default_mode",
+    "mean": -0.012,
+    "peak": 0.0426,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PoI2",
+    "system": null,
+    "mean": -0.0121,
+    "peak": 0.0274,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_EC",
+    "system": null,
+    "mean": -0.0134,
+    "peak": 0.0043,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OFC",
+    "system": null,
+    "mean": -0.0138,
+    "peak": -0.004,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10r",
+    "system": "default_mode",
+    "mean": -0.0139,
+    "peak": 0.0203,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TGv",
+    "system": null,
+    "mean": -0.0141,
+    "peak": 0.0218,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1m",
+    "system": null,
+    "mean": -0.0147,
+    "peak": 0.0182,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OFC",
+    "system": null,
+    "mean": -0.0148,
+    "peak": 0.0005,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_H",
+    "system": null,
+    "mean": -0.0151,
+    "peak": 0.003,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_d23ab",
+    "system": "default_mode",
+    "mean": -0.0158,
+    "peak": 0.0628,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP1",
+    "system": null,
+    "mean": -0.0159,
+    "peak": 0.0699,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP1",
+    "system": null,
+    "mean": -0.0166,
+    "peak": 0.0974,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_13l",
+    "system": null,
+    "mean": -0.017,
+    "peak": 0.0098,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STV",
+    "system": null,
+    "mean": -0.0171,
+    "peak": 0.124,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8BL",
+    "system": "frontal_control",
+    "mean": -0.0191,
+    "peak": 0.0258,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_45",
+    "system": "language",
+    "mean": -0.0212,
+    "peak": 0.0252,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_3b",
+    "system": "somatomotor",
+    "mean": -0.0214,
+    "peak": 0.0737,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31pd",
+    "system": "default_mode",
+    "mean": -0.0236,
+    "peak": 0.0467,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TGd",
+    "system": "language",
+    "mean": -0.0239,
+    "peak": 0.0187,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP2-3",
+    "system": null,
+    "mean": -0.0244,
+    "peak": 0.0785,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a47r",
+    "system": "frontal_control",
+    "mean": -0.0249,
+    "peak": 0.0086,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP4",
+    "system": null,
+    "mean": -0.0254,
+    "peak": 0.0774,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP4",
+    "system": null,
+    "mean": -0.0261,
+    "peak": 0.0763,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p47r",
+    "system": "frontal_control",
+    "mean": -0.0285,
+    "peak": 0.0141,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP4",
+    "system": null,
+    "mean": -0.0292,
+    "peak": 0.0942,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP1",
+    "system": null,
+    "mean": -0.0293,
+    "peak": 0.0481,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_43",
+    "system": null,
+    "mean": -0.0296,
+    "peak": 0.1311,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p9-46v",
+    "system": "frontal_control",
+    "mean": -0.0312,
+    "peak": 0.0481,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_Ig",
+    "system": null,
+    "mean": -0.0314,
+    "peak": 0.0731,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP2-3",
+    "system": null,
+    "mean": -0.0333,
+    "peak": 0.091,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_44",
+    "system": "language",
+    "mean": -0.0334,
+    "peak": 0.0125,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP3",
+    "system": null,
+    "mean": -0.0338,
+    "peak": 0.0658,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP3",
+    "system": null,
+    "mean": -0.0344,
+    "peak": 0.1006,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_SFL",
+    "system": null,
+    "mean": -0.0366,
+    "peak": 0.0307,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_MI",
+    "system": null,
+    "mean": -0.0372,
+    "peak": 0.0136,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_s32",
+    "system": null,
+    "mean": -0.0377,
+    "peak": -0.0128,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_43",
+    "system": null,
+    "mean": -0.0381,
+    "peak": 0.0808,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8Av",
+    "system": "frontal_control",
+    "mean": -0.0398,
+    "peak": -0.0043,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A4",
+    "system": "auditory",
+    "mean": -0.0433,
+    "peak": 0.0575,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IP2",
+    "system": "attention",
+    "mean": -0.046,
+    "peak": 0.0962,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47l",
+    "system": null,
+    "mean": -0.0462,
+    "peak": 0.0107,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE2a",
+    "system": null,
+    "mean": -0.0464,
+    "peak": -0.0083,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1p",
+    "system": null,
+    "mean": -0.0486,
+    "peak": 0.0285,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE2a",
+    "system": null,
+    "mean": -0.0505,
+    "peak": -0.0237,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1m",
+    "system": null,
+    "mean": -0.0507,
+    "peak": -0.0207,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFSp",
+    "system": "language",
+    "mean": -0.0547,
+    "peak": 0.0683,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSvp",
+    "system": "language",
+    "mean": -0.0554,
+    "peak": 0.0488,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFm",
+    "system": null,
+    "mean": -0.056,
+    "peak": 0.0284,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TPOJ1",
+    "system": null,
+    "mean": -0.0643,
+    "peak": 0.0735,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_s32",
+    "system": null,
+    "mean": -0.0658,
+    "peak": -0.0424,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PHT",
+    "system": null,
+    "mean": -0.0697,
+    "peak": 0.0627,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TGd",
+    "system": "language",
+    "mean": -0.0699,
+    "peak": -0.033,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STGa",
+    "system": "language",
+    "mean": -0.0785,
+    "peak": -0.0193,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSda",
+    "system": "language",
+    "mean": -0.0789,
+    "peak": 0.0224,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PGi",
+    "system": "default_mode",
+    "mean": -0.0799,
+    "peak": 0.02,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1a",
+    "system": "language",
+    "mean": -0.0851,
+    "peak": -0.0275,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1p",
+    "system": null,
+    "mean": -0.094,
+    "peak": 0.0033,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TGv",
+    "system": null,
+    "mean": -0.1005,
+    "peak": -0.0526,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1a",
+    "system": "language",
+    "mean": -0.1128,
+    "peak": -0.0635,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A5",
+    "system": "auditory",
+    "mean": -0.1153,
+    "peak": 0.0595,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STGa",
+    "system": "language",
+    "mean": -0.125,
+    "peak": -0.0459,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSva",
+    "system": "language",
+    "mean": -0.1439,
+    "peak": 0.0302,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A5",
+    "system": "auditory",
+    "mean": -0.1554,
+    "peak": 0.067,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSvp",
+    "system": "language",
+    "mean": -0.169,
+    "peak": 0.0152,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSda",
+    "system": "language",
+    "mean": -0.1736,
+    "peak": 0.0308,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSdp",
+    "system": "language",
+    "mean": -0.1736,
+    "peak": 0.0421,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSdp",
+    "system": "language",
+    "mean": -0.2138,
+    "peak": 0.0636,
+    "frac_active": 0.0
+   }
+  ],
+  "timeline": [
+   {
+    "second": 0,
+    "z": {
+     "early_visual": 0.033,
+     "motion": 0.05,
+     "faces": 0.108,
+     "places": 0.086,
+     "objects": 0.025,
+     "attention": -0.007,
+     "auditory": -0.067,
+     "somatomotor": 0.012,
+     "frontal_control": 0.007,
+     "language": -0.06,
+     "default_mode": 0.006
+    }
+   },
+   {
+    "second": 1,
+    "z": {
+     "early_visual": 0.059,
+     "motion": 0.076,
+     "faces": 0.099,
+     "places": 0.094,
+     "objects": 0.022,
+     "attention": -0.014,
+     "auditory": -0.017,
+     "somatomotor": 0.014,
+     "frontal_control": 0.002,
+     "language": -0.04,
+     "default_mode": 0.002
+    }
+   },
+   {
+    "second": 2,
+    "z": {
+     "early_visual": 0.07,
+     "motion": 0.103,
+     "faces": 0.094,
+     "places": 0.103,
+     "objects": 0.024,
+     "attention": -0.005,
+     "auditory": 0.05,
+     "somatomotor": 0.018,
+     "frontal_control": -0.001,
+     "language": -0.029,
+     "default_mode": -0.007
+    }
+   },
+   {
+    "second": 3,
+    "z": {
+     "early_visual": 0.094,
+     "motion": 0.159,
+     "faces": 0.103,
+     "places": 0.117,
+     "objects": 0.043,
+     "attention": 0.009,
+     "auditory": 0.068,
+     "somatomotor": 0.024,
+     "frontal_control": -0.0,
+     "language": -0.038,
+     "default_mode": -0.017
+    }
+   },
+   {
+    "second": 4,
+    "z": {
+     "early_visual": 0.175,
+     "motion": 0.259,
+     "faces": 0.145,
+     "places": 0.165,
+     "objects": 0.082,
+     "attention": 0.034,
+     "auditory": 0.038,
+     "somatomotor": 0.044,
+     "frontal_control": 0.004,
+     "language": -0.055,
+     "default_mode": 0.0
+    }
+   },
+   {
+    "second": 5,
+    "z": {
+     "early_visual": 0.213,
+     "motion": 0.334,
+     "faces": 0.174,
+     "places": 0.194,
+     "objects": 0.118,
+     "attention": 0.072,
+     "auditory": -0.001,
+     "somatomotor": 0.055,
+     "frontal_control": 0.02,
+     "language": -0.07,
+     "default_mode": 0.02
+    }
+   },
+   {
+    "second": 6,
+    "z": {
+     "early_visual": 0.27,
+     "motion": 0.409,
+     "faces": 0.202,
+     "places": 0.23,
+     "objects": 0.153,
+     "attention": 0.113,
+     "auditory": -0.057,
+     "somatomotor": 0.074,
+     "frontal_control": 0.029,
+     "language": -0.107,
+     "default_mode": 0.035
+    }
+   },
+   {
+    "second": 7,
+    "z": {
+     "early_visual": 0.305,
+     "motion": 0.452,
+     "faces": 0.221,
+     "places": 0.261,
+     "objects": 0.179,
+     "attention": 0.147,
+     "auditory": -0.087,
+     "somatomotor": 0.083,
+     "frontal_control": 0.042,
+     "language": -0.123,
+     "default_mode": 0.05
+    }
+   },
+   {
+    "second": 8,
+    "z": {
+     "early_visual": 0.332,
+     "motion": 0.541,
+     "faces": 0.27,
+     "places": 0.28,
+     "objects": 0.238,
+     "attention": 0.19,
+     "auditory": -0.084,
+     "somatomotor": 0.081,
+     "frontal_control": 0.051,
+     "language": -0.132,
+     "default_mode": 0.064
+    }
+   },
+   {
+    "second": 9,
+    "z": {
+     "early_visual": 0.344,
+     "motion": 0.58,
+     "faces": 0.303,
+     "places": 0.294,
+     "objects": 0.278,
+     "attention": 0.213,
+     "auditory": -0.077,
+     "somatomotor": 0.073,
+     "frontal_control": 0.046,
+     "language": -0.132,
+     "default_mode": 0.061
+    }
+   },
+   {
+    "second": 10,
+    "z": {
+     "early_visual": 0.333,
+     "motion": 0.594,
+     "faces": 0.311,
+     "places": 0.294,
+     "objects": 0.292,
+     "attention": 0.219,
+     "auditory": -0.016,
+     "somatomotor": 0.061,
+     "frontal_control": 0.049,
+     "language": -0.11,
+     "default_mode": 0.061
+    }
+   },
+   {
+    "second": 11,
+    "z": {
+     "early_visual": 0.311,
+     "motion": 0.566,
+     "faces": 0.316,
+     "places": 0.288,
+     "objects": 0.304,
+     "attention": 0.228,
+     "auditory": 0.051,
+     "somatomotor": 0.053,
+     "frontal_control": 0.051,
+     "language": -0.088,
+     "default_mode": 0.057
+    }
+   },
+   {
+    "second": 12,
+    "z": {
+     "early_visual": 0.282,
+     "motion": 0.535,
+     "faces": 0.33,
+     "places": 0.288,
+     "objects": 0.312,
+     "attention": 0.225,
+     "auditory": 0.036,
+     "somatomotor": 0.039,
+     "frontal_control": 0.05,
+     "language": -0.07,
+     "default_mode": 0.064
+    }
+   },
+   {
+    "second": 13,
+    "z": {
+     "early_visual": 0.262,
+     "motion": 0.513,
+     "faces": 0.326,
+     "places": 0.283,
+     "objects": 0.307,
+     "attention": 0.221,
+     "auditory": 0.058,
+     "somatomotor": 0.04,
+     "frontal_control": 0.051,
+     "language": -0.049,
+     "default_mode": 0.069
+    }
+   },
+   {
+    "second": 14,
+    "z": {
+     "early_visual": 0.234,
+     "motion": 0.43,
+     "faces": 0.302,
+     "places": 0.243,
+     "objects": 0.267,
+     "attention": 0.181,
+     "auditory": 0.054,
+     "somatomotor": 0.039,
+     "frontal_control": 0.06,
+     "language": -0.021,
+     "default_mode": 0.09
+    }
+   },
+   {
+    "second": 15,
+    "z": {
+     "early_visual": 0.208,
+     "motion": 0.394,
+     "faces": 0.281,
+     "places": 0.201,
+     "objects": 0.254,
+     "attention": 0.179,
+     "auditory": 0.037,
+     "somatomotor": 0.049,
+     "frontal_control": 0.069,
+     "language": -0.007,
+     "default_mode": 0.092
+    }
+   },
+   {
+    "second": 16,
+    "z": {
+     "early_visual": 0.187,
+     "motion": 0.331,
+     "faces": 0.238,
+     "places": 0.156,
+     "objects": 0.212,
+     "attention": 0.159,
+     "auditory": 0.011,
+     "somatomotor": 0.055,
+     "frontal_control": 0.078,
+     "language": -0.011,
+     "default_mode": 0.096
+    }
+   },
+   {
+    "second": 17,
+    "z": {
+     "early_visual": 0.192,
+     "motion": 0.311,
+     "faces": 0.202,
+     "places": 0.148,
+     "objects": 0.181,
+     "attention": 0.138,
+     "auditory": 0.002,
+     "somatomotor": 0.065,
+     "frontal_control": 0.078,
+     "language": -0.017,
+     "default_mode": 0.081
+    }
+   },
+   {
+    "second": 18,
+    "z": {
+     "early_visual": 0.196,
+     "motion": 0.307,
+     "faces": 0.203,
+     "places": 0.166,
+     "objects": 0.178,
+     "attention": 0.136,
+     "auditory": 0.058,
+     "somatomotor": 0.072,
+     "frontal_control": 0.069,
+     "language": -0.0,
+     "default_mode": 0.073
+    }
+   },
+   {
+    "second": 19,
+    "z": {
+     "early_visual": 0.211,
+     "motion": 0.311,
+     "faces": 0.204,
+     "places": 0.185,
+     "objects": 0.171,
+     "attention": 0.141,
+     "auditory": 0.063,
+     "somatomotor": 0.082,
+     "frontal_control": 0.072,
+     "language": -0.024,
+     "default_mode": 0.07
+    }
+   },
+   {
+    "second": 20,
+    "z": {
+     "early_visual": 0.196,
+     "motion": 0.27,
+     "faces": 0.177,
+     "places": 0.199,
+     "objects": 0.149,
+     "attention": 0.14,
+     "auditory": 0.055,
+     "somatomotor": 0.083,
+     "frontal_control": 0.066,
+     "language": -0.047,
+     "default_mode": 0.047
+    }
+   },
+   {
+    "second": 21,
+    "z": {
+     "early_visual": 0.171,
+     "motion": 0.234,
+     "faces": 0.154,
+     "places": 0.199,
+     "objects": 0.138,
+     "attention": 0.143,
+     "auditory": 0.02,
+     "somatomotor": 0.067,
+     "frontal_control": 0.052,
+     "language": -0.051,
+     "default_mode": 0.025
+    }
+   },
+   {
+    "second": 22,
+    "z": {
+     "early_visual": 0.135,
+     "motion": 0.182,
+     "faces": 0.127,
+     "places": 0.193,
+     "objects": 0.117,
+     "attention": 0.14,
+     "auditory": -0.026,
+     "somatomotor": 0.056,
+     "frontal_control": 0.05,
+     "language": -0.076,
+     "default_mode": 0.015
+    }
+   },
+   {
+    "second": 23,
+    "z": {
+     "early_visual": 0.111,
+     "motion": 0.167,
+     "faces": 0.125,
+     "places": 0.187,
+     "objects": 0.112,
+     "attention": 0.123,
+     "auditory": -0.061,
+     "somatomotor": 0.046,
+     "frontal_control": 0.032,
+     "language": -0.092,
+     "default_mode": 0.008
+    }
+   },
+   {
+    "second": 24,
+    "z": {
+     "early_visual": 0.093,
+     "motion": 0.162,
+     "faces": 0.128,
+     "places": 0.17,
+     "objects": 0.117,
+     "attention": 0.125,
+     "auditory": -0.059,
+     "somatomotor": 0.044,
+     "frontal_control": 0.032,
+     "language": -0.084,
+     "default_mode": 0.011
+    }
+   },
+   {
+    "second": 25,
+    "z": {
+     "early_visual": 0.056,
+     "motion": 0.121,
+     "faces": 0.133,
+     "places": 0.14,
+     "objects": 0.108,
+     "attention": 0.097,
+     "auditory": -0.033,
+     "somatomotor": 0.02,
+     "frontal_control": 0.01,
+     "language": -0.07,
+     "default_mode": 0.004
+    }
+   },
+   {
+    "second": 26,
+    "z": {
+     "early_visual": 0.035,
+     "motion": 0.133,
+     "faces": 0.167,
+     "places": 0.117,
+     "objects": 0.116,
+     "attention": 0.055,
+     "auditory": -0.049,
+     "somatomotor": 0.006,
+     "frontal_control": -0.015,
+     "language": -0.07,
+     "default_mode": 0.002
+    }
+   },
+   {
+    "second": 27,
+    "z": {
+     "early_visual": 0.035,
+     "motion": 0.161,
+     "faces": 0.18,
+     "places": 0.092,
+     "objects": 0.128,
+     "attention": 0.057,
+     "auditory": -0.039,
+     "somatomotor": 0.009,
+     "frontal_control": -0.007,
+     "language": -0.059,
+     "default_mode": 0.011
+    }
+   },
+   {
+    "second": 28,
+    "z": {
+     "early_visual": 0.035,
+     "motion": 0.157,
+     "faces": 0.159,
+     "places": 0.068,
+     "objects": 0.116,
+     "attention": 0.064,
+     "auditory": -0.025,
+     "somatomotor": 0.025,
+     "frontal_control": 0.003,
+     "language": -0.061,
+     "default_mode": 0.021
+    }
+   },
+   {
+    "second": 29,
+    "z": {
+     "early_visual": 0.007,
+     "motion": 0.093,
+     "faces": 0.118,
+     "places": 0.039,
+     "objects": 0.082,
+     "attention": 0.057,
+     "auditory": 0.0,
+     "somatomotor": 0.036,
+     "frontal_control": 0.004,
+     "language": -0.058,
+     "default_mode": 0.015
+    }
+   },
+   {
+    "second": 30,
+    "z": {
+     "early_visual": -0.063,
+     "motion": -0.039,
+     "faces": 0.004,
+     "places": -0.025,
+     "objects": 0.009,
+     "attention": 0.038,
+     "auditory": -0.026,
+     "somatomotor": 0.039,
+     "frontal_control": -0.008,
+     "language": -0.041,
+     "default_mode": -0.006
+    }
+   },
+   {
+    "second": 31,
+    "z": {
+     "early_visual": -0.058,
+     "motion": -0.122,
+     "faces": -0.129,
+     "places": -0.067,
+     "objects": -0.064,
+     "attention": 0.05,
+     "auditory": 0.086,
+     "somatomotor": 0.084,
+     "frontal_control": 0.018,
+     "language": 0.002,
+     "default_mode": 0.023
+    }
+   }
+  ]
+ },
+ "_wall_s": 24.6
+}

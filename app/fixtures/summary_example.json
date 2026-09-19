@@ -1,0 +1,1220 @@
+{
+ "sid": "demo01",
+ "duration_s": 240.0,
+ "n_seconds_predicted": 230,
+ "systems": [
+  {
+   "id": "early_visual",
+   "label": "Early visual cortex (V1/V2)",
+   "mean": 1.125,
+   "peak": 2.239,
+   "frac_active": 0.622,
+   "rank": 1
+  },
+  {
+   "id": "places",
+   "label": "Scenes and navigation (PPA / RSC)",
+   "mean": 0.943,
+   "peak": 2.185,
+   "frac_active": 0.409,
+   "rank": 2
+  },
+  {
+   "id": "auditory",
+   "label": "Auditory cortex (Heschl's / STG)",
+   "mean": 0.877,
+   "peak": 1.997,
+   "frac_active": 0.4,
+   "rank": 3
+  },
+  {
+   "id": "attention",
+   "label": "Spatial attention (intraparietal / SPL)",
+   "mean": 0.683,
+   "peak": 1.633,
+   "frac_active": 0.165,
+   "rank": 4
+  },
+  {
+   "id": "objects",
+   "label": "Object recognition (lateral occipital / IT)",
+   "mean": 0.612,
+   "peak": 1.365,
+   "frac_active": 0.1,
+   "rank": 5
+  },
+  {
+   "id": "somatomotor",
+   "label": "Sensorimotor cortex",
+   "mean": 0.476,
+   "peak": 1.645,
+   "frac_active": 0.083,
+   "rank": 6
+  },
+  {
+   "id": "frontal_control",
+   "label": "Executive control (dorsolateral prefrontal)",
+   "mean": 0.434,
+   "peak": 1.073,
+   "frac_active": 0.013,
+   "rank": 7
+  },
+  {
+   "id": "language",
+   "label": "Language network (IFG / STS)",
+   "mean": 0.341,
+   "peak": 1.165,
+   "frac_active": 0.022,
+   "rank": 8
+  },
+  {
+   "id": "default_mode",
+   "label": "Default mode network",
+   "mean": 0.278,
+   "peak": 0.932,
+   "frac_active": 0.0,
+   "rank": 9
+  },
+  {
+   "id": "faces",
+   "label": "Face processing (fusiform / FFA)",
+   "mean": 0.18,
+   "peak": 0.727,
+   "frac_active": 0.0,
+   "rank": 10
+  },
+  {
+   "id": "motion",
+   "label": "Visual motion (MT+/V5)",
+   "mean": 0.147,
+   "peak": 0.782,
+   "frac_active": 0.0,
+   "rank": 11
+  }
+ ],
+ "regions": [
+  {
+   "name": "L_S_parieto_occipital",
+   "system": "places",
+   "mean": 1.144,
+   "peak": 2.145,
+   "frac_active": 0.383
+  },
+  {
+   "name": "L_G_cuneus",
+   "system": "early_visual",
+   "mean": 1.138,
+   "peak": 2.046,
+   "frac_active": 0.598
+  },
+  {
+   "name": "L_G_oc-temp_med-Parahip",
+   "system": "places",
+   "mean": 1.106,
+   "peak": 2.177,
+   "frac_active": 0.366
+  },
+  {
+   "name": "L_S_calcarine",
+   "system": "early_visual",
+   "mean": 1.026,
+   "peak": 2.246,
+   "frac_active": 0.56
+  },
+  {
+   "name": "R_Pole_occipital",
+   "system": "early_visual",
+   "mean": 1.026,
+   "peak": 2.145,
+   "frac_active": 0.749
+  },
+  {
+   "name": "R_S_calcarine",
+   "system": "early_visual",
+   "mean": 0.997,
+   "peak": 2.379,
+   "frac_active": 0.781
+  },
+  {
+   "name": "L_S_intrapariet_and_P_trans",
+   "system": "attention",
+   "mean": 0.842,
+   "peak": 1.597,
+   "frac_active": 0.124
+  },
+  {
+   "name": "L_G_temp_sup-G_T_transv",
+   "system": "auditory",
+   "mean": 0.84,
+   "peak": 2.054,
+   "frac_active": 0.322
+  },
+  {
+   "name": "R_G_oc-temp_med-Lingual",
+   "system": "places",
+   "mean": 0.833,
+   "peak": 2.324,
+   "frac_active": 0.538
+  },
+  {
+   "name": "R_G_parietal_sup",
+   "system": "attention",
+   "mean": 0.764,
+   "peak": 1.447,
+   "frac_active": 0.218
+  },
+  {
+   "name": "R_G_temp_sup-Lateral",
+   "system": "auditory",
+   "mean": 0.656,
+   "peak": 1.925,
+   "frac_active": 0.244
+  },
+  {
+   "name": "R_G_and_S_occipital_inf",
+   "system": "objects",
+   "mean": 0.603,
+   "peak": 1.235,
+   "frac_active": 0.073
+  },
+  {
+   "name": "L_G_temporal_inf",
+   "system": "objects",
+   "mean": 0.587,
+   "peak": 1.509,
+   "frac_active": 0.087
+  },
+  {
+   "name": "R_G_postcentral",
+   "system": "somatomotor",
+   "mean": 0.474,
+   "peak": 1.408,
+   "frac_active": 0.095
+  },
+  {
+   "name": "L_G_precentral",
+   "system": "somatomotor",
+   "mean": 0.472,
+   "peak": 1.563,
+   "frac_active": 0.095
+  },
+  {
+   "name": "L_G_front_middle",
+   "system": "frontal_control",
+   "mean": 0.437,
+   "peak": 0.976,
+   "frac_active": 0.017
+  },
+  {
+   "name": "L_G_front_inf-Triangul",
+   "system": "language",
+   "mean": 0.384,
+   "peak": 1.195,
+   "frac_active": 0.023
+  },
+  {
+   "name": "L_G_oc-temp_lat-fusifor",
+   "system": "faces",
+   "mean": 0.224,
+   "peak": 0.764,
+   "frac_active": 0.0
+  },
+  {
+   "name": "R_G_precuneus",
+   "system": "default_mode",
+   "mean": 0.207,
+   "peak": 0.883,
+   "frac_active": 0.0
+  },
+  {
+   "name": "R_G_oc-temp_lat-fusifor",
+   "system": "faces",
+   "mean": 0.18,
+   "peak": 0.691,
+   "frac_active": 0.0
+  },
+  {
+   "name": "R_G_occipital_middle",
+   "system": "motion",
+   "mean": 0.176,
+   "peak": 0.814,
+   "frac_active": 0.0
+  },
+  {
+   "name": "L_G_occipital_middle",
+   "system": "motion",
+   "mean": 0.135,
+   "peak": 0.72,
+   "frac_active": 0.0
+  },
+  {
+   "name": "R_S_oc_middle_and_Lunatus",
+   "system": "motion",
+   "mean": 0.086,
+   "peak": 0.749,
+   "frac_active": 0.0
+  }
+ ],
+ "timeline": [
+  {
+   "second": 0,
+   "z": {
+    "early_visual": 1.283,
+    "motion": 0.177,
+    "faces": 0.169,
+    "places": 0.884,
+    "objects": 0.691,
+    "attention": 0.508,
+    "auditory": 0.593,
+    "somatomotor": 0.057,
+    "frontal_control": 0.478,
+    "language": 0.535,
+    "default_mode": 0.155
+   }
+  },
+  {
+   "second": 3,
+   "z": {
+    "early_visual": 1.35,
+    "motion": 0.498,
+    "faces": 0.212,
+    "places": 0.829,
+    "objects": 0.302,
+    "attention": 0.858,
+    "auditory": 0.684,
+    "somatomotor": 1.176,
+    "frontal_control": 0.503,
+    "language": -0.247,
+    "default_mode": 0.495
+   }
+  },
+  {
+   "second": 7,
+   "z": {
+    "early_visual": 1.397,
+    "motion": 0.013,
+    "faces": 0.537,
+    "places": 0.733,
+    "objects": 0.466,
+    "attention": 0.715,
+    "auditory": 1.219,
+    "somatomotor": 0.431,
+    "frontal_control": 0.753,
+    "language": -0.171,
+    "default_mode": 0.148
+   }
+  },
+  {
+   "second": 11,
+   "z": {
+    "early_visual": 0.923,
+    "motion": -0.043,
+    "faces": 0.259,
+    "places": 0.4,
+    "objects": 0.494,
+    "attention": 0.288,
+    "auditory": 1.13,
+    "somatomotor": 1.055,
+    "frontal_control": 0.462,
+    "language": 0.493,
+    "default_mode": 0.039
+   }
+  },
+  {
+   "second": 15,
+   "z": {
+    "early_visual": 0.692,
+    "motion": 0.062,
+    "faces": -0.025,
+    "places": 0.483,
+    "objects": 0.829,
+    "attention": 0.39,
+    "auditory": 0.943,
+    "somatomotor": 0.646,
+    "frontal_control": 0.435,
+    "language": 0.471,
+    "default_mode": 0.365
+   }
+  },
+  {
+   "second": 19,
+   "z": {
+    "early_visual": 1.245,
+    "motion": -0.089,
+    "faces": 0.381,
+    "places": 0.88,
+    "objects": 0.688,
+    "attention": 0.552,
+    "auditory": 1.162,
+    "somatomotor": 0.631,
+    "frontal_control": 0.189,
+    "language": 0.313,
+    "default_mode": 0.309
+   }
+  },
+  {
+   "second": 23,
+   "z": {
+    "early_visual": 1.711,
+    "motion": 0.363,
+    "faces": 0.326,
+    "places": 1.297,
+    "objects": 1.132,
+    "attention": 0.983,
+    "auditory": 1.385,
+    "somatomotor": 0.352,
+    "frontal_control": 0.246,
+    "language": 0.035,
+    "default_mode": 0.397
+   }
+  },
+  {
+   "second": 26,
+   "z": {
+    "early_visual": 1.164,
+    "motion": 0.099,
+    "faces": 0.103,
+    "places": 0.706,
+    "objects": 0.939,
+    "attention": 0.481,
+    "auditory": 0.957,
+    "somatomotor": 0.281,
+    "frontal_control": 0.229,
+    "language": 1.001,
+    "default_mode": 0.394
+   }
+  },
+  {
+   "second": 30,
+   "z": {
+    "early_visual": 1.671,
+    "motion": -0.124,
+    "faces": 0.087,
+    "places": 1.025,
+    "objects": 0.67,
+    "attention": 0.273,
+    "auditory": 0.37,
+    "somatomotor": 0.891,
+    "frontal_control": 0.6,
+    "language": 0.475,
+    "default_mode": 0.34
+   }
+  },
+  {
+   "second": 34,
+   "z": {
+    "early_visual": 1.478,
+    "motion": 0.203,
+    "faces": 0.301,
+    "places": 0.689,
+    "objects": 0.639,
+    "attention": 1.036,
+    "auditory": 1.16,
+    "somatomotor": 0.979,
+    "frontal_control": 0.602,
+    "language": 0.354,
+    "default_mode": -0.219
+   }
+  },
+  {
+   "second": 38,
+   "z": {
+    "early_visual": 1.729,
+    "motion": 0.269,
+    "faces": 0.131,
+    "places": 0.446,
+    "objects": 0.441,
+    "attention": 0.903,
+    "auditory": 0.375,
+    "somatomotor": 0.645,
+    "frontal_control": 0.591,
+    "language": 0.279,
+    "default_mode": 0.101
+   }
+  },
+  {
+   "second": 42,
+   "z": {
+    "early_visual": 0.548,
+    "motion": 0.068,
+    "faces": -0.005,
+    "places": 1.281,
+    "objects": 0.217,
+    "attention": 0.99,
+    "auditory": 0.069,
+    "somatomotor": 0.231,
+    "frontal_control": 0.546,
+    "language": 0.487,
+    "default_mode": 0.173
+   }
+  },
+  {
+   "second": 46,
+   "z": {
+    "early_visual": 1.024,
+    "motion": 0.122,
+    "faces": 0.494,
+    "places": 1.081,
+    "objects": 0.552,
+    "attention": 0.437,
+    "auditory": 1.069,
+    "somatomotor": 0.313,
+    "frontal_control": 0.736,
+    "language": 0.318,
+    "default_mode": 0.345
+   }
+  },
+  {
+   "second": 49,
+   "z": {
+    "early_visual": 1.073,
+    "motion": 0.046,
+    "faces": -0.303,
+    "places": 0.673,
+    "objects": 0.642,
+    "attention": 0.245,
+    "auditory": 1.997,
+    "somatomotor": 0.584,
+    "frontal_control": 0.0,
+    "language": -0.157,
+    "default_mode": 0.156
+   }
+  },
+  {
+   "second": 53,
+   "z": {
+    "early_visual": 0.605,
+    "motion": 0.287,
+    "faces": 0.403,
+    "places": 0.536,
+    "objects": 0.69,
+    "attention": 0.61,
+    "auditory": 1.102,
+    "somatomotor": 0.298,
+    "frontal_control": 0.072,
+    "language": 0.334,
+    "default_mode": 0.231
+   }
+  },
+  {
+   "second": 57,
+   "z": {
+    "early_visual": 0.497,
+    "motion": 0.32,
+    "faces": 0.344,
+    "places": 0.322,
+    "objects": 0.996,
+    "attention": 1.544,
+    "auditory": 1.304,
+    "somatomotor": 0.369,
+    "frontal_control": 0.719,
+    "language": 0.712,
+    "default_mode": 0.036
+   }
+  },
+  {
+   "second": 61,
+   "z": {
+    "early_visual": 1.546,
+    "motion": 0.072,
+    "faces": 0.267,
+    "places": 0.953,
+    "objects": 1.038,
+    "attention": 0.583,
+    "auditory": 0.73,
+    "somatomotor": 0.407,
+    "frontal_control": 0.739,
+    "language": 0.374,
+    "default_mode": 0.197
+   }
+  },
+  {
+   "second": 65,
+   "z": {
+    "early_visual": 1.164,
+    "motion": 0.124,
+    "faces": 0.163,
+    "places": 1.1,
+    "objects": 0.747,
+    "attention": 0.107,
+    "auditory": 0.833,
+    "somatomotor": 1.297,
+    "frontal_control": -0.004,
+    "language": -0.205,
+    "default_mode": 0.406
+   }
+  },
+  {
+   "second": 69,
+   "z": {
+    "early_visual": 1.443,
+    "motion": 0.14,
+    "faces": 0.55,
+    "places": 1.286,
+    "objects": 0.627,
+    "attention": 0.524,
+    "auditory": 0.227,
+    "somatomotor": 0.229,
+    "frontal_control": 0.206,
+    "language": 1.028,
+    "default_mode": 0.477
+   }
+  },
+  {
+   "second": 72,
+   "z": {
+    "early_visual": 2.028,
+    "motion": 0.275,
+    "faces": 0.36,
+    "places": 0.486,
+    "objects": 1.046,
+    "attention": 0.978,
+    "auditory": 0.382,
+    "somatomotor": 0.384,
+    "frontal_control": 0.272,
+    "language": 0.533,
+    "default_mode": 0.422
+   }
+  },
+  {
+   "second": 76,
+   "z": {
+    "early_visual": 1.492,
+    "motion": 0.256,
+    "faces": 0.372,
+    "places": 1.283,
+    "objects": 0.684,
+    "attention": 1.174,
+    "auditory": 0.567,
+    "somatomotor": 0.204,
+    "frontal_control": 0.138,
+    "language": 0.324,
+    "default_mode": 0.932
+   }
+  },
+  {
+   "second": 80,
+   "z": {
+    "early_visual": 0.9,
+    "motion": 0.126,
+    "faces": -0.196,
+    "places": 1.044,
+    "objects": 0.532,
+    "attention": 0.658,
+    "auditory": 0.695,
+    "somatomotor": 0.471,
+    "frontal_control": 0.491,
+    "language": -0.229,
+    "default_mode": 0.512
+   }
+  },
+  {
+   "second": 84,
+   "z": {
+    "early_visual": 0.848,
+    "motion": 0.177,
+    "faces": 0.226,
+    "places": 1.161,
+    "objects": 0.027,
+    "attention": 0.338,
+    "auditory": 1.152,
+    "somatomotor": -0.023,
+    "frontal_control": 0.503,
+    "language": 0.477,
+    "default_mode": 0.03
+   }
+  },
+  {
+   "second": 88,
+   "z": {
+    "early_visual": 0.109,
+    "motion": 0.356,
+    "faces": 0.217,
+    "places": 1.878,
+    "objects": 0.277,
+    "attention": 0.712,
+    "auditory": 1.357,
+    "somatomotor": 0.08,
+    "frontal_control": 0.554,
+    "language": 0.751,
+    "default_mode": 0.155
+   }
+  },
+  {
+   "second": 92,
+   "z": {
+    "early_visual": 0.901,
+    "motion": 0.426,
+    "faces": -0.034,
+    "places": 1.415,
+    "objects": 0.273,
+    "attention": 0.528,
+    "auditory": 0.843,
+    "somatomotor": 1.256,
+    "frontal_control": 0.774,
+    "language": 0.244,
+    "default_mode": 0.323
+   }
+  },
+  {
+   "second": 95,
+   "z": {
+    "early_visual": 0.98,
+    "motion": 0.333,
+    "faces": -0.063,
+    "places": 0.837,
+    "objects": 0.363,
+    "attention": 1.036,
+    "auditory": 1.131,
+    "somatomotor": 0.617,
+    "frontal_control": 0.397,
+    "language": 0.284,
+    "default_mode": 0.31
+   }
+  },
+  {
+   "second": 99,
+   "z": {
+    "early_visual": 1.176,
+    "motion": 0.058,
+    "faces": 0.371,
+    "places": 0.793,
+    "objects": 1.114,
+    "attention": 0.573,
+    "auditory": 1.26,
+    "somatomotor": 0.14,
+    "frontal_control": 0.373,
+    "language": 0.306,
+    "default_mode": 0.205
+   }
+  },
+  {
+   "second": 103,
+   "z": {
+    "early_visual": 1.184,
+    "motion": 0.082,
+    "faces": 0.484,
+    "places": 0.595,
+    "objects": 0.58,
+    "attention": 0.693,
+    "auditory": 0.836,
+    "somatomotor": -0.023,
+    "frontal_control": 0.29,
+    "language": 0.227,
+    "default_mode": 0.512
+   }
+  },
+  {
+   "second": 107,
+   "z": {
+    "early_visual": 0.694,
+    "motion": 0.16,
+    "faces": 0.068,
+    "places": 1.18,
+    "objects": 1.238,
+    "attention": 0.316,
+    "auditory": 0.116,
+    "somatomotor": 0.988,
+    "frontal_control": 0.532,
+    "language": 0.264,
+    "default_mode": 0.292
+   }
+  },
+  {
+   "second": 111,
+   "z": {
+    "early_visual": 1.168,
+    "motion": 0.137,
+    "faces": -0.01,
+    "places": 1.208,
+    "objects": 0.62,
+    "attention": 1.202,
+    "auditory": 0.807,
+    "somatomotor": 0.963,
+    "frontal_control": 0.682,
+    "language": 0.027,
+    "default_mode": -0.046
+   }
+  },
+  {
+   "second": 115,
+   "z": {
+    "early_visual": 1.433,
+    "motion": 0.152,
+    "faces": 0.31,
+    "places": 0.687,
+    "objects": 0.652,
+    "attention": 0.8,
+    "auditory": 0.163,
+    "somatomotor": 0.216,
+    "frontal_control": 0.559,
+    "language": 0.414,
+    "default_mode": 0.152
+   }
+  },
+  {
+   "second": 118,
+   "z": {
+    "early_visual": 0.387,
+    "motion": -0.028,
+    "faces": 0.395,
+    "places": 0.877,
+    "objects": 0.877,
+    "attention": 0.904,
+    "auditory": 1.052,
+    "somatomotor": 0.59,
+    "frontal_control": 0.378,
+    "language": 0.529,
+    "default_mode": 0.022
+   }
+  },
+  {
+   "second": 122,
+   "z": {
+    "early_visual": 0.758,
+    "motion": 0.224,
+    "faces": -0.016,
+    "places": 0.365,
+    "objects": 0.233,
+    "attention": 0.498,
+    "auditory": 0.487,
+    "somatomotor": 0.446,
+    "frontal_control": 0.232,
+    "language": 0.493,
+    "default_mode": 0.278
+   }
+  },
+  {
+   "second": 126,
+   "z": {
+    "early_visual": 0.385,
+    "motion": 0.188,
+    "faces": -0.268,
+    "places": 1.056,
+    "objects": 0.33,
+    "attention": 0.898,
+    "auditory": 0.467,
+    "somatomotor": 0.427,
+    "frontal_control": 0.268,
+    "language": 0.354,
+    "default_mode": 0.321
+   }
+  },
+  {
+   "second": 130,
+   "z": {
+    "early_visual": 0.51,
+    "motion": 0.192,
+    "faces": 0.211,
+    "places": 0.625,
+    "objects": 0.061,
+    "attention": 0.456,
+    "auditory": 1.217,
+    "somatomotor": 0.353,
+    "frontal_control": 0.133,
+    "language": 0.62,
+    "default_mode": 0.531
+   }
+  },
+  {
+   "second": 134,
+   "z": {
+    "early_visual": 0.973,
+    "motion": 0.037,
+    "faces": 0.271,
+    "places": 0.955,
+    "objects": 0.643,
+    "attention": 1.038,
+    "auditory": 1.843,
+    "somatomotor": 0.542,
+    "frontal_control": 0.627,
+    "language": 0.234,
+    "default_mode": 0.088
+   }
+  },
+  {
+   "second": 138,
+   "z": {
+    "early_visual": 1.261,
+    "motion": 0.056,
+    "faces": 0.05,
+    "places": 1.325,
+    "objects": 0.6,
+    "attention": 1.028,
+    "auditory": 0.091,
+    "somatomotor": 0.295,
+    "frontal_control": 0.599,
+    "language": 0.023,
+    "default_mode": 0.203
+   }
+  },
+  {
+   "second": 141,
+   "z": {
+    "early_visual": 1.474,
+    "motion": 0.423,
+    "faces": 0.262,
+    "places": 0.924,
+    "objects": 0.513,
+    "attention": 0.461,
+    "auditory": 1.897,
+    "somatomotor": 0.78,
+    "frontal_control": 0.442,
+    "language": 0.269,
+    "default_mode": 0.287
+   }
+  },
+  {
+   "second": 145,
+   "z": {
+    "early_visual": 1.255,
+    "motion": 0.485,
+    "faces": 0.081,
+    "places": 0.921,
+    "objects": 0.987,
+    "attention": 0.682,
+    "auditory": 0.331,
+    "somatomotor": 0.092,
+    "frontal_control": 0.378,
+    "language": 0.483,
+    "default_mode": 0.442
+   }
+  },
+  {
+   "second": 149,
+   "z": {
+    "early_visual": 1.114,
+    "motion": 0.128,
+    "faces": 0.3,
+    "places": 0.723,
+    "objects": 0.756,
+    "attention": 0.813,
+    "auditory": 0.915,
+    "somatomotor": 0.393,
+    "frontal_control": 0.449,
+    "language": 0.337,
+    "default_mode": 0.624
+   }
+  },
+  {
+   "second": 153,
+   "z": {
+    "early_visual": 1.126,
+    "motion": 0.173,
+    "faces": 0.053,
+    "places": 0.831,
+    "objects": 0.598,
+    "attention": 0.419,
+    "auditory": 0.863,
+    "somatomotor": 0.391,
+    "frontal_control": 0.275,
+    "language": -0.017,
+    "default_mode": 0.51
+   }
+  },
+  {
+   "second": 157,
+   "z": {
+    "early_visual": 0.554,
+    "motion": 0.286,
+    "faces": -0.141,
+    "places": 0.99,
+    "objects": 0.976,
+    "attention": 0.245,
+    "auditory": 0.789,
+    "somatomotor": 0.268,
+    "frontal_control": 0.394,
+    "language": 0.574,
+    "default_mode": 0.173
+   }
+  },
+  {
+   "second": 161,
+   "z": {
+    "early_visual": 0.838,
+    "motion": 0.623,
+    "faces": 0.406,
+    "places": 1.555,
+    "objects": 0.812,
+    "attention": 0.539,
+    "auditory": 0.609,
+    "somatomotor": 0.028,
+    "frontal_control": 0.726,
+    "language": 0.897,
+    "default_mode": 0.159
+   }
+  },
+  {
+   "second": 164,
+   "z": {
+    "early_visual": 1.137,
+    "motion": 0.181,
+    "faces": 0.373,
+    "places": 0.978,
+    "objects": 0.368,
+    "attention": 0.779,
+    "auditory": 1.527,
+    "somatomotor": 0.28,
+    "frontal_control": 0.703,
+    "language": 0.294,
+    "default_mode": -0.088
+   }
+  },
+  {
+   "second": 168,
+   "z": {
+    "early_visual": 1.533,
+    "motion": -0.038,
+    "faces": 0.017,
+    "places": 0.647,
+    "objects": 0.845,
+    "attention": 0.966,
+    "auditory": 0.675,
+    "somatomotor": 0.742,
+    "frontal_control": 0.23,
+    "language": 0.504,
+    "default_mode": 0.409
+   }
+  },
+  {
+   "second": 172,
+   "z": {
+    "early_visual": 0.934,
+    "motion": -0.029,
+    "faces": -0.067,
+    "places": 1.517,
+    "objects": 0.389,
+    "attention": 0.923,
+    "auditory": 1.204,
+    "somatomotor": 0.403,
+    "frontal_control": 0.457,
+    "language": 0.219,
+    "default_mode": 0.337
+   }
+  },
+  {
+   "second": 176,
+   "z": {
+    "early_visual": 1.885,
+    "motion": 0.08,
+    "faces": 0.243,
+    "places": 1.348,
+    "objects": -0.033,
+    "attention": -0.013,
+    "auditory": 1.449,
+    "somatomotor": 0.455,
+    "frontal_control": 0.189,
+    "language": 0.679,
+    "default_mode": 0.358
+   }
+  },
+  {
+   "second": 180,
+   "z": {
+    "early_visual": 1.925,
+    "motion": 0.672,
+    "faces": 0.415,
+    "places": 0.996,
+    "objects": 0.39,
+    "attention": 0.519,
+    "auditory": 0.641,
+    "somatomotor": 0.379,
+    "frontal_control": 0.128,
+    "language": -0.166,
+    "default_mode": 0.194
+   }
+  },
+  {
+   "second": 184,
+   "z": {
+    "early_visual": 1.657,
+    "motion": -0.111,
+    "faces": 0.036,
+    "places": 0.974,
+    "objects": 0.645,
+    "attention": 1.007,
+    "auditory": 0.903,
+    "somatomotor": 1.135,
+    "frontal_control": 0.678,
+    "language": 0.15,
+    "default_mode": 0.039
+   }
+  },
+  {
+   "second": 187,
+   "z": {
+    "early_visual": 0.867,
+    "motion": -0.381,
+    "faces": -0.129,
+    "places": 0.949,
+    "objects": 1.036,
+    "attention": 1.098,
+    "auditory": 0.352,
+    "somatomotor": 0.325,
+    "frontal_control": 0.662,
+    "language": 0.502,
+    "default_mode": 0.056
+   }
+  },
+  {
+   "second": 191,
+   "z": {
+    "early_visual": 1.059,
+    "motion": 0.134,
+    "faces": 0.197,
+    "places": 1.222,
+    "objects": 1.156,
+    "attention": 0.196,
+    "auditory": 0.821,
+    "somatomotor": 0.357,
+    "frontal_control": 0.217,
+    "language": 0.482,
+    "default_mode": 0.175
+   }
+  },
+  {
+   "second": 195,
+   "z": {
+    "early_visual": 1.007,
+    "motion": 0.357,
+    "faces": 0.51,
+    "places": 0.878,
+    "objects": 0.906,
+    "attention": 0.952,
+    "auditory": 0.932,
+    "somatomotor": 1.034,
+    "frontal_control": 0.379,
+    "language": 0.249,
+    "default_mode": 0.506
+   }
+  },
+  {
+   "second": 199,
+   "z": {
+    "early_visual": 0.989,
+    "motion": 0.165,
+    "faces": -0.355,
+    "places": 0.966,
+    "objects": 0.596,
+    "attention": 0.638,
+    "auditory": 0.678,
+    "somatomotor": 0.495,
+    "frontal_control": -0.025,
+    "language": 0.254,
+    "default_mode": 0.548
+   }
+  },
+  {
+   "second": 203,
+   "z": {
+    "early_visual": 1.122,
+    "motion": -0.028,
+    "faces": -0.191,
+    "places": 1.229,
+    "objects": 0.858,
+    "attention": 1.005,
+    "auditory": 1.019,
+    "somatomotor": 0.085,
+    "frontal_control": -0.027,
+    "language": 0.638,
+    "default_mode": 0.625
+   }
+  },
+  {
+   "second": 207,
+   "z": {
+    "early_visual": 1.25,
+    "motion": 0.547,
+    "faces": 0.235,
+    "places": 1.03,
+    "objects": 0.636,
+    "attention": 0.716,
+    "auditory": 1.607,
+    "somatomotor": 0.745,
+    "frontal_control": 0.546,
+    "language": 0.604,
+    "default_mode": 0.097
+   }
+  },
+  {
+   "second": 210,
+   "z": {
+    "early_visual": 1.017,
+    "motion": 0.323,
+    "faces": 0.101,
+    "places": 0.624,
+    "objects": 0.729,
+    "attention": 0.43,
+    "auditory": 0.667,
+    "somatomotor": -0.076,
+    "frontal_control": 0.299,
+    "language": -0.037,
+    "default_mode": 0.043
+   }
+  },
+  {
+   "second": 214,
+   "z": {
+    "early_visual": 1.322,
+    "motion": 0.198,
+    "faces": 0.098,
+    "places": 0.655,
+    "objects": 0.342,
+    "attention": -0.123,
+    "auditory": 1.384,
+    "somatomotor": 0.389,
+    "frontal_control": 0.913,
+    "language": 0.213,
+    "default_mode": -0.117
+   }
+  },
+  {
+   "second": 218,
+   "z": {
+    "early_visual": 1.019,
+    "motion": 0.246,
+    "faces": -0.186,
+    "places": 1.0,
+    "objects": 0.729,
+    "attention": 0.754,
+    "auditory": 0.664,
+    "somatomotor": 0.485,
+    "frontal_control": 0.595,
+    "language": 0.309,
+    "default_mode": 0.403
+   }
+  },
+  {
+   "second": 222,
+   "z": {
+    "early_visual": 1.494,
+    "motion": 0.117,
+    "faces": 0.164,
+    "places": 1.156,
+    "objects": 0.396,
+    "attention": 1.129,
+    "auditory": 0.35,
+    "somatomotor": 0.758,
+    "frontal_control": 0.573,
+    "language": 0.505,
+    "default_mode": 0.232
+   }
+  },
+  {
+   "second": 226,
+   "z": {
+    "early_visual": 0.66,
+    "motion": 0.064,
+    "faces": 0.201,
+    "places": 1.093,
+    "objects": 0.729,
+    "attention": 0.749,
+    "auditory": 0.629,
+    "somatomotor": 0.951,
+    "frontal_control": 0.055,
+    "language": 0.348,
+    "default_mode": 0.369
+   }
+  }
+ ]
+}

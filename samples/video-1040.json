@@ -1,0 +1,3821 @@
+{
+ "filename": "video-1040.MOV",
+ "infer_s": 12.65,
+ "rate_hz": 1,
+ "n_vertices": 20484,
+ "seconds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "regions": [
+  {
+   "second": 0,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.581
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.575
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.554
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.513
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.464
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.434
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.421
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.419
+    }
+   ]
+  },
+  {
+   "second": 1,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.721
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.703
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.679
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.619
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.591
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.538
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.526
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.502
+    }
+   ]
+  },
+  {
+   "second": 2,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.784
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.751
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.737
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.659
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.646
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.577
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.565
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.542
+    }
+   ]
+  },
+  {
+   "second": 3,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.819
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.776
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.773
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.688
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.682
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.613
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.601
+    },
+    {
+     "name": "R_PHA3",
+     "z": 0.574
+    }
+   ]
+  },
+  {
+   "second": 4,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.867
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.816
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.809
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.729
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.704
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.645
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.629
+    },
+    {
+     "name": "L_V7",
+     "z": 0.609
+    }
+   ]
+  },
+  {
+   "second": 5,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.856
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.804
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.786
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.716
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.681
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.637
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.622
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.61
+    }
+   ]
+  },
+  {
+   "second": 6,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.843
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.793
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.773
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.706
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.668
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.637
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.624
+    },
+    {
+     "name": "L_V7",
+     "z": 0.621
+    }
+   ]
+  },
+  {
+   "second": 7,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.862
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.812
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.784
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.723
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.677
+    },
+    {
+     "name": "L_V7",
+     "z": 0.65
+    },
+    {
+     "name": "R_V7",
+     "z": 0.646
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.644
+    }
+   ]
+  },
+  {
+   "second": 8,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.847
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.808
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.75
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.695
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.658
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.643
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.639
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.629
+    }
+   ]
+  },
+  {
+   "second": 9,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.786
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.766
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.673
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.634
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.612
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.601
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.601
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.596
+    }
+   ]
+  },
+  {
+   "second": 10,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.754
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.736
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.662
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.618
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.605
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.596
+    },
+    {
+     "name": "L_VMV3",
+     "z": 0.593
+    },
+    {
+     "name": "R_V3B",
+     "z": 0.577
+    }
+   ]
+  },
+  {
+   "second": 11,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.761
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.744
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.667
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.644
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.635
+    },
+    {
+     "name": "R_V7",
+     "z": 0.621
+    },
+    {
+     "name": "L_V7",
+     "z": 0.619
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.618
+    }
+   ]
+  },
+  {
+   "second": 12,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.735
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.72
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.644
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.636
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.626
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.623
+    },
+    {
+     "name": "L_V7",
+     "z": 0.611
+    },
+    {
+     "name": "R_V7",
+     "z": 0.609
+    }
+   ]
+  },
+  {
+   "second": 13,
+   "top": [
+    {
+     "name": "R_VMV2",
+     "z": 0.69
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.674
+    },
+    {
+     "name": "R_VMV3",
+     "z": 0.606
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.603
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.599
+    },
+    {
+     "name": "L_V3B",
+     "z": 0.589
+    },
+    {
+     "name": "R_V3CD",
+     "z": 0.577
+    },
+    {
+     "name": "L_V7",
+     "z": 0.576
+    }
+   ]
+  },
+  {
+   "second": 14,
+   "top": [
+    {
+     "name": "R_V6A",
+     "z": 0.439
+    },
+    {
+     "name": "L_V6A",
+     "z": 0.419
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.417
+    },
+    {
+     "name": "L_V3CD",
+     "z": 0.412
+    },
+    {
+     "name": "L_V4t",
+     "z": 0.412
+    },
+    {
+     "name": "L_VMV2",
+     "z": 0.41
+    },
+    {
+     "name": "L_V7",
+     "z": 0.409
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.406
+    }
+   ]
+  },
+  {
+   "second": 15,
+   "top": [
+    {
+     "name": "R_V6A",
+     "z": 0.406
+    },
+    {
+     "name": "L_V6A",
+     "z": 0.381
+    },
+    {
+     "name": "R_PGp",
+     "z": 0.363
+    },
+    {
+     "name": "R_V4t",
+     "z": 0.343
+    },
+    {
+     "name": "L_V7",
+     "z": 0.34
+    },
+    {
+     "name": "L_PGp",
+     "z": 0.34
+    },
+    {
+     "name": "R_V7",
+     "z": 0.332
+    },
+    {
+     "name": "R_LO3",
+     "z": 0.33
+    }
+   ]
+  },
+  {
+   "second": 16,
+   "top": [
+    {
+     "name": "R_V6A",
+     "z": 0.277
+    },
+    {
+     "name": "R_V3A",
+     "z": 0.245
+    },
+    {
+     "name": "L_LBelt",
+     "z": 0.242
+    },
+    {
+     "name": "R_LBelt",
+     "z": 0.241
+    },
+    {
+     "name": "L_V6A",
+     "z": 0.228
+    },
+    {
+     "name": "R_7PL",
+     "z": 0.219
+    },
+    {
+     "name": "R_7Am",
+     "z": 0.213
+    },
+    {
+     "name": "R_V6",
+     "z": 0.213
+    }
+   ]
+  }
+ ],
+ "systems": [
+  {
+   "second": 0,
+   "z": {
+    "early_visual": 0.049,
+    "motion": 0.195,
+    "faces": 0.196,
+    "places": 0.196,
+    "objects": 0.149,
+    "attention": 0.055,
+    "auditory": -0.132,
+    "somatomotor": -0.021,
+    "frontal_control": -0.015,
+    "language": -0.088,
+    "default_mode": -0.02
+   }
+  },
+  {
+   "second": 1,
+   "z": {
+    "early_visual": 0.102,
+    "motion": 0.259,
+    "faces": 0.213,
+    "places": 0.253,
+    "objects": 0.169,
+    "attention": 0.067,
+    "auditory": -0.134,
+    "somatomotor": -0.027,
+    "frontal_control": -0.017,
+    "language": -0.107,
+    "default_mode": -0.018
+   }
+  },
+  {
+   "second": 2,
+   "z": {
+    "early_visual": 0.121,
+    "motion": 0.278,
+    "faces": 0.209,
+    "places": 0.285,
+    "objects": 0.173,
+    "attention": 0.083,
+    "auditory": -0.122,
+    "somatomotor": -0.032,
+    "frontal_control": -0.02,
+    "language": -0.125,
+    "default_mode": -0.019
+   }
+  },
+  {
+   "second": 3,
+   "z": {
+    "early_visual": 0.139,
+    "motion": 0.312,
+    "faces": 0.212,
+    "places": 0.307,
+    "objects": 0.188,
+    "attention": 0.105,
+    "auditory": -0.103,
+    "somatomotor": -0.03,
+    "frontal_control": -0.021,
+    "language": -0.135,
+    "default_mode": -0.018
+   }
+  },
+  {
+   "second": 4,
+   "z": {
+    "early_visual": 0.153,
+    "motion": 0.336,
+    "faces": 0.214,
+    "places": 0.328,
+    "objects": 0.199,
+    "attention": 0.133,
+    "auditory": -0.089,
+    "somatomotor": -0.024,
+    "frontal_control": -0.009,
+    "language": -0.136,
+    "default_mode": -0.011
+   }
+  },
+  {
+   "second": 5,
+   "z": {
+    "early_visual": 0.16,
+    "motion": 0.343,
+    "faces": 0.214,
+    "places": 0.334,
+    "objects": 0.2,
+    "attention": 0.136,
+    "auditory": -0.11,
+    "somatomotor": -0.018,
+    "frontal_control": -0.003,
+    "language": -0.139,
+    "default_mode": 0.005
+   }
+  },
+  {
+   "second": 6,
+   "z": {
+    "early_visual": 0.158,
+    "motion": 0.359,
+    "faces": 0.229,
+    "places": 0.334,
+    "objects": 0.217,
+    "attention": 0.147,
+    "auditory": -0.098,
+    "somatomotor": -0.011,
+    "frontal_control": 0.002,
+    "language": -0.132,
+    "default_mode": 0.011
+   }
+  },
+  {
+   "second": 7,
+   "z": {
+    "early_visual": 0.158,
+    "motion": 0.377,
+    "faces": 0.23,
+    "places": 0.341,
+    "objects": 0.226,
+    "attention": 0.166,
+    "auditory": -0.098,
+    "somatomotor": -0.012,
+    "frontal_control": 0.006,
+    "language": -0.131,
+    "default_mode": 0.011
+   }
+  },
+  {
+   "second": 8,
+   "z": {
+    "early_visual": 0.167,
+    "motion": 0.373,
+    "faces": 0.229,
+    "places": 0.339,
+    "objects": 0.222,
+    "attention": 0.166,
+    "auditory": -0.094,
+    "somatomotor": -0.01,
+    "frontal_control": 0.013,
+    "language": -0.139,
+    "default_mode": 0.026
+   }
+  },
+  {
+   "second": 9,
+   "z": {
+    "early_visual": 0.153,
+    "motion": 0.36,
+    "faces": 0.217,
+    "places": 0.313,
+    "objects": 0.216,
+    "attention": 0.162,
+    "auditory": -0.093,
+    "somatomotor": -0.015,
+    "frontal_control": 0.016,
+    "language": -0.123,
+    "default_mode": 0.032
+   }
+  },
+  {
+   "second": 10,
+   "z": {
+    "early_visual": 0.133,
+    "motion": 0.363,
+    "faces": 0.235,
+    "places": 0.294,
+    "objects": 0.213,
+    "attention": 0.124,
+    "auditory": -0.082,
+    "somatomotor": -0.032,
+    "frontal_control": -0.01,
+    "language": -0.114,
+    "default_mode": 0.019
+   }
+  },
+  {
+   "second": 11,
+   "z": {
+    "early_visual": 0.151,
+    "motion": 0.415,
+    "faces": 0.258,
+    "places": 0.295,
+    "objects": 0.242,
+    "attention": 0.144,
+    "auditory": -0.073,
+    "somatomotor": -0.021,
+    "frontal_control": -0.008,
+    "language": -0.111,
+    "default_mode": 0.021
+   }
+  },
+  {
+   "second": 12,
+   "z": {
+    "early_visual": 0.168,
+    "motion": 0.429,
+    "faces": 0.276,
+    "places": 0.29,
+    "objects": 0.248,
+    "attention": 0.142,
+    "auditory": -0.057,
+    "somatomotor": -0.02,
+    "frontal_control": -0.001,
+    "language": -0.098,
+    "default_mode": 0.034
+   }
+  },
+  {
+   "second": 13,
+   "z": {
+    "early_visual": 0.162,
+    "motion": 0.408,
+    "faces": 0.271,
+    "places": 0.273,
+    "objects": 0.238,
+    "attention": 0.124,
+    "auditory": -0.048,
+    "somatomotor": -0.02,
+    "frontal_control": -0.008,
+    "language": -0.087,
+    "default_mode": 0.031
+   }
+  },
+  {
+   "second": 14,
+   "z": {
+    "early_visual": 0.115,
+    "motion": 0.295,
+    "faces": 0.186,
+    "places": 0.179,
+    "objects": 0.173,
+    "attention": 0.107,
+    "auditory": 0.042,
+    "somatomotor": 0.011,
+    "frontal_control": 0.001,
+    "language": -0.026,
+    "default_mode": 0.03
+   }
+  },
+  {
+   "second": 15,
+   "z": {
+    "early_visual": 0.094,
+    "motion": 0.243,
+    "faces": 0.158,
+    "places": 0.144,
+    "objects": 0.148,
+    "attention": 0.094,
+    "auditory": 0.107,
+    "somatomotor": 0.025,
+    "frontal_control": -0.001,
+    "language": 0.009,
+    "default_mode": 0.032
+   }
+  },
+  {
+   "second": 16,
+   "z": {
+    "early_visual": 0.086,
+    "motion": 0.056,
+    "faces": -0.03,
+    "places": 0.057,
+    "objects": 0.022,
+    "attention": 0.098,
+    "auditory": 0.14,
+    "somatomotor": 0.064,
+    "frontal_control": 0.028,
+    "language": 0.012,
+    "default_mode": 0.061
+   }
+  }
+ ],
+ "summary": {
+  "n_seconds_predicted": 17,
+  "duration_s": 17.0,
+  "systems": [
+   {
+    "id": "motion",
+    "label": "Visual motion (MT+/V5)",
+    "mean": 0.3177,
+    "peak": 0.429,
+    "frac_active": 0.6471,
+    "rank": 1
+   },
+   {
+    "id": "places",
+    "label": "Scenes and navigation (PPA / RSC)",
+    "mean": 0.2683,
+    "peak": 0.341,
+    "frac_active": 0.4118,
+    "rank": 2
+   },
+   {
+    "id": "faces",
+    "label": "Face processing (fusiform / FFA)",
+    "mean": 0.2068,
+    "peak": 0.2758,
+    "frac_active": 0.0,
+    "rank": 3
+   },
+   {
+    "id": "objects",
+    "label": "Object recognition (lateral occipital / IT)",
+    "mean": 0.1908,
+    "peak": 0.2484,
+    "frac_active": 0.0,
+    "rank": 4
+   },
+   {
+    "id": "early_visual",
+    "label": "Early visual cortex (V1/V2)",
+    "mean": 0.1336,
+    "peak": 0.1681,
+    "frac_active": 0.0,
+    "rank": 5
+   },
+   {
+    "id": "attention",
+    "label": "Spatial attention (intraparietal / SPL)",
+    "mean": 0.1208,
+    "peak": 0.1661,
+    "frac_active": 0.0,
+    "rank": 6
+   },
+   {
+    "id": "default_mode",
+    "label": "Default mode network",
+    "mean": 0.0134,
+    "peak": 0.0609,
+    "frac_active": 0.0,
+    "rank": 7
+   },
+   {
+    "id": "frontal_control",
+    "label": "Executive control (dorsolateral prefrontal)",
+    "mean": -0.0028,
+    "peak": 0.0275,
+    "frac_active": 0.0,
+    "rank": 8
+   },
+   {
+    "id": "somatomotor",
+    "label": "Sensorimotor cortex",
+    "mean": -0.0113,
+    "peak": 0.0638,
+    "frac_active": 0.0,
+    "rank": 9
+   },
+   {
+    "id": "auditory",
+    "label": "Auditory cortex (Heschl's / STG)",
+    "mean": -0.0614,
+    "peak": 0.14,
+    "frac_active": 0.0,
+    "rank": 10
+   },
+   {
+    "id": "language",
+    "label": "Language network (IFG / STS)",
+    "mean": -0.0983,
+    "peak": 0.0118,
+    "frac_active": 0.0,
+    "rank": 11
+   }
+  ],
+  "regions": [
+   {
+    "name": "R_VMV2",
+    "system": "places",
+    "mean": 0.6798,
+    "peak": 0.8672,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_VMV2",
+    "system": "places",
+    "mean": 0.6509,
+    "peak": 0.8155,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "R_VMV3",
+    "system": "places",
+    "mean": 0.6046,
+    "peak": 0.8093,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_V3B",
+    "system": "motion",
+    "mean": 0.5633,
+    "peak": 0.7291,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_VMV3",
+    "system": "places",
+    "mean": 0.5405,
+    "peak": 0.7039,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_V3CD",
+    "system": null,
+    "mean": 0.5364,
+    "peak": 0.6427,
+    "frac_active": 0.9412
+   },
+   {
+    "name": "R_V3CD",
+    "system": null,
+    "mean": 0.5288,
+    "peak": 0.645,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_V7",
+    "system": null,
+    "mean": 0.5171,
+    "peak": 0.6504,
+    "frac_active": 0.9412
+   },
+   {
+    "name": "R_V7",
+    "system": null,
+    "mean": 0.5095,
+    "peak": 0.6456,
+    "frac_active": 0.9412
+   },
+   {
+    "name": "R_V3B",
+    "system": "motion",
+    "mean": 0.5095,
+    "peak": 0.6367,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "R_PHA3",
+    "system": "places",
+    "mean": 0.5005,
+    "peak": 0.6208,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_PGp",
+    "system": null,
+    "mean": 0.4902,
+    "peak": 0.604,
+    "frac_active": 0.9412
+   },
+   {
+    "name": "L_V6A",
+    "system": null,
+    "mean": 0.4732,
+    "peak": 0.5903,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "R_PHA2",
+    "system": "places",
+    "mean": 0.4732,
+    "peak": 0.5878,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "R_PGp",
+    "system": null,
+    "mean": 0.4713,
+    "peak": 0.5856,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_IP0",
+    "system": null,
+    "mean": 0.4681,
+    "peak": 0.5894,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "R_IP0",
+    "system": null,
+    "mean": 0.466,
+    "peak": 0.5828,
+    "frac_active": 0.9412
+   },
+   {
+    "name": "R_LO1",
+    "system": "motion",
+    "mean": 0.4604,
+    "peak": 0.5577,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "R_V6A",
+    "system": null,
+    "mean": 0.4557,
+    "peak": 0.5586,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_V4t",
+    "system": "motion",
+    "mean": 0.4325,
+    "peak": 0.6362,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_PHA2",
+    "system": "places",
+    "mean": 0.4315,
+    "peak": 0.5467,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_IPS1",
+    "system": null,
+    "mean": 0.4224,
+    "peak": 0.539,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_LO3",
+    "system": "objects",
+    "mean": 0.414,
+    "peak": 0.5874,
+    "frac_active": 0.8824
+   },
+   {
+    "name": "L_V4",
+    "system": "early_visual",
+    "mean": 0.4119,
+    "peak": 0.498,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "L_PHA3",
+    "system": "places",
+    "mean": 0.4033,
+    "peak": 0.5055,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_VVC",
+    "system": "faces",
+    "mean": 0.3958,
+    "peak": 0.4889,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_DVT",
+    "system": null,
+    "mean": 0.3935,
+    "peak": 0.5009,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_IPS1",
+    "system": null,
+    "mean": 0.3852,
+    "peak": 0.489,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_PHA1",
+    "system": "places",
+    "mean": 0.3682,
+    "peak": 0.4606,
+    "frac_active": 0.7647
+   },
+   {
+    "name": "R_V4",
+    "system": "early_visual",
+    "mean": 0.3557,
+    "peak": 0.4468,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_VIP",
+    "system": "attention",
+    "mean": 0.35,
+    "peak": 0.443,
+    "frac_active": 0.7059
+   },
+   {
+    "name": "L_LO1",
+    "system": "motion",
+    "mean": 0.3496,
+    "peak": 0.4691,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "L_MT",
+    "system": "motion",
+    "mean": 0.3371,
+    "peak": 0.4838,
+    "frac_active": 0.7059
+   },
+   {
+    "name": "L_PHA1",
+    "system": "places",
+    "mean": 0.3194,
+    "peak": 0.3956,
+    "frac_active": 0.7647
+   },
+   {
+    "name": "L_MST",
+    "system": "motion",
+    "mean": 0.3183,
+    "peak": 0.4565,
+    "frac_active": 0.7059
+   },
+   {
+    "name": "L_TPOJ3",
+    "system": null,
+    "mean": 0.3124,
+    "peak": 0.4288,
+    "frac_active": 0.5882
+   },
+   {
+    "name": "L_VVC",
+    "system": "faces",
+    "mean": 0.3033,
+    "peak": 0.3696,
+    "frac_active": 0.7647
+   },
+   {
+    "name": "L_DVT",
+    "system": null,
+    "mean": 0.3032,
+    "peak": 0.3946,
+    "frac_active": 0.6471
+   },
+   {
+    "name": "L_7PL",
+    "system": "attention",
+    "mean": 0.3015,
+    "peak": 0.3929,
+    "frac_active": 0.5882
+   },
+   {
+    "name": "R_V8",
+    "system": "objects",
+    "mean": 0.2996,
+    "peak": 0.3928,
+    "frac_active": 0.8235
+   },
+   {
+    "name": "R_LIPv",
+    "system": "attention",
+    "mean": 0.2982,
+    "peak": 0.3825,
+    "frac_active": 0.6471
+   },
+   {
+    "name": "L_LO3",
+    "system": "objects",
+    "mean": 0.2967,
+    "peak": 0.4146,
+    "frac_active": 0.5882
+   },
+   {
+    "name": "R_7Am",
+    "system": "attention",
+    "mean": 0.295,
+    "peak": 0.3935,
+    "frac_active": 0.5294
+   },
+   {
+    "name": "R_PCV",
+    "system": "default_mode",
+    "mean": 0.2925,
+    "peak": 0.4,
+    "frac_active": 0.5294
+   },
+   {
+    "name": "L_LO2",
+    "system": "motion",
+    "mean": 0.2879,
+    "peak": 0.4133,
+    "frac_active": 0.4118
+   },
+   {
+    "name": "L_VIP",
+    "system": "attention",
+    "mean": 0.2851,
+    "peak": 0.3697,
+    "frac_active": 0.5882
+   },
+   {
+    "name": "L_V8",
+    "system": "objects",
+    "mean": 0.2722,
+    "peak": 0.3509,
+    "frac_active": 0.7059
+   },
+   {
+    "name": "L_FST",
+    "system": "motion",
+    "mean": 0.2682,
+    "peak": 0.385,
+    "frac_active": 0.4706
+   },
+   {
+    "name": "L_PH",
+    "system": "objects",
+    "mean": 0.2615,
+    "peak": 0.3323,
+    "frac_active": 0.2941
+   },
+   {
+    "name": "R_V4t",
+    "system": "motion",
+    "mean": 0.2609,
+    "peak": 0.4465,
+    "frac_active": 0.3529
+   },
+   {
+    "name": "R_POS1",
+    "system": "places",
+    "mean": 0.259,
+    "peak": 0.3597,
+    "frac_active": 0.3529
+   },
+   {
+    "name": "L_7Am",
+    "system": "attention",
+    "mean": 0.2578,
+    "peak": 0.3465,
+    "frac_active": 0.2941
+   },
+   {
+    "name": "R_V3A",
+    "system": "motion",
+    "mean": 0.2507,
+    "peak": 0.325,
+    "frac_active": 0.2353
+   },
+   {
+    "name": "R_PH",
+    "system": "objects",
+    "mean": 0.2471,
+    "peak": 0.31,
+    "frac_active": 0.1765
+   },
+   {
+    "name": "R_TPOJ3",
+    "system": null,
+    "mean": 0.2455,
+    "peak": 0.3981,
+    "frac_active": 0.2941
+   },
+   {
+    "name": "L_LIPv",
+    "system": "attention",
+    "mean": 0.2435,
+    "peak": 0.3204,
+    "frac_active": 0.1176
+   },
+   {
+    "name": "R_FST",
+    "system": "motion",
+    "mean": 0.2415,
+    "peak": 0.3679,
+    "frac_active": 0.1765
+   },
+   {
+    "name": "R_MT",
+    "system": "motion",
+    "mean": 0.241,
+    "peak": 0.4833,
+    "frac_active": 0.3529
+   },
+   {
+    "name": "R_MST",
+    "system": "motion",
+    "mean": 0.24,
+    "peak": 0.4336,
+    "frac_active": 0.2941
+   },
+   {
+    "name": "L_VMV1",
+    "system": "places",
+    "mean": 0.2341,
+    "peak": 0.2887,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V3A",
+    "system": "motion",
+    "mean": 0.2245,
+    "peak": 0.3313,
+    "frac_active": 0.2353
+   },
+   {
+    "name": "L_MIP",
+    "system": "attention",
+    "mean": 0.2232,
+    "peak": 0.3048,
+    "frac_active": 0.1176
+   },
+   {
+    "name": "R_LO2",
+    "system": "motion",
+    "mean": 0.2155,
+    "peak": 0.3479,
+    "frac_active": 0.1765
+   },
+   {
+    "name": "R_7PL",
+    "system": "attention",
+    "mean": 0.2105,
+    "peak": 0.2837,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_23c",
+    "system": null,
+    "mean": 0.2075,
+    "peak": 0.2963,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6a",
+    "system": null,
+    "mean": 0.2017,
+    "peak": 0.2819,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MIP",
+    "system": "attention",
+    "mean": 0.2011,
+    "peak": 0.2633,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FEF",
+    "system": null,
+    "mean": 0.1941,
+    "peak": 0.2824,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_VMV1",
+    "system": "places",
+    "mean": 0.1935,
+    "peak": 0.2345,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5mv",
+    "system": null,
+    "mean": 0.1922,
+    "peak": 0.2677,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6a",
+    "system": null,
+    "mean": 0.1902,
+    "peak": 0.2764,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V3",
+    "system": "early_visual",
+    "mean": 0.1865,
+    "peak": 0.2419,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FFC",
+    "system": "faces",
+    "mean": 0.1863,
+    "peak": 0.27,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_ProS",
+    "system": "places",
+    "mean": 0.1781,
+    "peak": 0.2314,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_POS1",
+    "system": "places",
+    "mean": 0.1757,
+    "peak": 0.2483,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V3",
+    "system": "early_visual",
+    "mean": 0.1699,
+    "peak": 0.2371,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_23c",
+    "system": null,
+    "mean": 0.167,
+    "peak": 0.2377,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V6",
+    "system": null,
+    "mean": 0.1612,
+    "peak": 0.2164,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_5mv",
+    "system": null,
+    "mean": 0.1575,
+    "peak": 0.2066,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7AL",
+    "system": "attention",
+    "mean": 0.155,
+    "peak": 0.217,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PreS",
+    "system": null,
+    "mean": 0.1473,
+    "peak": 0.1816,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FEF",
+    "system": null,
+    "mean": 0.1422,
+    "peak": 0.1959,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31a",
+    "system": "default_mode",
+    "mean": 0.1376,
+    "peak": 0.201,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TPOJ2",
+    "system": null,
+    "mean": 0.1345,
+    "peak": 0.241,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7PC",
+    "system": "attention",
+    "mean": 0.1293,
+    "peak": 0.1749,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PCV",
+    "system": "default_mode",
+    "mean": 0.1247,
+    "peak": 0.2082,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V6",
+    "system": null,
+    "mean": 0.1221,
+    "peak": 0.2128,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7PC",
+    "system": "attention",
+    "mean": 0.1178,
+    "peak": 0.1709,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PreS",
+    "system": null,
+    "mean": 0.1169,
+    "peak": 0.1464,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PIT",
+    "system": "faces",
+    "mean": 0.1129,
+    "peak": 0.2116,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6ma",
+    "system": "somatomotor",
+    "mean": 0.1093,
+    "peak": 0.1721,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7AL",
+    "system": "attention",
+    "mean": 0.1043,
+    "peak": 0.1459,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFJp",
+    "system": null,
+    "mean": 0.1032,
+    "peak": 0.1583,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_ProS",
+    "system": "places",
+    "mean": 0.1007,
+    "peak": 0.1366,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PF",
+    "system": null,
+    "mean": 0.0986,
+    "peak": 0.1533,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PIT",
+    "system": "faces",
+    "mean": 0.0974,
+    "peak": 0.2272,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFJa",
+    "system": "language",
+    "mean": 0.0956,
+    "peak": 0.1423,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_5m",
+    "system": null,
+    "mean": 0.0925,
+    "peak": 0.1365,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V2",
+    "system": "early_visual",
+    "mean": 0.0918,
+    "peak": 0.1255,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TF",
+    "system": null,
+    "mean": 0.0915,
+    "peak": 0.1175,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V2",
+    "system": "early_visual",
+    "mean": 0.0909,
+    "peak": 0.1182,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFJp",
+    "system": null,
+    "mean": 0.0901,
+    "peak": 0.1598,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_RI",
+    "system": "auditory",
+    "mean": 0.0866,
+    "peak": 0.1566,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PSL",
+    "system": null,
+    "mean": 0.0861,
+    "peak": 0.1299,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7Pm",
+    "system": null,
+    "mean": 0.0858,
+    "peak": 0.1534,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FFC",
+    "system": "faces",
+    "mean": 0.0817,
+    "peak": 0.1534,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFcm",
+    "system": null,
+    "mean": 0.0802,
+    "peak": 0.1221,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PF",
+    "system": null,
+    "mean": 0.0778,
+    "peak": 0.1176,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE2p",
+    "system": "objects",
+    "mean": 0.0768,
+    "peak": 0.1219,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_33pr",
+    "system": null,
+    "mean": 0.0751,
+    "peak": 0.1125,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IP1",
+    "system": "attention",
+    "mean": 0.0748,
+    "peak": 0.1153,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_RI",
+    "system": "auditory",
+    "mean": 0.0744,
+    "peak": 0.1139,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8Ad",
+    "system": null,
+    "mean": 0.0736,
+    "peak": 0.1096,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_5L",
+    "system": null,
+    "mean": 0.0712,
+    "peak": 0.1338,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6ma",
+    "system": "somatomotor",
+    "mean": 0.0699,
+    "peak": 0.1194,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STV",
+    "system": null,
+    "mean": 0.0677,
+    "peak": 0.1463,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_v23ab",
+    "system": "default_mode",
+    "mean": 0.0675,
+    "peak": 0.1074,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_V1",
+    "system": "early_visual",
+    "mean": 0.0674,
+    "peak": 0.1325,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7Pm",
+    "system": null,
+    "mean": 0.0672,
+    "peak": 0.1705,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFt",
+    "system": "attention",
+    "mean": 0.0641,
+    "peak": 0.0972,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PGs",
+    "system": "default_mode",
+    "mean": 0.0636,
+    "peak": 0.099,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8C",
+    "system": "frontal_control",
+    "mean": 0.0624,
+    "peak": 0.1025,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_2",
+    "system": "somatomotor",
+    "mean": 0.0623,
+    "peak": 0.0834,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_POS2",
+    "system": "default_mode",
+    "mean": 0.0592,
+    "peak": 0.1375,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47m",
+    "system": null,
+    "mean": 0.0586,
+    "peak": 0.0818,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_46",
+    "system": "frontal_control",
+    "mean": 0.0575,
+    "peak": 0.1001,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p24pr",
+    "system": null,
+    "mean": 0.0567,
+    "peak": 0.0921,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PEF",
+    "system": null,
+    "mean": 0.0535,
+    "peak": 0.1013,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_33pr",
+    "system": null,
+    "mean": 0.053,
+    "peak": 0.0868,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PeEc",
+    "system": null,
+    "mean": 0.0522,
+    "peak": 0.062,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFcm",
+    "system": null,
+    "mean": 0.0514,
+    "peak": 0.0775,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AIP",
+    "system": "attention",
+    "mean": 0.0511,
+    "peak": 0.0779,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFSp",
+    "system": "language",
+    "mean": 0.051,
+    "peak": 0.0716,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_i6-8",
+    "system": "frontal_control",
+    "mean": 0.0501,
+    "peak": 0.0976,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_POS2",
+    "system": "default_mode",
+    "mean": 0.05,
+    "peak": 0.1317,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_2",
+    "system": "somatomotor",
+    "mean": 0.0498,
+    "peak": 0.0927,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47m",
+    "system": null,
+    "mean": 0.0486,
+    "peak": 0.0726,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TF",
+    "system": null,
+    "mean": 0.0482,
+    "peak": 0.0771,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_V1",
+    "system": "early_visual",
+    "mean": 0.0467,
+    "peak": 0.1267,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31a",
+    "system": "default_mode",
+    "mean": 0.0446,
+    "peak": 0.0776,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_i6-8",
+    "system": "frontal_control",
+    "mean": 0.0436,
+    "peak": 0.082,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PEF",
+    "system": null,
+    "mean": 0.0413,
+    "peak": 0.1214,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6mp",
+    "system": "somatomotor",
+    "mean": 0.0398,
+    "peak": 0.0721,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFt",
+    "system": "attention",
+    "mean": 0.0392,
+    "peak": 0.0875,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IFSa",
+    "system": "frontal_control",
+    "mean": 0.0387,
+    "peak": 0.0659,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8Ad",
+    "system": null,
+    "mean": 0.0364,
+    "peak": 0.0733,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_52",
+    "system": null,
+    "mean": 0.0359,
+    "peak": 0.1279,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSva",
+    "system": "language",
+    "mean": 0.0356,
+    "peak": 0.0889,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a24",
+    "system": "default_mode",
+    "mean": 0.0349,
+    "peak": 0.0619,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p32",
+    "system": "default_mode",
+    "mean": 0.0343,
+    "peak": 0.056,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_24dd",
+    "system": null,
+    "mean": 0.0332,
+    "peak": 0.0625,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47l",
+    "system": null,
+    "mean": 0.0317,
+    "peak": 0.0406,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PGi",
+    "system": "default_mode",
+    "mean": 0.0316,
+    "peak": 0.1101,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_H",
+    "system": null,
+    "mean": 0.0315,
+    "peak": 0.0414,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_v23ab",
+    "system": "default_mode",
+    "mean": 0.0313,
+    "peak": 0.0587,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10r",
+    "system": "default_mode",
+    "mean": 0.0304,
+    "peak": 0.0499,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PeEc",
+    "system": null,
+    "mean": 0.0288,
+    "peak": 0.0409,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5L",
+    "system": null,
+    "mean": 0.0286,
+    "peak": 0.0739,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_5m",
+    "system": null,
+    "mean": 0.0279,
+    "peak": 0.085,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AIP",
+    "system": "attention",
+    "mean": 0.0274,
+    "peak": 0.0706,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PHT",
+    "system": null,
+    "mean": 0.0273,
+    "peak": 0.1167,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9-46d",
+    "system": "frontal_control",
+    "mean": 0.0263,
+    "peak": 0.1034,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_EC",
+    "system": null,
+    "mean": 0.0258,
+    "peak": 0.0361,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_s6-8",
+    "system": null,
+    "mean": 0.0248,
+    "peak": 0.0573,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8Av",
+    "system": "frontal_control",
+    "mean": 0.0243,
+    "peak": 0.0636,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p10p",
+    "system": null,
+    "mean": 0.024,
+    "peak": 0.0578,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PI",
+    "system": null,
+    "mean": 0.0211,
+    "peak": 0.0636,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9a",
+    "system": "frontal_control",
+    "mean": 0.0209,
+    "peak": 0.0363,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_13l",
+    "system": null,
+    "mean": 0.0201,
+    "peak": 0.0316,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFJa",
+    "system": "language",
+    "mean": 0.0198,
+    "peak": 0.0474,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6r",
+    "system": null,
+    "mean": 0.0195,
+    "peak": 0.0613,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_LIPd",
+    "system": "attention",
+    "mean": 0.0171,
+    "peak": 0.0715,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10v",
+    "system": "default_mode",
+    "mean": 0.0165,
+    "peak": 0.0294,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_H",
+    "system": null,
+    "mean": 0.0162,
+    "peak": 0.0252,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_55b",
+    "system": "language",
+    "mean": 0.0162,
+    "peak": 0.098,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_23d",
+    "system": "default_mode",
+    "mean": 0.0152,
+    "peak": 0.1031,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31pd",
+    "system": "default_mode",
+    "mean": 0.0151,
+    "peak": 0.0904,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PoI1",
+    "system": null,
+    "mean": 0.0141,
+    "peak": 0.106,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_RSC",
+    "system": "places",
+    "mean": 0.0135,
+    "peak": 0.0965,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a10p",
+    "system": null,
+    "mean": 0.0134,
+    "peak": 0.0731,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_24dd",
+    "system": null,
+    "mean": 0.0118,
+    "peak": 0.0807,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p24pr",
+    "system": null,
+    "mean": 0.0111,
+    "peak": 0.082,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_11l",
+    "system": null,
+    "mean": 0.0105,
+    "peak": 0.029,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10r",
+    "system": "default_mode",
+    "mean": 0.0103,
+    "peak": 0.0258,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_46",
+    "system": "frontal_control",
+    "mean": 0.0099,
+    "peak": 0.0892,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_31pv",
+    "system": "default_mode",
+    "mean": 0.0094,
+    "peak": 0.0711,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p9-46v",
+    "system": "frontal_control",
+    "mean": 0.0094,
+    "peak": 0.0356,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6d",
+    "system": "somatomotor",
+    "mean": 0.0091,
+    "peak": 0.0266,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a24",
+    "system": "default_mode",
+    "mean": 0.0083,
+    "peak": 0.034,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PoI1",
+    "system": null,
+    "mean": 0.0082,
+    "peak": 0.0811,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFSa",
+    "system": "frontal_control",
+    "mean": 0.008,
+    "peak": 0.0449,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP2",
+    "system": null,
+    "mean": 0.0078,
+    "peak": 0.0838,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9-46d",
+    "system": "frontal_control",
+    "mean": 0.0068,
+    "peak": 0.0676,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_s32",
+    "system": null,
+    "mean": 0.0066,
+    "peak": 0.0195,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6mp",
+    "system": "somatomotor",
+    "mean": 0.0054,
+    "peak": 0.0698,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_EC",
+    "system": null,
+    "mean": 0.0047,
+    "peak": 0.0119,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_s6-8",
+    "system": null,
+    "mean": 0.0031,
+    "peak": 0.0367,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFop",
+    "system": null,
+    "mean": 0.0028,
+    "peak": 0.1432,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p32",
+    "system": "default_mode",
+    "mean": 0.0021,
+    "peak": 0.0335,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TA2",
+    "system": "auditory",
+    "mean": 0.0016,
+    "peak": 0.0479,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_11l",
+    "system": null,
+    "mean": 0.0015,
+    "peak": 0.0238,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_25",
+    "system": null,
+    "mean": 0.0013,
+    "peak": 0.0123,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10v",
+    "system": "default_mode",
+    "mean": 0.0001,
+    "peak": 0.0195,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IP1",
+    "system": "attention",
+    "mean": -0.0001,
+    "peak": 0.1229,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10d",
+    "system": null,
+    "mean": -0.0009,
+    "peak": 0.0079,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PGs",
+    "system": "default_mode",
+    "mean": -0.0013,
+    "peak": 0.0942,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_RSC",
+    "system": "places",
+    "mean": -0.0025,
+    "peak": 0.0913,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_d32",
+    "system": "default_mode",
+    "mean": -0.0028,
+    "peak": 0.0556,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_d32",
+    "system": "default_mode",
+    "mean": -0.003,
+    "peak": 0.0251,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OFC",
+    "system": null,
+    "mean": -0.003,
+    "peak": 0.0035,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a47r",
+    "system": "frontal_control",
+    "mean": -0.0035,
+    "peak": 0.0095,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6r",
+    "system": null,
+    "mean": -0.0039,
+    "peak": 0.0704,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p47r",
+    "system": "frontal_control",
+    "mean": -0.0047,
+    "peak": 0.0209,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9m",
+    "system": "default_mode",
+    "mean": -0.0052,
+    "peak": 0.0218,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_MBelt",
+    "system": "auditory",
+    "mean": -0.0058,
+    "peak": 0.1551,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_52",
+    "system": null,
+    "mean": -0.0064,
+    "peak": 0.1185,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_47s",
+    "system": null,
+    "mean": -0.007,
+    "peak": 0.0233,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10pp",
+    "system": null,
+    "mean": -0.0074,
+    "peak": 0.0163,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_24dv",
+    "system": null,
+    "mean": -0.008,
+    "peak": 0.0717,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OFC",
+    "system": null,
+    "mean": -0.0088,
+    "peak": -0.0035,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p10p",
+    "system": null,
+    "mean": -0.0088,
+    "peak": 0.019,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6v",
+    "system": "somatomotor",
+    "mean": -0.0089,
+    "peak": 0.0545,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP5",
+    "system": null,
+    "mean": -0.009,
+    "peak": 0.0842,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_LBelt",
+    "system": "auditory",
+    "mean": -0.0092,
+    "peak": 0.2407,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_1",
+    "system": "somatomotor",
+    "mean": -0.011,
+    "peak": 0.0529,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_25",
+    "system": null,
+    "mean": -0.0114,
+    "peak": 0.0001,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_10pp",
+    "system": null,
+    "mean": -0.0118,
+    "peak": 0.0087,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_pOFC",
+    "system": null,
+    "mean": -0.0131,
+    "peak": -0.0034,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_10d",
+    "system": null,
+    "mean": -0.0134,
+    "peak": 0.0256,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_4",
+    "system": "somatomotor",
+    "mean": -0.014,
+    "peak": 0.0539,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_24dv",
+    "system": null,
+    "mean": -0.0145,
+    "peak": 0.1109,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_13l",
+    "system": null,
+    "mean": -0.0152,
+    "peak": 0.0037,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_LBelt",
+    "system": "auditory",
+    "mean": -0.016,
+    "peak": 0.2423,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_Pir",
+    "system": null,
+    "mean": -0.0182,
+    "peak": 0.0236,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p24",
+    "system": "default_mode",
+    "mean": -0.0185,
+    "peak": 0.0654,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a24pr",
+    "system": null,
+    "mean": -0.0186,
+    "peak": 0.1182,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_Pir",
+    "system": null,
+    "mean": -0.0187,
+    "peak": 0.0063,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PoI2",
+    "system": null,
+    "mean": -0.0189,
+    "peak": 0.0654,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AVI",
+    "system": null,
+    "mean": -0.019,
+    "peak": 0.0458,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a24pr",
+    "system": null,
+    "mean": -0.0194,
+    "peak": 0.1076,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE2p",
+    "system": "objects",
+    "mean": -0.0203,
+    "peak": 0.0338,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_LIPd",
+    "system": "attention",
+    "mean": -0.0205,
+    "peak": 0.0671,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP2",
+    "system": null,
+    "mean": -0.0218,
+    "peak": 0.0674,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_44",
+    "system": "language",
+    "mean": -0.0235,
+    "peak": 0.0418,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8BM",
+    "system": "default_mode",
+    "mean": -0.0239,
+    "peak": -0.0072,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PI",
+    "system": null,
+    "mean": -0.0255,
+    "peak": 0.0419,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9m",
+    "system": "default_mode",
+    "mean": -0.026,
+    "peak": -0.0083,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8BM",
+    "system": "default_mode",
+    "mean": -0.0261,
+    "peak": 0.0494,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_d23ab",
+    "system": "default_mode",
+    "mean": -0.0262,
+    "peak": 0.0489,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TGd",
+    "system": "language",
+    "mean": -0.0269,
+    "peak": -0.0099,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a47r",
+    "system": "frontal_control",
+    "mean": -0.0272,
+    "peak": -0.0175,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TA2",
+    "system": "auditory",
+    "mean": -0.0272,
+    "peak": 0.0161,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AVI",
+    "system": null,
+    "mean": -0.0272,
+    "peak": 0.0791,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_pOFC",
+    "system": null,
+    "mean": -0.0278,
+    "peak": -0.0073,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p32pr",
+    "system": null,
+    "mean": -0.028,
+    "peak": 0.0868,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_7m",
+    "system": "default_mode",
+    "mean": -0.0289,
+    "peak": 0.0702,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47s",
+    "system": null,
+    "mean": -0.029,
+    "peak": 0.0075,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP1",
+    "system": null,
+    "mean": -0.0291,
+    "peak": 0.1227,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TGv",
+    "system": null,
+    "mean": -0.0295,
+    "peak": 0.0021,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a32pr",
+    "system": null,
+    "mean": -0.0301,
+    "peak": 0.0354,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a10p",
+    "system": null,
+    "mean": -0.0302,
+    "peak": 0.0045,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_AAIC",
+    "system": null,
+    "mean": -0.0303,
+    "peak": 0.0206,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_8BL",
+    "system": "frontal_control",
+    "mean": -0.031,
+    "peak": -0.0007,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MBelt",
+    "system": "auditory",
+    "mean": -0.032,
+    "peak": 0.1244,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFop",
+    "system": null,
+    "mean": -0.0324,
+    "peak": 0.0887,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a9-46v",
+    "system": "frontal_control",
+    "mean": -0.0325,
+    "peak": 0.0548,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9a",
+    "system": "frontal_control",
+    "mean": -0.0331,
+    "peak": -0.012,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1m",
+    "system": null,
+    "mean": -0.0332,
+    "peak": 0.0257,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_s32",
+    "system": null,
+    "mean": -0.0333,
+    "peak": -0.0172,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_1",
+    "system": "somatomotor",
+    "mean": -0.0341,
+    "peak": 0.0931,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_a9-46v",
+    "system": "frontal_control",
+    "mean": -0.0343,
+    "peak": 0.0244,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p24",
+    "system": "default_mode",
+    "mean": -0.0344,
+    "peak": 0.0352,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_6v",
+    "system": "somatomotor",
+    "mean": -0.0356,
+    "peak": 0.0794,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PoI2",
+    "system": null,
+    "mean": -0.0359,
+    "peak": 0.0465,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A1",
+    "system": "auditory",
+    "mean": -0.0361,
+    "peak": 0.2117,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE2a",
+    "system": null,
+    "mean": -0.0362,
+    "peak": -0.0062,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_4",
+    "system": "somatomotor",
+    "mean": -0.0367,
+    "peak": 0.0669,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_3a",
+    "system": "somatomotor",
+    "mean": -0.0367,
+    "peak": 0.0466,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p9-46v",
+    "system": "frontal_control",
+    "mean": -0.0371,
+    "peak": -0.0185,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_IP2",
+    "system": "attention",
+    "mean": -0.0375,
+    "peak": 0.096,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_AAIC",
+    "system": null,
+    "mean": -0.0377,
+    "peak": 0.0214,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_6d",
+    "system": "somatomotor",
+    "mean": -0.0387,
+    "peak": 0.0608,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_d23ab",
+    "system": "default_mode",
+    "mean": -0.0392,
+    "peak": 0.0499,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_a32pr",
+    "system": null,
+    "mean": -0.0411,
+    "peak": 0.0653,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31pv",
+    "system": "default_mode",
+    "mean": -0.0414,
+    "peak": 0.035,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A1",
+    "system": "auditory",
+    "mean": -0.0414,
+    "peak": 0.1558,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PBelt",
+    "system": "auditory",
+    "mean": -0.0415,
+    "peak": 0.2012,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8C",
+    "system": "frontal_control",
+    "mean": -0.043,
+    "peak": 0.0088,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8Av",
+    "system": "frontal_control",
+    "mean": -0.0436,
+    "peak": -0.0158,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_9p",
+    "system": "frontal_control",
+    "mean": -0.045,
+    "peak": 0.0207,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1m",
+    "system": null,
+    "mean": -0.0455,
+    "peak": -0.0188,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_SCEF",
+    "system": null,
+    "mean": -0.0457,
+    "peak": 0.0982,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_9p",
+    "system": "frontal_control",
+    "mean": -0.0462,
+    "peak": -0.0044,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_p32pr",
+    "system": null,
+    "mean": -0.0465,
+    "peak": 0.0977,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TGd",
+    "system": "language",
+    "mean": -0.047,
+    "peak": -0.0219,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE2a",
+    "system": null,
+    "mean": -0.0492,
+    "peak": -0.0061,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP4",
+    "system": null,
+    "mean": -0.0498,
+    "peak": 0.0593,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_55b",
+    "system": "language",
+    "mean": -0.0505,
+    "peak": 0.1116,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_Ig",
+    "system": null,
+    "mean": -0.0512,
+    "peak": 0.0658,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1p",
+    "system": null,
+    "mean": -0.0514,
+    "peak": 0.0419,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_p47r",
+    "system": "frontal_control",
+    "mean": -0.0519,
+    "peak": -0.0358,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_3a",
+    "system": "somatomotor",
+    "mean": -0.0521,
+    "peak": 0.0711,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_PFm",
+    "system": null,
+    "mean": -0.0521,
+    "peak": 0.0904,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP5",
+    "system": null,
+    "mean": -0.053,
+    "peak": 0.0211,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_45",
+    "system": "language",
+    "mean": -0.0531,
+    "peak": 0.0294,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TPOJ2",
+    "system": null,
+    "mean": -0.0535,
+    "peak": 0.0809,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_8BL",
+    "system": "frontal_control",
+    "mean": -0.0537,
+    "peak": 0.0052,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_7m",
+    "system": "default_mode",
+    "mean": -0.0543,
+    "peak": 0.0553,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_23d",
+    "system": "default_mode",
+    "mean": -0.0561,
+    "peak": 0.0518,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP1",
+    "system": null,
+    "mean": -0.0574,
+    "peak": 0.0193,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_47l",
+    "system": null,
+    "mean": -0.0586,
+    "peak": -0.0274,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PSL",
+    "system": null,
+    "mean": -0.062,
+    "peak": 0.0562,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_44",
+    "system": "language",
+    "mean": -0.062,
+    "peak": -0.0116,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A4",
+    "system": "auditory",
+    "mean": -0.0638,
+    "peak": 0.1496,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_SCEF",
+    "system": null,
+    "mean": -0.0651,
+    "peak": 0.0843,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PBelt",
+    "system": "auditory",
+    "mean": -0.0738,
+    "peak": 0.1624,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PHT",
+    "system": null,
+    "mean": -0.0755,
+    "peak": 0.0502,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IP2",
+    "system": "attention",
+    "mean": -0.0775,
+    "peak": 0.0652,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP1",
+    "system": null,
+    "mean": -0.0777,
+    "peak": 0.0766,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_45",
+    "system": "language",
+    "mean": -0.0778,
+    "peak": -0.0128,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_Ig",
+    "system": null,
+    "mean": -0.0778,
+    "peak": 0.0557,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_3b",
+    "system": "somatomotor",
+    "mean": -0.0791,
+    "peak": 0.0719,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP2-3",
+    "system": null,
+    "mean": -0.0802,
+    "peak": 0.0468,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_MI",
+    "system": null,
+    "mean": -0.0833,
+    "peak": 0.073,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_OP4",
+    "system": null,
+    "mean": -0.0834,
+    "peak": 0.0491,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_3b",
+    "system": "somatomotor",
+    "mean": -0.0838,
+    "peak": 0.008,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PFm",
+    "system": null,
+    "mean": -0.0841,
+    "peak": 0.0212,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_SFL",
+    "system": null,
+    "mean": -0.0861,
+    "peak": 0.0341,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TE1a",
+    "system": "language",
+    "mean": -0.0871,
+    "peak": -0.0484,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP4",
+    "system": null,
+    "mean": -0.0876,
+    "peak": 0.0656,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_IFSp",
+    "system": "language",
+    "mean": -0.0878,
+    "peak": 0.0417,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_PGi",
+    "system": "default_mode",
+    "mean": -0.0905,
+    "peak": 0.0311,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_FOP3",
+    "system": null,
+    "mean": -0.0906,
+    "peak": 0.0437,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP4",
+    "system": null,
+    "mean": -0.092,
+    "peak": 0.0759,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_31pd",
+    "system": "default_mode",
+    "mean": -0.0925,
+    "peak": 0.023,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STGa",
+    "system": "language",
+    "mean": -0.0941,
+    "peak": -0.0143,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TGv",
+    "system": null,
+    "mean": -0.0955,
+    "peak": -0.0488,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1a",
+    "system": "language",
+    "mean": -0.0965,
+    "peak": -0.0394,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TE1p",
+    "system": null,
+    "mean": -0.0984,
+    "peak": -0.0282,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_SFL",
+    "system": null,
+    "mean": -0.0989,
+    "peak": 0.008,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP1",
+    "system": null,
+    "mean": -0.0996,
+    "peak": 0.0726,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_OP2-3",
+    "system": null,
+    "mean": -0.1,
+    "peak": 0.0627,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_FOP3",
+    "system": null,
+    "mean": -0.102,
+    "peak": 0.0556,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_MI",
+    "system": null,
+    "mean": -0.1023,
+    "peak": 0.0126,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STV",
+    "system": null,
+    "mean": -0.1065,
+    "peak": 0.0727,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_43",
+    "system": null,
+    "mean": -0.1119,
+    "peak": 0.0559,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_43",
+    "system": null,
+    "mean": -0.1242,
+    "peak": 0.0823,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_TPOJ1",
+    "system": null,
+    "mean": -0.1292,
+    "peak": 0.097,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSvp",
+    "system": "language",
+    "mean": -0.1309,
+    "peak": 0.0841,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STGa",
+    "system": "language",
+    "mean": -0.1323,
+    "peak": -0.0488,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSva",
+    "system": "language",
+    "mean": -0.1351,
+    "peak": 0.0146,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A4",
+    "system": "auditory",
+    "mean": -0.1482,
+    "peak": 0.1322,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSda",
+    "system": "language",
+    "mean": -0.1671,
+    "peak": 0.0356,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_TPOJ1",
+    "system": null,
+    "mean": -0.1883,
+    "peak": 0.1278,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSda",
+    "system": "language",
+    "mean": -0.2263,
+    "peak": 0.0268,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSvp",
+    "system": "language",
+    "mean": -0.2331,
+    "peak": 0.0019,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_A5",
+    "system": "auditory",
+    "mean": -0.241,
+    "peak": 0.1348,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_A5",
+    "system": "auditory",
+    "mean": -0.2528,
+    "peak": 0.1191,
+    "frac_active": 0.0
+   },
+   {
+    "name": "R_STSdp",
+    "system": "language",
+    "mean": -0.2985,
+    "peak": 0.0752,
+    "frac_active": 0.0
+   },
+   {
+    "name": "L_STSdp",
+    "system": "language",
+    "mean": -0.3196,
+    "peak": 0.0711,
+    "frac_active": 0.0
+   }
+  ],
+  "timeline": [
+   {
+    "second": 0,
+    "z": {
+     "early_visual": 0.049,
+     "motion": 0.195,
+     "faces": 0.196,
+     "places": 0.196,
+     "objects": 0.149,
+     "attention": 0.055,
+     "auditory": -0.132,
+     "somatomotor": -0.021,
+     "frontal_control": -0.015,
+     "language": -0.088,
+     "default_mode": -0.02
+    }
+   },
+   {
+    "second": 1,
+    "z": {
+     "early_visual": 0.102,
+     "motion": 0.259,
+     "faces": 0.213,
+     "places": 0.253,
+     "objects": 0.169,
+     "attention": 0.067,
+     "auditory": -0.134,
+     "somatomotor": -0.027,
+     "frontal_control": -0.017,
+     "language": -0.107,
+     "default_mode": -0.018
+    }
+   },
+   {
+    "second": 2,
+    "z": {
+     "early_visual": 0.121,
+     "motion": 0.278,
+     "faces": 0.209,
+     "places": 0.285,
+     "objects": 0.173,
+     "attention": 0.083,
+     "auditory": -0.122,
+     "somatomotor": -0.032,
+     "frontal_control": -0.02,
+     "language": -0.125,
+     "default_mode": -0.019
+    }
+   },
+   {
+    "second": 3,
+    "z": {
+     "early_visual": 0.139,
+     "motion": 0.312,
+     "faces": 0.212,
+     "places": 0.307,
+     "objects": 0.188,
+     "attention": 0.105,
+     "auditory": -0.103,
+     "somatomotor": -0.03,
+     "frontal_control": -0.021,
+     "language": -0.135,
+     "default_mode": -0.018
+    }
+   },
+   {
+    "second": 4,
+    "z": {
+     "early_visual": 0.153,
+     "motion": 0.336,
+     "faces": 0.214,
+     "places": 0.328,
+     "objects": 0.199,
+     "attention": 0.133,
+     "auditory": -0.089,
+     "somatomotor": -0.024,
+     "frontal_control": -0.009,
+     "language": -0.136,
+     "default_mode": -0.011
+    }
+   },
+   {
+    "second": 5,
+    "z": {
+     "early_visual": 0.16,
+     "motion": 0.343,
+     "faces": 0.214,
+     "places": 0.334,
+     "objects": 0.2,
+     "attention": 0.136,
+     "auditory": -0.11,
+     "somatomotor": -0.018,
+     "frontal_control": -0.003,
+     "language": -0.139,
+     "default_mode": 0.005
+    }
+   },
+   {
+    "second": 6,
+    "z": {
+     "early_visual": 0.158,
+     "motion": 0.359,
+     "faces": 0.229,
+     "places": 0.334,
+     "objects": 0.217,
+     "attention": 0.147,
+     "auditory": -0.098,
+     "somatomotor": -0.011,
+     "frontal_control": 0.002,
+     "language": -0.132,
+     "default_mode": 0.011
+    }
+   },
+   {
+    "second": 7,
+    "z": {
+     "early_visual": 0.158,
+     "motion": 0.377,
+     "faces": 0.23,
+     "places": 0.341,
+     "objects": 0.226,
+     "attention": 0.166,
+     "auditory": -0.098,
+     "somatomotor": -0.012,
+     "frontal_control": 0.006,
+     "language": -0.131,
+     "default_mode": 0.011
+    }
+   },
+   {
+    "second": 8,
+    "z": {
+     "early_visual": 0.167,
+     "motion": 0.373,
+     "faces": 0.229,
+     "places": 0.339,
+     "objects": 0.222,
+     "attention": 0.166,
+     "auditory": -0.094,
+     "somatomotor": -0.01,
+     "frontal_control": 0.013,
+     "language": -0.139,
+     "default_mode": 0.026
+    }
+   },
+   {
+    "second": 9,
+    "z": {
+     "early_visual": 0.153,
+     "motion": 0.36,
+     "faces": 0.217,
+     "places": 0.313,
+     "objects": 0.216,
+     "attention": 0.162,
+     "auditory": -0.093,
+     "somatomotor": -0.015,
+     "frontal_control": 0.016,
+     "language": -0.123,
+     "default_mode": 0.032
+    }
+   },
+   {
+    "second": 10,
+    "z": {
+     "early_visual": 0.133,
+     "motion": 0.363,
+     "faces": 0.235,
+     "places": 0.294,
+     "objects": 0.213,
+     "attention": 0.124,
+     "auditory": -0.082,
+     "somatomotor": -0.032,
+     "frontal_control": -0.01,
+     "language": -0.114,
+     "default_mode": 0.019
+    }
+   },
+   {
+    "second": 11,
+    "z": {
+     "early_visual": 0.151,
+     "motion": 0.415,
+     "faces": 0.258,
+     "places": 0.295,
+     "objects": 0.242,
+     "attention": 0.144,
+     "auditory": -0.073,
+     "somatomotor": -0.021,
+     "frontal_control": -0.008,
+     "language": -0.111,
+     "default_mode": 0.021
+    }
+   },
+   {
+    "second": 12,
+    "z": {
+     "early_visual": 0.168,
+     "motion": 0.429,
+     "faces": 0.276,
+     "places": 0.29,
+     "objects": 0.248,
+     "attention": 0.142,
+     "auditory": -0.057,
+     "somatomotor": -0.02,
+     "frontal_control": -0.001,
+     "language": -0.098,
+     "default_mode": 0.034
+    }
+   },
+   {
+    "second": 13,
+    "z": {
+     "early_visual": 0.162,
+     "motion": 0.408,
+     "faces": 0.271,
+     "places": 0.273,
+     "objects": 0.238,
+     "attention": 0.124,
+     "auditory": -0.048,
+     "somatomotor": -0.02,
+     "frontal_control": -0.008,
+     "language": -0.087,
+     "default_mode": 0.031
+    }
+   },
+   {
+    "second": 14,
+    "z": {
+     "early_visual": 0.115,
+     "motion": 0.295,
+     "faces": 0.186,
+     "places": 0.179,
+     "objects": 0.173,
+     "attention": 0.107,
+     "auditory": 0.042,
+     "somatomotor": 0.011,
+     "frontal_control": 0.001,
+     "language": -0.026,
+     "default_mode": 0.03
+    }
+   },
+   {
+    "second": 15,
+    "z": {
+     "early_visual": 0.094,
+     "motion": 0.243,
+     "faces": 0.158,
+     "places": 0.144,
+     "objects": 0.148,
+     "attention": 0.094,
+     "auditory": 0.107,
+     "somatomotor": 0.025,
+     "frontal_control": -0.001,
+     "language": 0.009,
+     "default_mode": 0.032
+    }
+   },
+   {
+    "second": 16,
+    "z": {
+     "early_visual": 0.086,
+     "motion": 0.056,
+     "faces": -0.03,
+     "places": 0.057,
+     "objects": 0.022,
+     "attention": 0.098,
+     "auditory": 0.14,
+     "somatomotor": 0.064,
+     "frontal_control": 0.028,
+     "language": 0.012,
+     "default_mode": 0.061
+    }
+   }
+  ]
+ },
+ "_wall_s": 18.0
+}

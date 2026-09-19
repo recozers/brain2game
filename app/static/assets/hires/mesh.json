@@ -1,0 +1,169 @@
+{
+ "n_vertices": 327684,
+ "n_faces": 655360,
+ "hemi_offset": 163842,
+ "k": 4,
+ "coarse_n": 20484,
+ "coarse_hemi_offset": 10242,
+ "hemi_gap_mm": 12.0,
+ "files": {
+  "pial": {
+   "file": "pial.f32",
+   "bytes": 3932208,
+   "dtype": "float32le",
+   "shape": [
+    327684,
+    3
+   ]
+  },
+  "white": {
+   "file": "white.f32",
+   "bytes": 3932208,
+   "dtype": "float32le",
+   "shape": [
+    327684,
+    3
+   ]
+  },
+  "inflated": {
+   "file": "inflated.f32",
+   "bytes": 3932208,
+   "dtype": "float32le",
+   "shape": [
+    327684,
+    3
+   ]
+  },
+  "faces": {
+   "file": "faces.u32",
+   "bytes": 7864320,
+   "dtype": "uint32le",
+   "shape": [
+    655360,
+    3
+   ]
+  },
+  "curv": {
+   "file": "curv.f32",
+   "bytes": 1310736,
+   "dtype": "float32le",
+   "shape": [
+    327684
+   ]
+  },
+  "sulc": {
+   "file": "sulc.f32",
+   "bytes": 1310736,
+   "dtype": "float32le",
+   "shape": [
+    327684
+   ]
+  },
+  "interp_idx": {
+   "file": "interp_idx.u32",
+   "bytes": 5242944,
+   "dtype": "uint32le",
+   "shape": [
+    327684,
+    4
+   ]
+  },
+  "interp_w": {
+   "file": "interp_w.f32",
+   "bytes": 5242944,
+   "dtype": "float32le",
+   "shape": [
+    327684,
+    4
+   ]
+  }
+ },
+ "bbox": {
+  "pial": [
+   -68.79399871826172,
+   -104.82599639892578,
+   -47.83100128173828,
+   70.03199768066406,
+   69.33999633789062,
+   78.96299743652344
+  ],
+  "inflated": [
+   -89.01799774169922,
+   -108.02799987792969,
+   -73.3270034790039,
+   87.81900024414062,
+   108.02799987792969,
+   73.3270034790039
+  ],
+  "white": [
+   -65.66300201416016,
+   -102.50399780273438,
+   -43.52799987792969,
+   66.78700256347656,
+   65.52899932861328,
+   76.27400207519531
+  ]
+ },
+ "source": "nilearn fetch_surf_fsaverage(mesh='fsaverage')",
+ "mesh": "fsaverage",
+ "coarse_mesh": "fsaverage5",
+ "coarse_source": "nilearn fetch_surf_fsaverage(mesh='fsaverage5') sphere (TRIBE v2 vertex order: left 0..10241, right 10242..20483)",
+ "units": "mm",
+ "inflated_x_shift_mm": {
+  "left": -47.50904846191406,
+  "right": 46.90966796875
+ },
+ "curv_range": [
+  -0.6769885420799255,
+  0.5402269959449768
+ ],
+ "sulc_range": [
+  -1.8817977905273438,
+  1.8689610958099365
+ ],
+ "interp": {
+  "method": "inverse-distance-squared over the 4 nearest fsaverage5 vertices on the same hemisphere's sphere (radius 100); one-hot when the nearest is < 0.001 mm away",
+  "usage": "fine[v] = sum_k interp_w[v,k] * coarse[interp_idx[v,k]]",
+  "nested": "fsaverage5 vertex j == fsaverage vertex j (j < 10242) per hemisphere on the sphere"
+ },
+ "validation": {
+  "sphere_faces_outward_fraction": {
+   "left": 1.0,
+   "right": 1.0
+  },
+  "nesting": {
+   "left": {
+    "nested_fraction": 1.0,
+    "nested_max_dist_mm": 0.0,
+    "coincident_rows": 10242,
+    "coincident_rows_beyond_first_10242": 0,
+    "nearest_dist_mm_nonnested": [
+     0.8514684222710386,
+     1.408873395347777,
+     2.070120717424173
+    ],
+    "kth_dist_mm_max": 4.504786346487305
+   },
+   "right": {
+    "nested_fraction": 1.0,
+    "nested_max_dist_mm": 0.0,
+    "coincident_rows": 10242,
+    "coincident_rows_beyond_first_10242": 0,
+    "nearest_dist_mm_nonnested": [
+     0.8514684222710386,
+     1.408873395347777,
+     2.070120717424173
+    ],
+    "kth_dist_mm_max": 4.504786346487305
+   }
+  },
+  "weight_sum_max_abs_err": 4.470348358154297e-08,
+  "roundtrip_z_max_abs_err_mm": 0.4670291386616441,
+  "roundtrip_z_mean_abs_err_mm": 0.1343880496058079,
+  "roundtrip_x_max_abs_err_mm": 0.48895587473484525,
+  "roundtrip_x_mean_abs_err_mm": 0.13723427821575587,
+  "roundtrip_y_max_abs_err_mm": 0.4924966169476761,
+  "roundtrip_y_mean_abs_err_mm": 0.13658044092641933
+ },
+ "total_bytes": 32768304
+}

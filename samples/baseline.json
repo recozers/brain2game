@@ -1,0 +1,88 @@
+{
+ "n_clips": 4,
+ "clips": [
+  "IMG_9892",
+  "mcp_video-1349",
+  "mcp_video-2329",
+  "video-1040"
+ ],
+ "systems": {
+  "places": {
+   "label": "Scenes and navigation (PPA / RSC)",
+   "mean": 0.1974,
+   "std": 0.0661,
+   "peak": 0.3204,
+   "frac_active": 0.1426
+  },
+  "motion": {
+   "label": "Visual motion (MT+/V5)",
+   "mean": 0.2442,
+   "std": 0.0581,
+   "peak": 0.4143,
+   "frac_active": 0.3271
+  },
+  "early_visual": {
+   "label": "Early visual cortex (V1/V2)",
+   "mean": 0.1415,
+   "std": 0.0369,
+   "peak": 0.2477,
+   "frac_active": 0.0391
+  },
+  "faces": {
+   "label": "Face processing (fusiform / FFA)",
+   "mean": 0.1613,
+   "std": 0.0357,
+   "peak": 0.2553,
+   "frac_active": 0.0469
+  },
+  "objects": {
+   "label": "Object recognition (lateral occipital / IT)",
+   "mean": 0.1327,
+   "std": 0.0426,
+   "peak": 0.2192,
+   "frac_active": 0.0234
+  },
+  "attention": {
+   "label": "Spatial attention (intraparietal / SPL)",
+   "mean": 0.0886,
+   "std": 0.0296,
+   "peak": 0.154,
+   "frac_active": 0.0
+  },
+  "somatomotor": {
+   "label": "Sensorimotor cortex",
+   "mean": 0.0165,
+   "std": 0.0223,
+   "peak": 0.0698,
+   "frac_active": 0.0
+  },
+  "default_mode": {
+   "label": "Default mode network",
+   "mean": 0.0083,
+   "std": 0.0195,
+   "peak": 0.0518,
+   "frac_active": 0.0
+  },
+  "frontal_control": {
+   "label": "Executive control (dorsolateral prefrontal)",
+   "mean": 0.0071,
+   "std": 0.0153,
+   "peak": 0.0383,
+   "frac_active": 0.0
+  },
+  "auditory": {
+   "label": "Auditory cortex (Heschl's / STG)",
+   "mean": -0.0386,
+   "std": 0.0269,
+   "peak": 0.1224,
+   "frac_active": 0.0
+  },
+  "language": {
+   "label": "Language network (IFG / STS)",
+   "mean": -0.0986,
+   "std": 0.0334,
+   "peak": 0.0034,
+   "frac_active": 0.0
+  }
+ }
+}
