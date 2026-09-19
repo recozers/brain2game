@@ -19,7 +19,7 @@ from pathlib import Path
 import modal
 
 APP_NAME = "brain-twin"
-VERSION = 4
+VERSION = 8
 CACHE_DIR = "/cache"            # volume: HF hub cache lives at /cache/huggingface/hub
 FEAT_DIR = "/tmp/feat"          # per-container neuralset feature cache (wiped after every window)
 SESS_DIR = "/tmp/sessions"
@@ -27,6 +27,7 @@ WINDOW_S = float(os.environ.get("WINDOW_S", "20"))   # trailing window fed to th
 TRAIL_DROP = 2                  # seconds dropped at the end of each window (no trailing context)
 N_VERT = 20484
 ACTIVE_Z = 0.3                  # system-level value counted as "active" (average-subject scale: peaks ~0.5-0.7)
+TEXT_ON = os.environ.get("TEXT_ON", "1") != "0"   # transcribe speech (resident faster-whisper) and feed the Llama text pathway
 MAX_PREDS_PER_RESPONSE = 60
 
 HERE = Path(__file__).parent
@@ -43,17 +44,20 @@ image = (
         "git clone --depth 1 https://github.com/facebookresearch/tribev2.git /tribev2",
         "cd /tribev2 && pip install -e .",
     )
-    .pip_install("fastapi[standard]", "python-multipart")
+    .pip_install("fastapi[standard]", "python-multipart", "faster-whisper>=1.1")
     .env(
         {
             "HF_HOME": f"{CACHE_DIR}/huggingface",
             "HF_HUB_DOWNLOAD_TIMEOUT": "300",
             "HF_HUB_HTTP_TIMEOUT": "300",
             "TOKENIZERS_PARALLELISM": "false",
+            # ctranslate2 (faster-whisper) dlopens cuBLAS/cuDNN: point it at the pip-installed CUDA libs
+            "LD_LIBRARY_PATH": "/usr/local/lib/python3.11/site-packages/nvidia/cublas/lib:/usr/local/lib/python3.11/site-packages/nvidia/cudnn/lib",
         }
     )
     .add_local_file(str(CAPTURE_LOCAL), "/root/capture.html")
     .add_local_file(str(HERE / "fast_video.py"), "/root/fast_video.py")
+    .add_local_file(str(HERE / "fast_text.py"), "/root/fast_text.py")
 )
 if ATLAS_LOCAL.exists():
     image = image.add_local_file(str(ATLAS_LOCAL), "/root/atlas.json")
@@ -73,16 +77,26 @@ def _probe_duration(path: str) -> float | None:
         return None
 
 
-def _synthetic_clip(path: str, seconds: int = 30) -> None:
-    """Colour bars + tone, only used to warm the backbones at container start."""
-    _run(
-        [
-            "ffmpeg", "-y", "-f", "lavfi", "-i", f"testsrc=size=640x480:rate=30",
-            "-f", "lavfi", "-i", "sine=frequency=440:sample_rate=48000",
-            "-t", str(seconds), "-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p",
-            "-c:a", "aac", "-shortest", path,
-        ]
-    )
+def _synthetic_clip(path: str, seconds: int = 30, speech: bool = False) -> None:
+    """Colour bars + tone (or a TTS sentence loop when speech=True): only used to warm the models."""
+    audio = None
+    if speech:
+        try:
+            from gtts import gTTS
+
+            mp3 = path + ".speech.mp3"
+            gTTS("The quick brown fox jumps over the lazy dog while the orchestra plays in the old town square. "
+                 "She said the museum opens at nine, so we walked past the river and watched the boats.", lang="en").save(mp3)
+            audio = mp3
+        except Exception as e:
+            print(f"gTTS unavailable ({e}); warm-up uses a tone", flush=True)
+    if audio:
+        cmd = ["ffmpeg", "-y", "-f", "lavfi", "-i", "testsrc=size=640x480:rate=30", "-stream_loop", "-1", "-i", audio,
+               "-t", str(seconds), "-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", "48000", "-shortest", path]
+    else:
+        cmd = ["ffmpeg", "-y", "-f", "lavfi", "-i", "testsrc=size=640x480:rate=30", "-f", "lavfi", "-i", "sine=frequency=440:sample_rate=48000",
+               "-t", str(seconds), "-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest", path]
+    _run(cmd)
 
 
 class Session:
@@ -290,8 +304,14 @@ class TribeService:
         self.fast_video = fast_video
         from tribev2 import TribeModel
 
+        import fast_text  # noqa: F401  (resident faster-whisper replaces the whisperx subprocess)
+
+        self.fast_text = fast_text
+
         model = None
-        for update in ({"data.num_workers": 0}, None):  # 0: no forked loader workers (they die when forked from the ASGI thread)
+        # num_workers 0: forked loader workers die when forked from the ASGI thread; text batch 32: the release config
+        # runs Llama on 4 words at a time (25 forwards for a 30 s clip), 32 cuts that to ~4 forwards
+        for update in ({"data.num_workers": 0, "data.text_feature.batch_size": 32}, {"data.num_workers": 0}, None):
             try:
                 model = TribeModel.from_pretrained("facebook/tribev2", cache_folder=FEAT_DIR, config_update=update)
                 print(f"model loaded with config_update={update}", flush=True)
@@ -332,10 +352,16 @@ class TribeService:
 
         # warm the backbones with two different synthetic clips: the second call measures the resident path
         self.warm_s = self.warm2_s = None
+        if TEXT_ON:
+            try:
+                fast_text.get_model()
+                vol.commit()   # keep the downloaded whisper weights on the volume
+            except Exception as e:
+                print(f"whisper preload failed: {type(e).__name__}: {e}", flush=True)
         try:
             for i, sec in enumerate((30, 30)):
                 warm = f"{SESS_DIR}/_warm{i}.mp4"
-                _synthetic_clip(warm, sec)
+                _synthetic_clip(warm, sec, speech=(i == 1))
                 t1 = time.time()
                 preds, _ = self.infer_file(warm)
                 dt = round(time.time() - t1, 1)
@@ -361,9 +387,23 @@ class TribeService:
 
         t0 = time.time()
         ev = pd.DataFrame([{"type": "Video", "filepath": path, "start": 0, "timeline": "default", "subject": "default"}])
-        events = get_audio_and_text_events(ev, audio_only=True)
+        n_words = 0
+        if TEXT_ON:
+            try:
+                events = get_audio_and_text_events(ev, audio_only=False)
+                n_words = int((events.type == "Word").sum())
+                if n_words == 0:
+                    events = get_audio_and_text_events(ev, audio_only=True)
+            except Exception as e:
+                print(f"text pathway failed ({type(e).__name__}: {e}); falling back to audio+video", flush=True)
+                events = get_audio_and_text_events(ev, audio_only=True)
+        else:
+            events = get_audio_and_text_events(ev, audio_only=True)
         t1 = time.time()
         with self.gpu_lock:
+            self.fast_text.FEATURE_TIMES.clear()
+            self.model.data.get_loaders(events=events, split_to_build="all")   # feature extraction (cached for predict below)
+            t_feat = time.time()
             preds, segments = self.model.predict(events, verbose=False)
             t2 = time.time()
             preds = np.asarray(preds, dtype=np.float32)
@@ -374,7 +414,8 @@ class TribeService:
                 preds, starts = preds[order], starts[order]
             except Exception:
                 starts = np.arange(len(preds), dtype=float)
-        print(f"infer {os.path.basename(path)}: events {t1 - t0:.1f}s, features+head {t2 - t1:.1f}s -> {preds.shape}", flush=True)
+        ft = " ".join(f"{k}={v['s']}s/{v['n_events']}" for k, v in self.fast_text.FEATURE_TIMES.items())
+        print(f"infer {os.path.basename(path)}: events {t1 - t0:.1f}s ({n_words} words), features {t_feat - t1:.1f}s [{ft}], head {t2 - t_feat:.1f}s -> {preds.shape}", flush=True)
         return preds, starts
 
     def stats_for(self, vec) -> tuple[dict, list]:
@@ -484,7 +525,7 @@ class TribeService:
         @api.get("/")
         def root():
             return {"ok": True, "app": APP_NAME, "version": VERSION, "gpu": svc.gpu_name, "atlas": svc.atlas is not None,
-                    "fast_video": svc.fast_video.stats(),
+                    "fast_video": svc.fast_video.stats(), "text_on": TEXT_ON, "fast_text": svc.fast_text.stats() if TEXT_ON else None,
                     "load_s": svc.load_s, "warm_s": getattr(svc, "warm_s", None), "warm2_s": getattr(svc, "warm2_s", None),
                     "sessions": list(svc.sessions)}
 

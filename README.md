@@ -5,7 +5,9 @@ hears; the laptop paints what an *average human brain* would be doing about 15 s
 press Finish and a Gemini agent writes you a browser game that exercises the least-driven system.
 
 Honest framing: TRIBE v2 predicts the group-average fMRI response to a stimulus. This is a brain
-twin / simulator, not a brain reader. Text pathway is off (audio + video only).
+twin / simulator, not a brain reader. All three of TRIBE's pathways run: video (V-JEPA2), audio
+(w2v-bert) and text (speech transcribed by a resident faster-whisper large-v3-turbo, then Llama 3.2 3B).
+Set `TEXT_ON=0` in the Modal environment to go back to audio + video only.
 
 Design and API contracts: [CONTRACTS.md](CONTRACTS.md).
 
@@ -53,6 +55,7 @@ against when deciding which system is under-driven.
 
 - `modal_app/tribe_service.py` — Modal app: TRIBE v2 inference, rolling 30 s window sessions, /predict, phone page
 - `modal_app/fast_video.py` — speed patches for neuralset's V-JEPA2 extractor (resident model, bf16, ffmpeg decode)
+- `modal_app/fast_text.py` — resident faster-whisper in place of the whisperx subprocess; keeps Llama and w2v-bert loaded across calls; per-modality timing
 - `modal_app/capture.html` — phone capture page (MediaRecorder rotated every 5 s)
 - `app/server.py`, `app/agent.py` — laptop FastAPI + Gemini game agent; `app/static/` — three.js viewer (`brain.js` = full-res fsaverage renderer with pial/inflated morph and bloom, press `i` or the Inflate button; add `?hires=0` to fall back to the fsaverage5 mesh)
 - `app/regions.py` — functional systems table shared by everything

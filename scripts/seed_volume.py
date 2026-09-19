@@ -13,6 +13,7 @@ MODELS = [
     "models--facebook--tribev2",
     "models--facebook--vjepa2-vitg-fpc64-256",
     "models--facebook--w2v-bert-2.0",
+    "models--meta-llama--Llama-3.2-3B",
 ]
 
 
