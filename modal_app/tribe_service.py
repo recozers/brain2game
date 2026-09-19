@@ -19,7 +19,7 @@ from pathlib import Path
 import modal
 
 APP_NAME = "brain-twin"
-VERSION = 8
+VERSION = 9
 CACHE_DIR = "/cache"            # volume: HF hub cache lives at /cache/huggingface/hub
 FEAT_DIR = "/tmp/feat"          # per-container neuralset feature cache (wiped after every window)
 SESS_DIR = "/tmp/sessions"
@@ -402,10 +402,9 @@ class TribeService:
         t1 = time.time()
         with self.gpu_lock:
             self.fast_text.FEATURE_TIMES.clear()
-            self.model.data.get_loaders(events=events, split_to_build="all")   # feature extraction (cached for predict below)
-            t_feat = time.time()
             preds, segments = self.model.predict(events, verbose=False)
             t2 = time.time()
+            t_feat = t1 + sum(v["s"] for v in self.fast_text.FEATURE_TIMES.values())   # features vs head split from the prepare timings
             preds = np.asarray(preds, dtype=np.float32)
             try:
                 starts = np.array([float(sg.start) for sg in segments], dtype=float)

@@ -41,7 +41,7 @@
 <script>
 const qs = new URLSearchParams(location.search);
 const sid = qs.get('sid') || 'demo';
-const CHUNK_MS = 5000;
+const CHUNK_MS = 3000;
 document.getElementById('sid').textContent = sid;
 const $ = id => document.getElementById(id);
 let stream = null, rec = null, idx = 0, running = false, wakeLock = null, inflight = 0;

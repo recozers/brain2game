@@ -12,7 +12,7 @@ const ADAPTIVE = true, THRESH_LO_FLOOR = 0.12, THRESH_MIN_SPAN = 0.25;  // per-f
 const FADE_S = 1.0;                         // crossfade between consecutive seconds
 const POLL_MS = 1000;                       // /preds poll period
 const GAP_SKIP_MS = 10000;                  // skip forward if a second never arrives
-const MAX_AHEAD = 20, KEEP_AHEAD = 10, MIN_START_BUFFER = 6, HARD_JUMP = 60;      // catch-up if the buffer runs away (bursty backend)
+const MAX_AHEAD = 20, KEEP_AHEAD = 10, MIN_START_BUFFER = 4, HARD_JUMP = 60;      // catch-up if the buffer runs away (bursty backend)
 const BAR_MIN = -0.2, BAR_MAX = 0.8;
 const TRAIN_AFTER_S = 20;                    // 'Train my brain' appears after this many inferred seconds
 const ASSET_BASE = new URL('assets/', import.meta.url);
@@ -290,6 +290,18 @@ function ingest(resp) {
   if (st.busy !== undefined) state.busy = st.busy;
 }
 
+function playbackPeriodMs() {
+  // target buffer ~ one inference tick (+ margin); below it slow down (no stalls), above it catch up gently
+  const tick = state.lastInferS ? clamp(state.lastInferS + 3, 6, 25) : 10;
+  const buffered = state.buffer.size;
+  if (state.playSecond === null) return 1000;
+  // predictions arrive in bursts of ~one tick; we only need the buffer to stay above a few seconds at the
+  // trough right before a burst, so slow down only when it is nearly empty and speed up when it is fat
+  if (buffered < 3) return 1650;               // 0.6x realtime
+  if (buffered < 6) return 1250;               // 0.8x
+  if (buffered > tick + 6) return 800;         // 1.25x: too far behind, catch up
+  return 1000;
+}
 function playbackTick() {
   const buf = state.buffer;
   if (buf.size === 0) return;
@@ -455,7 +467,10 @@ function renderStatus() {
   $('received').textContent = state.secondsReceived > 0 ? fmt(state.secondsReceived, 1) + ' s' : '—';
   const shown = state.shownSecond;
   $('brainTime').textContent = shown === null ? '—' : `${shown} s`;
-  $('stageTimeVal').textContent = shown === null ? '—' : `${shown} s`;
+  const stv = $('stageTimeVal');
+  if (shown !== null) { const stalled = state.waitingSince !== null && state.buffer.size === 0; stv.textContent = `${shown} s${stalled ? ' …' : ''}`; stv.classList.toggle('pulse', stalled); }
+  else if (state.secondsReceived > 0 || MOCK) { stv.textContent = 'listening…'; stv.classList.add('pulse'); }
+  else { stv.textContent = '—'; stv.classList.remove('pulse'); }
   $('delay').textContent = shown === null || !(state.secondsReceived > 0) ? '—' : fmt(state.secondsReceived - shown, 1) + ' s';
   $('infer').textContent = state.lastInferS === null || state.lastInferS === undefined ? '—' : fmt(state.lastInferS, 1) + ' s' + (state.busy ? ' · busy' : '');
   $('buffered').textContent = `${state.buffer.size} s`;
@@ -739,7 +754,7 @@ async function main() {
   buildBars(assets.atlas);
   renderQR(cfg);
   renderStatus(); renderBars();
-  setInterval(playbackTick, 1000);
+  (function playbackLoop() { playbackTick(); setTimeout(playbackLoop, playbackPeriodMs()); })();
   if (MOCK) startMock(assets);
   else if (cfg.modal_base_url) pollLoop(cfg);
   else { renderStatus(); toast('No Modal base URL configured: the viewer is idle. Add ?modal=<base url> (or ?mock=1 for demo data).', 'error', 12000); }

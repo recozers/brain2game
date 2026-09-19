@@ -21,6 +21,8 @@
     background: radial-gradient(ellipse at 50% 42%, #ffffff 0%, #f8f8f6 55%, #efefec 100%); }
   #stage canvas { display: block; }
   #stageTime { position: absolute; left: 24px; top: 20px; font-size: 12px; color: var(--muted); letter-spacing: .4px; text-transform: uppercase; pointer-events: none; }
+  #stageTime b.pulse { font-size: 22px; font-weight: 500; color: var(--rose); animation: breathe 1.6s ease-in-out infinite; }
+  @keyframes breathe { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
   #stageTime b { display: block; font-size: 30px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; line-height: 1.15; letter-spacing: 0; text-transform: none; }
   #legend { position: absolute; left: 24px; bottom: 20px; color: var(--muted); font-size: 11px; pointer-events: none; }
   #legend .ramp { width: 170px; height: 7px; border-radius: 4px; margin: 5px 0 3px;

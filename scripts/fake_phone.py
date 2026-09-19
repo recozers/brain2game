@@ -1,8 +1,8 @@
-"""Pretend to be the phone: split a local clip into 5 s chunks and POST them to a live session in
+"""Pretend to be the phone: split a local clip into 3 s chunks and POST them to a live session in
 real time, exactly like modal_app/capture.html does. Lets us test the live loop without a phone, and
 doubles as the on-stage fallback (replay a canned clip through the real pipeline).
 
-    python3 scripts/fake_phone.py samples/face_talk.mov --sid demo          # real time (5 s per chunk)
+    python3 scripts/fake_phone.py samples/face_talk.mov --sid demo          # real time (3 s per chunk)
     python3 scripts/fake_phone.py clip.mp4 --sid demo --fast                # no pacing
 """
 import argparse
@@ -60,7 +60,7 @@ def main():
     ap.add_argument("video")
     ap.add_argument("--sid", default="demo")
     ap.add_argument("--url", default=None)
-    ap.add_argument("--chunk", type=float, default=5.0)
+    ap.add_argument("--chunk", type=float, default=3.0)
     ap.add_argument("--fast", action="store_true", help="do not pace to real time")
     a = ap.parse_args()
     url = (a.url or load_env().get("MODAL_BASE_URL") or os.environ.get("MODAL_BASE_URL") or "").rstrip("/")
